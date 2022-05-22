@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<title>GP_CONTR_REG_CMD (GPU) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___gpu.html")>GPU Module</a> &gt; GP_CONTR_REG_CMD (GPU) Register</p><h1>GP_CONTR_REG_CMD (GPU) Register</h1>
+<h2>GP_CONTR_REG_CMD (GPU) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>GP_CONTR_REG_CMD</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000020</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD4B0020 (GPU)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">wo<span class="tooltiptext">Write-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>GP Control Register Command</td></tr>
+</table>
+<p></p>
+<h2>GP_CONTR_REG_CMD (GPU) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:12</td><td class="tooltip grayback">wo<span class="tooltiptext">Write-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved, write as zero, read undefined</td></tr>
+<tr valign=top><td>GP_CMD_CLK_OVERRIDE</td><td class="center">11</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Disable block level clock gates. Writing a 1 to this bit overrides all the<br/>architectural clock gates in the design so all clocks are always active</td></tr>
+<tr valign=top><td>GP_CMD_SOFT_RESET</td><td class="center">10</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Waits until all outstanding bus-transfers are completed, then resets the<br/>internal state of GP. Use the GP_IRQ_RESET_COMPLETED<br/>interrupt bit to discover when the reset has actually completed</td></tr>
+<tr valign=top><td>GP_CMD_STOP_BUS</td><td class="center"> 9</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Stop data bus.</td></tr>
+<tr valign=top><td>GP_CMD_START_BUS</td><td class="center"> 8</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Start data bus.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 7</td><td class="tooltip grayback">wo<span class="tooltiptext">Write-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved, write as zero, read undefined.</td></tr>
+<tr valign=top><td>GP_CMD_FORCE_HANG</td><td class="center"> 6</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Force hang. This functionality depends on the watchdog timer</td></tr>
+<tr valign=top><td>GP_CMD_FORCE_RESET</td><td class="center"> 5</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Resets the internal state of GP immediately.<br/>If GP_CMD_FORCE_RESET is asserted while there is a bus<br/>transaction in progress the AXI interconnect might operate at reduced<br/>efficiency or lockup.<br/>To ensure a safe reset:<br/>1. Write 1 to GP_CMD_STOP_BUS.<br/>2. Wait until all transactions have completed. The<br/>GP_IRQ_AXI_BUS_STOPPED interrupt is asserted when the<br/>bus is idle.<br/>3. Write 1 to GP_CMD_FORCE_RESET.<br/>The use of GP_CMD_FORCE_RESET must be deprecated, unless<br/>you require backwards compatibility with Mali-200.</td></tr>
+<tr valign=top><td>GP_CMD_UPDATE_PLB_ALLOC</td><td class="center"> 4</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Update polygon list allocation addresses.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 3:2</td><td class="tooltip grayback">wo<span class="tooltiptext">Write-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved, write as zero, read undefined.</td></tr>
+<tr valign=top><td>GP_CMD_START_PLB</td><td class="center"> 1</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Start PLB.</td></tr>
+<tr valign=top><td>GP_CMD_START_VS</td><td class="center"> 0</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Start vertex shader.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

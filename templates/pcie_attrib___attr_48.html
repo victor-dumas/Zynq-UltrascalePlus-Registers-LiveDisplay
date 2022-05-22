@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<title>ATTR_48 (PCIE_ATTRIB) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___pcie_attrib.html")>PCIE_ATTRIB Module</a> &gt; ATTR_48 (PCIE_ATTRIB) Register</p><h1>ATTR_48 (PCIE_ATTRIB) Register</h1>
+<h2>ATTR_48 (PCIE_ATTRIB) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>ATTR_48</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x00000000C0</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD4800C0 (PCIE_ATTRIB)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000003</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>ATTR_48</td></tr>
+</table>
+<p>This register should only be written to during reset of the PCIe block</p>
+<h2>ATTR_48 (PCIE_ATTRIB) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>attr_msix_cap_table_size</td><td class="center">10:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x3</td><td>MSI-X Table Size. This value is transferred to the MSI-X Message Control[10:0] field. Set to 0 if MSI-X is not enabled. Note that the core does not implement the table; that must be implemented in user logic.; EP=0x0003; RP=0x0000</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

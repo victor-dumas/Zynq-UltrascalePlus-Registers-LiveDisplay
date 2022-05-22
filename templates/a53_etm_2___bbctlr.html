@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<title>BBCTLR (A53_ETM_2) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___a53_etm_2.html")>A53_ETM_2 Module</a> &gt; BBCTLR (A53_ETM_2) Register</p><h1>BBCTLR (A53_ETM_2) Register</h1>
+<h2>BBCTLR (A53_ETM_2) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>BBCTLR</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000003C</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FEE4003C (CORESIGHT_A53_ETM_2)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Branch Broadcast Control Register</td></tr>
+</table>
+<p></p>
+<h2>BBCTLR (A53_ETM_2) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>MODE</td><td class="center"> 8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Mode bit:<br/>0: Exclude mode. Branch broadcasting is not enabled in the address range that RANGE defines. If RANGE==0 then branch broadcasting is enabled for the entire memory map.<br/>1: Include mode. Branch broadcasting is enabled in the address range that RANGE defines. If RANGE==0 then the behavior of the trace unit is constrained UNPREDICTABLE. That is, the trace unit might or might not consider any instructions to be in a branch broadcast region.</td></tr>
+<tr valign=top><td>RANGE</td><td class="center"> 7:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Address range field. Selects which address range comparator pairs are in use with branch broadcasting. Each bit represents an address range comparator pair, so bit[n] controls the selection of address range comparator pair n. If bit[n] is:</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<title>AXIPC (SATA_AHCI_VENDOR) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___sata_ahci_vendor.html")>SATA_AHCI_VENDOR Module</a> &gt; AXIPC (SATA_AHCI_VENDOR) Register</p><h1>AXIPC (SATA_AHCI_VENDOR) Register</h1>
+<h2>AXIPC (SATA_AHCI_VENDOR) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>AXIPC</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000024</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD0C00C4 (SATA_AHCI_VENDOR)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>AXI PROT Control.</td></tr>
+</table>
+<p>Controls the value of the AWPROT and ARPROT used to distinguish each address operation on the address bus.</p>
+<h2>AXIPC (SATA_AHCI_VENDOR) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:30</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>EARP</td><td class="center">29</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Enable the ARPROT (EARP): control from the PRDT entries used during the data phase of this operation</td></tr>
+<tr valign=top><td>EAWP</td><td class="center">28</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Enable the AWPROT (EAWP): control from the PRDT entries used during the data phase of this operation</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">27</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>AWPF</td><td class="center">26:24</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Address Write Prot FIS (AWPF): This is the value driven onto AWPROT when the AXI master is posting a status FIS write address to the memory controller.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">23</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>AWPD</td><td class="center">22:20</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Address Write Prot Data (AWPD): This is the value driven onto AWPROT when the AXI master is posting a Data burst write address to the memory controller when the data burst is not the final burst in the transfer.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">19</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>AWPFD</td><td class="center">18:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Address Write Prot Final Data (AWPFD): This is the value driven onto AWPROT when the AXI master is posting a Data burst write address to the memory controller when the data burst is the final burst in the transfer.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">15</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>ARPP</td><td class="center">14:12</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Address Read Prot PRD (ARPP): This is the value driven onto ARPROT when the AXI master is posting a PRD read address to the memory controller.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">11</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>ARPH</td><td class="center">10:8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Address Read Prot Header (ARPH): This is the value driven onto ARPROT when the AXI master is posting a Header read address to the memory controller.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 7</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>ARPF</td><td class="center"> 6:4</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Address Read Prot FIS (ARPF): This is the value driven onto ARPROT when the AXI master is posting a command FIS read address to the memory controller.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 3</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>ARPD</td><td class="center"> 2:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Address Read Prot Data (ARPD): This is the value driven onto ARPROT when the AXI master is posting a data burst read address to the memory controller.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<title>SRR (CAN) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___can.html")>CAN Module</a> &gt; SRR (CAN) Register</p><h1>SRR (CAN) Register</h1>
+<h2>SRR (CAN) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>SRR</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000000</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF060000 (CAN0)<br/>0x00FF070000 (CAN1)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Software Reset and Enable</td></tr>
+</table>
+<p>Writing to the Software Reset Register (SRR) places the CAN controller in Configuration mode. Once in Configuration mode, the CAN controller drives recessive on the bus line and does not transmit or receive messages. During power-up, CEN and SRST bits are '0' and CONFIG bit in the Status Register (SR) is '1.' The Transfer Layer Configuration Registers can be changed only when CEN bit in the SRR Register is '0.' If the CEN bit is changed during core operation, it is recommended to reset the core so that operations start afresh.</p>
+<h2>SRR (CAN) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:2</td><td class="tooltip grayback">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved.</td></tr>
+<tr valign=top><td>CEN</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>CAN Enable<br/>The Enable bit for the CAN controller.<br/>1: The CAN controller is in loopback, Sleep or Normal mode depending on the LBACK and SLEEP bits in the MSR.<br/>0: The CAN controller is in the Configuration mode.<br/>If the CEN bit is changed during core operation, it is recommended to reset the core so that operations start afresh.</td></tr>
+<tr valign=top><td>SRST</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Reset<br/>The Software reset bit for the CAN controller.<br/>1: CAN controller is reset.<br/>If a 1 is written to this bit, all the CAN controller configuration registers (including the SRR) are reset. Reads to this bit always return a 0.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

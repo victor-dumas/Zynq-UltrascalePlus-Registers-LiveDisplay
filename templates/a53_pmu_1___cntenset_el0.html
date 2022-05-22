@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<title>CNTENSET_EL0 (A53_PMU_1) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___a53_pmu_1.html")>A53_PMU_1 Module</a> &gt; CNTENSET_EL0 (A53_PMU_1) Register</p><h1>CNTENSET_EL0 (A53_PMU_1) Register</h1>
+<h2>CNTENSET_EL0 (A53_PMU_1) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>CNTENSET_EL0</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000C00</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FED30C00 (CORESIGHT_A53_PMU_1)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Performance Monitors Count Enable Set Register</td></tr>
+</table>
+<p></p>
+<h2>CNTENSET_EL0 (A53_PMU_1) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>C</td><td class="center">31</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>PMCCNTR_EL0 enable bit. Enables the cycle counter register.</td></tr>
+<tr valign=top><td>P</td><td class="center">30:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Event counter enable bit for EVCNTR&lt;x>. N is the value in PMCR_EL0.N. Bits [30:N] are RAZ/WI.Possible values of each bit are:</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

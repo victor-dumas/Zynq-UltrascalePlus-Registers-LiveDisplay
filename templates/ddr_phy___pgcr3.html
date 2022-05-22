@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<title>PGCR3 (DDR_PHY) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddr_phy.html")>DDR_PHY Module</a> &gt; PGCR3 (DDR_PHY) Register</p><h1>PGCR3 (DDR_PHY) Register</h1>
+<h2>PGCR3 (DDR_PHY) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>PGCR3</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000001C</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD08001C (DDR_PHY)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x050A0080</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>PHY General Configuration Register 3</td></tr>
+</table>
+<p></p>
+<h2>PGCR3 (DDR_PHY) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>CKNEN</td><td class="center">27:24</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x5</td><td>CKN Enable: Controls whether the CKN going to the SDRAM is enabled (toggling) or disabled (static value) and whether the CKN is inverted. Two bits for each of the two CKN pairs. Valid values for the two bits are:<br/>2b00 = CKN disabled (Driven to constant 0)<br/>2b01= CKN toggling with normal polarity (Default setting)<br/>2b10 = CKN toggling with inverted polarity<br/>2b11 = CKN disabled (Driven to constant 1)</td></tr>
+<tr valign=top><td>CKEN</td><td class="center">19:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0xA</td><td>CK Enable: Controls whether the CK going to the SDRAM is enabled (toggling) or disabled (static value) and whether the CK is inverted. Two bits for each of the two CK pairs. Valid values for the two bits are:<br/>2b00 = CK disabled (Driven to constant 0)<br/>2b01 = CK toggling with inverted polarity<br/>2b10 = CK toggling with normal polarity (This should be the default<br/>setting)<br/>2b11 = CK disabled (Driven to constant 1)</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">15</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Return zeroes on reads.</td></tr>
+<tr valign=top><td>GATEACRDCLK</td><td class="center">14:13</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Enable Clock Gating for AC [0] ctl_rd_clk: Enables, when set, clock gating for power saving. Valid values are:<br/>2b00 = Dynamic<br/>2b01 = Always ON<br/>2b10 = Always OFF<br/>2b11 = Reserved</td></tr>
+<tr valign=top><td>GATEACDDRCLK</td><td class="center">12:11</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Enable Clock Gating for AC [0]ddr_clk: Enables, when set, clock gating for power saving. Valid values are:<br/>2b00 = Dynamic<br/>2b01 = Always ON<br/>2b10 = Always OFF<br/>2b11 = Reserved</td></tr>
+<tr valign=top><td>GATEACCTLCLK</td><td class="center">10:9</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Enable Clock Gating for AC [0] ctl_clk: Enables, when set, clock gating for power saving. Valid values are:<br/>2b00 = Dynamic<br/>2b01 = Always ON<br/>2b10 = Always OFF<br/>2b11 = Reserved</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 8</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Return zeroes on reads.</td></tr>
+<tr valign=top><td>DDLBYPMODE</td><td class="center"> 7:6</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x2</td><td>Controls DDL Bypass Modes. Valid values are:<br/>2b00 = Normal dynamic control<br/>2b01 = All DDLs bypassed<br/>2b10 = No DDLs bypassed<br/>2b11 = Reserved</td></tr>
+<tr valign=top><td>IOLB</td><td class="center"> 5</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>I/O Loop-Back Select: Selects where inside the I/O the loop-back of<br/>signals happens. Valid values are:<br/>1b0 = Loopback is after output buffer; output enable must be<br/>asserted<br/>1b1 = Loopback is before output buffer; output enable is don't care</td></tr>
+<tr valign=top><td>RDMODE</td><td class="center"> 4:3</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>AC Receive FIFO Read Mode. Valid values are:<br/>2b00 = 2 stage synchronizer async FIFO<br/>2b01 = 3 stage synchronizer async FIFO<br/>2b10 = 4 stage synchronizer async FIFO<br/>2b11 = AC loopback read mode FIFO static read response enabled<br/>Note: The static response mode should be selected only when<br/>system is in IDLE. The static response mode must be OFF when<br/>Initialization, Training, BIST or DCU operation is performed.</td></tr>
+<tr valign=top><td>DISRST</td><td class="center"> 2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Disables the Read FIFO reset: When set, read receive FIFO can't be<br/>reset from ctl_dx_rdfifo_rstn input. Valid values are:<br/>1b0 = RX Read FIFO is reset when ctl_dx_rxfifo_rstn is LOW.<br/>1b1 = RX Read FIFO can't be reset by ctl_dx_rxfifo_rstn</td></tr>
+<tr valign=top><td>CLKLEVEL</td><td class="center"> 1:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Selects the level to which clocks will be stalled when clock gating is<br/>enabled in PHY. Valid values are:<br/>2b00 = Clocks will stall to static level 0<br/>2b01 = Clocks will stall to static level 1<br/>2b10 - 2b11= Clocks will toggle at slow speed.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

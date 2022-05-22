@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<title>ECC_Register (NAND) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___nand.html")>NAND Module</a> &gt; ECC_Register (NAND) Register</p><h1>ECC_Register (NAND) Register</h1>
+<h2>ECC_Register (NAND) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>ECC_Register</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000034</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF100034 (NAND)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>ECC Configuration.</td></tr>
+</table>
+<p></p>
+<h2>ECC_Register (NAND) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:28</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>Slc_Mlc</td><td class="center">27</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Select the error correction method:<br/>0: Hamming error correction.<br/>1: BCH error correction.<br/>Note: Change this value only when controller is not communicating with the memory device.</td></tr>
+<tr valign=top><td>ECC_size</td><td class="center">26:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Register used to program the ECC size for write<br/>and read data transaction.<br/>For SLC use ECC size as:<br/>Page size 512B - 11'h 003<br/>Page size 2KB - 11'h 00C<br/>Page size 4KB - 11'h 018<br/>Page size 8KB - 11'h 030<br/>Page size 16KB - 11'h 060<br/>For MLC 4-bit error correction use ECC size as:<br/>Page size 512B - 11'h 007<br/>Page size 2KB - 11'h 01A<br/>Page size 4KB - 11'h 034<br/>Page size 8KB - 11'h 068<br/>Page size 16KB - 11'h 0D0<br/>For MLC 8-bit error correction use ECC size as:<br/>Page size 512B - 11'h 00D<br/>Page size 2KB - 11'h 034<br/>Page size 4KB - 11'h 068<br/>Page size 8KB - 11'h 0D0<br/>Page size 16KB - 11'h 1A0<br/>For MLC 12-bit error correction use ECC size as:<br/>Page size 2KB - 11'h 04E<br/>Page size 4KB - 11'h 09C<br/>Page size 8KB - 11'h 138<br/>Page size 16KB - 11'h 270<br/>For MLC 24-bit error correction use ECC size as:<br/>Page size 2KB - 11'h 054<br/>Page size 4KB - 11'h 0A8<br/>Page size 8KB - 11'h 150<br/>Page size 16KB - 11'h 2A0<br/>Note: Change this value only when controller is not communicating with the memory device.</td></tr>
+<tr valign=top><td>ECC_addr</td><td class="center">15:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Register required to issue ECC Address for change read<br/>column / change write column.<br/>For SLC use ECC Address as:<br/>Page size 512 - 16'h 020D<br/>Page size 2k - 16'h 834<br/>Page size 4k - 16'h 1068<br/>Page size 8k - 16'h 20D0<br/>Page size 16k - 16'h 4460<br/>For MLC 4-bit error correction use ECC Addr as:<br/>Page size 512 - 16'h 0209<br/>Page size 2k - 16'h 0826<br/>Page size 4k - 16'h 104C<br/>Page size 8k - 16'h 2098<br/>Page size 16k - 16'h 43f0<br/>For MLC 8-bit error correction use ECC Addr as:<br/>Page size 512 - 16'h 0203<br/>Page size 2k - 16'h 080C<br/>Page size 4k - 16'h 1018<br/>Page size 8k - 16'h 2030<br/>Page size 16k - 16'h 4320<br/>For MLC 12-bit error correction use ECC Addr as:<br/>Page size 2k - 16'h 0822<br/>Page size 4k - 16'h 1044<br/>Page size 8k - 16'h 2088<br/>Page size 16k - 16'h 4250<br/>For MLC 24-bit error correction use ECC Addr as:<br/>Page size 2k - 16'h 081C<br/>Page size 4k - 16'h 1038<br/>Page size 8k - 16'h 2070<br/>Page size 16k - 16'h 4220<br/>Note: Change this value only when controller is not communicating with the memory device.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

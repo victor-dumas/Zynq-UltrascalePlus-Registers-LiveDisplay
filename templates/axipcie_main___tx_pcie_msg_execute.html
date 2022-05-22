@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<title>TX_PCIE_MSG_EXECUTE (AXIPCIE_MAIN) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___axipcie_main.html")>AXIPCIE_MAIN Module</a> &gt; TX_PCIE_MSG_EXECUTE (AXIPCIE_MAIN) Register</p><h1>TX_PCIE_MSG_EXECUTE (AXIPCIE_MAIN) Register</h1>
+<h2>TX_PCIE_MSG_EXECUTE (AXIPCIE_MAIN) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>TX_PCIE_MSG_EXECUTE</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000620</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD0E0620 (AXIPCIE_MAIN)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">ro<span class="tooltiptext">Read-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>PCIe Message Request Execution.</td></tr>
+</table>
+<p></p>
+<h2>TX_PCIE_MSG_EXECUTE (AXIPCIE_MAIN) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:26</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback></td></tr>
+<tr valign=top><td>msg_done_status</td><td class="center">25:24</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Message Transaction Done Status. Cleared when msg_execute is written to 1. Set to the Message transaction status when msg_done is set to 1.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">23:17</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback></td></tr>
+<tr valign=top><td>msg_done</td><td class="center">16</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Message Transaction Done. Cleared when msg_execute is written to 1 to start a new Message transaction.<br/>Set to 1 when the transaction is completed.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">15:9</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback></td></tr>
+<tr valign=top><td>msg_busy</td><td class="center"> 8</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Message Transaction Busy. Set to 1 when msg_execute is written to 1. Cleared when msg_done is set to 1 indicating that the transaction is completed.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 7:1</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback></td></tr>
+<tr valign=top><td>msg_execute</td><td class="center"> 0</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Message Transaction Execute. Write a 1 to transmit an Message transaction. The transaction is created using the values in the CONTROL, ADDRESS, and DATA regsiters.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

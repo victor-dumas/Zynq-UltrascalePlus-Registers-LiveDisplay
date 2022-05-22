@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<title>USB3_REGS Module</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> > USB3_REGS Module</p><h1>USB3_REGS Module</h1>
+<h2>USB3_REGS Module Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Module Name</th><td width=80% class=noborder>Universal Serial Bus 3.0 (USB3_REGS)</td></tr>
+<tr valign=top><th width=20% class=sumparam>Modules of this Type</th><td width=80% class=noborder>USB3_0, USB3_1</td></tr>
+<tr valign=top><th class=sumparam>Base Address</th><td class=noborder>0x00FF9D0000 (USB3_0)<br/>0x00FF9E0000 (USB3_1)</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>USB Core 0 Controller</td></tr>
+</table>
+<h2>USB3_REGS Module Register Summary</h2>
+<table>
+<tr valign=top><th width=20%>Register Name</th><th width=10%>Address</th><th width=10%>Width</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=40%>Description</th></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("usb3_regs___cur_pwr_st.html")>cur_pwr_st</a></td><td class="hex">0x0000000000</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>Indicates current power state of the core</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("usb3_regs___connect_st.html")>connect_st</a></td><td class="hex">0x0000000004</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>Indicates if USB3 Always ON block has connection to at least 1 host or device during Hibernation state</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("usb3_regs___bus_filter.html")>bus_filter</a></td><td class="hex">0x0000000030</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>Disables internal bus filters that are enabled by DWC_USB3_EN_BUS_FILTERS</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("usb3_regs___pme_en.html")>pme_en</a></td><td class="hex">0x0000000034</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>Enable signal for pme_generation</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("usb3_regs___port.html")>port</a></td><td class="hex">0x0000000038</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>Device characteristics</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("usb3_regs___pmu_usb.html")>pmu_usb</a></td><td class="hex">0x000000003C</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>Power state transition request by<br/>PMU to USB</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("usb3_regs___jitter_adjust.html")>jitter_adjust</a></td><td class="hex">0x0000000040</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000020</td><td>High Speed Jitter Adjustment</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("usb3_regs___pwr_config_usb3.html")>pwr_config_usb3</a></td><td class="hex">0x0000000048</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>USB3 PHY power config</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("usb3_regs___pwr_config_usb2.html")>pwr_config_usb2</a></td><td class="hex">0x000000004C</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>USB2 PHY power config</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("usb3_regs___host.html")>host</a></td><td class="hex">0x0000000050</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x000007E8</td><td>Current BELT value</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("usb3_regs___coherency.html")>coherency</a></td><td class="hex">0x000000005C</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>Coherency Mode</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("usb3_regs___reg_ctrl.html")>reg_ctrl</a></td><td class="hex">0x0000000060</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>reg_ctrl</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("usb3_regs___ir_status.html")>ir_status</a></td><td class="hex">0x0000000064</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>ir_status</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("usb3_regs___ir_mask.html")>ir_mask</a></td><td class="hex">0x0000000068</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000003</td><td>ir_mask</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("usb3_regs___ir_enable.html")>ir_enable</a></td><td class="hex">0x000000006C</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>ir_enable</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("usb3_regs___ir_disable.html")>ir_disable</a></td><td class="hex">0x0000000070</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>ir_disable</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("usb3_regs___fpd_pipe_clk.html")>fpd_pipe_clk</a></td><td class="hex">0x000000007C</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>fpd_pipe_clk</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("usb3_regs___fpd_power_prsnt.html")>fpd_power_prsnt</a></td><td class="hex">0x0000000080</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>fpd_power_prsnt</td></tr>
+</table>
+<p id=foot class=footer></p>
+</body>
+</html>

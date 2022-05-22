@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<title>TRANSFER_SIZE (QSPI) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___qspi.html")>QSPI Module</a> &gt; TRANSFER_SIZE (QSPI) Register</p><h1>TRANSFER_SIZE (QSPI) Register</h1>
+<h2>TRANSFER_SIZE (QSPI) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>TRANSFER_SIZE</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x00000000C4</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF0F00C4 (QSPI)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Transfer Size</td></tr>
+</table>
+<p></p>
+<h2>TRANSFER_SIZE (QSPI) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:29</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>RESERVED. Return 0 when read. Writes ignored.</td></tr>
+<tr valign=top><td>SIZE</td><td class="center">28:2</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Specifies the number of 4-byte words the QSPI will read from memory<br/>Size is word aligned, so this field is only 27-bits. (2 lsb's are 0)<br/>The value in this register signifies the number of words to be read from memory.<br/>This is a static signal - should not be changed while controller is actively transmitting/receiving data to/from Flash device</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 1:0</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>RESERVED. Return 0 when read. Writes ignored.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

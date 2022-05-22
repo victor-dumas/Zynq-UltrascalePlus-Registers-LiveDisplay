@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<title>ATB_RESP_EN (FPD_SLCR) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___fpd_slcr.html")>FPD_SLCR Module</a> &gt; ATB_RESP_EN (FPD_SLCR) Register</p><h1>ATB_RESP_EN (FPD_SLCR) Register</h1>
+<h2>ATB_RESP_EN (FPD_SLCR) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>ATB_RESP_EN</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000006014</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD616014 (FPD_SLCR)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>AXI Response Enables.</td></tr>
+</table>
+<p>ATB can respond for the slave when a timeout event occurs. 0: do not respond (system may continue to hang). 1: send response to master (the type of response depends on the ATB_RESP_TYPE register bit setting).</p>
+<h2>ATB_RESP_EN (FPD_SLCR) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:3</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>afifs1</td><td class="center"> 2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>ATB instance 5: FPD Main Switch to M_AXI_HPM1_FPD inteface.</td></tr>
+<tr valign=top><td>afifs0</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>ATB instance 4: FPD Main Switch to M_AXI_HPM0_FPD inteface.</td></tr>
+<tr valign=top><td>fpds</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>ATB instance 3: FPD Main Switch to SIOU slaves.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<title>ACIOCR4 (DDR_PHY) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddr_phy.html")>DDR_PHY Module</a> &gt; ACIOCR4 (DDR_PHY) Register</p><h1>ACIOCR4 (DDR_PHY) Register</h1>
+<h2>ACIOCR4 (DDR_PHY) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>ACIOCR4</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000510</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD080510 (DDR_PHY)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>AC I/O Configuration Register 4</td></tr>
+</table>
+<p></p>
+<h2>ACIOCR4 (DDR_PHY) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>LBCLKGATE</td><td class="center">31</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Loopback Clock Gate: When set to 1, this signal will gate (stop)<br/>the clock to all registers inside a correspondingly numbered<br/>address/command loopback (LB) slice.</td></tr>
+<tr valign=top><td>ACOECLKGATE1</td><td class="center">30</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>I/O Output Enable Clock Gate for AC Macro 1: When set to 1, this<br/>signal will gate (stop) the clocks to all registers inside the I/O<br/>output enable (D) slice.</td></tr>
+<tr valign=top><td>ACPDRCLKGATE1</td><td class="center">29</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>I/O Power-Down Receiver Clock Gate fro AC Macro 1: When set<br/>to 1, this signal will gate (stop) the clocks to all registers inside<br/>the I/O power down receiver (D) slice.</td></tr>
+<tr valign=top><td>ACTECLKGATE1</td><td class="center">28</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>I/O Terminate Enable Clock Gate for AC Macro 1: When set to 1,<br/>this signal will gate (stop) the clocks to all registers inside the I/O<br/>termination (D) slice.</td></tr>
+<tr valign=top><td>CKNCLKGATE1</td><td class="center">27:26</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>CK# Clock Gate for AC Macro 1: When set to 1, this signal will<br/>gate (stop) the clocks to all registers inside a correspondingly<br/>numbered CK# output (D) slice.</td></tr>
+<tr valign=top><td>CKCLKGATE1</td><td class="center">25:24</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>CK Clock Gate for AC Macro 1: When set to 1, this signal will<br/>gate (stop) the clocks to all registers inside a correspondingly<br/>numbered CK output (D) slice.</td></tr>
+<tr valign=top><td>ACCLKGATE1</td><td class="center">23:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Address/Command Clock Gate for AC Macro 1: When set to 1,<br/>this signal will gate (stop) the clock to all registers inside a<br/>correspondingly numbered address/command output (D) slice.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<title>err_status (XPPU_SINK) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___xppu_sink.html")>XPPU_SINK Module</a> &gt; err_status (XPPU_SINK) Register</p><h1>err_status (XPPU_SINK) Register</h1>
+<h2>err_status (XPPU_SINK) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>err_status</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000FF00</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF9CFF00 (LPD_XPPU_SINK)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Access Violation Error Status.</td></tr>
+</table>
+<p>One of 2 access violations can occur. Each is defined by an APB address range within the XPPU_Sink address range. 1) Received a poisoned AXI Transaction from XPPU via the APB interface (0xFD4F_0000 to 0xFD4F_FEFF). 2) APB Register Access Error (upper 256 bytes: 0xFD4F_FF00 to 0xFD4F_FFFF). The XPPU_Sink records the first violation it receives. Once a violation is detected, subsequent transactions are not recorded until the XPPU_Sink is reset. The ERR_CTRL [PSLVERR] can enable a violation event to cause the XPPU_Sink to assert the PSLVERR signal back to the APB interconnect.</p>
+<h2>err_status (XPPU_SINK) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>rdwr</td><td class="center">31</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>R/W type of access violation.<br/>0: read.<br/>1: write.</td></tr>
+<tr valign=top><td>addr</td><td class="center">11:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Offset Address<br/>of access violation.<br/>Bits[11:0] correspond to APB address bits [11:0].</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

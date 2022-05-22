@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<title>dp_stc_clkctrl (SIOU) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___siou.html")>SIOU Module</a> &gt; dp_stc_clkctrl (SIOU) Register</p><h1>dp_stc_clkctrl (SIOU) Register</h1>
+<h2>dp_stc_clkctrl (SIOU) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>dp_stc_clkctrl</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000430</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD3D0430 (SIOU)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000001</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>dp_stc_ref_clk control register</td></tr>
+</table>
+<p></p>
+<h2>dp_stc_clkctrl (SIOU) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:11</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>refsel</td><td class="center">10</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>0 - bypass divider; 1 - Use divider output</td></tr>
+<tr valign=top><td>lanesel</td><td class="center"> 9:8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Select which lane refclk should be used as STC clock source</td></tr>
+<tr valign=top><td>uptog</td><td class="center"> 7</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Pulse this bit after divisor value change</td></tr>
+<tr valign=top><td>divisor</td><td class="center"> 6:1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Divisor value for the divider</td></tr>
+<tr valign=top><td>soft_rst</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Reset for the clock divider</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

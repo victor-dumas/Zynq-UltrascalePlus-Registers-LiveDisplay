@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<title>Priority_Ctrl_Reg (FUNNEL3P) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___funnel3p.html")>FUNNEL3P Module</a> &gt; Priority_Ctrl_Reg (FUNNEL3P) Register</p><h1>Priority_Ctrl_Reg (FUNNEL3P) Register</h1>
+<h2>Priority_Ctrl_Reg (FUNNEL3P) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>Priority_Ctrl_Reg</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000004</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FE910004 (CORESIGHT_SOC_FUNN_0)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>The Priority Control Register defines the order in which inputs are selected. Each 3-bit field represents a priority for each particular slave interface. Location 0 has the priority value for the first slave port. Location 1 is the priority value for the second slave port, Location 2 is the third, down to location 7, which has the priority value of the eighth slave port. Values represent the priority value for each port number. If you want to give highest priority to a particular slave port, the corresponding port must be programmed with the lowest value. Typically this is likely to be a port that has more important data or that has a small FIFO and is therefore likely to overflow.<br/>If you want to give lowest priority to a particular slave port, the corresponding slave port must be programmed with the highest value. Typically this is likely to be a device that has a large FIFO that is less likely to overflow or a source that has information that is of lower importance.</td></tr>
+</table>
+<p></p>
+<h2>Priority_Ctrl_Reg (FUNNEL3P) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>PriPort2</td><td class="center"> 8:6</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Priority value of the 3rd port.</td></tr>
+<tr valign=top><td>PriPort1</td><td class="center"> 5:3</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Priority value of the 2nd port.</td></tr>
+<tr valign=top><td>PriPort0</td><td class="center"> 2:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Priority value of the first slave port. The value written into this location is the value that you want to assign the first slave port.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

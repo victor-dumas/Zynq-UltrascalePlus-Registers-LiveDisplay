@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<title>LBUFLEVEL (ETF8K) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___etf8k.html")>ETF8K Module</a> &gt; LBUFLEVEL (ETF8K) Register</p><h1>LBUFLEVEL (ETF8K) Register</h1>
+<h2>LBUFLEVEL (ETF8K) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>LBUFLEVEL</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000002C</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FE95002C (CORESIGHT_SOC_ETF_2)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">ro<span class="tooltiptext">Read-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Reading this register returns the maximum fill level of the trace memory in 32_bit words since this register was last read. Reading this register also results in its contents being updated to the current fill level.This register does not apply when the TMC is programmed for Scatter Gather operation in ETR configuration. In this case, reading this register will return 0x00000000.When the TraceCaptEn bit is cleared, this register retains it last value. If TraceCaptEn is 0 and a 1 is written to it, the LBUFLEVEL register is cleared.The fill level information is mainly useful for performance analysis.Reading this register alters the internal state of the TMC, hence this register can be read only if the device is unlocked. Reading this register when the device is locked will return 0x00000000.The width of this register in the ETB/ETF configurations is 1+log2(MEM_SIZE). In the ETR configuration, the width of this register is 31 bits. Note that an extra bit is needed to return the correct fill level when full.</td></tr>
+</table>
+<p></p>
+<h2>LBUFLEVEL (ETF8K) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>LBUFLEVEL</td><td class="center">11:0</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Indicates the maximum fill level of the trace memory in 32_bit words since this register was last read.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<title>BUFWM (ETF8K) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___etf8k.html")>ETF8K Module</a> &gt; BUFWM (ETF8K) Register</p><h1>BUFWM (ETF8K) Register</h1>
+<h2>BUFWM (ETF8K) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>BUFWM</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000034</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FE950034 (CORESIGHT_SOC_ETF_2)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>The value programmed into this register indicates the desired threshold vacancy level in 32_bit words in the trace memory. When the space into FIFO is less than or equal to this value (ie Fill level >= MEM_SIZE - BUFWM), the FULL output is pulled HIGH and the Full bit in the STS register is set. This register is used only in the Software FIFO mode and the Hardware FIFO mode. In the Circular Buffer mode, this functionality can be obtained by programming the RWP to the desired vacancy trigger level, so that when the pointer wraps around, the Full bit is set indicating that the vacancy level has fallen below the desired level. The maximum value that can be written into this register is MEM_SIZE - 1 (in which case the Full bit is set after the first 32_bit word is written to trace memory.).Writing to this register other than when TMCReady=1 and TraceCaptEn=0 will result in Unpredictable behavior.This register is ignored when the TMC is programmed for scatter-gather operation in ETR configuration.</td></tr>
+</table>
+<p></p>
+<h2>BUFWM (ETF8K) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>BUFWM</td><td class="center">10:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Indicates the desired threshold vacancy level in 32_bit words in the trace memory.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

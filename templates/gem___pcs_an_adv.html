@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<title>pcs_an_adv (GEM) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___gem.html")>GEM Module</a> &gt; pcs_an_adv (GEM) Register</p><h1>pcs_an_adv (GEM) Register</h1>
+<h2>pcs_an_adv (GEM) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>pcs_an_adv</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000210</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF0B0210 (GEM0)<br/>0x00FF0C0210 (GEM1)<br/>0x00FF0D0210 (GEM2)<br/>0x00FF0E0210 (GEM3)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000020</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>The value of this register is used to transmit the base page of the GEM PCS capabilities. Note this is only valid for the default configuration where SGMII is not included in the GEM. In this case the registers is reserved. When SGMII is included, this register returns fixed 0x00000001 when read. SGMII specifies that the transmit configuration information sent from the MAC to the PHY is fixed with bit 14 set to 1 to indicate acknowledge, bit 0 set to 1 to indicate SGMII and all other bits set to 0.</td></tr>
+</table>
+<p></p>
+<h2>pcs_an_adv (GEM) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:16</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Set to zero.</td></tr>
+<tr valign=top><td>next_page</td><td class="center">15</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Next page. When set active high, this bit is used during auto-negotiation to indicate to the link partner that the PCS requires exchanging next pages.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">14</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Set to zero.</td></tr>
+<tr valign=top><td>remote_fault</td><td class="center">13:12</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Remote fault [1:0] - indicates and classifies a remote fault condition to the link partner:00: No error, Link O.K.01: Link Failure. 10: Off line. 11: Auto-negotiation error.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">11:9</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Set to zero.</td></tr>
+<tr valign=top><td>pause</td><td class="center"> 8:7</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Pause[1:0] - used to provide a pause capability mechanism as follows:00: No pause. 01: Symmetric pause. 10: Asymmetric pause toward link partner. 11: Both symmetric pause and asymmetric pause toward link device.</td></tr>
+<tr valign=top><td>half_duplex</td><td class="center"> 6</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Half duplex - this bit defines to the link partner whether the GEM is capable of supporting half duplex operation.0: The GEM cannot support half duplex. 1: The GEM can support half duplex.</td></tr>
+<tr valign=top><td>full_duplex</td><td class="center"> 5</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Full duplex - this bit defines to the link partner whether the GEM is capable of supporting full duplex operation. 0: The GEM cannot support full duplex. 1: The GEM can support full duplex.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 4:0</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Set to zero.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

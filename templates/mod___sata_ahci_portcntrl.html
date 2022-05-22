@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<title>SATA_AHCI_PORTCNTRL Module</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> > SATA_AHCI_PORTCNTRL Module</p><h1>SATA_AHCI_PORTCNTRL Module</h1>
+<h2>SATA_AHCI_PORTCNTRL Module Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Module Name</th><td width=80% class=noborder>SATA_AHCI_PORTCNTRL Module</td></tr>
+<tr valign=top><th width=20% class=sumparam>Modules of this Type</th><td width=80% class=noborder>SATA_AHCI_PORT0_CNTRL, SATA_AHCI_PORT1_CNTRL</td></tr>
+<tr valign=top><th class=sumparam>Base Address</th><td class=noborder>0x00FD0C0100 (SATA_AHCI_PORT0_CNTRL)<br/>0x00FD0C0180 (SATA_AHCI_PORT1_CNTRL)</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>SATA AHCI Port 0 Control</td></tr>
+</table>
+<h2>SATA_AHCI_PORTCNTRL Module Register Summary</h2>
+<table>
+<tr valign=top><th width=20%>Register Name</th><th width=10%>Address</th><th width=10%>Width</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=40%>Description</th></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_portcntrl___pxclb.html")>PxCLB</a></td><td class="hex">0x0000000000</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>Port x Command List Base Address (PxCLB)</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_portcntrl___pxclbu.html")>PxCLBU</a></td><td class="hex">0x0000000004</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>Port x Command List Base Address Upper 32-bits (PxCLBU)</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_portcntrl___pxfb.html")>PxFB</a></td><td class="hex">0x0000000008</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>Port x FIS Base Address (PxFB)</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_portcntrl___pxfbu.html")>PxFBU</a></td><td class="hex">0x000000000C</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>Port x FIS Base Address Upper 32-bits (PxFBU)</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_portcntrl___pxis.html")>PxIS</a></td><td class="hex">0x0000000010</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>Port x Interupt Status (PxIS)</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_portcntrl___pxie.html")>PxIE</a></td><td class="hex">0x0000000014</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>Port x Interrupt Enable (PxIE)</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_portcntrl___pxcmd.html")>PxCMD</a></td><td class="hex">0x0000000018</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00400000</td><td>Port x Command and Status (PxCMD)</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_portcntrl___pxtfd.html")>PxTFD</a></td><td class="hex">0x0000000020</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0000007F</td><td>Port x Task File Data (PxTFD)</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_portcntrl___pxsig.html")>PxSIG</a></td><td class="hex">0x0000000024</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0xFFFFFFFF</td><td>Port x Signature (PxSIG).</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_portcntrl___pxssts.html")>PxSSTS</a></td><td class="hex">0x0000000028</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00000000</td><td>Port x serial ATA Status (SCR0: Sstatus) (PxSSTS)</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_portcntrl___pxsctl.html")>PxSCTL</a></td><td class="hex">0x000000002C</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000300</td><td>Port x Serial ATA Control (SCR2: SControl) (PxSCTL)</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_portcntrl___pxserr.html")>PxSERR</a></td><td class="hex">0x0000000030</td><td class="center">32</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x00000000</td><td>Port x Serial ATA Error (SCR1: SError)</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_portcntrl___pxsact.html")>PxSACT</a></td><td class="hex">0x0000000034</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>Port x Serial ATA Active (SCR3: SActive)</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_portcntrl___pxci.html")>PxCI</a></td><td class="hex">0x0000000038</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>PxCI: Port x Command Issue</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_portcntrl___pxsntf.html")>PxSNTF</a></td><td class="hex">0x000000003C</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>Port x Serial ATA Notification (SCR4: SNotification)</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_portcntrl___pxfbs.html")>PxFBS</a></td><td class="hex">0x0000000040</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00004000</td><td>Port x FIS-based Switching Control</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_portcntrl___pxdevslp.html")>PxDEVSLP</a></td><td class="hex">0x0000000044</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000002</td><td>PxDEVSLP - Port x Device Sleep</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_portcntrl___pberr.html")>PBERR</a></td><td class="hex">0x0000000070</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000003</td><td>PBERR - Port 0/1 BIST Error.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_portcntrl___cmds.html")>CMDS</a></td><td class="hex">0x0000000074</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00000002</td><td>CMDS - Port 0/1 Command Status Error.</td></tr>
+</table>
+<p id=foot class=footer></p>
+</body>
+</html>

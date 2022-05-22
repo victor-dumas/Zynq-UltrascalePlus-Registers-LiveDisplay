@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<title>reg_blocksize (SDIO) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___sdio.html")>SDIO Module</a> &gt; reg_blocksize (SDIO) Register</p><h1>reg_blocksize (SDIO) Register</h1>
+<h2>reg_blocksize (SDIO) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>reg_blocksize</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000004</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF160004 (SD0)<br/>0x00FF170004 (SD1)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>16</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Configure the Number of Bytes in a Data Block.</td></tr>
+</table>
+<p></p>
+<h2>reg_blocksize (SDIO) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>sdma_bufboundary</td><td class="center">14:12</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Write the size of the contiguous DMA buffer in the system memory.<br/>The System Address register is updated at every system boundary during the DMA transfer<br/>The DMA transfer waits at the every boundary specified by these fields and the SDIO controller generates the DMA interrupt to request the controller to update the System Address register.<br/>This function is active when the [DMA Enable] bit in the Transfer Mode register is set = 1.<br/>000b: 4KB<br/>001b: 8KB<br/>010b: 16KB<br/>011b: 32KB<br/>100b: 64KB<br/>101b: 128KB<br/>110b: 256KB<br/>111b: 512KB</td></tr>
+<tr valign=top><td>xfer_blocksize</td><td class="center">11:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Block size for data transfers for CMD17, CMD18, CMD24, CMD25 and CMD53. Read-only. Valid if no transaction is executing (i.e after a transaction has stopped).<br/>0000h: No data transfer.<br/>0001h: 1 byte<br/>0002h: 2 bytes<br/>0003h: 3 bytes<br/>..<br/>0200h: 512 bytes<br/>..<br/>0800h: 2048 bytes (maximum block size)</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

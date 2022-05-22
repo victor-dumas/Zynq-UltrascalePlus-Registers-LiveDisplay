@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<title>EFUSE_RD_ADDR (EFUSE) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___efuse.html")>EFUSE Module</a> &gt; EFUSE_RD_ADDR (EFUSE) Register</p><h1>EFUSE_RD_ADDR (EFUSE) Register</h1>
+<h2>EFUSE_RD_ADDR (EFUSE) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>EFUSE_RD_ADDR</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000010</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FFCC0010 (EFUSE)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>eFuse Read Address</td></tr>
+</table>
+<p></p>
+<h2>EFUSE_RD_ADDR (EFUSE) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>EFUSE</td><td class="center">12:11</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Type of eFuse to read from.<br/>0: Main eFuse array.<br/>1: reserved<br/>2: PUF Syndrome data (LSB).<br/>3: PUF Syndrome data (MSB).</td></tr>
+<tr valign=top><td>ROW</td><td class="center">10:5</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>eFuse row address</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 4:0</td><td class="tooltip grayback">waz<span class="tooltiptext">Write as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved - The eFuse will read an entire 32-bit row at a time.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

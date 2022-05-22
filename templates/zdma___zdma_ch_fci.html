@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<title>ZDMA_CH_FCI (ZDMA) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___zdma.html")>ZDMA Module</a> &gt; ZDMA_CH_FCI (ZDMA) Register</p><h1>ZDMA_CH_FCI (ZDMA) Register</h1>
+<h2>ZDMA_CH_FCI (ZDMA) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>ZDMA_CH_FCI</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000118</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FFA80118 (ADMA_CH0)<br/>0x00FFA90118 (ADMA_CH1)<br/>0x00FFAA0118 (ADMA_CH2)<br/>0x00FFAB0118 (ADMA_CH3)<br/>0x00FFAC0118 (ADMA_CH4)<br/>0x00FFAD0118 (ADMA_CH5)<br/>0x00FFAE0118 (ADMA_CH6)<br/>0x00FFAF0118 (ADMA_CH7)<br/>0x00FD500118 (GDMA_CH0)<br/>0x00FD510118 (GDMA_CH1)<br/>0x00FD520118 (GDMA_CH2)<br/>0x00FD530118 (GDMA_CH3)<br/>0x00FD540118 (GDMA_CH4)<br/>0x00FD550118 (GDMA_CH5)<br/>0x00FD560118 (GDMA_CH6)<br/>0x00FD570118 (GDMA_CH7)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Channel Flow Control Register</td></tr>
+</table>
+<p></p>
+<h2>ZDMA_CH_FCI (ZDMA) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:6</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved for future use</td></tr>
+<tr valign=top><td>PROG_CELL_CNT</td><td class="center"> 3:2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>This field is used when flow control interface is enabled and it is attached to the DST side. These register fields can be used to limit the common buffer usage of the flow controlled channel. When FCI is controlling the write side, read DMA side is not controlled and may use the entire common buffer. This might starve/limit the bandwidth of other DMA channels. By programming the PROG_CELL_CNT, user can limit the number of 128/64-bit entries used by channel in common buffer. Maximum number of entries used by a channel:<br/>0: 32 + AxLEN<br/>1: 64 + AxLEN<br/>2: 128 + AxLEN<br/>3: 256</td></tr>
+<tr valign=top><td>SIDE</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>0: Flow Control Interface is attached to Read side when enabled<br/>1: Flow Control Interface is attached to Write side when enabled</td></tr>
+<tr valign=top><td>EN</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>0: Flow Control Interface Disable<br/>1: Flow Control Interface Enable</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

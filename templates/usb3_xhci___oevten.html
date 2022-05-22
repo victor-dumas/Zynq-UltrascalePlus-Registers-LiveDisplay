@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<title>OEVTEN (USB3_XHCI) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___usb3_xhci.html")>USB3_XHCI Module</a> &gt; OEVTEN (USB3_XHCI) Register</p><h1>OEVTEN (USB3_XHCI) Register</h1>
+<h2>OEVTEN (USB3_XHCI) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>OEVTEN</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000CC0C</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FE20CC0C (USB3_0_XHCI)<br/>0x00FE30CC0C (USB3_1_XHCI)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>OTG Events Enable Register<br/>Setting a bit in this register enables the generation of corresponding events in OEVT and assertion of otg_interrupt due to this event. When the enable bit is 1'b0, the event is<br/>not be set in OEVT and otg_interrupt is not asserted due to this event.</td></tr>
+</table>
+<p></p>
+<h2>OEVTEN (USB3_XHCI) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:28</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>OTGXhciRunStpSetEvntEn</td><td class="center">27</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>OTG Host Run Stop Set Event Enable (OTGXhciRunStpSetEvntEn)<br/>When this bit is set, OEVT.OTGXhciRunStpSetEvnt is enabled. If not, the event is disabled.</td></tr>
+<tr valign=top><td>OTGDevRunStpSetEvntEn</td><td class="center">26</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>OTG Device Run Stop Set Event Enable (OTGDevRunStpSetEvntEn)<br/>When this bit is set, OEVT.DevRunStpSet event is enabled. If not, that event is disabled.</td></tr>
+<tr valign=top><td>OTGHibEntryEvntEn</td><td class="center">25</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>OTG Hibernation Entry Event Enable (OTGHibEntryEn)<br/>When this bit is set, OEVT.HibEntryEvnt is enabled. If not, the event is disabled.</td></tr>
+<tr valign=top><td>OTGConIDStsChngEvntEn</td><td class="center">24</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>OTGCommonEvtInfoEn[0]<br/>Connector ID Status Change<br/>Event (OTGConIDStsChngEvnt)<br/>Set in both A-Dev/B-Dev Mode:<br/>This event is generated when there is a change in connector ID status</td></tr>
+<tr valign=top><td>HRRConfNotifEvntEn</td><td class="center">23</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>OTGCommonEvtInfoEn[2]<br/>HRRConfNotif Event Enable (HRRConfNotifEvntEn)<br/>When this bit is set, OEVT.HRRConfNotifEvnt is enabled. If not, the event is disabled.</td></tr>
+<tr valign=top><td>HRRInitNotifEvntEn</td><td class="center">22</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>OTGCommonEvtInfoEn[1]<br/>HRRInitNotif Event Enable (HRRInitNotifEvntEn)<br/>When this bit is set, OEVT.HRRInitNotifEvnt is enabled. If not, the event is disabled.</td></tr>
+<tr valign=top><td>OTGADevIdleEvntEn</td><td class="center">21</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>OTGADevEvtInfoEn[5]<br/>A-device A-IDLE Event (OTGADevIdleEvntEn)<br/>When this bit is set, OEVT.OTGADevIdleEvnt is enabled. If not, the event is disabled.</td></tr>
+<tr valign=top><td>OTGADevBHostEndEvntEn</td><td class="center">20</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>OTGADevEvtInfoEn[4]<br/>A-device B-Host End Event Enable (OTGADevBHostEndEvntEn)<br/>When this bit is set, OEVT.OTGADevBHostEndEvnt is enabled. If not, the event is disabled.</td></tr>
+<tr valign=top><td>OTGADevHostEvntEn</td><td class="center">19</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>OTGADevEvtInfoEn[3]<br/>A-device host event (OTGADevHostEvntEn)<br/>When this bit is set, OEVT.OTGADevHostEvnt is enabled. If not, the event is disabled.</td></tr>
+<tr valign=top><td>OTGADevHNPChngEvntEn</td><td class="center">18</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>OTGADevEvtInfoEn[2]<br/>A-Dev HNP Change EventEn (OTGADevHNPChngEvntEn)<br/>When this bit is set, OEVT.OTGADevHNPChngEvnt is enabled. If not, the event is disabled.</td></tr>
+<tr valign=top><td>OTGADevSRPDetEvntEn</td><td class="center">17</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>OTGADevEvtInfoEn[1]<br/>SRP Detect Event Enable (OTGADevSRPDetEvntEn)<br/>When this bit is set, OEVT.OTGADevSRPDetEvnt is enabled. If not, the event is disabled.</td></tr>
+<tr valign=top><td>OTGADevSessEndDetEvntEn</td><td class="center">16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>OTGADevEvtInfoEn[0]<br/>Session End Detected Event Enable (OTGADevSessEndDetEvntEn)<br/>When this bit is set, OEVT.OTGADevSessEndEvnt is enabled.<br/>Otherwise, the event is disabled.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">15:12</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>OTGBDevBHostEndEvntEn</td><td class="center">11</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>OTGBDevEvtInfoEn[3]<br/>B-device B-Host End Event Enable (OTGBDevBHostEndEvntEn)<br/>When this bit is set, OEVT.OTGBDevHostEndEvnt is enabled. If not, the event is disabled</td></tr>
+<tr valign=top><td>OTGBDevHNPChngEvntEn</td><td class="center">10</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>OTGBDevEvtInfoEn[2]<br/>B-Dev HNP Change Event Enable (OTGBDevHNPChngEvntEn)<br/>When this bit is set, OEVT.OTGBDevHNPChngEvnt is enabled. If not, the event is disabled</td></tr>
+<tr valign=top><td>OTGBDevSessVldDetEvntEn</td><td class="center"> 9</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>OTGBDevEvtInfoEn[1]<br/>Session Valid Detected Event Enable (OTGBDevSessVldDetEvntEn)<br/>Set in B-device mode only.<br/>This event is asserted when there is a valid VBUS from A-device and B-device succeeds in starting a session.</td></tr>
+<tr valign=top><td>OTGBDevVBUSChngEvntEn</td><td class="center"> 8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>OTGBDevEvtInfoEn[0]<br/>VBUS Change Event Enable (OTGBDevVBUSChngEvntEn)<br/>When this bit is set, OEVT.OTGBDevVBUSChngEvnt is enabled. If not, the event is disabled.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 7:0</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

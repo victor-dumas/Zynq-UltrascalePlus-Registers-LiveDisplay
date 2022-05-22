@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<title>reg_errorintrsts (SDIO) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___sdio.html")>SDIO Module</a> &gt; reg_errorintrsts (SDIO) Register</p><h1>reg_errorintrsts (SDIO) Register</h1>
+<h2>reg_errorintrsts (SDIO) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>reg_errorintrsts</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000032</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF160032 (SD0)<br/>0x00FF170032 (SD1)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>16</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Error Interrupts Status</td></tr>
+</table>
+<p></p>
+<h2>reg_errorintrsts (SDIO) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>errorintrsts_hosterror</td><td class="center">12</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Occurs when detecting Host ERROR'0' No error'1' Error</td></tr>
+<tr valign=top><td>errorintrsts_admaerror</td><td class="center"> 9</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>This bit is set when the Host Controller detects errors during ADMA based data transfer. The state of the ADMA at an error occurrence is saved in the ADMA Error Status Register.'0' No error'1' Error</td></tr>
+<tr valign=top><td>errorintrsts_autocmderror</td><td class="center"> 8</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Auto CMD12 and Auto CMD23 use this error status. This bit is set when detecting that one of the bits D00-D04 in Auto CMD Error Status register has changed from 0 to 1. In case of Auto CMD12, this bit is set to 1, not only when the errors in Auto CMD12 occur but also when Auto CMD12 is not executed due to the previous command error.'0' No error'1' Error</td></tr>
+<tr valign=top><td>errorintrsts_currlimiterror</td><td class="center"> 7</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>By setting the SD Bus Power bit in the Power Control Register, the HC is requested to supply power for the SD Bus. If the HC supports the Current Limit Function, it can be protected from an Illegal card by stopping power supply to the card in which case this bit indicates a failure status. Reading 1 means the HC is not supplying power to SD card due to some failure. Reading 0 means that the HC is supplying power and no error has occurred. This bit shall always set to be 0, if the HC does not support this function.'0' No error'1' Power Fail<br/>Note: The current_Limit_Error is to be implemented if customer application requires it. By default it is not implemented as there is no specific requirement from Customers.</td></tr>
+<tr valign=top><td>errorintrsts_dataendbiterror</td><td class="center"> 6</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Occurs when detecting 0 at the end bit position of read data which uses the DAT line or the end bit position of the CRC status.</td></tr>
+<tr valign=top><td>errorintrsts_datacrcerror</td><td class="center"> 5</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Occurs when detecting CRC error when transferring read data which uses the DAT line or when detecting the Write CRC Status having a value of other than '010'.'0' No error'1' Error</td></tr>
+<tr valign=top><td>errorintrsts_datatimeouterror</td><td class="center"> 4</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Occurs when detecting one of following timeout conditions:<br/>1. Busy Timeout for R1b, R5b type.<br/>2. Busy Timeout after Write CRC status<br/>3. Write CRC status Timeout<br/>4. Read Data Timeout.'0' No Error'1' Timeout</td></tr>
+<tr valign=top><td>errorintrsts_cmdindexerror</td><td class="center"> 3</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Occurs if a Command Index error occurs in the Command Response.'0' No Error'1' Error</td></tr>
+<tr valign=top><td>errorintrsts_cmdendbiterror</td><td class="center"> 2</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Occurs when detecting that the end bit of a command response is 0.'0' No Error, '1' End bit error generated</td></tr>
+<tr valign=top><td>errorintrsts_cmdcrcerror</td><td class="center"> 1</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Command CRC Error is generated in two cases.<br/>1. If a response is returned and the Command Time-out Error is set to 0, this bit is set to 1 when detecting a CRT error in the command response<br/>2. The HC detects a CMD line conflict by monitoring the CMD line when a command is issued. If the HC drives the CMD line to 1 level, but detects 0 level on the CMD line at the next SDCLK edge, then the HC shall abort the command (Stop driving CMD line) and set this bit to 1. The Command Timeout Error shall also be set to 1 to distinguish CMD line conflict.'0' No Error,'1' CRC Error</td></tr>
+<tr valign=top><td>errorintrsts_cmdtimeouterror</td><td class="center"> 0</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Occurs only if the no response is returned within 64 SDCLK cycles from the end bit of the command. If the HC detects a CMD line conflict, in which case Command CRC Error shall also be set. This bit shall be set without waiting for 64 SDCLK cycles because the command will be aborted by the HC.'0' Error'1' Timeout</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

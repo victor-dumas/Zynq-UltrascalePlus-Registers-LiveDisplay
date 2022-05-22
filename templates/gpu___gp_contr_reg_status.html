@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<title>GP_CONTR_REG_STATUS (GPU) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___gpu.html")>GPU Module</a> &gt; GP_CONTR_REG_STATUS (GPU) Register</p><h1>GP_CONTR_REG_STATUS (GPU) Register</h1>
+<h2>GP_CONTR_REG_STATUS (GPU) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>GP_CONTR_REG_STATUS</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000068</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD4B0068 (GPU)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">ro<span class="tooltiptext">Read-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>GP Control Register Status</td></tr>
+</table>
+<p></p>
+<h2>GP_CONTR_REG_STATUS (GPU) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:10</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved, write as zero, read undefined.</td></tr>
+<tr valign=top><td>CLK_OVERRIDE</td><td class="center"> 9</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Shows that the block level clock gates have been disabled<br/>This bit is set by the GP_CLK_OVERRIDE command in the<br/>GP_CONTR_REG_CMD Register.<br/>When this bit is set, all the architectural clock gates in the design<br/>are overridden so all clocks are always active</td></tr>
+<tr valign=top><td>GP_STATUS_WRITE_BOUND_ERR</td><td class="center"> 8</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Write boundaries error detected.</td></tr>
+<tr valign=top><td>GP_STATUS_HANG</td><td class="center"> 7</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Watchdog timer limit reached.<br/>This state can also be triggered under normal rendering if you are<br/>running a shader where it is near to a never-ending inner loop.<br/>From the software perspective, you can ignore this state, because<br/>this is merely a hint from the HW that something might be wrong.<br/>The SW then decides to either reset the processor, or continue to let<br/>it run.</td></tr>
+<tr valign=top><td>GP_STATUS_BUS_ERROR</td><td class="center"> 6</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Bus error detected.</td></tr>
+<tr valign=top><td>GP_STATUS_PLB_STALLED</td><td class="center"> 5</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>PLB stalled on list allocation.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 4</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved, write as zero, read undefined.</td></tr>
+<tr valign=top><td>GP_STATUS_PLB_ACTIVE</td><td class="center"> 3</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>PLB active.</td></tr>
+<tr valign=top><td>GP_STATUS_BUS_STOPPED</td><td class="center"> 2</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Stop command issued.</td></tr>
+<tr valign=top><td>GP_STATUS_VS_ACTIVE</td><td class="center"> 1</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Vertex shader active.</td></tr>
+<tr valign=top><td>GP_STATUS_IRQ</td><td class="center"> 0</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>IRQ asserted.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

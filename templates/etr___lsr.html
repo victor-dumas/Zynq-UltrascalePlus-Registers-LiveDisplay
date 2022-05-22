@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<title>LSR (ETR) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___etr.html")>ETR Module</a> &gt; LSR (ETR) Register</p><h1>LSR (ETR) Register</h1>
+<h2>LSR (ETR) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>LSR</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000FB4</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FE970FB4 (CORESIGHT_SOC_ETR)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">ro<span class="tooltiptext">Read-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000003</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>This indicates the status of the Lock control mechanism. This lock prevents accidental writes by code under debug. When locked, write access is blocked to all registers, except the Lock Access Register.External accesses from a debugger (PADDRDBG31 = 1) are not subject to the Lock Registers. This register reads as 0 when read from an external debugger (PADDRDBG31 = 1).</td></tr>
+</table>
+<p></p>
+<h2>LSR (ETR) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>LOCKTYPE</td><td class="center"> 2</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Indicates if the Lock Access Register (0xFB0) is implemented as 8-bit or 32_bit</td></tr>
+<tr valign=top><td>LOCKGRANT</td><td class="center"> 1</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>Returns the current status of the Lock. This bit reads as 0 when read from an external debugger (PADDRDBG31 = 1) since external debugger accesses are not subject to Lock Registers.</td></tr>
+<tr valign=top><td>LOCKEXIST</td><td class="center"> 0</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>Indicates that a lock control mechanism exists for this device. This bit reads as 0 when read from an external debugger (PADDRDBG31 = 1) since external debugger accesses are not subject to Lock Registers.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<title>PMU_PB_ERR (PMU_LOCAL) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___pmu_local.html")>PMU_LOCAL Module</a> &gt; PMU_PB_ERR (PMU_LOCAL) Register</p><h1>PMU_PB_ERR (PMU_LOCAL) Register</h1>
+<h2>PMU_PB_ERR (PMU_LOCAL) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>PMU_PB_ERR</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000338</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FFD60338 (PMU_LOCAL)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Errors Detected During PMU Pre-Boot. Reset by POR only.</td></tr>
+</table>
+<p>All errors during the PMU Pre-Boot execution. The register is only reset by the POR Reset and maintains its state through a System Reset.</p>
+<h2>PMU_PB_ERR (PMU_LOCAL) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>PBERR_Flag</td><td class="center">31</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>If there is any error in the PBERR_Data field, this bit must be set to 1. In that case the PS_ERR pin on the device will be asserted to signify an error.</td></tr>
+<tr valign=top><td>PBERR_Data</td><td class="center">30:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Bits in this field represent all Pre-boot ROM errors.<br/>0x00000001: PMU RAM Init Error<br/>0x00000002: SysMon Init Error<br/>0x00000004: SysMon LP_Supply Check Error<br/>0x00000008: SysMon Aux_Supply Check Error<br/>0x00000010: SysMon IO_Supply Check Error<br/>0x00000020: IOPLL Lock Error<br/>0x00000040: DPLL Lock Error<br/>0x00010000: LPD Scan Zeroization Timeout Error<br/>0x00020000: FPD Scan Zeroization Timeout Error<br/>0x00040000: LPD Scan Zeroization Failure Error<br/>0x00080000: FPD Scan Zeroization Failure Error<br/>0x00400000: FPD BISR Timeout Error<br/>0x00800000: FPD BISR Failure Error<br/>0x01000000: LPD MBIST Zeroization Timeout Error<br/>0x02000000: FPD MBIST Zeroization Timeout Error<br/>0x04000000: LPD MBIST Zeroization Failure Error<br/>0x08000000: FPD MBIST Zeroization Failure Error<br/>0xFFFFFFFF: Unresolved Error</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

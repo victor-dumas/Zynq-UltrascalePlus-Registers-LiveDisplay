@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<title>PWR_STATE (PMU_GLOBAL) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___pmu_global.html")>PMU_GLOBAL Module</a> &gt; PWR_STATE (PMU_GLOBAL) Register</p><h1>PWR_STATE (PMU_GLOBAL) Register</h1>
+<h2>PWR_STATE (PMU_GLOBAL) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>PWR_STATE</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000100</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FFD80100 (PMU_GLOBAL)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">ro<span class="tooltiptext">Read-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00FFFCBF</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Power State Status; PS Islands, PL Internal and FPD.</td></tr>
+</table>
+<p>This register provides status for two power domains and 19 power islands. The status of the 19 power islands are based on the state of the internal power control circuits. 0: powered-down. 1: powered-up. The status of the two power domains are based on the state of the isolation wall for the system signals between the LPD and the other two power domains. Note: the register retains its value during a system reset; register is reset only by a POR reset. Read-only.</p>
+<h2>PWR_STATE (PMU_GLOBAL) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:24</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>PL</td><td class="center">23</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>PL Power Domain (PLPD) status.<br/>0: powered-down or isolated (PMU_LOCAL.DOMAIN_ISO_CTRL [PL_LP_ISO_1] = 1; this refers to the non-PCAP interface between the LPD and the PLPD).<br/>1: powered-up and accessible.<br/>The PL power is usually controlled by an external FET via an MIO pin.</td></tr>
+<tr valign=top><td>FP</td><td class="center">22</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>Full-power Domain (FPD) status.<br/>0: powered-down or isolated (PMU_LOCAL.DOMAIN_ISO_CTRL [LP_FP_ISO_2] = 1).<br/>1: powered-up and accessible.<br/>Note: If PMU_LOCAL.DOMAIN_ISO_CTRL [LP_FP_ISO_2] = 1, then the [FP] bit will = 0, but the FPD power supply may in-fact be powered up and the system accessible for debug.<br/>When the FPD is in locked isolation (PMU_LOCAL.DOMAIN_ISO_CTRL [FP_LOCKED] = 1), the [FP] bit will be cleared because [LP_FP_ISO_2] becomes inactive in order to allow clocks and resets to enter the FPD. Thus, this field cannot be used to determine FPD accessibility in the event the FPD is locked out. The PMU_LOCAL register set is only accessible by the PMU processor.<br/>Note: To request changes to the VCC_PSINTFP power supply, refer to the REQ_PWR{UP,DWN}_TRIG registers.<br/>Note: To determine the state of the VCC_PSINTFP power supply, refer to the PMU_GLOCAL.PWR_SUPPLY_STATUS [VCC_PSINTFP] bit.</td></tr>
+<tr valign=top><td>USB1</td><td class="center">21</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>USB Controller 1 power island.<br/>0: powered-down.<br/>1: powered-up.</td></tr>
+<tr valign=top><td>USB0</td><td class="center">20</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>USB Controller 0 power island.</td></tr>
+<tr valign=top><td>OCM_Bank3</td><td class="center">19</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>OCM bank 3 power island.</td></tr>
+<tr valign=top><td>OCM_Bank2</td><td class="center">18</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>OCM bank 2 power island.</td></tr>
+<tr valign=top><td>OCM_Bank1</td><td class="center">17</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>OCM bank 1 power island.</td></tr>
+<tr valign=top><td>OCM_Bank0</td><td class="center">16</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>OCM bank 0 power island.</td></tr>
+<tr valign=top><td>TCM1B</td><td class="center">15</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>RPU1 TCM_B power island.</td></tr>
+<tr valign=top><td>TCM1A</td><td class="center">14</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>RPU1 TCM_A power island.</td></tr>
+<tr valign=top><td>TCM0B</td><td class="center">13</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>RPU0 TCM_B power island.</td></tr>
+<tr valign=top><td>TCM0A</td><td class="center">12</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>RPU0 TCM_A power island.</td></tr>
+<tr valign=top><td>R5_1</td><td class="center">11</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>RPU1 power island.</td></tr>
+<tr valign=top><td>R5_0</td><td class="center">10</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>RPU0 power island.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 9</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 8</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>L2_Bank0</td><td class="center"> 7</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>APU L2 Cache power island.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 6</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>PP1</td><td class="center"> 5</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>GPU Pixel Processor 1 power island.</td></tr>
+<tr valign=top><td>PP0</td><td class="center"> 4</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>GPU Pixel Processor 0 power island.</td></tr>
+<tr valign=top><td>ACPU3</td><td class="center"> 3</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>APU core 3 power island.</td></tr>
+<tr valign=top><td>ACPU2</td><td class="center"> 2</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>APU core 2 power island.</td></tr>
+<tr valign=top><td>ACPU1</td><td class="center"> 1</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>APU core 1 power island.</td></tr>
+<tr valign=top><td>ACPU0</td><td class="center"> 0</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>APU core 0 power island.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

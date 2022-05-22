@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<title>VTCR0 (DDR_PHY) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddr_phy.html")>DDR_PHY Module</a> &gt; VTCR0 (DDR_PHY) Register</p><h1>VTCR0 (DDR_PHY) Register</h1>
+<h2>VTCR0 (DDR_PHY) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>VTCR0</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000528</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD080528 (DDR_PHY)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x70032019</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>VREF Training Control Register 0</td></tr>
+</table>
+<p></p>
+<h2>VTCR0 (DDR_PHY) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>tVREF</td><td class="center">31:29</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x3</td><td>Number of ctl_clk required to meet vref step timing (short, middle,<br/>long) requirements. Valid values are:<br/>3b000 = No of ctl_clk = 32<br/>3b001 = No of ctl_clk = 64<br/>3b010 = No of ctl_clk = 96<br/>3b011 = No of ctl_clk = 128<br/>3b100 = No of ctl_clk = 160<br/>3b101 = No of ctl_clk = 192<br/>3b110 = No of ctl_clk = 224<br/>3b111 = No of ctl_clk = 256</td></tr>
+<tr valign=top><td>DVEN</td><td class="center">28</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>DRAM DQ VREF training Enable: When set, DQ VREF training will be<br/>performed for all enabled byte lanes and all enabled ranks.</td></tr>
+<tr valign=top><td>PDAEN</td><td class="center">27</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Per Device Addressability Enable: When Enabled, each device will<br/>receive VREF DQ values independently.<br/>Note: This is applicable in DDR4 mode only</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">26</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Returns zeros when read.</td></tr>
+<tr valign=top><td>VWCR</td><td class="center">25:22</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>VREF Word Count: The number of times same memory location<br/>range is written/read for each loop in VREF training.</td></tr>
+<tr valign=top><td>DVSS</td><td class="center">21:18</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>DRAM DQ VREF step size used during DRAM VREF training. The<br/>register value of N indicates step size of (N+1). The valid step sizes<br/>are 1 to 16.</td></tr>
+<tr valign=top><td>DVMAX</td><td class="center">17:12</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x32</td><td>Maximum VREF limit value used during DRAM VREF training.</td></tr>
+<tr valign=top><td>DVMIN</td><td class="center">11:6</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Minimum VREF limit value used during DRAM VREF training.</td></tr>
+<tr valign=top><td>DVINIT</td><td class="center"> 5:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x19</td><td>Initial DRAM DQ VREF value used during DRAM VREF training.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

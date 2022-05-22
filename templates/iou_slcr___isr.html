@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<title>isr (IOU_SLCR) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___iou_slcr.html")>IOU_SLCR Module</a> &gt; isr (IOU_SLCR) Register</p><h1>isr (IOU_SLCR) Register</h1>
+<h2>isr (IOU_SLCR) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>isr</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000700</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF180700 (IOU_SLCR)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder> 1</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Address Decode Error Interrupt Status</td></tr>
+</table>
+<p>This is a sticky register that holds the value of the interrupt until cleared by a value of 1.</p>
+<h2>isr (IOU_SLCR) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>addr_decode_err</td><td class="center"> 0</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Status for an address decode error interrupt.<br/>0: No Event<br/>1: Event Occurred</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

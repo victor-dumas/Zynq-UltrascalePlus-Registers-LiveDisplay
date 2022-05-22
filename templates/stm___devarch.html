@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<title>DEVARCH (STM) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___stm.html")>STM Module</a> &gt; DEVARCH (STM) Register</p><h1>DEVARCH (STM) Register</h1>
+<h2>DEVARCH (STM) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>DEVARCH</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000FBC</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FE9C0FBC (CORESIGHT_SOC_STM)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">ro<span class="tooltiptext">Read-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x47710A63</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Indicates the architect and architecture of the STM. For the STM-500, the architect is Arm, and the architecture is STMv1.1</td></tr>
+</table>
+<p></p>
+<h2>DEVARCH (STM) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>ARCHITECT</td><td class="center">31:21</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x23B</td><td>Defines the architect of the component. Bits[31:28] indicate the DEP106 continuation code of the architect. Bits[27:21] indicate the JEP106 identification code of the architect. See the Standard Manufacturers Identification Code for information about JEP106:<br/>23Bh: Arm</td></tr>
+<tr valign=top><td>PRESENT</td><td class="center">20</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>Indicates the presence of the STMDEVARCH register:<br/>1: present.</td></tr>
+<tr valign=top><td>REVISION</td><td class="center">19:16</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>Architecture revision. Returns the revision of the architecture that the ARCHID field specifies. For the STM-500, this value is 1h, indicating the STMv1.1 architecture.</td></tr>
+<tr valign=top><td>ARCHID</td><td class="center">14:0</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0xA63</td><td>Architecture ID. Returns a value that identifies the architecture of the component. For the STM-500, this value is 15'h0A63, indicating the STMv1 architecture.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

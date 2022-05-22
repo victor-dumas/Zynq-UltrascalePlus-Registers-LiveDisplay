@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<title>REQ_PWRDWN_TRIG (PMU_GLOBAL) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___pmu_global.html")>PMU_GLOBAL Module</a> &gt; REQ_PWRDWN_TRIG (PMU_GLOBAL) Register</p><h1>REQ_PWRDWN_TRIG (PMU_GLOBAL) Register</h1>
+<h2>REQ_PWRDWN_TRIG (PMU_GLOBAL) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>REQ_PWRDWN_TRIG</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000220</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FFD80220 (PMU_GLOBAL)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">wo<span class="tooltiptext">Write-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Power-down or RAM Retention Request; Interrupt Trigger.</td></tr>
+</table>
+<p>The software request can request a power-down or RAM data retention request. Refer to the RAM_RET_CNTRL register for more information on using this trigger register for RAM retention. Trigger a request. 0: no effect. 1: trigger a power-down or retention request. Write-only.</p>
+<h2>REQ_PWRDWN_TRIG (PMU_GLOBAL) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>PL</td><td class="center">23</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Programmable Logic, PL. Controlled by external FET via MIO pin. This optional control uses MIO [32] and is equivalent to PMU signal [6].</td></tr>
+<tr valign=top><td>FP</td><td class="center">22</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Full-power Domain, FPD. Controlled by external FET via MIO pin. This optional control uses MIO [31] and is equivalent to PMU signal [5].</td></tr>
+<tr valign=top><td>USB1</td><td class="center">21</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>USB controller 1 power-down.</td></tr>
+<tr valign=top><td>USB0</td><td class="center">20</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>USB controller 0 power-down.</td></tr>
+<tr valign=top><td>OCM_Bank3</td><td class="center">19</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>OCM Bank 3: power-down or RAM data retention.</td></tr>
+<tr valign=top><td>OCM_Bank2</td><td class="center">18</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>OCM Bank 2: power-down or RAM data retention.</td></tr>
+<tr valign=top><td>OCM_Bank1</td><td class="center">17</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>OCM Bank 1: power-down or RAM data retention.</td></tr>
+<tr valign=top><td>OCM_Bank0</td><td class="center">16</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>OCM Bank 0: power-down or RAM data retention.</td></tr>
+<tr valign=top><td>TCM1B</td><td class="center">15</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>RPU core 1, TCM_B: power-down or RAM data retention.</td></tr>
+<tr valign=top><td>TCM1A</td><td class="center">14</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>RPU core 1, TCM_A: power-down or RAM data retention.</td></tr>
+<tr valign=top><td>TCM0B</td><td class="center">13</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>RPU core 0, TCM_B: power-down or RAM data retention.</td></tr>
+<tr valign=top><td>TCM0A</td><td class="center">12</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>RPU core 0, TCM_A: power-down or RAM data retention.</td></tr>
+<tr valign=top><td>RPU</td><td class="center">10</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>RPU processors: power-down.</td></tr>
+<tr valign=top><td>L2_Bank0</td><td class="center"> 7</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>APU L2 Cache: power-down or RAM data retention.</td></tr>
+<tr valign=top><td>PP1</td><td class="center"> 5</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>GPU Pixel Processor 1: power-down.</td></tr>
+<tr valign=top><td>PP0</td><td class="center"> 4</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>GPU Pixel Processor 0: power-down.</td></tr>
+<tr valign=top><td>ACPU3</td><td class="center"> 3</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>APU core 3: power-down.</td></tr>
+<tr valign=top><td>ACPU2</td><td class="center"> 2</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>APU core 2: power-down.</td></tr>
+<tr valign=top><td>ACPU1</td><td class="center"> 1</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>APU core 1: power-down.</td></tr>
+<tr valign=top><td>ACPU0</td><td class="center"> 0</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>APU core 0: power-down.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

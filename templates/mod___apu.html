@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<title>APU Module</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> > APU Module</p><h1>APU Module</h1>
+<h2>APU Module Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Module Name</th><td width=80% class=noborder>APU Module</td></tr>
+<tr valign=top><th width=20% class=sumparam>Modules of this Type</th><td width=80% class=noborder>APU</td></tr>
+<tr valign=top><th class=sumparam>Base Address</th><td class=noborder>0x00FD5C0000 (APU)</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>APU settings, APU Configuration</td></tr>
+</table>
+<h2>APU Module Register Summary</h2>
+<table>
+<tr valign=top><th width=20%>Register Name</th><th width=10%>Address</th><th width=10%>Width</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=40%>Description</th></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("apu___err_ctrl.html")>ERR_CTRL</a></td><td class="hex">0x0000000000</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>Control register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("apu___isr.html")>ISR</a></td><td class="hex">0x0000000010</td><td class="center">32</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x00000000</td><td>Interrupt Status Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("apu___imr.html")>IMR</a></td><td class="hex">0x0000000014</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00000001</td><td>Interrupt Mask Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("apu___ien.html")>IEN</a></td><td class="hex">0x0000000018</td><td class="center">32</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x00000000</td><td>Interrupt Enable Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("apu___ids.html")>IDS</a></td><td class="hex">0x000000001C</td><td class="center">32</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x00000000</td><td>Interrupt Disable Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("apu___config_0.html")>CONFIG_0</a></td><td class="hex">0x0000000020</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000F0F</td><td>CPU Core Configuration</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("apu___config_1.html")>CONFIG_1</a></td><td class="hex">0x0000000024</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>L2 Configuration</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("apu___rvbaraddr0l.html")>RVBARADDR0L</a></td><td class="hex">0x0000000040</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0xFFFF0000</td><td>Reset Vector Base Address</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("apu___rvbaraddr0h.html")>RVBARADDR0H</a></td><td class="hex">0x0000000044</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>Reset Vector Base Address</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("apu___rvbaraddr1l.html")>RVBARADDR1L</a></td><td class="hex">0x0000000048</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0xFFFF0000</td><td>Reset Vector Base Address</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("apu___rvbaraddr1h.html")>RVBARADDR1H</a></td><td class="hex">0x000000004C</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>Reset Vector Base Address</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("apu___rvbaraddr2l.html")>RVBARADDR2L</a></td><td class="hex">0x0000000050</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0xFFFF0000</td><td>Reset Vector Base Address</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("apu___rvbaraddr2h.html")>RVBARADDR2H</a></td><td class="hex">0x0000000054</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>Reset Vector Base Address</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("apu___rvbaraddr3l.html")>RVBARADDR3L</a></td><td class="hex">0x0000000058</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0xFFFF0000</td><td>Reset Vector Base Address</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("apu___rvbaraddr3h.html")>RVBARADDR3H</a></td><td class="hex">0x000000005C</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>Reset Vector Base Address</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("apu___ace_ctrl.html")>ACE_CTRL</a></td><td class="hex">0x0000000060</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x000F000F</td><td>ACE Control Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("apu___snoop_ctrl.html")>SNOOP_CTRL</a></td><td class="hex">0x0000000080</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>Snoop Control Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("apu___pwrctl.html")>PWRCTL</a></td><td class="hex">0x0000000090</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>Power Control Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("apu___pwrstat.html")>PWRSTAT</a></td><td class="hex">0x0000000094</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00000000</td><td>Power Status Register</td></tr>
+</table>
+<p id=foot class=footer></p>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<title>PP4C (SATA_AHCI_VENDOR) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___sata_ahci_vendor.html")>SATA_AHCI_VENDOR Module</a> &gt; PP4C (SATA_AHCI_VENDOR) Register</p><h1>PP4C (SATA_AHCI_VENDOR) Register</h1>
+<h2>PP4C (SATA_AHCI_VENDOR) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>PP4C</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000014</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD0C00B4 (SATA_AHCI_VENDOR)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x064A0813</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Port Phy Configuration 4.</td></tr>
+</table>
+<p>Controls the configuration of the Phy Control Burst timing for the COM parameters for either Port 0 or Port 1. The Port configured is controlled by the value programmed into the Port Config Register.</p>
+<h2>PP4C (SATA_AHCI_VENDOR) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>PTST</td><td class="center">31:24</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x6</td><td>PTST: Partial to Slumber timer value, specific delay the controller should apply while in partial before entering slumber.<br/>The value is bases on the system clock divided by 128,<br/>total delay = (Sys Clock Period) * PTST * 128</td></tr>
+<tr valign=top><td>SFD</td><td class="center">23:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x4A</td><td>SFD: Signal Failure Detection, if the signal detection de-asserts for a time greater than this then the OOB detector will determine this is a line idle and cause the PhyInit state machine to exit the Phy Ready State. A value of zero disables the Signal Failure Detector. The value is based on the OOB Detector Clock typically (PMCLK Clock Period) * SFD giving a nominal time of 500ns based on a 150MHz PMCLK.</td></tr>
+<tr valign=top><td>BNM</td><td class="center">15:8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x8</td><td>BNM: COM Burst Nominal.</td></tr>
+<tr valign=top><td>BMX</td><td class="center"> 7:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x13</td><td>BMX: COM Burst Maximum.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

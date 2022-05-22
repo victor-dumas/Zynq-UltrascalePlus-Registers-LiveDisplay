@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<title>GLOBAL_RESET (PMU_GLOBAL) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___pmu_global.html")>PMU_GLOBAL Module</a> &gt; GLOBAL_RESET (PMU_GLOBAL) Register</p><h1>GLOBAL_RESET (PMU_GLOBAL) Register</h1>
+<h2>GLOBAL_RESET (PMU_GLOBAL) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>GLOBAL_RESET</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000608</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FFD80608 (PMU_GLOBAL)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>GLOBAL_RESET</td></tr>
+</table>
+<p></p>
+<h2>GLOBAL_RESET (PMU_GLOBAL) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:11</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>PS_ONLY_RST</td><td class="center">10</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>The PS can be reset by itself by clearing<br/>[Prog_Gate]<br/>and using [PS_ONLY_RST] to initiate the reset.<br/>0: reset released to PS.<br/>1: PS held in reset.<br/>Refer to PMU_GLOBAL.PS_CNTRL [Prog_Gate] for more information on blocking the reset from propagating to the entire device.</td></tr>
+<tr valign=top><td>FPD_RST</td><td class="center"> 9</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>FPD Reset to APUs, DDR memory Controller, AXI, etc.<br/>0: reset released to FPD.<br/>1: FPD held in reset.<br/>Note: this reset should be used to reset the DDR memory controller.</td></tr>
+<tr valign=top><td>RPU_LS_RST</td><td class="center"> 8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>RPU Lockstep Reset.<br/>Split Mode:<br/>0: reset released to RPU0.<br/>1: RPU0 held in reset.<br/>RPU Lockstep Mode:<br/>0: reset released to RPU{0, 1}.<br/>1: RPU{0, 1} held in reset.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 7:0</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

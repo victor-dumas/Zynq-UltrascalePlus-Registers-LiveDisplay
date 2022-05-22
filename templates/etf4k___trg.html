@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<title>TRG (ETF4K) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___etf4k.html")>ETF4K Module</a> &gt; TRG (ETF4K) Register</p><h1>TRG (ETF4K) Register</h1>
+<h2>TRG (ETF4K) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>TRG</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000001C</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FE94001C (CORESIGHT_SOC_ETF_1)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>In the Circular-buffer mode, the Trigger Counter Register specifies the number of 32_bit words to capture in the Trace RAM following the detection of either a rising edge on the TRIGIN input or a trigger packet in the incoming trace stream (ATID = 7'h7D). On capturing the specified number of datawords, a Trigger Event is said to have occurred. The effect of a Trigger Event on TMC behavior is controlled by the FFCR register, 0x304.The number of 32_bit words written into the Trace RAM following the trigger is the value stored in this register+1. This counter is disabled when the TMC is in Software-read-FIFO mode or Hardware-read-FIFO mode.Once the trigger counter has started counting, any further triggers, either on TRIGIN or in the incoming trace stream, are ignored till the counter reaches 0. Once the counter has reached 0, it remains at 0 till it is re-programmed with a write to this register. This register is cleared when TMCReady goes HIGH, so that the state of the counter when trace capture has stopped does not affect a subsequent trace capture cycle.Attempting to write to this register while not in Disabled state (TMCReady=0 or TraceCaptEn=1) will result in Unpredictable behavior. A read access to this register is permitted even if trace capture enabled. A read access returns the current value of the Trigger counter. The width of this register and the Trigger counter depends on the size of the trace memory. In ETB and ETF configurations, the width of the counter is log2(MEMSIZE). The width of this register in ETR configuration is 32 bits.</td></tr>
+</table>
+<p></p>
+<h2>TRG (ETF4K) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>TRG</td><td class="center"> 9:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>This count represents the number of 32_bit words between a TRIGIN/trigger packet and a trigger event.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

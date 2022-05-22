@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<title>CTIOUTEN2 (A53_CTI_2) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___a53_cti_2.html")>A53_CTI_2 Module</a> &gt; CTIOUTEN2 (A53_CTI_2) Register</p><h1>CTIOUTEN2 (A53_CTI_2) Register</h1>
+<h2>CTIOUTEN2 (A53_CTI_2) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>CTIOUTEN2</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x00000000A8</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FEE200A8 (CORESIGHT_A53_CTI_2)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>The CTI Channel to Trigger 2 Enable Registers define which channels can generate a ctitrigout[2] output. Within this register there is one bit for each of the four channels implemented. This register affects the mapping from application trigger to trigger outputs.</td></tr>
+</table>
+<p></p>
+<h2>CTIOUTEN2 (A53_CTI_2) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>TRIGOUTEN</td><td class="center"> 3:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Changing the value of this bit from a 0 to a 1 enables a channel event for the corresponding channel to generate a ctitrigout[2] output. There is one bit of the field for each of the four channels.When a 1 is written to a bit in this register, the channel input (ctichin) from the CTM is routed to the ctitrigout output. For example, enabling bit 0 enables ctichin[0] to cause a trigger event on the ctitrigout[2] output. When a 0 is written to any of the bits in this register, the channel input (ctichin) from the CTM is not routed to the ctitrigout output.Reading this register returns the programmed value.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

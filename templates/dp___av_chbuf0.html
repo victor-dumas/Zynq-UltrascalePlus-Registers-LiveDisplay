@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<title>AV_CHBUF0 (DP) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___dp.html")>DP Module</a> &gt; AV_CHBUF0 (DP) Register</p><h1>AV_CHBUF0 (DP) Register</h1>
+<h2>AV_CHBUF0 (DP) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>AV_CHBUF0</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000B010</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD4AB010 (DP)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>AV_CHBUF0: Channel Enable, flush and Burst length to be programmed based on video formats. Each channel can be programmed with independent BL<br/>Channel 0: must be always enabled for any video mode.<br/>Channel 1 and 2: should be enabled for planar modes.<br/>Channel 3: for graphics.<br/>Channel 4 and 5: for audio modes</td></tr>
+</table>
+<p></p>
+<h2>AV_CHBUF0 (DP) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:7</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback></td></tr>
+<tr valign=top><td>BURST_LEN</td><td class="center"> 6:2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Burst length: Allowed values are 0,1,3,7,15. (correspond to 1,2,4,8,16)</td></tr>
+<tr valign=top><td>FLUSH</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Flush</td></tr>
+<tr valign=top><td>EN</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Enable</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

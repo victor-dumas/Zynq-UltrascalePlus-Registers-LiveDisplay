@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<title>PTR6 (DDR_PHY) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddr_phy.html")>DDR_PHY Module</a> &gt; PTR6 (DDR_PHY) Register</p><h1>PTR6 (DDR_PHY) Register</h1>
+<h2>PTR6 (DDR_PHY) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>PTR6</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000058</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD080058 (DDR_PHY)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x04000855</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>PHY Timing Register 6</td></tr>
+</table>
+<p></p>
+<h2>PTR6 (DDR_PHY) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:27</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Return zeroes on reads.</td></tr>
+<tr valign=top><td>tDINIT4</td><td class="center">26:20</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x40</td><td>DRAM Initialization Time 4: DRAM initialization time in DRAM clock<br/>cycles corresponding to the following:<br/>LPDDR4 = Time from ZQCAL LATCH command to first command<br/>(tZQLAT= MAX(30ns,8 tCK)).<br/>Note: The default value corresponds to 8 tCK.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">19:12</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Return zeroes on reads.</td></tr>
+<tr valign=top><td>tDINIT3</td><td class="center">11:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x855</td><td>DRAM Initialization Time 3: DRAM initialization time in DRAM clock<br/>cycles corresponding to the following:<br/>DDR4 = Time from ZQ initialization command to first command (1 us)<br/>DDR3 = Time from ZQ initialization command to first command (1 us)<br/>LPDDR4 = Time from ZQCAL START command to ZQCAL LATCH<br/>command (tZQCAL=1 us)<br/>LPDDR3 = Time from ZQ initialization command to first command (1us)<br/>Note: Default value corresponds to LPDDR4 1us at 2133 Mbps.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

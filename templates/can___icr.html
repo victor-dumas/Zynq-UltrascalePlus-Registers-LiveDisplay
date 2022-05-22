@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<title>ICR (CAN) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___can.html")>CAN Module</a> &gt; ICR (CAN) Register</p><h1>ICR (CAN) Register</h1>
+<h2>ICR (CAN) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>ICR</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000024</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF060024 (CAN0)<br/>0x00FF070024 (CAN1)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Interrupt Clear</td></tr>
+</table>
+<p></p>
+<h2>ICR (CAN) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:15</td><td class="tooltip grayback">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>CTXFEMP</td><td class="center">14</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Clear TXFIFO Empty Interrupt<br/>Writing a 1 to this bit clears the TXFEMP bit in the ISR.</td></tr>
+<tr valign=top><td>CTXFWMEMP</td><td class="center">13</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Clear TXFIFO Watermark Empty Interrupt<br/>Writing a 1 to this bit clears the TXFWMEMP bit in the ISR.</td></tr>
+<tr valign=top><td>CRXFWMFLL</td><td class="center">12</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Clear RXFIFO Watermark Full Interrupt<br/>Writing a 1 to this bit clears the RXFWMFLL bit in the ISR.</td></tr>
+<tr valign=top><td>CWKUP</td><td class="center">11</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Clear Wake up Interrupt<br/>Writing a 1 to this bit clears the WKUP bit in the ISR.</td></tr>
+<tr valign=top><td>CSLP</td><td class="center">10</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Clear Sleep Interrupt<br/>Writing a 1 to this bit clears the SLP bit in the ISR.</td></tr>
+<tr valign=top><td>CBSOFF</td><td class="center"> 9</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Clear Bus Off Interrupt<br/>Writing a 1 to this bit clears the BSOFF bit in the ISR.</td></tr>
+<tr valign=top><td>CERROR</td><td class="center"> 8</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Clear Error Interrupt<br/>Writing a 1 to this bit clears the ERROR bit in the ISR.</td></tr>
+<tr valign=top><td>CRXNEMP</td><td class="center"> 7</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Clear Receive FIFO Not Empty Interrupt<br/>Writing a 1 to this bit clears the RXNEMP bit in the ISR.</td></tr>
+<tr valign=top><td>CRXOFLW</td><td class="center"> 6</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Clear RX FIFO Overflow Interrupt<br/>Writing a 1 to this bit clears the RXOFLW bit in the ISR.</td></tr>
+<tr valign=top><td>CRXUFLW</td><td class="center"> 5</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Clear RX FIFO Underflow Interrupt<br/>Writing a 1 to this bit clears the RXUFLW bit in the ISR.</td></tr>
+<tr valign=top><td>CRXOK</td><td class="center"> 4</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Clear New Message Received Interrupt<br/>Writing a 1 to this bit clears the RXOK bit in the ISR.</td></tr>
+<tr valign=top><td>CTXBFLL</td><td class="center"> 3</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Clear High Priority Transmit Buffer Full Interrupt<br/>Writing a 1 to this bit clears the TXBFLL bit in the ISR.</td></tr>
+<tr valign=top><td>CTXFLL</td><td class="center"> 2</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Clear Transmit FIFO Full Interrupt<br/>Writing a 1 to this bit clears the TXFLL bit in the ISR.</td></tr>
+<tr valign=top><td>CTXOK</td><td class="center"> 1</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Clear Transmission Successful Interrupt<br/>Writing a 1 to this bit clears the CTXOK bit in the ISR.</td></tr>
+<tr valign=top><td>CARBLST</td><td class="center"> 0</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Clear Arbitration Lost Interrupt<br/>Writing a 1 to this bit clears the ARBLST bit in the ISR.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

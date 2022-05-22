@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<title>RDIMMGCR1 (DDR_PHY) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddr_phy.html")>DDR_PHY Module</a> &gt; RDIMMGCR1 (DDR_PHY) Register</p><h1>RDIMMGCR1 (DDR_PHY) Register</h1>
+<h2>RDIMMGCR1 (DDR_PHY) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>RDIMMGCR1</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000144</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD080144 (DDR_PHY)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000C80</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>RDIMM General Configuration Register 1</td></tr>
+</table>
+<p></p>
+<h2>RDIMMGCR1 (DDR_PHY) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:29</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Return zeroes on reads.</td></tr>
+<tr valign=top><td>A17BID</td><td class="center">28</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Address [17] B-side Inversion Disable</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">27</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Return zeroes on reads.</td></tr>
+<tr valign=top><td>tBCMRD_L2</td><td class="center">26:24</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Command word to command word programming delay: Number of<br/>DRAM clock cycles between two RDIMM buffer chip command<br/>programming accesses for RC0F and RC0D. The value used for<br/>tBCMRD_L2 is 32 plus the value programmed in these bits, i.e.<br/>tBCMRD_L2 value ranges from 32 to 39. This parameter corresponds to<br/>the buffer chip tMRD_L2parameter.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">23</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Return zeroes on reads.</td></tr>
+<tr valign=top><td>tBCMRD_L</td><td class="center">22:20</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Command word to command word programming delay: Number of<br/>DRAM clock cycles between two RDIMM buffer chip command<br/>programming accesses for RC03, RC04, RC05 and RC0B. The value<br/>used for tBCMRD_L is 16 plus the value programmed in these bits, i.e.<br/>tBCMRD_L value ranges from 16 to 23. This parameter corresponds to<br/>the buffer chip tMRD_L parameter.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">19</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Return zeroes on reads.</td></tr>
+<tr valign=top><td>tBCMRD</td><td class="center">18:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Command word to command word programming delay: Number of<br/>DRAM clock cycles between two RDIMM buffer chip command<br/>programming accesses. The value used for tBCMRD is 8 plus the value<br/>programmed in these bits, i.e. tBCMRD value ranges from 8 to 15. This<br/>parameter corresponds to the buffer chip tMRD parameter.<br/>The minimum value programmed for this register should be<br/>equivalent to tMRD.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">15:14</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Return zeroes on reads.</td></tr>
+<tr valign=top><td>tBCSTAB</td><td class="center">13:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0xC80</td><td>Stabilization time: Number of DRAM clock cycles for the RDIMM<br/>buffer chip to stabilize. This parameter corresponds to the buffer chip<br/>tSTAB parameter. Default value is in decimal format and corresponds<br/>to 6us at 533MHz.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

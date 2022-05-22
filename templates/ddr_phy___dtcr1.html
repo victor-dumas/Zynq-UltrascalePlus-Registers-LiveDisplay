@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<title>DTCR1 (DDR_PHY) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddr_phy.html")>DDR_PHY Module</a> &gt; DTCR1 (DDR_PHY) Register</p><h1>DTCR1 (DDR_PHY) Register</h1>
+<h2>DTCR1 (DDR_PHY) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>DTCR1</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000204</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD080204 (DDR_PHY)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00030237</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Data Training Configuration Register 1</td></tr>
+</table>
+<p></p>
+<h2>DTCR1 (DDR_PHY) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>RANKEN_RSVD</td><td class="center">31:18</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Reserved. Return zeros on reads.</td></tr>
+<tr valign=top><td>RANKEN</td><td class="center">17:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x3</td><td>Rank Enable: Specifies the ranks that are enabled for data-training<br/>and write leveling. Bit 0 controls rank 0, bit 1 controls rank 1, etc.<br/>Setting the bit to 1b1 enables the rank, and setting it to 1b0 disables<br/>the rank. This setting also specifies the ranks that are enabled for<br/>DQS drift detection and compensation.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">15:14</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Return zeros on reads.</td></tr>
+<tr valign=top><td>DTRANK</td><td class="center">13:12</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Data Training Rank: Selects the SDRAM rank to be used during data<br/>bit deskew.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">11</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Return zeros on reads.</td></tr>
+<tr valign=top><td>RDLVLGDIFF</td><td class="center">10:8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x2</td><td>Read Leveling Gate Sampling Difference: width of DQS sampling<br/>window. Encoded as a fraction of the DDR clock period follows:<br/>0b000: GDQSPRD/4<br/>0b001: GDQSPRD/4<br/>0b010: GDQSPRD/8<br/>0b011: GDQSPRD/16<br/>0b100: GDQSPRD/32<br/>0b101: GDQSPRD/64<br/>0b110: GDQSPRD/128<br/>0b111: GDQSPRD/256</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 7</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Return zeros on reads.</td></tr>
+<tr valign=top><td>RDLVLGS</td><td class="center"> 6:4</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x3</td><td>Read Leveling Gate Shift: delay reduction to apply to gate after it has<br/>been aligned to DQS. Encoded as a fraction of the DDR clock period<br/>follows:<br/>0b000: 0<br/>0b001: GDQSPRD/4<br/>0b010: GDQSPRD/8<br/>0b011: GDQSPRD/16<br/>0b100: GDQSPRD/32<br/>0b101: GDQSPRD/64<br/>0b110: GDQSPRD/128<br/>0b111: GDQSPRD/256</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 3</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Return zeros on reads.</td></tr>
+<tr valign=top><td>RDPRMVL_TRN</td><td class="center"> 2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Read Preamble Training enable: engages read preamble training<br/>mode in DDR4 DRAM during gate training</td></tr>
+<tr valign=top><td>RDLVLEN</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Read Leveling Enable: Run a DQS sampling scheme using the gate<br/>to align the rising edges of DQS and the gate after which a delay<br/>reduction is applied to the gate (see RDLVLGS).<br/>Note: This bit should not be enabled when the gate is extended</td></tr>
+<tr valign=top><td>BSTEN</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Basic Gate Training Enable: Runs a trial and error algorithm to<br/>progressively evaluate gate positions and narrow down to a working<br/>one</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

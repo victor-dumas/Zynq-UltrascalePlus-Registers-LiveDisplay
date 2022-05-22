@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<title>FPD_SLCR Module</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> > FPD_SLCR Module</p><h1>FPD_SLCR Module</h1>
+<h2>FPD_SLCR Module Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Module Name</th><td width=80% class=noborder>Full Power Domain SLCR (FPD_SLCR)</td></tr>
+<tr valign=top><th width=20% class=sumparam>Modules of this Type</th><td width=80% class=noborder>FPD_SLCR</td></tr>
+<tr valign=top><th class=sumparam>Base Address</th><td class=noborder>0x00FD610000 (FPD_SLCR)</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>FPD System-level Control</td></tr>
+</table>
+<h2>FPD_SLCR Module Register Summary</h2>
+<table>
+<tr valign=top><th width=20%>Register Name</th><th width=10%>Address</th><th width=10%>Width</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=40%>Description</th></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("fpd_slcr___wprot0.html")>wprot0</a></td><td class="hex">0x0000000000</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000001</td><td>FP Domain SLCR Write protection register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("fpd_slcr___ctrl.html")>ctrl</a></td><td class="hex">0x0000000004</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>General control register for the FP Domain SLCR</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("fpd_slcr___isr.html")>isr</a></td><td class="hex">0x0000000008</td><td class="center"> 1</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x00000000</td><td>Interrupt Status Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("fpd_slcr___imr.html")>imr</a></td><td class="hex">0x000000000C</td><td class="center"> 1</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00000001</td><td>Interrupt Mask Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("fpd_slcr___ier.html")>ier</a></td><td class="hex">0x0000000010</td><td class="center"> 1</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x00000000</td><td>Interrupt Enable Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("fpd_slcr___idr.html")>idr</a></td><td class="hex">0x0000000014</td><td class="center"> 1</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x00000000</td><td>Interrupt Disable Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("fpd_slcr___itr.html")>itr</a></td><td class="hex">0x0000000018</td><td class="center"> 1</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x00000000</td><td>Interrupt Trigger Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("fpd_slcr___wdt_clk_sel.html")>WDT_CLK_SEL</a></td><td class="hex">0x0000000100</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>FPD SWDT clock source select (WDT)</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("fpd_slcr___int_fpd.html")>INT_FPD</a></td><td class="hex">0x0000000200</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>Interconnect Clock Source Select</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("fpd_slcr___gpu.html")>gpu</a></td><td class="hex">0x000000100C</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000007</td><td>GPU Idle status Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("fpd_slcr___gdma_cfg.html")>gdma_cfg</a></td><td class="hex">0x0000003000</td><td class="center"> 7</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00000048</td><td>GDMA RF2 Configuation</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("fpd_slcr___gdma_ram.html")>GDMA_RAM</a></td><td class="hex">0x0000003010</td><td class="center">16</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00003B3B</td><td>RAM control register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("fpd_slcr___afi_fs.html")>afi_fs</a></td><td class="hex">0x0000005000</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000A00</td><td>afi fs SLCR control register. This register is static and should not be modified during operation.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("fpd_slcr___err_atb_isr.html")>ERR_ATB_ISR</a></td><td class="hex">0x0000006000</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>Interrupt Status.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("fpd_slcr___err_atb_imr.html")>ERR_ATB_IMR</a></td><td class="hex">0x0000006004</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000007</td><td>Interrupt Mask.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("fpd_slcr___err_atb_ier.html")>ERR_ATB_IER</a></td><td class="hex">0x0000006008</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>Interrupt Enable.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("fpd_slcr___err_atb_idr.html")>ERR_ATB_IDR</a></td><td class="hex">0x000000600C</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>Interrupt Disable.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("fpd_slcr___atb_cmd_store_en.html")>ATB_CMD_STORE_EN</a></td><td class="hex">0x0000006010</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000007</td><td>Timeout Enable.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("fpd_slcr___atb_resp_en.html")>ATB_RESP_EN</a></td><td class="hex">0x0000006014</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>AXI Response Enables.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("fpd_slcr___atb_resp_type.html")>ATB_RESP_TYPE</a></td><td class="hex">0x0000006018</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000007</td><td>Timed-out AXI Response Selection.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("fpd_slcr___atb_prescale.html")>ATB_PRESCALE</a></td><td class="hex">0x0000006020</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x0000FFFF</td><td>Prescalar and Enable</td></tr>
+</table>
+<p id=foot class=footer></p>
+</body>
+</html>

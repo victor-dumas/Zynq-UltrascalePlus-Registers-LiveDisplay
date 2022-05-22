@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<title>R5_ROM Module</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> > R5_ROM Module</p><h1>R5_ROM Module</h1>
+<h2>R5_ROM Module Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Module Name</th><td width=80% class=noborder>Cortex-R5 Debug ROM (R5_ROM)</td></tr>
+<tr valign=top><th width=20% class=sumparam>Modules of this Type</th><td width=80% class=noborder>CORESIGHT_R5_ROM</td></tr>
+<tr valign=top><th class=sumparam>Base Address</th><td class=noborder>0x00FEBE0000 (CORESIGHT_R5_ROM)</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>R5 Integration ROM</td></tr>
+</table>
+<h2>R5_ROM Module Register Summary</h2>
+<table>
+<tr valign=top><th width=20%>Register Name</th><th width=10%>Address</th><th width=10%>Width</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=40%>Description</th></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("r5_rom___entry00.html")>ENTRY00</a></td><td class="hex">0x0000000000</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00010003</td><td>CPU 0 Debug Component</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("r5_rom___entry01.html")>ENTRY01</a></td><td class="hex">0x0000000004</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00012003</td><td>CPU 0 CTI Component</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("r5_rom___entry02.html")>ENTRY02</a></td><td class="hex">0x0000000008</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00018003</td><td>CPU 0 ETM Component</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("r5_rom___entry03.html")>ENTRY03</a></td><td class="hex">0x000000000C</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00019003</td><td>CPU 1 Debug Component</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("r5_rom___entry04.html")>ENTRY04</a></td><td class="hex">0x0000000010</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0001C003</td><td>CPU 1 CTI Component</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("r5_rom___entry05.html")>ENTRY05</a></td><td class="hex">0x0000000014</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0001D003</td><td>CPU 1 ETM Component</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("r5_rom___devid.html")>DEVID</a></td><td class="hex">0x0000000FC8</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00000000</td><td>This register indicates the capabilities.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("r5_rom___devtype.html")>DEVTYPE</a></td><td class="hex">0x0000000FCC</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00000000</td><td>It provides a debugger with information about the component.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("r5_rom___pidr4.html")>PIDR4</a></td><td class="hex">0x0000000FD0</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00000004</td><td>ROM Peripheral ID 4</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("r5_rom___pidr5.html")>PIDR5</a></td><td class="hex">0x0000000FD4</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00000000</td><td>ROM Peripheral ID 5</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("r5_rom___pidr6.html")>PIDR6</a></td><td class="hex">0x0000000FD8</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00000000</td><td>ROM Peripheral ID 6</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("r5_rom___pidr7.html")>PIDR7</a></td><td class="hex">0x0000000FDC</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00000000</td><td>ROM Peripheral ID 7</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("r5_rom___pidr0.html")>PIDR0</a></td><td class="hex">0x0000000FE0</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x000000B5</td><td>ROM Peripheral ID 0</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("r5_rom___pidr1.html")>PIDR1</a></td><td class="hex">0x0000000FE4</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x000000B4</td><td>ROM Peripheral ID 1</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("r5_rom___pidr2.html")>PIDR2</a></td><td class="hex">0x0000000FE8</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0000000B</td><td>ROM Peripheral ID 2</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("r5_rom___pidr3.html")>PIDR3</a></td><td class="hex">0x0000000FEC</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00000000</td><td>ROM Peripheral ID 3</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("r5_rom___cidr0.html")>CIDR0</a></td><td class="hex">0x0000000FF0</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0000000D</td><td>ROM Component ID 0</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("r5_rom___cidr1.html")>CIDR1</a></td><td class="hex">0x0000000FF4</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00000010</td><td>ROM Component ID 1</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("r5_rom___cidr2.html")>CIDR2</a></td><td class="hex">0x0000000FF8</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00000005</td><td>ROM Component ID 2</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("r5_rom___cidr3.html")>CIDR3</a></td><td class="hex">0x0000000FFC</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x000000B1</td><td>ROM Component ID 3</td></tr>
+</table>
+<p id=foot class=footer></p>
+</body>
+</html>

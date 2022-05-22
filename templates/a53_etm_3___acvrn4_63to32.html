@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<title>ACVRn4_63to32 (A53_ETM_3) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___a53_etm_3.html")>A53_ETM_3 Module</a> &gt; ACVRn4_63to32 (A53_ETM_3) Register</p><h1>ACVRn4_63to32 (A53_ETM_3) Register</h1>
+<h2>ACVRn4_63to32 (A53_ETM_3) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>ACVRn4_63to32</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000424</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FEF40424 (CORESIGHT_A53_ETM_3)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Address Comparator Value Registers 4</td></tr>
+</table>
+<p></p>
+<h2>ACVRn4_63to32 (A53_ETM_3) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>ADDRESS</td><td class="center">31:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>Address value.The address comparators can support implementations that use multiple address widths. When the trace unit compares the ADDRESS field with an address that has a width less than this field, then it must ignore those upper bits in the comparison. For example, in a system that supports both 32-bit and 64-bit addresses, when the processor is in 32-bit state the comparator must ignore the ADDRESS[63:32] bits.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

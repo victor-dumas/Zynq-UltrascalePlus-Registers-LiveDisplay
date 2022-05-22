@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<title>PORT_TYPE (DDR_QOS_CTRL) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddr_qos_ctrl.html")>DDR_QOS_CTRL Module</a> &gt; PORT_TYPE (DDR_QOS_CTRL) Register</p><h1>PORT_TYPE (DDR_QOS_CTRL) Register</h1>
+<h2>PORT_TYPE (DDR_QOS_CTRL) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>PORT_TYPE</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000000</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD090000 (DDR_QOS_CTRL)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x0000A845</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Set Port Type Register</td></tr>
+</table>
+<p></p>
+<h2>PORT_TYPE (DDR_QOS_CTRL) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:16</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved for future use</td></tr>
+<tr valign=top><td>PORT5_TYPE</td><td class="center">15:14</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x2</td><td>Set Port 5 Type<br/>00 - Best Effort<br/>01 - Low Latency<br/>10 - Video traffic<br/>11 - Reserved</td></tr>
+<tr valign=top><td>PORT4_TYPE</td><td class="center">13:12</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x2</td><td>Set Port 4 Type<br/>00 - Best Effort<br/>01 - Low Latency<br/>10 - Video traffic<br/>11 - Reserved</td></tr>
+<tr valign=top><td>PORT3_TYPE</td><td class="center">11:10</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x2</td><td>Set Port 3 Type<br/>00 - Best Effort<br/>01 - Low Latency<br/>10 - Video traffic<br/>11 - Reserved</td></tr>
+<tr valign=top><td>PORT2B_TYPE</td><td class="center"> 9:8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Set Port 2 Blue Queue Type<br/>00 - Best Effort<br/>01 - Low Latency<br/>10 - Video traffic<br/>11 - Reserved</td></tr>
+<tr valign=top><td>PORT2R_TYPE</td><td class="center"> 7:6</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Set Port 2 Red Queue Type<br/>00 - Best Effort<br/>01 - Low Latency<br/>10 - Video traffic<br/>11 - Reserved</td></tr>
+<tr valign=top><td>PORT1B_TYPE</td><td class="center"> 5:4</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Set Port 1 Blue Queue Type<br/>00 - Best Effort<br/>01 - Low Latency<br/>10 - Video traffic<br/>11 - Reserved</td></tr>
+<tr valign=top><td>PORT1R_TYPE</td><td class="center"> 3:2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Set Port 1 Red Queue Type<br/>00 - Best Effort<br/>01 - Low Latency<br/>10 - Video traffic<br/>11 - Reserved</td></tr>
+<tr valign=top><td>PORT0_TYPE</td><td class="center"> 1:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Set Port 0 Type<br/>00 - Best Effort<br/>01 - Low Latency<br/>10 - Video traffic<br/>11 - Reserved</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

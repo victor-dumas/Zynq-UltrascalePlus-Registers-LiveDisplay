@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<title>CSUDMA_SRC_CTRL2 (CSUDMA) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___csudma.html")>CSUDMA Module</a> &gt; CSUDMA_SRC_CTRL2 (CSUDMA) Register</p><h1>CSUDMA_SRC_CTRL2 (CSUDMA) Register</h1>
+<h2>CSUDMA_SRC_CTRL2 (CSUDMA) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>CSUDMA_SRC_CTRL2</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000024</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FFC80024 (CSUDMA)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x081BFFF8</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>General SRC DMA Control Register 2</td></tr>
+</table>
+<p></p>
+<h2>CSUDMA_SRC_CTRL2 (CSUDMA) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:28</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>RESERVED. Return 0 when read. Writes ignored.</td></tr>
+<tr valign=top><td>ARCACHE</td><td class="center">26:24</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Sets the ARCACHE bits on the AXI Read channel as follows:<br/>Bit 0 - Sets the AXI ArCache[0] signal<br/>Bit 1 - Sets the AXI ArCache[2] signal<br/>Bit 2 - Sets the AXI ArCache[3] signal<br/>Note that ArCache[1] is always driven to 1</td></tr>
+<tr valign=top><td>ROUTE_BIT</td><td class="center">23</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>0: Command will be routed normally<br/>1: Command will be routed to APU's cache controller</td></tr>
+<tr valign=top><td>TIMEOUT_EN</td><td class="center">22</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>0: The 2 Timeout counters are disabled<br/>1: The 2 Timeout counters are enabled</td></tr>
+<tr valign=top><td>TIMEOUT_PRE</td><td class="center">15:4</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0xFFF</td><td>Set the prescaler value for the timeout in clk (~2.5ns) cycles (Refer to TIMEOUT_VALUE description). The TIMEOUT_PRE field is interpreted as follows:<br/>12'h000: Prescaler enables timer every cycle<br/>12'h001: Prescaler enables timer every 2 cycles<br/>etc<br/>12'hFFF: Prescaler enables timer every 4096 cycles</td></tr>
+<tr valign=top><td>MAX_OUTS_CMDS</td><td class="center"> 3:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x8</td><td>Controls the maximumum number of outstanding AXI read commands issued. The field is interpreted as follows:<br/>4'h0: Up to 1 Outstanding Read command allowed<br/>4'h1: Up to 2 Outstanding Read commands allowed<br/>etc<br/>4'h8: Up to 9 Outstanding Read commands allowed<br/>4'h9 - 4'hF: Invalid. Valid range is 4'h0 to 4'h8.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

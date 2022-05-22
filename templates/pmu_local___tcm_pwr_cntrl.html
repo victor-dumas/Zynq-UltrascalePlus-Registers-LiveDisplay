@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<title>TCM_PWR_CNTRL (PMU_LOCAL) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___pmu_local.html")>PMU_LOCAL Module</a> &gt; TCM_PWR_CNTRL (PMU_LOCAL) Register</p><h1>TCM_PWR_CNTRL (PMU_LOCAL) Register</h1>
+<h2>TCM_PWR_CNTRL (PMU_LOCAL) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>TCM_PWR_CNTRL</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x00000000D0</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FFD600D0 (PMU_LOCAL)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x01010101</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>RPU TCM Memory Power Control. Reset by POR only.</td></tr>
+</table>
+<p>Controls the on-chip power Switches: 0: power off. 1: power on. All fields can only be read or written by the PMU processor. This register maintains its contents during a System Reset.</p>
+<h2>TCM_PWR_CNTRL (PMU_LOCAL) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:25</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>TCMB1</td><td class="center">24</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>RPU core 1, TCM_B.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">23:17</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>TCMA1</td><td class="center">16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>RPU core 1, TCM_A.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">15:9</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>TCMB0</td><td class="center"> 8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>RPU core 0, TCM_B.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 7:1</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>TCMA0</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>RPU core 0, TCM_A.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

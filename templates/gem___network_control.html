@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<title>network_control (GEM) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___gem.html")>GEM Module</a> &gt; network_control (GEM) Register</p><h1>network_control (GEM) Register</h1>
+<h2>network_control (GEM) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>network_control</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000000</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF0B0000 (GEM0)<br/>0x00FF0C0000 (GEM1)<br/>0x00FF0D0000 (GEM2)<br/>0x00FF0E0000 (GEM3)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>The network control register contains general MAC control functions for both receiver and transmitter.</td></tr>
+</table>
+<p></p>
+<h2>network_control (GEM) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:26</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved, read as zero, ignored on write.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">25</td><td class="tooltip grayback">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Writeable register. Ignore on read.</td></tr>
+<tr valign=top><td>one_step_sync_mode</td><td class="center">24</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>1588 One Step Sync Mode. Write 1 to enable. Replace timestamp field in the 1588 header for TX Sync Frames with current TSU timer value.</td></tr>
+<tr valign=top><td>store_udp_offset</td><td class="center">22</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Store UDP / TCP offset to memory. Setting this bit to one will cause the upper 16-bits of the CRC of every received frame to be replaced with the offset from start of frame to the beginning of the UDP or TCP header. The lower 16-bits of the CRC are replaced with zero and reserved for future use. The offset is measured in units of 2 bytes. Set to zero for normal operation.</td></tr>
+<tr valign=top><td>alt_sgmii_mode</td><td class="center">21</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Alternative sgmii mode. If asserted with sgmii_mode in the network control register the ACK bit is driven before ability detect during transfer of status information from the PHY to the MAC.</td></tr>
+<tr valign=top><td>ptp_unicast_ena</td><td class="center">20</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Enable detection of unicast PTP unicast frames. </td></tr>
+<tr valign=top><td>tx_lpi_en</td><td class="center">19</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Enable LPI transmission when set LPI (low power idle) is immediately transmitted</td></tr>
+<tr valign=top><td>flush_rx_pkt_pclk</td><td class="center">18</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Flush the next packet from the external RX DPRAM. Writing one to this bit will only have an effect if the DMA is not currently writing a packet already stored in the DPRAM to memory.<br/>Self clearing register.</td></tr>
+<tr valign=top><td>transmit_pfc_priority_based_pause_frame</td><td class="center">17</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Write a one to transmit PFC priority based pause frame. Takes the values stored in the Transmit PFC Pause Register. Self clearing register.</td></tr>
+<tr valign=top><td>pfc_enable</td><td class="center">16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Enable PFC Priority Based Pause Reception capabilities. Setting this bit will enable PFC negotiation and recognition of priority based pause frames. </td></tr>
+<tr valign=top><td>store_rx_ts</td><td class="center">15</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Store receive time stamp to memory. Setting this bit to one will cause the CRC of every received frame to be replaced with the value of the nanoseconds field of the 1588 timer that was captured as the receive frame passed the message time stamp point. Set to zero for normal operation.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">14:13</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved, read as zero, ignored on write.</td></tr>
+<tr valign=top><td>tx_pause_frame_zero</td><td class="center">12</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Transmit zero quantum pause frame - writing one to this bit causes a pause frame with zero quantum to be transmitted. Self clearing register.</td></tr>
+<tr valign=top><td>tx_pause_frame_req</td><td class="center">11</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Transmit pause frame - writing one to this bit causes a pause frame to be transmitted. Self clearing register.</td></tr>
+<tr valign=top><td>tx_halt_pclk</td><td class="center">10</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Transmit halt - writing one to this bit halts transmission as soon as any ongoing frame transmission ends. Self clearing register.</td></tr>
+<tr valign=top><td>tx_start_pclk</td><td class="center"> 9</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Start transmission - writing one to this bit starts transmission. Self clearing register.</td></tr>
+<tr valign=top><td>back_pressure</td><td class="center"> 8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Back pressure if set in 10M or 100M half duplex mode will force collisions on all received frames. Ignored in gigabit half duplex mode.</td></tr>
+<tr valign=top><td>stats_write_en</td><td class="center"> 7</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Write enable for statistics registers - setting this bit to one means the statistics registers can be written for functional test purposes.</td></tr>
+<tr valign=top><td>inc_all_stats_regs</td><td class="center"> 6</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Incremental statistics registers - this bit is write only. Writing a one increments all the statistics registers by one for test purposes. Self clearing register.</td></tr>
+<tr valign=top><td>clear_all_stats_regs</td><td class="center"> 5</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Clear statistics registers - this bit is write only. Writing a one clears the statistics registers. Self clearing register.</td></tr>
+<tr valign=top><td>man_port_en</td><td class="center"> 4</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Management port enable - set to one to enable the management port. When zero forces mdio to high impedance state and mdc low.</td></tr>
+<tr valign=top><td>enable_transmit</td><td class="center"> 3</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Transmit enable - when set, it enables the GEM transmitter to send data. When reset transmission will stop immediately, the transmit pipeline and control registers will be cleared and the transmit queue pointer register will reset to point to the start of the transmit descriptor list.</td></tr>
+<tr valign=top><td>enable_receive</td><td class="center"> 2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Receive enable - when set, it enables the GEM to receive data. When reset frame reception will stop immediately and the receive pipeline will be cleared. The receive queue pointer register is unaffected.</td></tr>
+<tr valign=top><td>loopback_local</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Loopback local - asserts the loopback_local signal to the system clock generator. Also connects txd to rxd, tx_en to rx_dv and forces full duplex mode. Bit 11 of the network configuration register must be set low to disable TBI mode when in internal loopback. rx_clk and tx_clk may malfunction as the GEM is switched into and out of internal loopback. It is important that receive and transmit circuits have already been disabled when making the switch into and out of internal loopback. Local loopback functionality is optional and may not be supported by some instantiations of the GEM.</td></tr>
+<tr valign=top><td>loopback</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Reserved (loopback output signal is not implemented)</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

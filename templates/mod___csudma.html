@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<title>CSUDMA Module</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> > CSUDMA Module</p><h1>CSUDMA Module</h1>
+<h2>CSUDMA Module Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Module Name</th><td width=80% class=noborder>CSUDMA Module</td></tr>
+<tr valign=top><th width=20% class=sumparam>Modules of this Type</th><td width=80% class=noborder>CSUDMA</td></tr>
+<tr valign=top><th class=sumparam>Base Address</th><td class=noborder>0x00FFC80000 (CSUDMA)</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>CSU module DMA Engine, CSU DMA Control</td></tr>
+</table>
+<h2>CSUDMA Module Register Summary</h2>
+<table>
+<tr valign=top><th width=20%>Register Name</th><th width=10%>Address</th><th width=10%>Width</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=40%>Description</th></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("csudma___csudma_src_addr.html")>CSUDMA_SRC_ADDR</a></td><td class="hex">0x0000000000</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>Source mem address (lsbs) for DMA memory->stream data transfer</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("csudma___csudma_src_size.html")>CSUDMA_SRC_SIZE</a></td><td class="hex">0x0000000004</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>DMA transfer payload for DMA memory-> stream data transfer</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("csudma___csudma_src_sts.html")>CSUDMA_SRC_STS</a></td><td class="hex">0x0000000008</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>General SRC DMA Status</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("csudma___csudma_src_ctrl.html")>CSUDMA_SRC_CTRL</a></td><td class="hex">0x000000000C</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x003FFA00</td><td>General SRC DMA Control Register 1</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("csudma___csudma_src_crc.html")>CSUDMA_SRC_CRC</a></td><td class="hex">0x0000000010</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>SRC DMA Pseudo CRC</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("csudma___csudma_src_i_sts.html")>CSUDMA_SRC_I_STS</a></td><td class="hex">0x0000000014</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>SRC DMA Interrupt Status Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("csudma___csudma_src_i_en.html")>CSUDMA_SRC_I_EN</a></td><td class="hex">0x0000000018</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>SRC DMA Interrupt Enable</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("csudma___csudma_src_i_dis.html")>CSUDMA_SRC_I_DIS</a></td><td class="hex">0x000000001C</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>SRC DMA Interrupt Disable</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("csudma___csudma_src_i_mask.html")>CSUDMA_SRC_I_MASK</a></td><td class="hex">0x0000000020</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x0000007F</td><td>SRC DMA Interrupt Mask</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("csudma___csudma_src_ctrl2.html")>CSUDMA_SRC_CTRL2</a></td><td class="hex">0x0000000024</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x081BFFF8</td><td>General SRC DMA Control Register 2</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("csudma___csudma_src_addr_msb.html")>CSUDMA_SRC_ADDR_MSB</a></td><td class="hex">0x0000000028</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>Source mem address (msbs) for DMA memory->stream data transfer</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("csudma___csudma_dst_addr.html")>CSUDMA_DST_ADDR</a></td><td class="hex">0x0000000800</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>Destination mem address (lsbs) for DMA stream->memory data transfer</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("csudma___csudma_dst_size.html")>CSUDMA_DST_SIZE</a></td><td class="hex">0x0000000804</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>DMA transfer payload for DMA stream-> memory data transfer</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("csudma___csudma_dst_sts.html")>CSUDMA_DST_STS</a></td><td class="hex">0x0000000808</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>General DST DMA Status</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("csudma___csudma_dst_ctrl.html")>CSUDMA_DST_CTRL</a></td><td class="hex">0x000000080C</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x803FFA00</td><td>General DST DMA Control</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("csudma___csudma_dst_i_sts.html")>CSUDMA_DST_I_STS</a></td><td class="hex">0x0000000814</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>DST DMA Interrupt Status Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("csudma___csudma_dst_i_en.html")>CSUDMA_DST_I_EN</a></td><td class="hex">0x0000000818</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>DST DMA Interrupt Enable</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("csudma___csudma_dst_i_dis.html")>CSUDMA_DST_I_DIS</a></td><td class="hex">0x000000081C</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>DST DMA Interrupt Disable</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("csudma___csudma_dst_i_mask.html")>CSUDMA_DST_I_MASK</a></td><td class="hex">0x0000000820</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x000000FE</td><td>DST DMA Interrupt Mask</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("csudma___csudma_dst_ctrl2.html")>CSUDMA_DST_CTRL2</a></td><td class="hex">0x0000000824</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x081BFFF8</td><td>General DST DMA Control Register 2</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("csudma___csudma_dst_addr_msb.html")>CSUDMA_DST_ADDR_MSB</a></td><td class="hex">0x0000000828</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>Destination mem address (msbs) for DMA stream->memory data transfer</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("csudma___csudma_safety_chk.html")>CSUDMA_SAFETY_CHK</a></td><td class="hex">0x0000000FF8</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>Safety endpoint connectivity check Register</td></tr>
+</table>
+<p id=foot class=footer></p>
+</body>
+</html>

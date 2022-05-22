@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<title>reg_command (SDIO) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___sdio.html")>SDIO Module</a> &gt; reg_command (SDIO) Register</p><h1>reg_command (SDIO) Register</h1>
+<h2>reg_command (SDIO) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>reg_command</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000000E</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF16000E (SD0)<br/>0x00FF17000E (SD1)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>16</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Controller Commands.</td></tr>
+</table>
+<p></p>
+<h2>reg_command (SDIO) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>command_cmdindex</td><td class="center">13:8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Write the command number used with:<br/>* CMD [0:63].<br/>* ACMD [0:63].</td></tr>
+<tr valign=top><td>command_cmdtype</td><td class="center"> 7:6</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Assert a special command type; there are three types: suspend, resume, and abort.<br/>Suspend Command:<br/>If the Suspend command succeeds, the controller assumes the SD I/O has been released and that it is possible to issue the next command using the SD_DAT signals. The controller de-asserts Read Wait for read transactions and stops checking busy for write transactions. The Interrupt cycle starts in 4-bit mode. If the Suspend command fails, the controller maintain its current state. and the controller shall restart the transfer by setting Continue Request in the Block Gap Control Register.<br/>Resume Command:<br/>The SDIO controller re-starts the data transfer by restoring the registers in the range of 000-00Dh. The controller checks for busy before starting write transfers.<br/>Abort Command:<br/>* If this command is set when executing a read transfer, the controller stops adding content to the receive buffer. * If this command is set when executing a write transfer, the controller stops driving the SD_DAT signals.<br/>After issuing the Abort command, the controller should issue a software reset.<br/>00: Normal<br/>01: Suspend<br/>10: Resume<br/>11: Abort</td></tr>
+<tr valign=top><td>command_datapresent</td><td class="center"> 5</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>This bit is set to 1 to indicate that data is present and shall be transferred using the DAT line. If is set to 0 for the following:<br/>1. Commands using only CMD line (ex. CMD52).<br/>2. Commands with no data transferbut using busy signal on DAT[0]line (R1b or R5b ex. CMD38).<br/>3. Resume Command.'0' Data not Present'1' Data present</td></tr>
+<tr valign=top><td>command_indexchkena</td><td class="center"> 4</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>If this bit is set to 1, the HC shall check the index field in the response to see if it has the same value as the command index. If it is not, it is reported as a Command Index Error. If this bit is set to 0, the Index field is not checked.'0' Disable'1' Enable</td></tr>
+<tr valign=top><td>command_crcchkena</td><td class="center"> 3</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>If this bit is set to 1, the HC shall check the CRC field in the response. If an error is detected, it is reported as a Command CRC Error. If this bit is set to 0, the CRC field is not checked.'0' Disable'1' Enable</td></tr>
+<tr valign=top><td>command_responsetype</td><td class="center"> 1:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Response Type Select.'00' No Response'01' Response Length 136'10' Response Length 48'11' Response Length 48 check busy after response</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

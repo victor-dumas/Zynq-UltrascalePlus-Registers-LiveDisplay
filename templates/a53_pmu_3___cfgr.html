@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<title>CFGR (A53_PMU_3) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___a53_pmu_3.html")>A53_PMU_3 Module</a> &gt; CFGR (A53_PMU_3) Register</p><h1>CFGR (A53_PMU_3) Register</h1>
+<h2>CFGR (A53_PMU_3) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>CFGR</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000E00</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FEF30E00 (CORESIGHT_A53_PMU_3)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">ro<span class="tooltiptext">Read-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x0001FF06</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Performance Monitors Configuration Register</td></tr>
+</table>
+<p></p>
+<h2>CFGR (A53_PMU_3) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>UEN</td><td class="center">19</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>User-mode Enable Register supported. PMUSERENR_EL0 is not visible in the external debug interface, so this bit is RES0.</td></tr>
+<tr valign=top><td>WT</td><td class="center">18</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>This feature is not supported, so this bit is RES0.</td></tr>
+<tr valign=top><td>NA</td><td class="center">17</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>This feature is not supported, so this bit is RES0.</td></tr>
+<tr valign=top><td>EX</td><td class="center">16</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>Export supported. Value is IMPLEMENTATION DEFINED.</td></tr>
+<tr valign=top><td>CCD</td><td class="center">15</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>Cycle counter has prescale. This is RES1 if AArch32 is supported at any EL, and RES0 otherwise.</td></tr>
+<tr valign=top><td>CC</td><td class="center">14</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>Dedicated cycle counter (counter 31) supported. This bit is RES1.</td></tr>
+<tr valign=top><td>SIZE</td><td class="center">13:8</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x3F</td><td>Size of counters. This field determines the spacing of counters in the memory-map.In v8-A the counters are at doubleword-aligned addresses, and the largest counter is 64-bits, so this field is 0b111111.</td></tr>
+<tr valign=top><td>N</td><td class="center"> 7:0</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x6</td><td>Number of counters implemented in addition to the cycle counter, PMCCNTR_EL0. The maximum number of event counters is 31, so bits[7:5] are always RES0.and so on up to 0b00011111, which indicates PMCCNTR_EL0 and 31 event counters implemented.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

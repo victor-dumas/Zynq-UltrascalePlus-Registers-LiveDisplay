@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<title>DPDMA_ISR (DPDMA) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___dpdma.html")>DPDMA Module</a> &gt; DPDMA_ISR (DPDMA) Register</p><h1>DPDMA_ISR (DPDMA) Register</h1>
+<h2>DPDMA_ISR (DPDMA) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>DPDMA_ISR</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000004</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD4C0004 (DPDMA)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Interrupt Status Register for intrN. This is a sticky register that holds the value of the interrupt until cleared by a value of 1.</td></tr>
+</table>
+<p></p>
+<h2>DPDMA_ISR (DPDMA) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>vsync_int</td><td class="center">27</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Interrupt on Vsync</td></tr>
+<tr valign=top><td>axi_rd_4k_cross</td><td class="center">26</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>AXI Read Channel burst crosses 4k boundary</td></tr>
+<tr valign=top><td>wr_data_fifo_full</td><td class="center">25</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Write data FIFO full condition is detected during descriptor update</td></tr>
+<tr valign=top><td>wr_cmd_fifo_full</td><td class="center">24</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Write cmd FIFO full condition is detected during descriptor update</td></tr>
+<tr valign=top><td>dscr_err5</td><td class="center">23</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>descriptor payload is larger than line/frame size dictated by Video timing signals on channel 5</td></tr>
+<tr valign=top><td>dscr_err4</td><td class="center">22</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>descriptor payload is larger than line/frame size dictated by Video timing signals on channel 4</td></tr>
+<tr valign=top><td>dscr_err3</td><td class="center">21</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>descriptor payload is larger than line/frame size dictated by Video timing signals on channel 3</td></tr>
+<tr valign=top><td>dscr_err2</td><td class="center">20</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>descriptor payload is larger than line/frame size dictated by Video timing signals on channel 2</td></tr>
+<tr valign=top><td>dscr_err1</td><td class="center">19</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>descriptor payload is larger than line/frame size dictated by Video timing signals on channel 1</td></tr>
+<tr valign=top><td>dscr_err0</td><td class="center">18</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>descriptor payload is larger than line/frame size dictated by Video timing signals on channel 0</td></tr>
+<tr valign=top><td>data_axi_err5</td><td class="center">17</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Error occurred during data read on Channel 5<br/>- SLAVE/DECODE Error on any beat of data</td></tr>
+<tr valign=top><td>data_axi_err4</td><td class="center">16</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Error occurred during data read on Channel 4<br/>- SLAVE/DECODE Error on any beat of data</td></tr>
+<tr valign=top><td>data_axi_err3</td><td class="center">15</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Error occurred during data read on Channel 3<br/>- SLAVE/DECODE Error on any beat of data</td></tr>
+<tr valign=top><td>data_axi_err2</td><td class="center">14</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Error occurred during data read on Channel 2<br/>- SLAVE/DECODE Error on any beat of data</td></tr>
+<tr valign=top><td>data_axi_err1</td><td class="center">13</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Error occurred during data read on Channel 1<br/>- SLAVE/DECODE Error on any beat of data</td></tr>
+<tr valign=top><td>data_axi_err0</td><td class="center">12</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Error occurred during data read on Channel 0<br/>- SLAVE/DECODE Error on any beat of data</td></tr>
+<tr valign=top><td>no_ostand_tran5</td><td class="center">11</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>outstanding transaction counter reached zero during pause on channel 5</td></tr>
+<tr valign=top><td>no_ostand_tran4</td><td class="center">10</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>outstanding transaction counter reached zero during pause on channel 4</td></tr>
+<tr valign=top><td>no_ostand_tran3</td><td class="center"> 9</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>outstanding transaction counter reached zero during pause on channel 3</td></tr>
+<tr valign=top><td>no_ostand_tran2</td><td class="center"> 8</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>outstanding transaction counter reached zero during pause on channel 2</td></tr>
+<tr valign=top><td>no_ostand_tran1</td><td class="center"> 7</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>outstanding transaction counter reached zero during pause on channel 1</td></tr>
+<tr valign=top><td>no_ostand_tran0</td><td class="center"> 6</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>outstanding transaction counter reached zero during pause on channel 0</td></tr>
+<tr valign=top><td>dscr_done5</td><td class="center"> 5</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>DMA is done with current descriptor, interrupt is only generated if it is enabled in current descriptor</td></tr>
+<tr valign=top><td>dscr_done4</td><td class="center"> 4</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>DMA is done with current descriptor, interrupt is only generated if it is enabled in current descriptor</td></tr>
+<tr valign=top><td>dscr_done3</td><td class="center"> 3</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>DMA is done with current descriptor, interrupt is only generated if it is enabled in current descriptor</td></tr>
+<tr valign=top><td>dscr_done2</td><td class="center"> 2</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>DMA is done with current descriptor, interrupt is only generated if it is enabled in current descriptor</td></tr>
+<tr valign=top><td>dscr_done1</td><td class="center"> 1</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>DMA is done with current descriptor, interrupt is only generated if it is enabled in current descriptor</td></tr>
+<tr valign=top><td>dscr_done0</td><td class="center"> 0</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>DMA is done with current descriptor, interrupt is only generated if it is enabled in current descriptor</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

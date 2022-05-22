@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<title>CRCPARSTAT (DDRC) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddrc.html")>DDRC Module</a> &gt; CRCPARSTAT (DDRC) Register</p><h1>CRCPARSTAT (DDRC) Register</h1>
+<h2>CRCPARSTAT (DDRC) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>CRCPARSTAT</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x00000000CC</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD0700CC (DDRC)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">ro<span class="tooltiptext">Read-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>CRC Parity Status Register</td></tr>
+</table>
+<p></p>
+<h2>CRCPARSTAT (DDRC) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>cmd_in_err_window</td><td class="center">29</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Indicate if commands are in the parity/crc error window.<br/>- 0 - No command is in the parity/crc error window.<br/>- 1 - One or more commands are in the parity/crc error window or retry is in progress.<br/>This register is valid when CRCPARCTRL1.crc_parity_retry_enable=1.</td></tr>
+<tr valign=top><td>retry_operating_mode</td><td class="center">28</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Operating mode of retry<br/>- 0 - Normal<br/>- 1 - Retry due to CRC/Parity error is in progress</td></tr>
+<tr valign=top><td>retry_current_state</td><td class="center">27:24</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Indicate current retry state for debug purposes only<br/>- 0000 - IDLE:Retry is not enabled<br/>- 0001 - MON_DFI:Retry is enabled and monitoring DFI<br/>- 0010 - DETECTED ALERT:Detected dfi_alert_n<br/>- 0011 - WAKE_UP:Waking up from self-refresh state<br/>- 0100 - PRECHRGING:Pre-charging banks<br/>- 0101 - SEND_REF1:Sending extra REFs before software intervention time<br/>- 0110 - CTRLUPD:Issuing control update from retry logic<br/>- 0111 - WAIT_SW:Software intervention time<br/>- 1000 - SEND_REF2:Sending extra REFs before retrying commands<br/>- 1001 - RETRY_COMMANDS:Retrying commands<br/>- 1010 - RESTART_RETRY:Restarting retry due to alert_n detection during retry<br/>- 1111 - FATL_ERR:Fatal error detected<br/>FOR DEBUG PURPOSE ONLY</td></tr>
+<tr valign=top><td>dfi_alert_err_fatl_code</td><td class="center">22:20</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Indicate reason of dfi_alert_err_fatl_int assertion<br/>- [22] MPSMX caused parity error. (RCD's parity error detection only)<br/>- [21] Parity error happens again during software intervention time<br/>- [20] MRS was in retry_fifo_max_hold_timer_x4 window from alert_n=0 or STAT.operating_mode is Init.<br/>Two or more reason can be available at the same time<br/>It remains set until cleared by CRCPARCTL0.dfi_alert_err_fatl_clr.</td></tr>
+<tr valign=top><td>dfi_alert_err_no_sw</td><td class="center">19</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Indicate whether software can perform MRS/MPR/PDA during software intervention time.<br/>- 0 - MRS/MPR/PDA can be performed during software intervention time<br/>- 1 - MRS/MPR/PDA can NOT be performed during software intervention time<br/>If CRCPARCTL1.alert_wait_for_sw=1 and dfi_alert_err_no_sw=1, software can not perform MRS/MPR/PDA until dfi_alert_err_int is cleared by dfi_alert_err_int_clr.<br/>It remains set until cleared by CRCPARCTL0.dfi_alert_err_int_clr.</td></tr>
+<tr valign=top><td>dfi_alert_err_max_reached_int</td><td class="center">18</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>DFI alert error counter max reached interrupt.<br/>If the CRCPARSTAT.dfi_alert_err_cnt reaches it maximum value, this interrupt bit is set. It remains set until cleared by CRCPARCTL0.dfi_alert_err_int_clr</td></tr>
+<tr valign=top><td>dfi_alert_err_fatl_int</td><td class="center">17</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Fatal parity error interrupt.<br/>One or more these situation below happens, this interrupt bit is set.<br/>- PDA operation is in progress/started during retry is in control<br/>- Parity error happens again during dfi_alert_err_inrt=1<br/>- MRS was in retry_fifo_max_hold_timer_x4 window from alert_n=0.<br/>It remains set until cleared by CRCPARCTL0.dfi_alert_err_fatl_clr.<br/>If this interrupt is asserted, system reset is strongly recommended.</td></tr>
+<tr valign=top><td>dfi_alert_err_int</td><td class="center">16</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>DFI alert error interrupt.<br/>If a parity/CRC error is detected on dfi_alert_n, and the interrupt is enabled by CRCPARCTL0.dfi_alert_err_int_en, this interrupt bit will be set.<br/>It will remain set until cleared by CRCPARCTL0.dfi_alert_err_int_clr</td></tr>
+<tr valign=top><td>dfi_alert_err_cnt</td><td class="center">15:0</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>DFI alert error count.<br/>If a parity/CRC error is detected on dfi_alert_n, this counter be incremented.<br/>This is independent of the setting of CRCPARCTL0.dfi_alert_err_int_en.<br/>It will saturate at 0xFFFF, and can be cleared by asserting CRCPARCTL0.dfi_alert_err_cnt_clr.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

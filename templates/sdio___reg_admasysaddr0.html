@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<title>reg_admasysaddr0 (SDIO) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___sdio.html")>SDIO Module</a> &gt; reg_admasysaddr0 (SDIO) Register</p><h1>reg_admasysaddr0 (SDIO) Register</h1>
+<h2>reg_admasysaddr0 (SDIO) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>reg_admasysaddr0</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000058</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF160058 (SD0)<br/>0x00FF170058 (SD1)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>16</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Lower physical address for ADMA data transfer.</td></tr>
+</table>
+<p>The 32-bit Address Descriptor uses lower 32-bit of this register. To setup an ADMA transfer, the Host Driver sets the start address of the Descriptor table. Each time a descriptor line is fetched, the ADMA increments this register address in order to point to next descriptor line. When the ADMA Error Interrupt is generated, this register holds the valid Descriptor address depending on the ADMA state. The Host Driver  programs the Descriptor Table on 32-bit boundaries and a 32-bit boundary address to this register. The ADMA2 ignores lower 2-bit of this register and assumes it to be 00b.</p>
+<h2>reg_admasysaddr0 (SDIO) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>adma_sysaddress0</td><td class="center">15:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Descriptor table byte address of executing command.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

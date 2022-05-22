@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<title>RWP (ETR) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___etr.html")>ETR Module</a> &gt; RWP (ETR) Register</p><h1>RWP (ETR) Register</h1>
+<h2>RWP (ETR) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>RWP</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000018</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FE970018 (CORESIGHT_SOC_ETR)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>The value written to this register must be a byte-address aligned to the width of the trace memory databus and to a frame boundary. For example, for 64_bit wide trace memory and 128_bit wide trace memory, the four LSBs must be 0s. For 256_bit wide trace memory, the five LSBs must be 0s. The width of the trace memory can be obtained by reading the MEMWIDTH field in the DEVID Register, 0xFC8. Reading this register returns the current memory location being referenced, to which the next write would occur. When one complete buffer or FIFO entry has been written to the RWD Register, the RAM Write Pointer Register is incremented by the number of bytes per memory width of data. For example, for 64_bit wide memory, it is incremented by eight. For 128_bit wide memory it is incremented by 16 for every complete memory entry write. When this register wraps around its maximum value, the Full flag in the Status Register, STS, 0x00C, is set. In the ETB or ETF configurations, the width of this register is log2(MEM_SIZE*4). In the ETR configuration, this register is 32 bits wide, and the contents of this register represent the lower 32 bits of the 40-bit AXI address used to access trace memory. In ETB and ETF configurations, when in Circular Buffer mode, this register can be used to set the address to start capturing data from. This is for backwards compatibility purposes, to enable the FULL signal to be generated before the buffer becomes full. In other configurations and modes, the RAM Write Pointer is reset to the start of trace memory when exiting Disabled state (TraceCaptEn=0 and TMCReady=1). This register can be read:&lt;ul>&lt;li>when in Disabled state&lt;/li>&lt;li>when in Stopped state, in Circular Buffer mode&lt;/li>&lt;li>when in Running, Stopping or Stopped states, in Software FIFO mode.&lt;/li>&lt;/ul></td></tr>
+</table>
+<p></p>
+<h2>RWP (ETR) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>RWP</td><td class="center"> 8:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>This value represents the location in trace memory that will be accessed on a subsequent write to the trace memory.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

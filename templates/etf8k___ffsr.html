@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<title>FFSR (ETF8K) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___etf8k.html")>ETF8K Module</a> &gt; FFSR (ETF8K) Register</p><h1>FFSR (ETF8K) Register</h1>
+<h2>FFSR (ETF8K) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>FFSR</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000300</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FE950300 (CORESIGHT_SOC_ETF_2)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">ro<span class="tooltiptext">Read-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000002</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>This register indicates the status of the Formatter and the status of Flush request.</td></tr>
+</table>
+<p></p>
+<h2>FFSR (ETF8K) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>FtStopped</td><td class="center"> 1</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>This bit behaves the same way as the FtEmpty bit in the STS register, 0x00C. The FtStopped bit is deprecated and is present in this register to support backwards-compatibility with earlier versions of the ETB.</td></tr>
+<tr valign=top><td>FlInProg</td><td class="center"> 0</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>This bit indicates whether the TMC is currently processing a flush on the ATB slave port. This bit reflects the status of the AFVALIDS output. In the ETB or ETR configurations, the flush initiation is controlled by the flush-control bits in the FFCR register. In the ETF configuration, the flush request could additionally be from the ATB Master port.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

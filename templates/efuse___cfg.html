@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<title>cfg (EFUSE) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___efuse.html")>EFUSE Module</a> &gt; cfg (EFUSE) Register</p><h1>cfg (EFUSE) Register</h1>
+<h2>cfg (EFUSE) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>cfg</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000004</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FFCC0004 (EFUSE)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Configuration</td></tr>
+</table>
+<p></p>
+<h2>cfg (EFUSE) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>slverr_enable</td><td class="center"> 5</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>By default, invalid address requests are ignored. However, a maskable interrupt exsists. By enabling this slverr_enable invalid address requests cause a slverr to occur.<br/>Enable/Disable SLVERR during address decode failure.<br/>0: SLVERR is disabled. For request address: Writes are ignored. Read returns 0.<br/>1: SLVERR is enabled. For requestes address, SLVERR is asserted. Writes are ignored. Read returns 0.</td></tr>
+<tr valign=top><td>margin_rd</td><td class="center"> 3:2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>eFuse read margin control<br/>00: Normal Read<br/>01: Margin 1 Read<br/>10: Margin 2 Read<br/>11: Reserved</td></tr>
+<tr valign=top><td>pgm_en</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>eFuse PS control, enabled programming if set</td></tr>
+<tr valign=top><td>efuse_clk_sel</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Selects the source of the eFuse clock. The PS_REF_CLK MUST be used when programming the eFuse and a very accurate clock is required (+/- 5%). The default value of the timing parameters are set for the Internal ring oscillator and must be changed when the clock source is changed.<br/>0: Internal Ring Oscillator<br/>1: PS_REF_CLK</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

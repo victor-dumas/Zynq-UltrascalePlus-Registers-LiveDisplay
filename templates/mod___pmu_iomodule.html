@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<title>PMU_IOMODULE Module</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> > PMU_IOMODULE Module</p><h1>PMU_IOMODULE Module</h1>
+<h2>PMU_IOMODULE Module Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Module Name</th><td width=80% class=noborder>Power Management Unit LogicCORE I/O Module (PMU_IOMODULE)</td></tr>
+<tr valign=top><th width=20% class=sumparam>Modules of this Type</th><td width=80% class=noborder>PMU_IOMODULE</td></tr>
+<tr valign=top><th class=sumparam>Base Address</th><td class=noborder>0x00FFD40000 (PMU_IOMODULE)</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>PMU IO Module - Private</td></tr>
+</table>
+<h2>PMU_IOMODULE Module Register Summary</h2>
+<table>
+<tr valign=top><th width=20%>Register Name</th><th width=10%>Address</th><th width=10%>Width</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=40%>Description</th></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("pmu_iomodule___irq_mode.html")>IRQ_MODE</a></td><td class="hex">0x000000000C</td><td class="center">32</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x00000000</td><td>Interrupt Mode Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("pmu_iomodule___gpo0.html")>GPO0</a></td><td class="hex">0x0000000010</td><td class="center">32</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x00000000</td><td>IOModule Misc Control Register (GPO0)</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("pmu_iomodule___gpo1.html")>GPO1</a></td><td class="hex">0x0000000014</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>PMU to MIO Signals (GPO1)</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("pmu_iomodule___gpo2.html")>GPO2</a></td><td class="hex">0x0000000018</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>PMU Acknowlegements (GPO2)</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("pmu_iomodule___gpo3.html")>GPO3</a></td><td class="hex">0x000000001C</td><td class="center">32</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x00000000</td><td>PMU to PL Signals (GPO3)</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("pmu_iomodule___gpi0.html")>GPI0</a></td><td class="hex">0x0000000020</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>Fault Tolerance Status Register (GPI0)</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("pmu_iomodule___gpi1.html")>GPI1</a></td><td class="hex">0x0000000024</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>General Purpose Input Register 1</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("pmu_iomodule___gpi2.html")>GPI2</a></td><td class="hex">0x0000000028</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>General Purpose Input Register 2</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("pmu_iomodule___gpi3.html")>GPI3</a></td><td class="hex">0x000000002C</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00000000</td><td>General Purpose Input Register 3</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("pmu_iomodule___irq_status.html")>IRQ_STATUS</a></td><td class="hex">0x0000000030</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>Interrupt Status Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("pmu_iomodule___irq_pending.html")>IRQ_PENDING</a></td><td class="hex">0x0000000034</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>Interrupt Pending Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("pmu_iomodule___irq_enable.html")>IRQ_ENABLE</a></td><td class="hex">0x0000000038</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>Interrupt Enable Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("pmu_iomodule___irq_ack.html")>IRQ_ACK</a></td><td class="hex">0x000000003C</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>Interrupt Acknowledge Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("pmu_iomodule___pit0_preload.html")>PIT0_PRELOAD</a></td><td class="hex">0x0000000040</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00000000</td><td>PIT0 Preload Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("pmu_iomodule___pit0_counter.html")>PIT0_COUNTER</a></td><td class="hex">0x0000000044</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00000000</td><td>PIT0 Counter Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("pmu_iomodule___pit0_control.html")>PIT0_CONTROL</a></td><td class="hex">0x0000000048</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>PIT0 Control Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("pmu_iomodule___pit1_preload.html")>PIT1_PRELOAD</a></td><td class="hex">0x0000000050</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00000000</td><td>PIT1 Preload Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("pmu_iomodule___pit1_counter.html")>PIT1_COUNTER</a></td><td class="hex">0x0000000054</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00000000</td><td>PIT1 Counter Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("pmu_iomodule___pit1_control.html")>PIT1_CONTROL</a></td><td class="hex">0x0000000058</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>PIT1 Control Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("pmu_iomodule___pit2_preload.html")>PIT2_PRELOAD</a></td><td class="hex">0x0000000060</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00000000</td><td>PIT2 Preload Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("pmu_iomodule___pit2_counter.html")>PIT2_COUNTER</a></td><td class="hex">0x0000000064</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00000000</td><td>PIT2 Counter Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("pmu_iomodule___pit2_control.html")>PIT2_CONTROL</a></td><td class="hex">0x0000000068</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>PIT2 Control Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("pmu_iomodule___pit3_preload.html")>PIT3_PRELOAD</a></td><td class="hex">0x0000000070</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00000000</td><td>PIT3 Preload Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("pmu_iomodule___pit3_counter.html")>PIT3_COUNTER</a></td><td class="hex">0x0000000074</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00000000</td><td>PIT3 Counter Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("pmu_iomodule___pit3_control.html")>PIT3_CONTROL</a></td><td class="hex">0x0000000078</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>PIT3 Control Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("pmu_iomodule___instruction_inject_addr.html")>INSTRUCTION_INJECT_ADDR</a></td><td class="hex">0x0000001014</td><td class="center">32</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x00000000</td><td>Instruction Injection Address (IOModule_1.GPO1)</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("pmu_iomodule___instruction_inject.html")>INSTRUCTION_INJECT</a></td><td class="hex">0x0000001018</td><td class="center">32</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x00000000</td><td>Instruction Injection (IOModule_1.GPO2)</td></tr>
+</table>
+<p id=foot class=footer></p>
+</body>
+</html>

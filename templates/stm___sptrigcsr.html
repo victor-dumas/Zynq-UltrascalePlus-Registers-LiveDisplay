@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<title>SPTRIGCSR (STM) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___stm.html")>STM Module</a> &gt; SPTRIGCSR (STM) Register</p><h1>SPTRIGCSR (STM) Register</h1>
+<h2>SPTRIGCSR (STM) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>SPTRIGCSR</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000E70</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FE9C0E70 (CORESIGHT_SOC_STM)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Control the STM triggers caused by STMSPTER.</td></tr>
+</table>
+<p></p>
+<h2>SPTRIGCSR (STM) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>ATBTRIGEN_DIR</td><td class="center"> 4</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>When set, this bit enables the STM to use the ATID value of 0x7D when a Trigger Event on writes to TRIG location occurs:<br/>0: disable.<br/>1: enable.</td></tr>
+<tr valign=top><td>ATBTRIGEN_TE</td><td class="center"> 3</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>When set, this bit enables the STM to use the ATID value of 0x7D when a Trigger Event on match using STMSPTER occurs:<br/>0: disable.<br/>1: enable.</td></tr>
+<tr valign=top><td>TRIGCLEAR</td><td class="center"> 2</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0</td><td>When TRIGCTL indicates single-shot mode, this bit is used to clear TRIGSTATUS.Writing a b1 to this bit when in multi-shot mode is Unpredictable:<br/>0: no effect.<br/>1: clear status.</td></tr>
+<tr valign=top><td>TRIGSTATUS</td><td class="center"> 1</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0</td><td>When TRIGCTL indicates single-shot mode, this indicates whether the single trigger has occurred:<br/>0: did not occur.<br/>1: occurred.</td></tr>
+<tr valign=top><td>TRIGCTL</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Trigger Control:<br/>0: multi-shot.<br/>1: single-shot.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

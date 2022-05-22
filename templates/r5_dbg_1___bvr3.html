@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<title>BVR3 (R5_DBG_1) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___r5_dbg_1.html")>R5_DBG_1 Module</a> &gt; BVR3 (R5_DBG_1) Register</p><h1>BVR3 (R5_DBG_1) Register</h1>
+<h2>BVR3 (R5_DBG_1) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>BVR3</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000010C</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FEBF210C (CORESIGHT_R5_DBG_1)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Breakpoint Value Register 3</td></tr>
+</table>
+<p></p>
+<h2>BVR3 (R5_DBG_1) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>Breakpoint_value</td><td class="center">31:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>Each BVR is associated with a Breakpoint Control Register(BCR). BCRy is the corresponding control register for BVRy.<br/>A pair of breakpoint registers, BVRy/BCRy, is called a Breakpoint Register Pair<br/>(BRP). BVR0-7 are paired with BCR0-7 to make BRP0-7.<br/>The breakpoint value contained in this register corresponds to either an instruction address or a<br/>context ID. Breakpoints can be set on:<br/>. an instruction address<br/>. a context ID value<br/>. an instruction address and context ID pair.<br/>For an instruction address and context ID pair, two BRPs must be linked. A debug event is generated when both the instruction address and the context ID pair match at the same time.<br/>Note<br/>. Only BRPn supports context ID comparison, where n+1 is the number of breakpoint register pairs implemented in the processor.<br/>. Bits [1:0] of Registers BVR0 to BVR(n-1) are Do Not Modify on writes and Read-As-Zero because these registers do not support context ID comparisons.<br/>. The contents of the CP15 Context ID Register give the context ID value for a BVR to match. For information on the Context ID Register, see Chapter 4 System Control.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

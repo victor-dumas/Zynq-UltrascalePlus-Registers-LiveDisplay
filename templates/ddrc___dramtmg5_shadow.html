@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<title>DRAMTMG5_SHADOW (DDRC) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddrc.html")>DDRC Module</a> &gt; DRAMTMG5_SHADOW (DDRC) Register</p><h1>DRAMTMG5_SHADOW (DDRC) Register</h1>
+<h2>DRAMTMG5_SHADOW (DDRC) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>DRAMTMG5_SHADOW</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000002114</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD072114 (DDRC)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x05050403</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>SDRAM Timing Shadow Register 5</td></tr>
+</table>
+<p>This register is quasi-dynamic group 2 and group 4. Group 2 registers can be written in self-refresh, deep power-down, and maximum power saving modes. Group 4 registers can be written depending on MSTR.frequency_mode.</p>
+<h2>DRAMTMG5_SHADOW (DDRC) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>t_cksrx</td><td class="center">27:24</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x5</td><td>This is the time before Self Refresh Exit that CK is maintained as a valid clock before issuing SRX. Specifies the clock stable time before SRX.<br/>Recommended settings:<br/>- LPDDR3: 2<br/>- LPDDR4: tCKCKEH<br/>- DDR3: tCKSRX<br/>- DDR4: tCKSRX<br/>Program this to recommended value divided by two and round it up to next integer.</td></tr>
+<tr valign=top><td>t_cksre</td><td class="center">19:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x5</td><td>This is the time after Self Refresh Down Entry that CK is maintained as a valid clock. Specifies the clock disable delay after SRE.<br/>Recommended settings:<br/>- LPDDR3: 2<br/>- LPDDR4: tCKCKEL<br/>- DDR3: max (10 ns, 5 tCK)<br/>- DDR4: max (10 ns, 5 tCK)<br/>Program this to recommended value divided by two and round it up to next integer.</td></tr>
+<tr valign=top><td>t_ckesr</td><td class="center">13:8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x4</td><td>Minimum CKE low width for Self refresh or Self refresh power down entry to exit timing in memory clock cycles.<br/>Recommended settings:<br/>- LPDDR3: tCKESR<br/>- LPDDR4: max(tCKELPD, tSR)<br/>- DDR3: tCKE + 1<br/>- DDR4: tCKE + 1<br/>Program this to recommended value divided by two and round it up to next integer.</td></tr>
+<tr valign=top><td>t_cke</td><td class="center"> 4:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x3</td><td>Minimum number of cycles of CKE HIGH/LOW during power-down and self refresh.<br/>- LPDDR3 mode: Set this to the larger of tCKE or tCKESR<br/>- LPDDR4 mode: Set this to the larger of tCKE, tCKELPD or tSR.<br/>- Non-non-LPDDR3/non-LPDDR4 designs: Set this to tCKE value.<br/>Program this to (value described above)/2 and round it up to the next integer value.<br/>Unit: Clocks.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<title>ZDMA_CH_CTRL0 (ZDMA) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___zdma.html")>ZDMA Module</a> &gt; ZDMA_CH_CTRL0 (ZDMA) Register</p><h1>ZDMA_CH_CTRL0 (ZDMA) Register</h1>
+<h2>ZDMA_CH_CTRL0 (ZDMA) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>ZDMA_CH_CTRL0</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000110</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FFA80110 (ADMA_CH0)<br/>0x00FFA90110 (ADMA_CH1)<br/>0x00FFAA0110 (ADMA_CH2)<br/>0x00FFAB0110 (ADMA_CH3)<br/>0x00FFAC0110 (ADMA_CH4)<br/>0x00FFAD0110 (ADMA_CH5)<br/>0x00FFAE0110 (ADMA_CH6)<br/>0x00FFAF0110 (ADMA_CH7)<br/>0x00FD500110 (GDMA_CH0)<br/>0x00FD510110 (GDMA_CH1)<br/>0x00FD520110 (GDMA_CH2)<br/>0x00FD530110 (GDMA_CH3)<br/>0x00FD540110 (GDMA_CH4)<br/>0x00FD550110 (GDMA_CH5)<br/>0x00FD560110 (GDMA_CH6)<br/>0x00FD570110 (GDMA_CH7)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000080</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Channel Control Register 0</td></tr>
+</table>
+<p></p>
+<h2>ZDMA_CH_CTRL0 (ZDMA) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:8</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved for future use</td></tr>
+<tr valign=top><td>OVR_FETCH</td><td class="center"> 7</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>0: DMA channel is not allowed to over-fetch on SRC<br/>1: DMA channel is allowed to over-fetch<br/>This field must remain stable while DMA Channel is enabled</td></tr>
+<tr valign=top><td>POINT_TYPE</td><td class="center"> 6</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>0: Simple mode DMA. Descriptor (DMA command) from APB register space.<br/>1: Scatter-gather mode DMA. Descriptor are stored in Memory.<br/>This field must remain stable while DMA Channel is enabled</td></tr>
+<tr valign=top><td>MODE</td><td class="center"> 5:4</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>00: Normal read & write DMA (default)<br/>01: Write only<br/>(uses data from WR_DMA_DATA*)<br/>10: Read only<br/>11: Reserved for future use<br/>This field must remain stable while DMA Channel is enabled</td></tr>
+<tr valign=top><td>RATE_CTRL</td><td class="center"> 3</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Enable/Disable rate control<br/>0: rate control is disabled<br/>1: rate control is enabled, use rate control count to schedule AXI transaction (Read)<br/>This field must remain stable while DMA Channel is enabled</td></tr>
+<tr valign=top><td>CONT_ADDR</td><td class="center"> 2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Coming out of pause<br/>0: use continuous address(calculated from previous DSCR Addr) to fetch next descriptor<br/>1: use address specified in Start Address Register to fetch next descriptor on both SRC & DST side</td></tr>
+<tr valign=top><td>CONT</td><td class="center"> 1</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Setting to 1 unpause (restarts from current position) the paused DMA<br/>SW sets this 1 to trigger. When DMA is unpaused , then hardware clears this bit. SW clear has no effect on it</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 0</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved for future use</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

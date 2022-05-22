@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<title>SATA_AHCI_VENDOR Module</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> > SATA_AHCI_VENDOR Module</p><h1>SATA_AHCI_VENDOR Module</h1>
+<h2>SATA_AHCI_VENDOR Module Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Module Name</th><td width=80% class=noborder>SATA_AHCI_VENDOR Module</td></tr>
+<tr valign=top><th width=20% class=sumparam>Modules of this Type</th><td width=80% class=noborder>SATA_AHCI_VENDOR</td></tr>
+<tr valign=top><th class=sumparam>Base Address</th><td class=noborder>0x00FD0C00A0 (SATA_AHCI_VENDOR)</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>SATA AHCI Vendor</td></tr>
+</table>
+<h2>SATA_AHCI_VENDOR Module Register Summary</h2>
+<table>
+<tr valign=top><th width=20%>Register Name</th><th width=10%>Address</th><th width=10%>Width</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=40%>Description</th></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_vendor___pctrl.html")>PCTRL</a></td><td class="hex">0x0000000000</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>SerDes control AHB control port.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_vendor___pcfg.html")>PCFG</a></td><td class="hex">0x0000000004</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00322002</td><td>Dual lane port select, timer scalars, interrupt separation.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_vendor___ppcfg.html")>PPCFG</a></td><td class="hex">0x0000000008</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0xA001FFFE</td><td>Phy Control Layer 1 configuration for port 0 or 1.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_vendor___pp2c.html")>PP2C</a></td><td class="hex">0x000000000C</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x28184D1B</td><td>Port Phy Configuration 2.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_vendor___pp3c.html")>PP3C</a></td><td class="hex">0x0000000010</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0E081906</td><td>PP3C - Port Phy3 Configuration</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_vendor___pp4c.html")>PP4C</a></td><td class="hex">0x0000000014</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x064A0813</td><td>Port Phy Configuration 4.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_vendor___pp5c.html")>PP5C</a></td><td class="hex">0x0000000018</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x3FFC96A4</td><td>Port Phy Configuration 5.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_vendor___axicc.html")>AXICC</a></td><td class="hex">0x000000001C</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00100010</td><td>AXI CACHE Control.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_vendor___paxic.html")>PAXIC</a></td><td class="hex">0x0000000020</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00410102</td><td>Port AXICfg</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_vendor___axipc.html")>AXIPC</a></td><td class="hex">0x0000000024</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>AXI PROT Control.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_vendor___ptc.html")>PTC</a></td><td class="hex">0x0000000028</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x08000020</td><td>Port Transfer Configuration</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_vendor___pts.html")>PTS</a></td><td class="hex">0x000000002C</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0000012D</td><td>Transport Layer Status (TransStatus).</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_vendor___plc.html")>PLC</a></td><td class="hex">0x0000000030</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x3800FF34</td><td>Link Layer Configuration (LinkCfg).</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_vendor___plc1.html")>PLC1</a></td><td class="hex">0x0000000034</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>Port LinkCfg1</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_vendor___plc2.html")>PLC2</a></td><td class="hex">0x0000000038</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>Port LinkCfg2</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_vendor___pls.html")>PLS</a></td><td class="hex">0x000000003C</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x3121100A</td><td>Port Link-layer Status.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_vendor___pls1.html")>PLS1</a></td><td class="hex">0x0000000040</td><td class="center">32</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x00000000</td><td>Port Link-layer Status 1.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_vendor___pcmdc.html")>PCMDC</a></td><td class="hex">0x0000000044</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>Port CmdConfig</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_vendor___ppcs.html")>PPCS</a></td><td class="hex">0x0000000048</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0xF8000000</td><td>Port Phy Status (PhyControlStatus).</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_vendor___ams.html")>AMS</a></td><td class="hex">0x000000004C</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00000084</td><td>AXI Master Status</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_vendor___tcr.html")>TCR</a></td><td class="hex">0x0000000050</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000100</td><td>Timer Control</td></tr>
+</table>
+<p id=foot class=footer></p>
+</body>
+</html>

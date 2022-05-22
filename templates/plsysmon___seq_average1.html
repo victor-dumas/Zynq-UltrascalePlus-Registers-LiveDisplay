@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<title>SEQ_AVERAGE1 (PLSYSMON) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___plsysmon.html")>PLSYSMON Module</a> &gt; SEQ_AVERAGE1 (PLSYSMON) Register</p><h1>SEQ_AVERAGE1 (PLSYSMON) Register</h1>
+<h2>SEQ_AVERAGE1 (PLSYSMON) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>SEQ_AVERAGE1</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000012C</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FFA50D2C (AMS_PL_SYSMON)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>16</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Sequencer Channel Averaging, Group 1.</td></tr>
+</table>
+<p>Enable averaging over multiple readings on a per channel basis for group 1 channels. 0: disabled. 1: enabled. The enable and averaging size are selected by Config_Reg0[13:12].</p>
+<h2>SEQ_AVERAGE1 (PLSYSMON) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>average1</td><td class="center">15:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>VAux[0:15] channels.<br/>Bit[0] is for VAux0.<br/>Bit[1] is for VAux1.<br/>..<br/>Bit[15] is for VAux15.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

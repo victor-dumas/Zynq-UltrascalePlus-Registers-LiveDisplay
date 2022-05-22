@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<title>ATTR_51 (PCIE_ATTRIB) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___pcie_attrib.html")>PCIE_ATTRIB Module</a> &gt; ATTR_51 (PCIE_ATTRIB) Register</p><h1>ATTR_51 (PCIE_ATTRIB) Register</h1>
+<h2>ATTR_51 (PCIE_ATTRIB) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>ATTR_51</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x00000000CC</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD4800CC (PCIE_ATTRIB)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00004021</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>ATTR_51</td></tr>
+</table>
+<p>This register should only be written to during reset of the PCIe block</p>
+<h2>ATTR_51 (PCIE_ATTRIB) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>attr_pm_base_ptr</td><td class="center">15:8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x40</td><td>Byte address of the base of the Power Management (PM) Capability Structure. Any access to this structure (via either the link or the management port) is relative to this address. ; EP=0x0040; RP=0x0040</td></tr>
+<tr valign=top><td>attr_pcie_revision</td><td class="center"> 7:4</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x2</td><td>Not currently in use.<br/>Need to correct this definition: '2' specifies PCI Express v2.0 compliance. '1' specifies PCI Express v1.1 compliance. '0' specifies PCI Express v1.0a compliance. '1' should be used.<br/>Not acted upon.; EP=0x0002; RP=0x0002</td></tr>
+<tr valign=top><td>attr_pcie_cap_slot_implemented</td><td class="center"> 3</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Slot Implemented.<br/>When TRUE, indicates that the PCI Express Link associated with this Port is connected to a slot (rather than to an integrated component).<br/>Valid only for Root Port of Root Complex and Downstream Port of Switch.<br/>Transferred to the PCI Express Capabilities register.; EP=0x0000; RP=0x0000</td></tr>
+<tr valign=top><td>attr_pcie_cap_rsvd_15_14</td><td class="center"> 2:1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>This sets the Reserved bits [15:14] of the PCIE Capability register. These should only be set to 0.; EP=0x0000; RP=0x0000</td></tr>
+<tr valign=top><td>attr_pcie_cap_on</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Indicates that the PCIE structures exists. If this is FALSE, then the PCIE structure cannot be accessed via either the link or the management port.; EP=0x0001; RP=0x0001</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

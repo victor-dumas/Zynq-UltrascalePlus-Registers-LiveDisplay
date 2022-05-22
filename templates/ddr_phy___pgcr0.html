@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<title>PGCR0 (DDR_PHY) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddr_phy.html")>DDR_PHY Module</a> &gt; PGCR0 (DDR_PHY) Register</p><h1>PGCR0 (DDR_PHY) Register</h1>
+<h2>PGCR0 (DDR_PHY) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>PGCR0</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000010</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD080010 (DDR_PHY)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x07001E00</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>PHY General Configuration Register 0</td></tr>
+</table>
+<p></p>
+<h2>PGCR0 (DDR_PHY) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>ADCP</td><td class="center">31</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Address Copy: Enables, if set, the use of {RAS#,BA[2:0] and A[15:10]}<br/>as second copy of A[9:0]. This feature is valid only when design is in<br/>LPDDR3, LPDDR4 mode and these pins exist in the design.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">30:27</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Returns zeroes on reads.</td></tr>
+<tr valign=top><td>PHYFRST</td><td class="center">26</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>AC loopback read FIFO reset: A write of 1b0 to this bit resets the AC<br/>Macro FIFOs (in both AC macros, if 2 AC macros are present) without<br/>resetting PUB RTL logic. This bit is not self-clearing and a 1b1 must<br/>be written to de-assert the reset.</td></tr>
+<tr valign=top><td>OSCACDL</td><td class="center">25:24</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x3</td><td>Oscillator Mode Address/Command Delay Line Select: Selects which<br/>of the two address/command LCDLs is active. The delay select value<br/>of the inactive LCDL is set to zero while the delay select value of the<br/>active LCDL can be varied by the input write leveling delay select pin.<br/>Valid values are:<br/>2b00 = No AC LCDL is active<br/>2b01 = DDR AC LCDL is active<br/>2b10 = CTL AC LCDL is active<br/>2b11 = Both LCDLs are active</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">23:19</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Returns zeroes on reads.</td></tr>
+<tr valign=top><td>DTOSEL</td><td class="center">18:14</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Digital Test Output Select: Selects the PHY digital test output that<br/>should be driven onto PHY digital test output (phy_dto) pin: Valid<br/>values are:<br/>5b00000 = DATX8 0 PLL/PHY macro digital test output<br/>5b00001 = DATX8 1 PLL/PHY macro digital test output<br/>5b00010 = DATX8 2 PLL/PHY macro digital test output<br/>5b00011 = DATX8 3 PLL/PHY macro digital test output<br/>5b00100 = DATX8 4 PLL/PHY macro digital test output<br/>5b00101 = DATX8 5 PLL/PHY macro digital test output<br/>5b00110 = DATX8 6 PLL/PHY macro digital test output<br/>5b00111 = DATX8 7 PLL/PHY macro digital test output<br/>5b01000 = DATX8 8 PLL/PHY macro digital test output<br/>5b01001 = AC PLL/PHY macro digital test output for AC Macro 0<br/>5b01010 = AC PLL/PHY macro digital test output for AC Macro 1<br/>5b01011 - 5b01111 = Reserved<br/>5b10000 = DATX8 0 delay line digital test output<br/>5b10001 = DATX8 1 delay line digital test output<br/>5b10010 = DATX8 2 delay line digital test output<br/>5b10011 = DATX8 3 delay line digital test output<br/>5b10100 = DATX8 4 delay line digital test output<br/>5b10101 = DATX8 5 delay line digital test output<br/>5b10110 = DATX8 6 delay line digital test output<br/>5b10111 = DATX8 7 delay line digital test output<br/>5b11000 = DATX8 8 delay line digital test output<br/>5b11001 = AC delay line digital test output for AC Macro 0<br/>5b11010 = AC delay line digital test output for AC Macro 1<br/>5b11011 - 5b11111 = Reserved<br/>NOTE: For DTO settings of 5b00000 to 5b01111, PGCR1.DTOMODE<br/>selects whether the digital test output is coming from the PLL or the<br/>PHY (AC/DATX8) macro</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">13</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Returns zeroes on reads.</td></tr>
+<tr valign=top><td>OSCDIV</td><td class="center">12:9</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0xF</td><td>Oscillator Mode Division: Specifies the factor by which the delay line<br/>oscillator mode output is divided down before it is output on the delay<br/>line digital test output pin dl_dto. Valid values are:<br/>4b0000 = Divide by 1<br/>4b0001 = Divide by 4<br/>4b0010 = Divide by 8<br/>4b0011 = Divide by 16<br/>4b0100 = Divide by 32<br/>4b0101 = Divide by 64<br/>4b0110 = Divide by 128<br/>4b0111 = Divide by 256<br/>4b1000 = Divide by 512<br/>4b1001 = Divide by 1024<br/>4b1010 = Divide by 2048<br/>4b1011 = Divide by 4096<br/>4b1100 = Divide by 8192<br/>4b1101 = Divide by 16384<br/>4b1110 = Divide by 32768<br/>4b 1111 = Divide by 65536</td></tr>
+<tr valign=top><td>OSCEN</td><td class="center"> 8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Oscillator Enable: Enables, if set, the delay line oscillation.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 7:0</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Returns zeroes on reads.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

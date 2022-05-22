@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<title>ATTR_89 (PCIE_ATTRIB) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___pcie_attrib.html")>PCIE_ATTRIB Module</a> &gt; ATTR_89 (PCIE_ATTRIB) Register</p><h1>ATTR_89 (PCIE_ATTRIB) Register</h1>
+<h2>ATTR_89 (PCIE_ATTRIB) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>ATTR_89</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000164</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD480164 (PCIE_ATTRIB)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00002281</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>ATTR_89</td></tr>
+</table>
+<p>This register should only be written to during reset of the PCIe block</p>
+<h2>ATTR_89 (PCIE_ATTRIB) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>attr_vsec_cap_on</td><td class="center">13</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Indicates that the VSEC structures exists. If this is FALSE, then the VSEC structure cannot be accessed via either the link or the management port.; EP=0x0001; RP=0x0001</td></tr>
+<tr valign=top><td>attr_vsec_cap_nextptr</td><td class="center">12:1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x140</td><td>VSEC's Next Capability Offset pointer to the next item in the capabilities list, or 000h if this is the final capability.; EP=0x0140; RP=0x0140</td></tr>
+<tr valign=top><td>attr_vsec_cap_is_link_visible</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>The VSEC structure can be detected by link-side config accesses if TRUE. Otherwise, it is only user-side visible.; EP=0x0001; RP=0x0001</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

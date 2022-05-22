@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<title>Flow_delay_reg0 (UART) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___uart.html")>UART Module</a> &gt; Flow_delay_reg0 (UART) Register</p><h1>Flow_delay_reg0 (UART) Register</h1>
+<h2>Flow_delay_reg0 (UART) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>Flow_delay_reg0</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000038</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF000038 (UART0)<br/>0x00FF010038 (UART1)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Flow Control Delay Register</td></tr>
+</table>
+<p>The Flow Control Delay register is only used if automatic flow control mode is enabled in the FCM field in the Modem Control register. When automatic flow control mode is enabled, this register specifies the receiver FIFO level at which the EMIOUARTxRTSN output is de-asserted. The EMIOUARTxRTSN output is only asserted again once the fill level drops to below four less than FDEL.</p>
+<h2>Flow_delay_reg0 (UART) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:6</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved, read as zero, ignored on write.</td></tr>
+<tr valign=top><td>FDEL</td><td class="center"> 5:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>RxFIFO trigger level for Ready To Send (RTS) output signal (EMIOUARTxRTSN) de-assertion:<br/>0 - 3: Flow delay triggering is disabled, since minimum 4 word hysteresis cannot be satisfied.<br/>4 to 65535: EMIOUARTxRTSN is driven high when Rx FIFO fill level equals FDEL</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

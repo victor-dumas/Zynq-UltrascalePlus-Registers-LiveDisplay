@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<title>IPDISABLE (EFUSE) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___efuse.html")>EFUSE Module</a> &gt; IPDISABLE (EFUSE) Register</p><h1>IPDISABLE (EFUSE) Register</h1>
+<h2>IPDISABLE (EFUSE) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>IPDISABLE</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000001018</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FFCC1018 (EFUSE)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">ro<span class="tooltiptext">Read-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Available Functionality</td></tr>
+</table>
+<p>The device family can be determined using the VCU_DIS & GPU_DIS bits: 00: EV (includes VCU and GPU) 01: Invalid 10: EG (includes GPU) 11: CG (no VCU or GPU; 2-core)</p>
+<h2>IPDISABLE (EFUSE) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>VCU_DIS</td><td class="center"> 8</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Indicates that the VCU is disabled if set (this is a PL eFuse) 0: VCU is present<br/>1: VCU is not present<br/>Note:this bit is only valid if the PL is powered-up and the PROG_B signal is released.</td></tr>
+<tr valign=top><td>GPU_DIS</td><td class="center"> 5</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Indicates that the GPU is disabled if set</td></tr>
+<tr valign=top><td>APU3_DIS</td><td class="center"> 3</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Indicates that APU core 3 is disabled if set</td></tr>
+<tr valign=top><td>APU2_DIS</td><td class="center"> 2</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Indicates that APU core 2 is disabled if set</td></tr>
+<tr valign=top><td>APU1_DIS</td><td class="center"> 1</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Indicates that APU core 1 is disabled if set</td></tr>
+<tr valign=top><td>APU0_DIS</td><td class="center"> 0</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Indicates that APU core 0 is disabled if set</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

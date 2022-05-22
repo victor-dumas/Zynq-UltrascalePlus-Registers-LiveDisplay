@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<title>designcfg_debug6 (GEM) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___gem.html")>GEM Module</a> &gt; designcfg_debug6 (GEM) Register</p><h1>designcfg_debug6 (GEM) Register</h1>
+<h2>designcfg_debug6 (GEM) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>designcfg_debug6</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000294</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF0B0294 (GEM0)<br/>0x00FF0C0294 (GEM1)<br/>0x00FF0D0294 (GEM2)<br/>0x00FF0E0294 (GEM3)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">ro<span class="tooltiptext">Read-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x02510002</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Design Configuration Register 6</td></tr>
+</table>
+<p></p>
+<h2>designcfg_debug6 (GEM) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:26</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Set to zero.</td></tr>
+<tr valign=top><td>pbuf_cutthru</td><td class="center">25</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>Takes the value of the `gem_pbuf_cutthru DEFINE</td></tr>
+<tr valign=top><td>pfc_multi_quantum</td><td class="center">24</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Takes the value of the `gem_pfc_multi_quantum DEFINE</td></tr>
+<tr valign=top><td>dma_addr_width_is_64b</td><td class="center">23</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Takes the value of the `gem_dma_addr_width_is_64b DEFINE</td></tr>
+<tr valign=top><td>host_if_soft_select</td><td class="center">22</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>Takes the value of the `gem_host_if_soft_select DEFINE</td></tr>
+<tr valign=top><td>tx_add_fifo_if</td><td class="center">21</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Takes the value of the `gem_tx_add_fifo_if DEFINE</td></tr>
+<tr valign=top><td>ext_tsu_timer</td><td class="center">20</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>Takes the value of the `gem_ext_tsu_timer DEFINE</td></tr>
+<tr valign=top><td>tx_pbuf_queue_segment_size</td><td class="center">19:16</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>Takes the value of the `gem_tx_pbuf_queue_segment_size DEFINE</td></tr>
+<tr valign=top><td>dma_priority_queue15</td><td class="center">15</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Takes the value of the `dma_priority_queue15 DEFINE</td></tr>
+<tr valign=top><td>dma_priority_queue14</td><td class="center">14</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Takes the value of the `dma_priority_queue14 DEFINE</td></tr>
+<tr valign=top><td>dma_priority_queue13</td><td class="center">13</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Takes the value of the `dma_priority_queue13 DEFINE</td></tr>
+<tr valign=top><td>dma_priority_queue12</td><td class="center">12</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Takes the value of the `dma_priority_queue12 DEFINE</td></tr>
+<tr valign=top><td>dma_priority_queue11</td><td class="center">11</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Takes the value of the `dma_priority_queue11 DEFINE</td></tr>
+<tr valign=top><td>dma_priority_queue10</td><td class="center">10</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Takes the value of the `dma_priority_queue10 DEFINE</td></tr>
+<tr valign=top><td>dma_priority_queue9</td><td class="center"> 9</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Takes the value of the `dma_priority_queue9 DEFINE</td></tr>
+<tr valign=top><td>dma_priority_queue8</td><td class="center"> 8</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Takes the value of the `dma_priority_queue8 DEFINE</td></tr>
+<tr valign=top><td>dma_priority_queue7</td><td class="center"> 7</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Takes the value of the `dma_priority_queue7 DEFINE</td></tr>
+<tr valign=top><td>dma_priority_queue6</td><td class="center"> 6</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Takes the value of the `dma_priority_queue6 DEFINE</td></tr>
+<tr valign=top><td>dma_priority_queue5</td><td class="center"> 5</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Takes the value of the `dma_priority_queue5 DEFINE</td></tr>
+<tr valign=top><td>dma_priority_queue4</td><td class="center"> 4</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Takes the value of the `dma_priority_queue4 DEFINE</td></tr>
+<tr valign=top><td>dma_priority_queue3</td><td class="center"> 3</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Takes the value of the `dma_priority_queue3 DEFINE</td></tr>
+<tr valign=top><td>dma_priority_queue2</td><td class="center"> 2</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Takes the value of the `dma_priority_queue2 DEFINE</td></tr>
+<tr valign=top><td>dma_priority_queue1</td><td class="center"> 1</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>Takes the value of the `dma_priority_queue1 DEFINE</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 0</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Set to zero.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

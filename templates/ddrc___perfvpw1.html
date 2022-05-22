@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<title>PERFVPW1 (DDRC) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddrc.html")>DDRC Module</a> &gt; PERFVPW1 (DDRC) Register</p><h1>PERFVPW1 (DDRC) Register</h1>
+<h2>PERFVPW1 (DDRC) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>PERFVPW1</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000278</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD070278 (DDRC)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Variable Priority Write CAM Register 1</td></tr>
+</table>
+<p>This register is static. Static registers can only be written when the controller is in reset.</p>
+<h2>PERFVPW1 (DDRC) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>vpw_timeout_range</td><td class="center">10:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Indicates the range of the timeout value that is used for grouping the expired VPW commands in the CAM in DDRC. For example, if the register value is set to 0xF, then the priorities of all the VPW commands whose timeout counters are 15 or below will be considered as expired-VPW commands when the timeout value of any of the VPW commands reach 0. The expired-VPW commands, when present, are given higher priority than normal Write commands. The VPW commands are expected to consist of largely page hit traffic and by grouping them together the bus utilization is expected to increase. This register applies to transactions inside the DDRC only.<br/>The Max value for this register is 0x7FF and the Min value is 0x0.<br/>When programmed to the Max value of 0x7FF, all the VPW commands that come in to DDRC will time-out right-away and will be considered as expired-VPW.<br/>When programmed to the Min value of 0x0, the timer of each command would have to reach a value of 0 before it will be considered as expired-VPW.<br/>Unit: Clock cycles.<br/>FOR PERFORMANCE ONLY.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<title>SPI Module</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> > SPI Module</p><h1>SPI Module</h1>
+<h2>SPI Module Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Module Name</th><td width=80% class=noborder>SPI Module</td></tr>
+<tr valign=top><th width=20% class=sumparam>Modules of this Type</th><td width=80% class=noborder>SPI0, SPI1</td></tr>
+<tr valign=top><th class=sumparam>Base Address</th><td class=noborder>0x00FF040000 (SPI0)<br/>0x00FF050000 (SPI1)</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>SPI 0 Controller</td></tr>
+</table>
+<h2>SPI Module Register Summary</h2>
+<table>
+<tr valign=top><th width=20%>Register Name</th><th width=10%>Address</th><th width=10%>Width</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=40%>Description</th></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("spi___config_reg0.html")>Config_reg0</a></td><td class="hex">0x0000000000</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00020000</td><td>SPI configuration</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("spi___intr_status_reg0.html")>Intr_status_reg0</a></td><td class="hex">0x0000000004</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000004</td><td>SPI interrupt status</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("spi___intrpt_en_reg0.html")>Intrpt_en_reg0</a></td><td class="hex">0x0000000008</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>Interrupt Enable</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("spi___intrpt_dis_reg0.html")>Intrpt_dis_reg0</a></td><td class="hex">0x000000000C</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>Interrupt disable</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("spi___intrpt_mask_reg0.html")>Intrpt_mask_reg0</a></td><td class="hex">0x0000000010</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00000000</td><td>Interrupt mask</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("spi___en_reg0.html")>En_reg0</a></td><td class="hex">0x0000000014</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>SPI_Enable</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("spi___delay_reg0.html")>Delay_reg0</a></td><td class="hex">0x0000000018</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>Clock Delay</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("spi___tx_data_reg0.html")>Tx_data_reg0</a></td><td class="hex">0x000000001C</td><td class="center">32</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x00000000</td><td>Transmit Data.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("spi___rx_data_reg0.html")>Rx_data_reg0</a></td><td class="hex">0x0000000020</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00000000</td><td>Receive Data</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("spi___slave_idle_count_reg0.html")>Slave_Idle_count_reg0</a></td><td class="hex">0x0000000024</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x000000FF</td><td>Slave Idle Count</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("spi___tx_thres_reg0.html")>TX_thres_reg0</a></td><td class="hex">0x0000000028</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000001</td><td>TX FIFO Threshold</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("spi___rx_thres_reg0.html")>RX_thres_reg0</a></td><td class="hex">0x000000002C</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000001</td><td>RX FIFO Threshold</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("spi___mod_id_reg0.html")>Mod_id_reg0</a></td><td class="hex">0x00000000FC</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00090108</td><td>Module ID</td></tr>
+</table>
+<p id=foot class=footer></p>
+</body>
+</html>

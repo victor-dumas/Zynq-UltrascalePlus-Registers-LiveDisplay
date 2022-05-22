@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<title>PP2C (SATA_AHCI_VENDOR) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___sata_ahci_vendor.html")>SATA_AHCI_VENDOR Module</a> &gt; PP2C (SATA_AHCI_VENDOR) Register</p><h1>PP2C (SATA_AHCI_VENDOR) Register</h1>
+<h2>PP2C (SATA_AHCI_VENDOR) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>PP2C</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000000C</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD0C00AC (SATA_AHCI_VENDOR)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x28184D1B</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Port Phy Configuration 2.</td></tr>
+</table>
+<p>Controls the configuration of the Phy Control OOB timing for the COMINIT parameters for either Port 0 or 1. The Port configured is controlled by the value programmed into the Port Config Register.</p>
+<h2>PP2C (SATA_AHCI_VENDOR) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>CINMP</td><td class="center">31:24</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x28</td><td>CINMP: COMINIT Negate Minimum Period.</td></tr>
+<tr valign=top><td>CIBGN</td><td class="center">23:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x18</td><td>CIBGN: COMINIT Burst Gap Nominal.</td></tr>
+<tr valign=top><td>CIBGMX</td><td class="center">15:8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x4D</td><td>CIBGMX: COMINIT Burst Gap Maximum.</td></tr>
+<tr valign=top><td>CIBGMN</td><td class="center"> 7:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1B</td><td>CIBGMN: COMINIT Burst Gap Minimum.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

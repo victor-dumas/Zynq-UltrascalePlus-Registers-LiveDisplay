@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<title>INIT5 (DDRC) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddrc.html")>DDRC Module</a> &gt; INIT5 (DDRC) Register</p><h1>INIT5 (DDRC) Register</h1>
+<h2>INIT5 (DDRC) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>INIT5</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x00000000E4</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD0700E4 (DDRC)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00100004</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>SDRAM Initialization Register 5</td></tr>
+</table>
+<p>This register is static. Static registers can only be written when the controller is in reset.</p>
+<h2>INIT5 (DDRC) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>dev_zqinit_x32</td><td class="center">23:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x10</td><td>ZQ initial calibration, tZQINIT.<br/>Unit: 32 clock cycles.<br/>DDR3 typically requires 512 clocks.<br/>DDR4 requires 1024 clocks.<br/>LPDDR3 requires 1us.</td></tr>
+<tr valign=top><td>max_auto_init_x1024</td><td class="center"> 9:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x4</td><td>Maximum duration of the auto initialization, tINIT5.<br/>LPDDR3 typically requires 10us.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

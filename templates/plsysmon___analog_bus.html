@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<title>ANALOG_BUS (PLSYSMON) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___plsysmon.html")>PLSYSMON Module</a> &gt; ANALOG_BUS (PLSYSMON) Register</p><h1>ANALOG_BUS (PLSYSMON) Register</h1>
+<h2>ANALOG_BUS (PLSYSMON) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>ANALOG_BUS</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000114</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FFA50D14 (AMS_PL_SYSMON)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>16</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Analog Bus Control</td></tr>
+</table>
+<p>Note: this register is marked private because the Wizard in the Vivado design suite takes care of this. The voltage measurement is done with a unipolar sampling circuit to produce an unsigned result with a 0 to 3V range. Bits [3:0] = NorthWest region. Bits [7:4] = NorthEast region. Bits [11:8] = SouthEast region. Bits [15:12] = SouthWest region.</p>
+<h2>ANALOG_BUS (PLSYSMON) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>vuser3</td><td class="center">15:12</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Selects the analog bus to monitor for VUser3</td></tr>
+<tr valign=top><td>vuser2</td><td class="center">11:8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Selects the analog bus to monitor for VUser2</td></tr>
+<tr valign=top><td>vuser1</td><td class="center"> 7:4</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Selects the analog bus to monitor for VUser1</td></tr>
+<tr valign=top><td>vuser0</td><td class="center"> 3:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Selects the analog bus to monitor for VUser0</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<title>LOCAL_GEN_STORAGE1 (PMU_LOCAL) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___pmu_local.html")>PMU_LOCAL Module</a> &gt; LOCAL_GEN_STORAGE1 (PMU_LOCAL) Register</p><h1>LOCAL_GEN_STORAGE1 (PMU_LOCAL) Register</h1>
+<h2>LOCAL_GEN_STORAGE1 (PMU_LOCAL) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>LOCAL_GEN_STORAGE1</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000304</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FFD60304 (PMU_LOCAL)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>PMU Boot Stage and General Purpose Read-Write.</td></tr>
+</table>
+<p>During boot, this register holds a code specify which stage in boot the PMU is currently in. After boot, this register can be used by the Firmware as a general storage register. Its contents are not modified or used by the PMU ROM after handoff to the Firmware.</p>
+<h2>LOCAL_GEN_STORAGE1 (PMU_LOCAL) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>Reg</td><td class="center">31:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>0000_0000 h: PMU ROM Pre-boot Initialization<br/>0000_0001 h: ScanClean of the LPD and FPD<br/>0000_0002 h: PS SysMon Initialization<br/>0000_0004 h: IOPLL and DPLL Lock Acquisition Begin<br/>0000_0008 h: PMU_RAM and CSU_RAM Zeroization<br/>0000_0010 h: IOPLL and DPLL Lock Check and MBIST Clk Configuration<br/>0000_0020 h: Check VCC_PSINTLP, VCC_AUX, and VCC_PSIO3 Supply Voltages<br/>0000_0040 h: BISR Clear FPD Domain<br/>0000_0080 h: BIST Clear LPD and FPD Domains<br/>0000_0100 h: Power Down Disabled IP<br/>0000_0200 h: Release CSU<br/>0000_0400 h: Enter PMU ROM Serivce Mode<br/>FFFF_FFFF h: Boot Complete</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

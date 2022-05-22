@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<title>IOVCR0 (DDR_PHY) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddr_phy.html")>DDR_PHY Module</a> &gt; IOVCR0 (DDR_PHY) Register</p><h1>IOVCR0 (DDR_PHY) Register</h1>
+<h2>IOVCR0 (DDR_PHY) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>IOVCR0</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000520</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD080520 (DDR_PHY)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x0F000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>IO VREF Control Register 0</td></tr>
+</table>
+<p></p>
+<h2>IOVCR0 (DDR_PHY) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:29</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Return zeros on reads.</td></tr>
+<tr valign=top><td>ACREFPEN</td><td class="center">28</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Address/command lane VREF Pad Enable: Enables the pass gate<br/>between (to connect) VREF and PAD.</td></tr>
+<tr valign=top><td>ACREFSEN</td><td class="center">25</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Address/command lane Single-End VREF Enable: Enables the<br/>generation of VREF value for internal address/command lane<br/>single-end IO buffers.</td></tr>
+<tr valign=top><td>ACREFIEN</td><td class="center">24</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Address/command lane Internal VREF Enable: Enables the<br/>generation of VREF value for internal address/command lane<br/>differential IO buffers.</td></tr>
+<tr valign=top><td>ACREFSSELRANGE</td><td class="center">15</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Single ended VREF generator REFSEL range select.</td></tr>
+<tr valign=top><td>ACREFSSEL</td><td class="center">14:8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Address/command lane Single-End VREF Select: Selects the<br/>generated VREF value for internal address/command lane single-<br/>end I/O buffers.</td></tr>
+<tr valign=top><td>ACVREFISELRANGE</td><td class="center"> 7</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Internal VREF generator REFSEL range select</td></tr>
+<tr valign=top><td>ACVREFISEL</td><td class="center"> 6:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>REFSEL Control for internal AC IOs: Selects the<br/>generated VREF value for internal AC IOs.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

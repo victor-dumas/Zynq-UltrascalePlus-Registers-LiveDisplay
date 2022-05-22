@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<title>GRXTHRCFG (USB3_XHCI) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___usb3_xhci.html")>USB3_XHCI Module</a> &gt; GRXTHRCFG (USB3_XHCI) Register</p><h1>GRXTHRCFG (USB3_XHCI) Register</h1>
+<h2>GRXTHRCFG (USB3_XHCI) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>GRXTHRCFG</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000C10C</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FE20C10C (USB3_0_XHCI)<br/>0x00FE30C10C (USB3_1_XHCI)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Global Rx Threshold Control Register<br/>In a normal case, a Tx burst starts as soon as one packet is prefetched; an Rx burst starts as soon as 1-packet space is available. This works well as long as the system bus is faster than the USB 3.0 bus (a 1024-bytes packet takes ~2.2 microseconds on the USB bus in SS mode).<br/>If the system bus latency is larger than 2.2 microseconds to access a 1024-byte packet, then starting a burst on 1-packet condition leads to an early abort of the burst causing unnecessary performance reduction.<br/>To avoid underrun and overrun during the burst, in a high-latency bus system (like USB), threshold and burst size control is provided through GTXTHRCFG and GRXTHRCFG registers. Bit [29] of the GTXTHRCFG and GRXTHRCFG registers enables this feature.<br/>For more information on<br/>- Using this register, refer to 'Architecture Details' chapter.<br/>- Selecting values for the fields of this register.<br/>Note:<br/>- GRXTHRCFG register is not applicable for Debug Target.<br/>- GRXTHRCFG register is not applicable in USB 2.0-only mode.</td></tr>
+</table>
+<p></p>
+<h2>GRXTHRCFG (USB3_XHCI) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:30</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>USBRxPktCntSel</td><td class="center">29</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>USB ReceivePacket Count Enable<br/>This field enables/disables the USB reception multi-packet thresholding:<br/>- 0: The core can only start reception on the USB when the RX FIFO has space for at least one packet.<br/>- 1: The core can only start reception on the USB when the RX FIFO has space for at least USBRxPktCnt amount of packets. This mode is valid in both host and device mode. It is only used for SuperSpeed.<br/>In device mode,<br/>- Setting this bit to 1 also enables the functionality of reporting NUMP in the ACK TP based on the RX FIFO space instead of reporting a fixed NUMP derived from DCFG.NUMP<br/>- If you are using external buffer control (EBC) feature, disable this mode by setting USBRxPktCntSel to 0.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">28</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>USBRxPktCnt</td><td class="center">27:24</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>USB Receive Packet Count<br/>In host mode, this field specifies the space (in terms of the number of packets) that must be available in the RX FIFO before the core can start the corresponding USB RX transaction (burst).<br/>In device mode, this field specifies the space (in terms of the number of packets) that must be available in the RX FIFO before the core can send ERDY for a flow-controlled endpoint.<br/>This field is valid only when the USB Receive Packet Count Enable field is set to 1. The valid values for this field are from 1 to 15.<br/>Note: This field must be less than or equal to the USB Maximum Receive Burst Size field.</td></tr>
+<tr valign=top><td>USBMaxRxBurstSize</td><td class="center">23:19</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>USB Maximum Receive Burst Size<br/>In host mode, this field specifies the Maximum Bulk IN burst the controller can perform.<br/>When the system bus is slower than the USB, RX FIFO can overrun during a long burst.<br/>You can program a smaller value to this field to limit the RX burst size that the core can perform. It only applies to SS Bulk, Isochronous, and Interrupt IN endpoints in the host mode.<br/>In device mode, this field specifies the NUMP value that is sent in ERDY for an OUT endpoint.<br/>This field is valid only when USBRxPktCntSel is one. The valid values for this field are from 1 to 16.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">18:16</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">15</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">14:13</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>ResvISOCOUTSpc</td><td class="center">12:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>Reserved for future use</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

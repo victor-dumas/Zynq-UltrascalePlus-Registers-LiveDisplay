@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<title>ODTMAP (DDRC) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddrc.html")>DDRC Module</a> &gt; ODTMAP (DDRC) Register</p><h1>ODTMAP (DDRC) Register</h1>
+<h2>ODTMAP (DDRC) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>ODTMAP</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000244</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD070244 (DDRC)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00002211</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>ODT/Rank Map Register</td></tr>
+</table>
+<p>This register is static. Static registers can only be written when the controller is in reset.</p>
+<h2>ODTMAP (DDRC) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>rank1_rd_odt</td><td class="center">13:12</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x2</td><td>Indicates which remote ODTs must be turned on during a read from rank 1.<br/>Each rank has a remote ODT (in the SDRAM) which can be turned on by setting the appropriate bit here.<br/>Rank 0 is controlled by the LSB; rank 1 is controlled by bit next to the LSB, etc.<br/>For each rank, set its bit to 1 to enable its ODT.</td></tr>
+<tr valign=top><td>rank1_wr_odt</td><td class="center"> 9:8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x2</td><td>Indicates which remote ODTs must be turned on during a write to rank 1.<br/>Each rank has a remote ODT (in the SDRAM) which can be turned on by setting the appropriate bit here.<br/>Rank 0 is controlled by the LSB; rank 1 is controlled by bit next to the LSB, etc.<br/>For each rank, set its bit to 1 to enable its ODT.</td></tr>
+<tr valign=top><td>rank0_rd_odt</td><td class="center"> 5:4</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Indicates which remote ODTs must be turned on during a read from rank 0.<br/>Each rank has a remote ODT (in the SDRAM) which can be turned on by setting the appropriate bit here.<br/>Rank 0 is controlled by the LSB; rank 1 is controlled by bit next to the LSB, etc.<br/>For each rank, set its bit to 1 to enable its ODT.</td></tr>
+<tr valign=top><td>rank0_wr_odt</td><td class="center"> 1:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Indicates which remote ODTs must be turned on during a write to rank 0.<br/>Each rank has a remote ODT (in the SDRAM) which can be turned on by setting the appropriate bit here.<br/>Rank 0 is controlled by the LSB; rank 1 is controlled by bit next to the LSB, etc.<br/>For each rank, set its bit to 1 to enable its ODT.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

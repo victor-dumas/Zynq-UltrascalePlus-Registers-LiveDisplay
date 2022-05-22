@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<title>LAR (FTM) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ftm.html")>FTM Module</a> &gt; LAR (FTM) Register</p><h1>LAR (FTM) Register</h1>
+<h2>LAR (FTM) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>LAR</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000FB0</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FE9D0FB0 (CORESIGHT_SOC_FTM)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">wo<span class="tooltiptext">Write-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Lock Access Register</td></tr>
+</table>
+<p></p>
+<h2>LAR (FTM) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>KEY</td><td class="center">31:0</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Write Access Code.<br/>Write behavior depends on PADDRDBG31 pin:<br/>- PADDRDBG31=0 (lower 2GB):<br/>After reset (via PRESETDBGn), FTM is locked, i.e., writes to all other registers using lower 2GB addresses are ignored.<br/>To unlock, 0xC5ACCE55 must be written this register.<br/>After the required registers are written, to lock again, write a value other than 0xC5ACCE55 to this register.<br/>- PADDRDBG31=1 (upper 2GB):<br/>FTM is unlocked when upper 2GB addresses are used to write to all the registers.<br/>However, write to this register is ignored using a upper 2GB address!<br/>Note: read from this register always returns 0, regardless of PADDRDBG31.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

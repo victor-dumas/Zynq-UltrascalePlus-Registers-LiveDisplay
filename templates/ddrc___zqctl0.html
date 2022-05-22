@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<title>ZQCTL0 (DDRC) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddrc.html")>DDRC Module</a> &gt; ZQCTL0 (DDRC) Register</p><h1>ZQCTL0 (DDRC) Register</h1>
+<h2>ZQCTL0 (DDRC) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>ZQCTL0</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000180</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD070180 (DDRC)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x02000040</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>ZQ Control Register 0</td></tr>
+</table>
+<p>All register fields are static, unless described otherwise in the register field description. Static registers can only be written when the controller is in reset.</p>
+<h2>ZQCTL0 (DDRC) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>dis_auto_zq</td><td class="center">31</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>- 1 - Disable DDRC generation of ZQCS/MPC(ZQ calibration) command.<br/>Register DBGCMD.zq_calib_short can be used instead to issue ZQ calibration request from APB module.<br/>- 0 - Internally generate ZQCS/MPC(ZQ calibration) commands based on ZQCTL1.t_zq_short_interval_x1024.<br/>Programming Mode: Dynamic</td></tr>
+<tr valign=top><td>dis_srx_zqcl</td><td class="center">30</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>- 1 - Disable issuing of ZQCL/MPC(ZQ calibration) command at Self-Refresh/SR-Powerdown exit.<br/>- 0 - Enable issuing of ZQCL/MPC(ZQ calibration) command at Self-Refresh/SR-Powerdown exit.<br/>Programming Mode: Quasi-dynamic Group 2 and Group 4</td></tr>
+<tr valign=top><td>zq_resistor_shared</td><td class="center">29</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>- 1 - Denotes that ZQ resistor is shared between ranks. Means ZQinit/ZQCL/ZQCS/MPC(ZQ calibration) commands are sent to one rank at a time with tZQinit/tZQCL/tZQCS/tZQCAL/tZQLAT timing met between commands so that commands to different ranks do not overlap.<br/>- 0 - ZQ resistor is not shared.</td></tr>
+<tr valign=top><td>dis_mpsmx_zqcl</td><td class="center">28</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>- 1 - Disable issuing of ZQCL command at Maximum Power Saving Mode exit. Only applicable when run in DDR4 mode.<br/>- 0 - Enable issuing of ZQCL command at Maximum Power Saving Mode exit. Only applicable when run in DDR4 mode.</td></tr>
+<tr valign=top><td>t_zq_long_nop</td><td class="center">26:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x200</td><td>tZQoper for DDR3/DDR4, tZQCL for LPDDR3, tZQCAL for LPDDR4: Number of cycles of NOP required after a ZQCL (ZQ calibration long)/MPC(ZQ Start) command is issued to SDRAM.<br/>DDR3/DDR4: program this to tZQoper/2 and round it up to the next integer value.<br/>LPDDR3: program this to tZQCL/2 and round it up to the next integer value.<br/>LPDDR4: program this to tZQCAL/2 and round it up to the next integer value.<br/>Unit: Clock cycles.</td></tr>
+<tr valign=top><td>t_zq_short_nop</td><td class="center"> 9:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x40</td><td>tZQCS for DDR3/DD4/LPDDR3, tZQLAT for LPDDR4: Number of cycles of NOP required after a ZQCS (ZQ calibration short)/MPC(ZQ Latch) command is issued to SDRAM.<br/>Program this to tZQCS/2 and round it up to the next integer value.<br/>Unit: Clock cycles.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

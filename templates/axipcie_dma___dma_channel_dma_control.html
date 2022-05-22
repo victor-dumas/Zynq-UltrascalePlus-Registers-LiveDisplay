@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<title>DMA_CHANNEL_DMA_CONTROL (AXIPCIE_DMA) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___axipcie_dma.html")>AXIPCIE_DMA Module</a> &gt; DMA_CHANNEL_DMA_CONTROL (AXIPCIE_DMA) Register</p><h1>DMA_CHANNEL_DMA_CONTROL (AXIPCIE_DMA) Register</h1>
+<h2>DMA_CHANNEL_DMA_CONTROL (AXIPCIE_DMA) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>DMA_CHANNEL_DMA_CONTROL</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000078</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD0F0078 (AXIPCIE_DMA0)<br/>0x00FD0F00F8 (AXIPCIE_DMA1)<br/>0x00FD0F0178 (AXIPCIE_DMA2)<br/>0x00FD0F01F8 (AXIPCIE_DMA3)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>DMA Channel Control</td></tr>
+</table>
+<p></p>
+<h2>DMA_CHANNEL_DMA_CONTROL (AXIPCIE_DMA) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:3</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback></td></tr>
+<tr valign=top><td>cmpl_stat_q_elem_size</td><td class="center"> 2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>DMA Channel Completion Status Queue Element Size. If UserID and/or UserHandle information is needed for an application, the application must setup the DMA Channel with 64-bit Status Queue Elements. If these features are not needed, then the DMA Channel may be setup with 32-bit Status Queue Elements to reduce the bus utilization required to write status Queue Elements.</td></tr>
+<tr valign=top><td>dma_reset</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>DMA Channel Reset. Each DMA Channel has a small Source SGL FIFO, Destination SGL FIFO, Source DMA Completion Status FIFO, and Destination DMA Completion Status FIFO to enable overlapping of DMA transactions for higher throughput. When a DMA Channel is disabled, these FIFOs may not empty fully and may need to be flushed before the DMA Channel can be reused for a new operation.</td></tr>
+<tr valign=top><td>dma_enable</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>DMA Channel Enable</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<title>Config_reg0 (SPI) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___spi.html")>SPI Module</a> &gt; Config_reg0 (SPI) Register</p><h1>Config_reg0 (SPI) Register</h1>
+<h2>Config_reg0 (SPI) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>Config_reg0</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000000</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF040000 (SPI0)<br/>0x00FF050000 (SPI1)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00020000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>SPI configuration</td></tr>
+</table>
+<p></p>
+<h2>Config_reg0 (SPI) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:18</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved, read as zero, ignored on write.</td></tr>
+<tr valign=top><td>Modefail_gen_en</td><td class="center">17</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>ModeFail Generation Enable<br/>1: enable<br/>0: disable<br/>Change only when controller is not actively transmitting or receiving data.</td></tr>
+<tr valign=top><td>Man_start_com</td><td class="center">16</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Manual Start Command<br/>1: start transmission of data<br/>0: don't care<br/>Change only when controller is not actively transmitting or receiving data.</td></tr>
+<tr valign=top><td>Man_start_en</td><td class="center">15</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Manual Start Enable<br/>1: enables manual start<br/>0: auto mode<br/>Change only when controller is not actively transmitting or receiving data.</td></tr>
+<tr valign=top><td>Manual_CS</td><td class="center">14</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Manual CS<br/>1: manual CS mode<br/>0: auto mode<br/>Change only when controller is not actively transmitting or receiving data.</td></tr>
+<tr valign=top><td>CS</td><td class="center">13:10</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Peripheral chip select lines; valid only if [Manual_CS] = 1.<br/>xxx0: slave 0 selected<br/>xx01: slave 1 selected<br/>x011: <br/>slave 2 selected<br/>0111: reserved<br/>1111: No slave selected<br/>Change only when controller is not actively transmitting or receiving data.</td></tr>
+<tr valign=top><td>PERI_SEL</td><td class="center"> 9</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Peripheral select decode<br/>1: allow external 3-to-8 decode<br/>0: only 1 of 3 selects<br/>Change only when controller is not actively transmitting or receiving data.</td></tr>
+<tr valign=top><td>REF_CLK</td><td class="center"> 8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Master reference clock select<br/>1: not supported<br/>0: use SPI REFERENCE CLOCK</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 7:6</td><td class="tooltip grayback">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved, read as zero, write with 00</td></tr>
+<tr valign=top><td>BAUD_RATE_DIV</td><td class="center"> 5:3</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Master mode baud rate divisor controls the amount the SPI_REF_CLK is divided for the controller.<br/>000: reserved<br/>001: divide by 4<br/>010: divide by 8<br/>011: divide by 16<br/>100: divide by 32<br/>101: divide by 64<br/>110: divide by 128<br/>111: divide by 256<br/>Change only when controller is not actively transmitting or receiving data.</td></tr>
+<tr valign=top><td>CLK_PH</td><td class="center"> 2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Clock phase<br/>1: the SPI clock is inactive outside the word<br/>0: the SPI clock is active outside the word<br/>Change only when controller is not actively transmitting or receiving data.</td></tr>
+<tr valign=top><td>CLK_POL</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Clock polarity outside SPI word<br/>1: the SPI clock is quiescent high<br/>0: the SPI clock is quiescent low<br/>Change only when controller is not actively transmitting or receiving data.</td></tr>
+<tr valign=top><td>MODE_SEL</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Mode select<br/>1: the SPI is in master mode<br/>0: the SPI is in slave mode<br/>Change only when controller is not actively transmitting or receiving data.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<title>Ctrl_Reg (FUNNEL3P) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___funnel3p.html")>FUNNEL3P Module</a> &gt; Ctrl_Reg (FUNNEL3P) Register</p><h1>Ctrl_Reg (FUNNEL3P) Register</h1>
+<h2>Ctrl_Reg (FUNNEL3P) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>Ctrl_Reg</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000000</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FE910000 (CORESIGHT_SOC_FUNN_0)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000300</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Soc_dbug_lpd Funnel Control</td></tr>
+</table>
+<p> Register enables the slave ports and defines the hold time of the slave ports. Hold time refers to the number of transactions that are output on the funnel master port from the same slave while that slave port atvalidsx is HIGH. Hold time does not refer to clock cycles in this context</p>
+<h2>Ctrl_Reg (FUNNEL3P) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>HT</td><td class="center">11:8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x3</td><td>The formatting scheme can easily become inefficient if fast switching occurs, so, where possible, this must be minimized. If a source has nothing to transmit, then another source is selected irrespective of the minimum number of transactions. The ATB Funnel holds for the minimum hold time and one additional cycle.<br/>The maximum value that can be entered is 0xE and this equates to 15 cycles.<br/>0xF is reserved.</td></tr>
+<tr valign=top><td>EnS2</td><td class="center"> 2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Reserved, set = 0.</td></tr>
+<tr valign=top><td>EnS1</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Funnel input port 1 control (RPU core1):<br/>0: disable, port is disabled from priority selection scheme (default).<br/>1: enable.</td></tr>
+<tr valign=top><td>EnS0</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Funnel input port 0 control (RPU core0):<br/>0: disable, port is disabled from priority selection scheme (default).<br/>1: enable.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

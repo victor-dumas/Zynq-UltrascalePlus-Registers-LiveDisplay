@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<title>DRAMTMG1_SHADOW (DDRC) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddrc.html")>DDRC Module</a> &gt; DRAMTMG1_SHADOW (DDRC) Register</p><h1>DRAMTMG1_SHADOW (DDRC) Register</h1>
+<h2>DRAMTMG1_SHADOW (DDRC) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>DRAMTMG1_SHADOW</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000002104</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD072104 (DDRC)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00080414</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>SDRAM Timing Shadow Register 1</td></tr>
+</table>
+<p>All register fields are quasi-dynamic group 2 and group 4, unless described otherwise in the register field description. Group 2 registers can be written in self-refresh, deep power-down, and maximum power saving modes. Group 4 registers can be written depending on MSTR.frequency_mode.</p>
+<h2>DRAMTMG1_SHADOW (DDRC) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>t_xp</td><td class="center">20:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x8</td><td>tXP: Minimum time after power-down exit to any operation.<br/>For DDR3, this should be programmed to tXPDLL if slow powerdown exit is selected in MR0[12].<br/>If C/A parity for DDR4 is used, set to (tXP+PL) instead.<br/>Program this to (tXP/2) and round it up to the next integer value.<br/>Units: Clocks</td></tr>
+<tr valign=top><td>rd2pre</td><td class="center">12:8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x4</td><td>tRTP:<br/>Minimum time from read to precharge of same bank.<br/>- DDR3: tAL + max (tRTP, 4)<br/>- DDR4: Max of following two equations:<br/>tAL + max (tRTP, 4) or,<br/>RL + BL/2 - tRP.<br/>- LPDDR3: BL/2 +<br/>max(tRTP,4) - 4<br/>- LPDDR4: BL/2 + max(tRTP,8) - 8<br/>For 1T mode, divide the above value by 2. No rounding up.<br/>For 2T mode or LPDDR4 mode, divide the above value by 2 and round it up to the next integer value.<br/>Unit: Clocks.<br/>Programming Mode: Quasi-dynamic Group 1, Group 2, and Group 4</td></tr>
+<tr valign=top><td>t_rc</td><td class="center"> 6:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x14</td><td>tRC:<br/>Minimum time between activates to same bank.<br/>Program this to (tRC/2) and round up to next integer value.<br/>Unit: Clocks.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

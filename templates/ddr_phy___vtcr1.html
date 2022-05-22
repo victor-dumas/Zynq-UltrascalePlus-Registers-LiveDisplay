@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<title>VTCR1 (DDR_PHY) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddr_phy.html")>DDR_PHY Module</a> &gt; VTCR1 (DDR_PHY) Register</p><h1>VTCR1 (DDR_PHY) Register</h1>
+<h2>VTCR1 (DDR_PHY) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>VTCR1</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000052C</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD08052C (DDR_PHY)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x07F00072</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>VREF Training Control Register 1</td></tr>
+</table>
+<p></p>
+<h2>VTCR1 (DDR_PHY) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>HVSS</td><td class="center">31:28</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Host VREF step size used during VREF training. The register value<br/>of N indicates step size of (N+1).The valid step sizes are 1 to 16.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">27</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Returns zeros on reads.</td></tr>
+<tr valign=top><td>HVMAX</td><td class="center">26:20</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x7F</td><td>Maximum VREF limit value used during Host VREF training.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">19</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Returns zeros on reads.</td></tr>
+<tr valign=top><td>HVMIN</td><td class="center">18:12</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Minimum VREF limit value used during Host VREF training.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">11</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Returns zeros when read.</td></tr>
+<tr valign=top><td>SHRNK</td><td class="center">10:9</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Static Host Vref Rank Value: When SHREN is enabled, SHRNK [1:0]<br/>will be used for Vref rank control for all DQ IO buffers.</td></tr>
+<tr valign=top><td>SHREN</td><td class="center"> 8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Static Host Vref Rank Enable:<br/>When Enabled, vref rank control for all DQ IO buffers will be static i.e.<br/>SHRNK [1:0].<br/>When Disabled, vref rank control for DQ IOs will be dynamically<br/>changing based on rank of read command.</td></tr>
+<tr valign=top><td>tVREFIO</td><td class="center"> 7:5</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x3</td><td>Number of ctl_clk required to meet (> 200ns) VREF Settling timing<br/>requirements during Host IO VREF training. The valid values are<br/>below:<br/>3'b000: No of ctl_clk = 32<br/>3'b001: No of ctl_clk = 64<br/>3'b010: No of ctl_clk = 96<br/>3'b011: No of ctl_clk = 128<br/>3'b100: No of ctl_clk = 160<br/>3'b101: No of ctl_clk = 192<br/>3'b110: No of ctl_clk = 224<br/>3'b111: No of ctl_clk = 256</td></tr>
+<tr valign=top><td>HVEN</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>HOST (IO) internal VREF training Enable: When Set, IO VREF<br/>training will be performed for all enabled byte lanes and all enabled<br/>ranks.</td></tr>
+<tr valign=top><td>HVIO</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Host IO Type Control: Controls whether IO VREF value will be used<br/>per rank or common across all ranks.<br/>0: IO VREF value will switch based on rank of read command.<br/>1: IO VREF value will remain same for reads across all ranks.<br/>This field should be programmed based on IO requirement.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

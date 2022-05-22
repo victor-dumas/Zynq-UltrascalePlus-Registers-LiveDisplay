@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<title>PCTRL (SATA_AHCI_VENDOR) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___sata_ahci_vendor.html")>SATA_AHCI_VENDOR Module</a> &gt; PCTRL (SATA_AHCI_VENDOR) Register</p><h1>PCTRL (SATA_AHCI_VENDOR) Register</h1>
+<h2>PCTRL (SATA_AHCI_VENDOR) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>PCTRL</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000000</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD0C00A0 (SATA_AHCI_VENDOR)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>SerDes control AHB control port.</td></tr>
+</table>
+<p>Port SERDES Control. The  SERDES is designed with an AHB control port. For integration simplicity, Vendor provides a facility within the Vendor-SATA Controller IP to control this  SERDES AHB bus via simple reads/writes to a defined address within the Vendor IP.</p>
+<h2>PCTRL (SATA_AHCI_VENDOR) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>BSY</td><td class="center">31</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>BSY: Busy</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">30:25</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>SRI</td><td class="center">24</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>SRI: Read/Write indicator to SERDES bus controller.<br/>0: Read.<br/>1: Write.</td></tr>
+<tr valign=top><td>SRWD</td><td class="center">23:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>SRWD: SERDES Read/Write Data. Note: If this control port is not connected to the SERDES then these bits will always read as 8'h0.</td></tr>
+<tr valign=top><td>SAV</td><td class="center">15:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>SAV: SERDES Address Register Value</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

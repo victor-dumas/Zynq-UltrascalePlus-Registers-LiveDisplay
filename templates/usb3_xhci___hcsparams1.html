@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<title>HCSPARAMS1 (USB3_XHCI) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___usb3_xhci.html")>USB3_XHCI Module</a> &gt; HCSPARAMS1 (USB3_XHCI) Register</p><h1>HCSPARAMS1 (USB3_XHCI) Register</h1>
+<h2>HCSPARAMS1 (USB3_XHCI) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>HCSPARAMS1</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000004</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FE200004 (USB3_0_XHCI)<br/>0x00FE300004 (USB3_1_XHCI)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">ro<span class="tooltiptext">Read-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Structural Parameters 1 Register<br/>For register definitions, refer to the xHCI specification.</td></tr>
+</table>
+<p></p>
+<h2>HCSPARAMS1 (USB3_XHCI) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>MAXPORTS</td><td class="center">31:24</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0</td><td>Number of Ports (MaxPorts)<br/>- Number of ports implemented is defined by the parameter (`DWC_USB3_HOST_NUM_U2_ROOT_PORTS + `DWC_USB3_HOST_NUM_U3_ROOT_PORTS)<br/>- Number of ports enabled is controlled by the core input signals host_num_u2_port[3:0]+host_num_u3_port[3:0]<br/>Note:<br/>In USB 2.0-only mode, the host_num_u3_port signal is zero.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">23:19</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>MAXINTRS</td><td class="center">18:8</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0</td><td>Number of Interrupters (MaxIntrs)<br/>Defined by the configurable parameter `DWC_USB3_HOST_NUM_INTERRUPTER_SUPT</td></tr>
+<tr valign=top><td>MAXSLOTS</td><td class="center"> 7:0</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0</td><td>Number of device slots (MaxSlots)<br/>Defined by configurable parameter `DWC_USB3_NUM_DEVICE_SUPT</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

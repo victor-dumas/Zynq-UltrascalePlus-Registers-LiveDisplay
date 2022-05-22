@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<title>AIB_CNTRL (PMU_GLOBAL) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___pmu_global.html")>PMU_GLOBAL Module</a> &gt; AIB_CNTRL (PMU_GLOBAL) Register</p><h1>AIB_CNTRL (PMU_GLOBAL) Register</h1>
+<h2>AIB_CNTRL (PMU_GLOBAL) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>AIB_CNTRL</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000600</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FFD80600 (PMU_GLOBAL)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">wo<span class="tooltiptext">Write-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>PS-PL AXI Bus Logic Isolation Requests.</td></tr>
+</table>
+<p>Requests to logically isolate the AXI busses between the PS and PL. 0: no effect. 1: initiate interface shutdown. The PMU will ensure the interface is quiescent before disabling a bus to logically isolate the PS side from the PL side. Write-only. Register is reset only by a POR reset.</p>
+<h2>AIB_CNTRL (PMU_GLOBAL) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:4</td><td class="tooltip grayback">wo<span class="tooltiptext">Write-only</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>FPD_AFI_FS</td><td class="center"> 3</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>M_AXI_HPM{0, 1}_FPD</td></tr>
+<tr valign=top><td>LPD_AFI_FS</td><td class="center"> 1</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>M_AXI_HPM0_LPD</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<title>type2_compare_2_word_0 (GEM) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___gem.html")>GEM Module</a> &gt; type2_compare_2_word_0 (GEM) Register</p><h1>type2_compare_2_word_0 (GEM) Register</h1>
+<h2>type2_compare_2_word_0 (GEM) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>type2_compare_2_word_0</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000710</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF0B0710 (GEM0)<br/>0x00FF0C0710 (GEM1)<br/>0x00FF0D0710 (GEM2)<br/>0x00FF0E0710 (GEM3)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Compare A,B and C fields of the screener type 2 match register are pointers to a pool of up to 32 compare registers. If enabled the compare is true if the data at the OFFSET into the frame, ANDed with the MASK Value, is equal to the COMPARE Value. A 16 bit word comparison is done. The byte at the OFFSET number of bytes from the index start is compared thru bits 7:0 of the configured VALUE and MASK.<br/>The byte at the OFFSET number of bytes + 1 from the index start is compared thru bits 15:8 of the configured VALUE and MASK. The OFFSET can be configured to be from 0 to 127 bytes from either the start of the frame, the byte following the etherType field (last EtherType in the header if the frame is VLAN tagged), the byte following the IP header (IPv4 or IPv6) or from the byte following the start of the TCP/UDP header. The required number of Type 2 screening registers up to a maximum of 32 is configurable in the gem defines file and have been allocated APB address space between 0x700 and 0x7fc.<br/>Note. when using RX Partial Store and Forward mode and priority queues, the frame offset must be less than the Partial Store and Forward watermark. If the offset is higher than the watermark value it's not possible to identify the priority queue before the frame is sent to the AMBA interface, and an incorrect priority queue may be used. The bit mapping for these registers is as follows:</td></tr>
+</table>
+<p></p>
+<h2>type2_compare_2_word_0 (GEM) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>compare_value</td><td class="center">31:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>2 byte Compare Value.<br/>The byte stored in bits [23:16] is compared against the 1st byte of the 2 bytes extracted from the frame. The byte stored in bits [31:24] is compared against the 2nd byte of the 2 bytes extracted from the frame</td></tr>
+<tr valign=top><td>mask_value</td><td class="center">15:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>2 byte Mask Value</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

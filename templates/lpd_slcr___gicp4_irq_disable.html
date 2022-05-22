@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<title>GICP4_IRQ_DISABLE (LPD_SLCR) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___lpd_slcr.html")>LPD_SLCR Module</a> &gt; GICP4_IRQ_DISABLE (LPD_SLCR) Register</p><h1>GICP4_IRQ_DISABLE (LPD_SLCR) Register</h1>
+<h2>GICP4_IRQ_DISABLE (LPD_SLCR) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>GICP4_IRQ_DISABLE</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000805C</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF41805C (LPD_SLCR)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">wo<span class="tooltiptext">Write-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Interrupt Disable Register. A write of one to this location will mask the interrupt. (IMR: 1)</td></tr>
+</table>
+<p></p>
+<h2>GICP4_IRQ_DISABLE (LPD_SLCR) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>src27</td><td class="center">27</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>SMMU (from int_fpd)</td></tr>
+<tr valign=top><td>src26</td><td class="center">26</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>CCI (From int_fpd)</td></tr>
+<tr valign=top><td>src25</td><td class="center">25</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>REGS</td></tr>
+<tr valign=top><td>src24</td><td class="center">24</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>EXTERR</td></tr>
+<tr valign=top><td>src23</td><td class="center">23</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>EXT ERR</td></tr>
+<tr valign=top><td>src22</td><td class="center">22</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>L2 Error</td></tr>
+<tr valign=top><td>src21</td><td class="center">21</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>L2 Error</td></tr>
+<tr valign=top><td>src20</td><td class="center">20</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>L2 Error</td></tr>
+<tr valign=top><td>src19</td><td class="center">19</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>L2 Error</td></tr>
+<tr valign=top><td>src18</td><td class="center">18</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Performance Monitor Unit</td></tr>
+<tr valign=top><td>src17</td><td class="center">17</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Performance Monitor Unit</td></tr>
+<tr valign=top><td>src16</td><td class="center">16</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Performance Monitor Unit</td></tr>
+<tr valign=top><td>src15</td><td class="center">15</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Performance Monitor Unit</td></tr>
+<tr valign=top><td>src14</td><td class="center">14</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>CTI</td></tr>
+<tr valign=top><td>src13</td><td class="center">13</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>CTI</td></tr>
+<tr valign=top><td>src12</td><td class="center">12</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>CTI</td></tr>
+<tr valign=top><td>src11</td><td class="center">11</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>CTI</td></tr>
+<tr valign=top><td>src10</td><td class="center">10</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>VCPUMT</td></tr>
+<tr valign=top><td>src9</td><td class="center"> 9</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>VCPUMT</td></tr>
+<tr valign=top><td>src8</td><td class="center"> 8</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>VCPUMT</td></tr>
+<tr valign=top><td>src7</td><td class="center"> 7</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>VCPUMT</td></tr>
+<tr valign=top><td>src6</td><td class="center"> 6</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>XMPU error interrupt for all of FPD</td></tr>
+<tr valign=top><td>src5</td><td class="center"> 5</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>SATA controller interrupt</td></tr>
+<tr valign=top><td>src4</td><td class="center"> 4</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>GPU interrupts</td></tr>
+<tr valign=top><td>src3</td><td class="center"> 3</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>FPD DMA<br/>interrupt for channel 7</td></tr>
+<tr valign=top><td>src2</td><td class="center"> 2</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>FPD DMA<br/>interrupt for channel 6</td></tr>
+<tr valign=top><td>src1</td><td class="center"> 1</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>FPD DMA<br/>interrupt for channel 5</td></tr>
+<tr valign=top><td>src0</td><td class="center"> 0</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>FPD DMA<br/>interrupt for channel 4 (GDMA)</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

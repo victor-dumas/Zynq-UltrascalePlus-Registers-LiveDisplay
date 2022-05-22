@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<title>MASK_DATA_4_MSW (GPIO) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___gpio.html")>GPIO Module</a> &gt; MASK_DATA_4_MSW (GPIO) Register</p><h1>MASK_DATA_4_MSW (GPIO) Register</h1>
+<h2>MASK_DATA_4_MSW (GPIO) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>MASK_DATA_4_MSW</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000024</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF0A0024 (GPIO)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Maskable Output Data (GPIO Bank4, EMIO, Upper 16bits)</td></tr>
+</table>
+<p>This register operates in exactly the same manner as MASK_DATA_0_LSW, except that it controls the upper 16bits of bank4, which corresponds to EMIO[63:48].</p>
+<h2>MASK_DATA_4_MSW (GPIO) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>MASK_4_MSW</td><td class="center">31:16</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Operation is the same as MASK_DATA_0_LSW [MASK_0_LSW]</td></tr>
+<tr valign=top><td>DATA_4_MSW</td><td class="center">15:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Operation is the same as MASK_DATA_0_LSW [DATA_0_LSW]</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

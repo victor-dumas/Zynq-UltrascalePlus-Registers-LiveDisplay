@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<title>Interrupt_Register_1 (TTC) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ttc.html")>TTC Module</a> &gt; Interrupt_Register_1 (TTC) Register</p><h1>Interrupt_Register_1 (TTC) Register</h1>
+<h2>Interrupt_Register_1 (TTC) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>Interrupt_Register_1</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000054</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF110054 (TTC0)<br/>0x00FF120054 (TTC1)<br/>0x00FF130054 (TTC2)<br/>0x00FF140054 (TTC3)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder> 6</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">clronrd<span class="tooltiptext">Readable, clears value on read</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Counter 1 Interval, Match, Overflow<br/>and Event interrupts</td></tr>
+</table>
+<p></p>
+<h2>Interrupt_Register_1 (TTC) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>Ev</td><td class="center"> 5</td><td class="tooltip">clronrd<span class="tooltiptext">Readable, clears value on read</span></td><td class="hex">0x0</td><td>Event timer overflow interrupt</td></tr>
+<tr valign=top><td>Ov</td><td class="center"> 4</td><td class="tooltip">clronrd<span class="tooltiptext">Readable, clears value on read</span></td><td class="hex">0x0</td><td>Counter overflow</td></tr>
+<tr valign=top><td>M3</td><td class="center"> 3</td><td class="tooltip">clronrd<span class="tooltiptext">Readable, clears value on read</span></td><td class="hex">0x0</td><td>Match 3 interrupt</td></tr>
+<tr valign=top><td>M2</td><td class="center"> 2</td><td class="tooltip">clronrd<span class="tooltiptext">Readable, clears value on read</span></td><td class="hex">0x0</td><td>Match 2 interrupt</td></tr>
+<tr valign=top><td>M1</td><td class="center"> 1</td><td class="tooltip">clronrd<span class="tooltiptext">Readable, clears value on read</span></td><td class="hex">0x0</td><td>Match 1 interrupt</td></tr>
+<tr valign=top><td>Iv</td><td class="center"> 0</td><td class="tooltip">clronrd<span class="tooltiptext">Readable, clears value on read</span></td><td class="hex">0x0</td><td>Interval interrupt</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

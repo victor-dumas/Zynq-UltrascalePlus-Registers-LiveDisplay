@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<title>DRAMTMG8_SHADOW (DDRC) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddrc.html")>DDRC Module</a> &gt; DRAMTMG8_SHADOW (DDRC) Register</p><h1>DRAMTMG8_SHADOW (DDRC) Register</h1>
+<h2>DRAMTMG8_SHADOW (DDRC) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>DRAMTMG8_SHADOW</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000002120</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD072120 (DDRC)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x03034405</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>SDRAM Timing Shadow Register 8</td></tr>
+</table>
+<p>This register is quasi-dynamic group 2 and group 4. Group 2 registers can be written in self-refresh, deep power-down, and maximum power saving modes. Group 4 registers can be written depending on MSTR.frequency_mode.</p>
+<h2>DRAMTMG8_SHADOW (DDRC) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>t_xs_fast_x32</td><td class="center">30:24</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x3</td><td>tXS_FAST: Exit Self Refresh to ZQCL, ZQCS and MRS (only CL, WR, and RTP).<br/>Program this to the above value divided by 2 and round up to next integer value.<br/>Unit: Multiples of 32 clocks.<br/>Note: This is applicable to only ZQCL/ZQCS commands.<br/>Note: Ensure this is less than or equal to t_xs_x32.</td></tr>
+<tr valign=top><td>t_xs_abort_x32</td><td class="center">22:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x3</td><td>tXS_ABORT: Exit Self Refresh to commands not requiring a locked DLL in Self Refresh Abort.<br/>Program this to the above value divided by 2 and round up to next integer value.<br/>Unit: Multiples of 32 clocks.<br/>Note: Ensure this is less than or equal to t_xs_x32.</td></tr>
+<tr valign=top><td>t_xs_dll_x32</td><td class="center">14:8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x44</td><td>tXSDLL: Exit Self Refresh to commands requiring a locked DLL.<br/>Program this to the above value divided by 2 and round up to next integer value.<br/>Unit: Multiples of 32 clocks.<br/>Note: Used only for DDR3 and DDR4 SDRAMs.</td></tr>
+<tr valign=top><td>t_xs_x32</td><td class="center"> 6:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x5</td><td>tXS: Exit Self Refresh to commands not requiring a locked DLL.<br/>Program this to the above value divided by 2 and round up to next integer value.<br/>Unit: Multiples of 32 clocks.<br/>Note: Used only for DDR3 and DDR4 SDRAMs.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

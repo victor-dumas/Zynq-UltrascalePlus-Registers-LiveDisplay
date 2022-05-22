@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<title>GTXFIFOPRIHST (USB3_XHCI) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___usb3_xhci.html")>USB3_XHCI Module</a> &gt; GTXFIFOPRIHST (USB3_XHCI) Register</p><h1>GTXFIFOPRIHST (USB3_XHCI) Register</h1>
+<h2>GTXFIFOPRIHST (USB3_XHCI) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>GTXFIFOPRIHST</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000C618</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FE20C618 (USB3_0_XHCI)<br/>0x00FE30C618 (USB3_1_XHCI)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Global Host TX FIFO DMA Priority Register<br/>This register specifies the relative DMA priority level among the Host TXFIFOs (one per USB bus instance) within the associated speed group (SS or HS/FSLS). Each register bit[n] controls the priority (1: high, 0: low) of TXFIFO[n] within a speed group. When multiple TXFIFOs compete for DMA service at a given time (i.e., multiple TXQs contain TX DMA requests and their corresponding TXFIFOs have space available), the TX DMA arbiter grants access on a packet-basis in the following manner:<br/>- 1. Among the FIFOs in the same speed group (SS or HS/FSLS):<br/>a. High-priority TXFIFOs are granted access using round-robin arbitration<br/>b. Low-priority TXFIFOs are granted access using round-robin arbitration only after the high-priority TXFIFOs have no further processing to do (that is, either the TXQs are empty or the corresponding TXFIFOs are full).<br/>- 2. The TX DMA arbiter prioritizes the SS speed group or HS/FSLS speed group according to the ratio programmed in the GDMAHLRATIO register.<br/>For scatter-gather packets, the arbiter grants successive DMA requests to the same FIFO until the entire packet is completed.<br/>This register is present only when the core is configured to operate in the host mode (includes DRD and OTG modes). The register size corresponds to the number of configured USB bus instances; for example, in the default configuration, there are 3 USB bus instances (1 SS, 1 HS, and 1 FSLS).</td></tr>
+</table>
+<p></p>
+<h2>GTXFIFOPRIHST (USB3_XHCI) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:4</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>gtxfifoprihst</td><td class="center"> 3:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>Host TxFIFO priority</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

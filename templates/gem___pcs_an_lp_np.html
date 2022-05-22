@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<title>pcs_an_lp_np (GEM) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___gem.html")>GEM Module</a> &gt; pcs_an_lp_np (GEM) Register</p><h1>pcs_an_lp_np (GEM) Register</h1>
+<h2>pcs_an_lp_np (GEM) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>pcs_an_lp_np</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000220</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF0B0220 (GEM0)<br/>0x00FF0C0220 (GEM1)<br/>0x00FF0D0220 (GEM2)<br/>0x00FF0E0220 (GEM3)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">ro<span class="tooltiptext">Read-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>This value of this register contains the next page received information from the link partner.</td></tr>
+</table>
+<p></p>
+<h2>pcs_an_lp_np (GEM) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:16</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Set to zero.</td></tr>
+<tr valign=top><td>next_page_to_receive</td><td class="center">15</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Next page to receive - this bit indicates whether this is the last page to be received in the sequence by the GEM PCS:0: Last page. 1: Additional page(s) to follow.</td></tr>
+<tr valign=top><td>acknowledge</td><td class="center">14</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Acknowledge - this bit indicates whether as part of the next page function, the link partner has successfully received the last message transmitted.</td></tr>
+<tr valign=top><td>message_page_indicator</td><td class="center">13</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Message page indicator - this bit identifies the message. 0: Unformatted page. 1: Message page.</td></tr>
+<tr valign=top><td>acknowledge_2</td><td class="center">12</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Acknowledge 2 - set active high by the link partner to indicate when it has the ability to comply with the last message received.</td></tr>
+<tr valign=top><td>toggle</td><td class="center">11</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Toggle - this bit toggles with every received page.</td></tr>
+<tr valign=top><td>message</td><td class="center">10:0</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Message - contains data as defined by the message page indicator bit.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

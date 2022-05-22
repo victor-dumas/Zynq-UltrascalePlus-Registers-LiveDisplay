@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<title>STS (ETF8K) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___etf8k.html")>ETF8K Module</a> &gt; STS (ETF8K) Register</p><h1>STS (ETF8K) Register</h1>
+<h2>STS (ETF8K) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>STS</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000000C</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FE95000C (CORESIGHT_SOC_ETF_2)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">ro<span class="tooltiptext">Read-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x0000000C</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>TMC Status register</td></tr>
+</table>
+<p></p>
+<h2>STS (ETF8K) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>Empty</td><td class="center"> 4</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>If set, this bit indicates that the TMC does not contain any valid trace data in the trace memory. This does not, however, mean that the pipeline stages within the TMC are empty. To determine whether the pipeline stages within the TMC are empty, read the TMCReady bit.This bit is set on reset.This bit is valid only when TraceCaptEn=1. This bit reads as 0 when TraceCaptEn=0.Note: In Circular-Buffer mode, it is possible that the Empty bit and the Full bit (STS register) are 1 at the same time due to the fact that the Full bit in this mode, once set, does not clear unless TraceCaptEn is set.</td></tr>
+<tr valign=top><td>FtEmpty</td><td class="center"> 3</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>This bit is set when trace capture has stopped, and all internal pipelines and buffers have drained. Unlike TMCReady, it is not affected by buffer drains and AXI accesses.The ACQCOMP output reflects the value of this bit unless the TMC is in integration mode.</td></tr>
+<tr valign=top><td>TMCReady</td><td class="center"> 2</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>This bit is set when all the following are true:&lt;ul>&lt;li>Trace capture has stopped and all internal pipelines and buffers have drained. This is equivalent to being in the Stopped or Disabled state.&lt;/li>&lt;li>The TMC is not training because of the DrainBuffer bit of the FFCR being set.&lt;/li>&lt;li>In ETR configuration, the AXI interface is not busy. This case can be used to detect page table reads in scatter-gather mode when in Stopped state.&lt;/li>&lt;/ul></td></tr>
+<tr valign=top><td>Triggered</td><td class="center"> 1</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>The Triggered bit is set when trace capture is in progress and the TMC has detected a trigger event. A trigger event is said to have occurred when the TMC has written the set number of datawords (as programmed in the TRG register) into the trace memory after the occurrence of either a rising edge on the TRIGIN input or a trigger packet (ATID = 7'h7D) in the incoming trace stream. This bit is cleared when trace capture is enabled again after having stopped. This bit is operational only in the Circular-buffer mode. In all other modes, this bit is always 0.This bit does not indicate that a trigger has been embedded in the formatted output trace data from the TMC. Trigger indication on the output trace stream is determined by the programming of the Formatter and Flush Control Register, FFCR, 0x304.</td></tr>
+<tr valign=top><td>Full</td><td class="center"> 0</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>This bit can be used to help determine how much of the trace buffer contains valid data.Circular-buffer mode: This flag is set when the RAM write pointer wraps around the top of the buffer, and remains set until the TraceCaptEn bit is cleared and set. Software-read-FIFO mode and Hardware-read-FIFO mode: This flag indicates that the current space in the trace memory is less than or equal to the value programmed in the BUFWM register (ie. Fill level >= MEM_SIZE - BUFWM). In the ETR configuration, if the TMC is programmed for Scatter_Gather operation, this bit indicates whether the Trace memory is currently full regardless of the value programmed in the BUFWM register. TMC Disabled (TraceCaptEn=0 and TMCReady=1): The Full bit retains its last value. If TraceCaptEn is 0 and a 1 is written to it, the Full bit is cleared.The FULL output from the TMC reflects the value of this register bit, except when the Integration Mode bit in the ITCTRL register, 0xF00, is set.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

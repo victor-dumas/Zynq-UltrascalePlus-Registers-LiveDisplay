@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<title>MSGF_MISC_STATUS (AXIPCIE_MAIN) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___axipcie_main.html")>AXIPCIE_MAIN Module</a> &gt; MSGF_MISC_STATUS (AXIPCIE_MAIN) Register</p><h1>MSGF_MISC_STATUS (AXIPCIE_MAIN) Register</h1>
+<h2>MSGF_MISC_STATUS (AXIPCIE_MAIN) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>MSGF_MISC_STATUS</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000400</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD0E0400 (AXIPCIE_MAIN)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Received Interrupt and Message Controller - Miscellaneous Interrupt Status.</td></tr>
+</table>
+<p></p>
+<h2>MSGF_MISC_STATUS (AXIPCIE_MAIN) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>pcie_core_event</td><td class="center">31:16</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Misc Interrupts from the PCIe Controller<br/>[31:27]:Reserved<br/>[26]:Link Bandwidth Management Status bit set in Link Status Register. This interrupt is only relevant to Root mode<br/>[25]:Link Autonomous Bandwidth Management Status bit set in Link Status Register. This interrupt is only relevant to Root mode<br/>[24]:PCIe Link down<br/>[23]:Fatal Error Detected bit set in Device Status Register<br/>[22]:Non-Fatal Error Detected bit set in Device Status Register<br/>[21]:Correctable Error Detected bit set in Device Status Register<br/>[20]:UR Detected bit set in Device Status Register<br/>[19]:TS1/2 with Hot Reset bit set received from link partner. This interrupt is only relevant to EP mode and should be diabled (masked) when operating as Root<br/>[18]:Correctable Error logged in AER Root Error Status register and reporting is enabled<br/>[17]:Non-Fatal Error logged in AER Root Error Status register and reporting is enabled<br/>[16]:Fatal Error logged in AER Root Error Status register and reporting is enabled</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">15:8</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback></td></tr>
+<tr valign=top><td>egress_address_translation_error</td><td class="center"> 7</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Egress Address Translation Security Violation.<br/>Set to 1 when a Security violation occurs on any Egress Translation.</td></tr>
+<tr valign=top><td>ingress_address_translation_error</td><td class="center"> 6</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Ingress Address Translation Security Violation.<br/>Set to 1 when a Security violation occurs on any Ingress Translation.</td></tr>
+<tr valign=top><td>master_error</td><td class="center"> 5</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>AXI Master Error. Set to 1 when a request on the AXI Master Interface is completed with SLVERR or DECERR status.</td></tr>
+<tr valign=top><td>slave_error</td><td class="center"> 4</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>AXI Slave Error. Set to 1 when a request on the AXI Slave Interface is completed with SLVERR or DECERR status.</td></tr>
+<tr valign=top><td>uncorrectable_write_error</td><td class="center"> 3</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Uncorrectable write hardware/software Error. Set to 1 when there is an error detected for a write request to a non-DMA register (from either AXI or PCIe).</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 2</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback></td></tr>
+<tr valign=top><td>rx_msg_overflow</td><td class="center"> 1</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Received Message FIFO Overflow. Set to 1 whenever a message is attempted to be written into the Received Message FIFO, but the message is discarded because the Received Message FIFO is full. Since there is a finite amount of Received Message FIFO storage space, software should process Received Messages with high priority to keep the Received Message FIFO from becoming full and dropping messages.</td></tr>
+<tr valign=top><td>rx_msg_avail</td><td class="center"> 0</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Received Message FIFO Available. Set to 1 whenever the Received Message FIFO becomes not empty. Message contents are available on the msgf_rx_fifo_type/msg/address_lo/address_hi/data ports.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

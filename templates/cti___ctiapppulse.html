@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<title>CTIAPPPULSE (CTI) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___cti.html")>CTI Module</a> &gt; CTIAPPPULSE (CTI) Register</p><h1>CTIAPPPULSE (CTI) Register</h1>
+<h2>CTIAPPPULSE (CTI) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>CTIAPPPULSE</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000001C</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FEBF801C (CORESIGHT_R5_CTI_0)<br/>0x00FEBF901C (CORESIGHT_R5_CTI_1)<br/>0x00FE99001C (CORESIGHT_SOC_CTI_0)<br/>0x00FE9A001C (CORESIGHT_SOC_CTI_1)<br/>0x00FE9B001C (CORESIGHT_SOC_CTI_2)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">wo<span class="tooltiptext">Write-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>The CTI Application Pulse Register is write-only. A write to this register causes a channel event pulse, one cticlk period, to be generated, corresponding to the bit written to. The pulse external to the ECT can be extended to multi-cycle by the handshaking interface circuits. This register clears itself immediately, so it can be repeatedly written to without software having to clear it.</td></tr>
+</table>
+<p></p>
+<h2>CTIAPPPULSE (CTI) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>APPULSE</td><td class="center"> 3:0</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Setting a bit HIGH generates a channel event pulse for the selected channel. There is one bit of the register for each channel.When a 1 is written to a bit in this register, a corresponding channel event pulse is generated for one cticlk period. Writing a 0 to any of the bits in this register has no effect.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

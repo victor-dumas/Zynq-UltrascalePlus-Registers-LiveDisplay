@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<title>GQSPI_FIFO_CTRL (QSPI) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___qspi.html")>QSPI Module</a> &gt; GQSPI_FIFO_CTRL (QSPI) Register</p><h1>GQSPI_FIFO_CTRL (QSPI) Register</h1>
+<h2>GQSPI_FIFO_CTRL (QSPI) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>GQSPI_FIFO_CTRL</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000014C</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF0F014C (QSPI)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>GQSPI FIFO Control</td></tr>
+</table>
+<p></p>
+<h2>GQSPI_FIFO_CTRL (QSPI) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:3</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>RST_RX_FIFO</td><td class="center"> 2</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Reset Receive FIFO:<br/>0: Do not clear Receive FIFO Contents<br/>1: Reset Receive FIFO contents<br/>Do not use RST_RX_FIFO while controller is actively transmitting/receiving data to/from Flash device. This bit should be used only when GQSPI is in IO mode (GQSPI_CFG.MODE_EN=0x0). Switch to IO mode if operating in DMA Mode. After RST_RX_FIFO bit is written, <br/>Controller takes few clock cycles to update the RX_FIFO_Empty status bit. Software can read the RX_FIFO_empty bit twice to allow enough time for the controller to update the status bit.</td></tr>
+<tr valign=top><td>RST_TX_FIFO</td><td class="center"> 1</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Reset Transmit FIFO:<br/>0: Do not clear Transmit FIFO Contents<br/>1: Reset Transmit FIFO contents<br/>Do not use RST_TX_FIFO while controller is actively transmitting/receiving data to/from Flash device. After RST_TX_FIFO bit is written, <br/>Controller takes few clock cycles to update the TX_FIFO_Empty status bit. Software can read the TX_FIFO_empty bit twice to allow enough time for the controller to update the status bit.</td></tr>
+<tr valign=top><td>RST_GEN_FIFO</td><td class="center"> 0</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Reset Generic FIFO:<br/>0: Do not clear Generic FIFO Contents<br/>1: Reset Generic FIFO contents<br/>Do not use RST_GEN_FIFO while controller is actively transmitting/receiving data to/from Flash device. After RST_GEN_FIFO bit is written, <br/>Controller takes few clock cycles to update the Gen_FIFO_Empty status bit. Software can read the Gen_FIFO_empty bit twice to allow enough time for the controller to update the status bit.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<title>PORTSC_30 (USB3_XHCI) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___usb3_xhci.html")>USB3_XHCI Module</a> &gt; PORTSC_30 (USB3_XHCI) Register</p><h1>PORTSC_30 (USB3_XHCI) Register</h1>
+<h2>PORTSC_30 (USB3_XHCI) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>PORTSC_30</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000430</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FE200430 (USB3_0_XHCI)<br/>0x00FE300430 (USB3_1_XHCI)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x000002A0</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Port Status and Control Register Bit Definitions<br/>The PORTSC Register Access fails (Timeout) if the UTMI/ULPI clock is not running or one of the following bits is asserted.<br/>- PR<br/>- ORC<br/>- WPR</td></tr>
+</table>
+<p></p>
+<h2>PORTSC_30 (USB3_XHCI) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>WPR</td><td class="center">31</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>Reset Value<br/>For a description of this standard USB register field, see the eXtensible Host Controller Interface for Universal Serial Bus (USB) Specification 3.0.<br/>Programming this field with random data will cause side effect i.e. Register Access will fail (Timeout) if the pipe clock is not running or reset is asserted. Bit Bash register testing is not recommended.</td></tr>
+<tr valign=top><td>DR</td><td class="center">30</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0</td><td>Reset Value<br/>For a description of this standard USB register field, see the eXtensible Host Controller Interface for Universal Serial Bus (USB) Specification 3.0.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">29:28</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>WOE</td><td class="center">27</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>WOE<br/>For a description of this standard USB register field, see the eXtensible Host Controller Interface for Universal Serial Bus (USB) Specification 3.0.</td></tr>
+<tr valign=top><td>WDE</td><td class="center">26</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>WDE<br/>For a description of this standard USB register field, see the eXtensible Host Controller Interface for Universal Serial Bus (USB) Specification 3.0.</td></tr>
+<tr valign=top><td>WCE</td><td class="center">25</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>WCE<br/>For a description of this standard USB register field, see the eXtensible Host Controller Interface for Universal Serial Bus (USB) Specification 3.0.</td></tr>
+<tr valign=top><td>CAS</td><td class="center">24</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Cold Attach Status<br/>For a description of this standard USB register field, see the eXtensible Host Controller Interface for Universal Serial Bus (USB) Specification 3.0.</td></tr>
+<tr valign=top><td>CEC</td><td class="center">23</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0</td><td>CEC<br/>For a description of this standard USB register field, see the eXtensible Host Controller Interface for Universal Serial Bus (USB) Specification 3.0.</td></tr>
+<tr valign=top><td>PLC</td><td class="center">22</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0</td><td>PLC<br/>For a description of this standard USB register field, see the eXtensible Host Controller Interface for Universal Serial Bus (USB) Specification 3.0.</td></tr>
+<tr valign=top><td>PRC</td><td class="center">21</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0</td><td>PRC<br/>For a description of this standard USB register field, see the eXtensible Host Controller Interface for Universal Serial Bus (USB) Specification 3.0.<br/>Programming this field with random data will cause side effect. Bit Bash register testing is not recommended.</td></tr>
+<tr valign=top><td>OCC</td><td class="center">20</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0</td><td>OCC<br/>For a description of this standard USB register field, see the eXtensible Host Controller Interface for Universal Serial Bus (USB) Specification 3.0.</td></tr>
+<tr valign=top><td>WRC</td><td class="center">19</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0</td><td>WRC<br/>For a description of this standard USB register field, see the eXtensible Host Controller Interface for Universal Serial Bus (USB) Specification 3.0.</td></tr>
+<tr valign=top><td>PEC</td><td class="center">18</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0</td><td>PEC<br/>For a description of this standard USB register field, see the eXtensible Host Controller Interface for Universal Serial Bus (USB) Specification 3.0.</td></tr>
+<tr valign=top><td>CSC</td><td class="center">17</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0</td><td>CSC<br/>For a description of this standard USB register field, see the eXtensible Host Controller Interface for Universal Serial Bus (USB) Specification 3.0.</td></tr>
+<tr valign=top><td>LWS</td><td class="center">16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>LWS<br/>For a description of this standard USB register field, see the eXtensible Host Controller Interface for Universal Serial Bus (USB) Specification 3.0.</td></tr>
+<tr valign=top><td>PIC</td><td class="center">15:14</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>PIC<br/>#The write has no effect if Port Indicators (PIND) bit in the HCCPARAMS1 register is a 0<br/>set_register_field_attribute DWC_usb3_map/DWC_usb3_block_Host_Cntrl_Port_Reg_Set/PORTSC_30_REGS/PORTSC_30/PIC VolatileMemory 1<br/>For a description of this standard USB register field, see the eXtensible Host Controller Interface for Universal Serial Bus (USB) Specification 3.0.</td></tr>
+<tr valign=top><td>PORTSPEED</td><td class="center">13:10</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0</td><td>PORTSPEED<br/>For a description of this standard USB register field, see the eXtensible Host Controller Interface for Universal Serial Bus (USB) Specification 3.0.</td></tr>
+<tr valign=top><td>PP</td><td class="center"> 9</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>PP<br/>For a description of this standard USB register field, see the eXtensible Host Controller Interface for Universal Serial Bus (USB) Specification 3.0.</td></tr>
+<tr valign=top><td>PLS</td><td class="center"> 8:5</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x5</td><td>PLS<br/>For a description of this standard USB register field, see the eXtensible Host Controller Interface for Universal Serial Bus (USB) Specification 3.0.</td></tr>
+<tr valign=top><td>PR</td><td class="center"> 4</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>PR<br/>set_register_field_attribute DWC_usb3_map/DWC_usb3_block_Host_Cntrl_Port_Reg_Set/PORTSC_30_REGS/PORTSC_30/PR VolatileMemory 1<br/>Programming this field with random data will cause side effect. Bit Bash register testing is not recommended.</td></tr>
+<tr valign=top><td>OCA</td><td class="center"> 3</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>OCA<br/>For a description of this standard USB register field, see the eXtensible Host Controller Interface for Universal Serial Bus (USB) Specification 3.0.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 2</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>PED</td><td class="center"> 1</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0</td><td>PED<br/>For a description of this standard USB register field, see the eXtensible Host Controller Interface for Universal Serial Bus (USB) Specification 3.0.</td></tr>
+<tr valign=top><td>CCS</td><td class="center"> 0</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>CCS<br/>For a description of this standard USB register field, see the eXtensible Host Controller Interface for Universal Serial Bus (USB) Specification 3.0.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

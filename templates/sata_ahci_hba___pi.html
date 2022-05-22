@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<title>PI (SATA_AHCI_HBA) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___sata_ahci_hba.html")>SATA_AHCI_HBA Module</a> &gt; PI (SATA_AHCI_HBA) Register</p><h1>PI (SATA_AHCI_HBA) Register</h1>
+<h2>PI (SATA_AHCI_HBA) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>PI</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000000C</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD0C000C (SATA_AHCI_HBA)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">ro<span class="tooltiptext">Read-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000003</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Ports Implemented</td></tr>
+</table>
+<p>indicates which ports are exposed by the HBA. It is loaded by the BIOS. It indicates which ports that the HBA supports are available for software to use. For example, on an HBA that supports six ports as indicated in CAP.NP, only ports 1 and 3 could be available, with ports 0, 2, 4, and 5 being unavailable. Software must not read or write to registers within unavailable ports. The intent of this register is to allow system vendors to build platforms that support less than the full number of ports implemented on the HBA silicon.</p>
+<h2>PI (SATA_AHCI_HBA) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>PI</td><td class="center">31:0</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x3</td><td>Port Implemented (PI):<br/>This register is bit significant.<br/>If a bit is set to '1', the corresponding port is available for software to use.<br/>If a bit is cleared to '0', the port is not available for software to use.<br/>The maximum number of bits set to '1' shall not exceed CAP.NP + 1, although the number of bits set in this register may be fewer than CAP.NP + 1.<br/>At least one bit shall be set to '1'.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

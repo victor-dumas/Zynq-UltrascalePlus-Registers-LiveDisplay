@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<title>AFIFM_RDDEBUG (AFIFM) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___afifm.html")>AFIFM Module</a> &gt; AFIFM_RDDEBUG (AFIFM) Register</p><h1>AFIFM_RDDEBUG (AFIFM) Register</h1>
+<h2>AFIFM_RDDEBUG (AFIFM) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>AFIFM_RDDEBUG</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000010</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD360010 (AFIFM0)<br/>0x00FD370010 (AFIFM1)<br/>0x00FD380010 (AFIFM2)<br/>0x00FD390010 (AFIFM3)<br/>0x00FD3A0010 (AFIFM4)<br/>0x00FD3B0010 (AFIFM5)<br/>0x00FF9B0010 (AFIFM6)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x40000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Read Channel Debug Register</td></tr>
+</table>
+<p>Miscellaneous debug fields for the Read channel. Not to be used for functional purposes.</p>
+<h2>AFIFM_RDDEBUG (AFIFM) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>AFI_VERSION</td><td class="center">31:30</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>Returns the Version of AFI_FM:<br/>2'b00: Zynq 7 Series<br/>2'b01: Zynq 8 Series</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">29:6</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>RESERVED. Return 0 when read. Writes ignored.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<title>INT_MASK_5 (GPIO) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___gpio.html")>GPIO Module</a> &gt; INT_MASK_5 (GPIO) Register</p><h1>INT_MASK_5 (GPIO) Register</h1>
+<h2>INT_MASK_5 (GPIO) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>INT_MASK_5</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000034C</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF0A034C (GPIO)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">ro<span class="tooltiptext">Read-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0xFFFFFFFF</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Interrupt Mask Status (GPIO Bank5, EMIO Bank2)</td></tr>
+</table>
+<p>This register operates in exactly the same manner as INT_MASK_0, except that it reflects bank5, which corresponds to EMIO[95:64].</p>
+<h2>INT_MASK_5 (GPIO) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>INT_MASK_5</td><td class="center">31:0</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0xFFFFFFFF</td><td>Interrupt mask<br/>0: interrupt source enabled<br/>1: interrupt source masked<br/>Each bit reports the status for the corresponding pin within the 32-bit bank</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

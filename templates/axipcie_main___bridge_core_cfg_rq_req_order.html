@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<title>BRIDGE_CORE_CFG_RQ_REQ_ORDER (AXIPCIE_MAIN) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___axipcie_main.html")>AXIPCIE_MAIN Module</a> &gt; BRIDGE_CORE_CFG_RQ_REQ_ORDER (AXIPCIE_MAIN) Register</p><h1>BRIDGE_CORE_CFG_RQ_REQ_ORDER (AXIPCIE_MAIN) Register</h1>
+<h2>BRIDGE_CORE_CFG_RQ_REQ_ORDER (AXIPCIE_MAIN) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>BRIDGE_CORE_CFG_RQ_REQ_ORDER</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000024</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD0E0024 (AXIPCIE_MAIN)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>PCI Express and AXI Read Reorder Queue Completion Ordering Configuration</td></tr>
+</table>
+<p></p>
+<h2>BRIDGE_CORE_CFG_RQ_REQ_ORDER (AXIPCIE_MAIN) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>cfg_pcie_req_order_strict</td><td class="center">31</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>For AXI Master Read Requests. Both 0 & 1 values are compliant with PCIe and AXI ordering requirements.<br/>A 1 value will increase read completion latency when read completions are received out of order.<br/>The recommended default is 0 and will produce the highest performance.</td></tr>
+<tr valign=top><td>cfg_axi_req_order_strict</td><td class="center">30</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>For PCIe Master (Transmitted) Read Requests.<br/>Both 0 & 1 values are compliant with PCIe and AXI ordering requirements.<br/>A 1 value will increase read completion latency when read completions are received out of order.<br/>The recommended default is 0 and will produce the highest performance.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">29:16</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback></td></tr>
+<tr valign=top><td>cfg_axi_req_order_id_mask</td><td class="center">15:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Determines which AXI Slave Interface s_arid[SID-1:0] bits are considered when cfg_axi_rq_req_order_strict = 0.<br/>* cfg_axi_req_order_id_mask[i] == 1. Consider s_arid[i] when determining the allowed order of read completions to AXI Slave read requests.<br/>* cfg_axi_req_order_id_mask[i] == 0. Do not consider s_arid[i] when determining the allowed order of read completions to AXI.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

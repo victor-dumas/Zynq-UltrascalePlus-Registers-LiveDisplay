@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<title>BRIDGE_CORE_CFG_AXI_MASTER (AXIPCIE_MAIN) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___axipcie_main.html")>AXIPCIE_MAIN Module</a> &gt; BRIDGE_CORE_CFG_AXI_MASTER (AXIPCIE_MAIN) Register</p><h1>BRIDGE_CORE_CFG_AXI_MASTER (AXIPCIE_MAIN) Register</h1>
+<h2>BRIDGE_CORE_CFG_AXI_MASTER (AXIPCIE_MAIN) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>BRIDGE_CORE_CFG_AXI_MASTER</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000008</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD0E0008 (AXIPCIE_MAIN)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>AXI Master Max Payload Size Configuration</td></tr>
+</table>
+<p></p>
+<h2>BRIDGE_CORE_CFG_AXI_MASTER (AXIPCIE_MAIN) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:7</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback></td></tr>
+<tr valign=top><td>cfg_m_max_rd_req_size</td><td class="center"> 6:4</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Maximum read request size allowed for AXI Master Interface read transactions.<br/>AXI Master Interface read requests exceeding the configured maximum read request size are fragmented into multiple AXI transactions to comply with the requested max read request size.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 3</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback></td></tr>
+<tr valign=top><td>cfg_m_max_wr_req_size</td><td class="center"> 2:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Maximum write request size allowed for AXI Master Interface write transactions.<br/>AXI Master Interface write requests exceeding the configured maximum write request size are fragmented into multiple AXI transactions to comply with the requested max write request size.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

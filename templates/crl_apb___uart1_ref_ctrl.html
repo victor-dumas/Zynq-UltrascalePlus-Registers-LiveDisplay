@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<title>UART1_REF_CTRL (CRL_APB) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___crl_apb.html")>CRL_APB Module</a> &gt; UART1_REF_CTRL (CRL_APB) Register</p><h1>UART1_REF_CTRL (CRL_APB) Register</h1>
+<h2>UART1_REF_CTRL (CRL_APB) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>UART1_REF_CTRL</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000078</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF5E0078 (CRL_APB)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x01001800</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>UART 1 Clock Generator Config</td></tr>
+</table>
+<p></p>
+<h2>UART1_REF_CTRL (CRL_APB) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:25</td><td class="tooltip grayback">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>CLKACT</td><td class="center">24</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Clock active control.<br/>0: disable.<br/>1: enable.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">23:22</td><td class="tooltip grayback">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>DIVISOR1</td><td class="center">21:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>6-bit divider.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">15:14</td><td class="tooltip grayback">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>DIVISOR0</td><td class="center">13:8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x18</td><td>6-bit divider.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 7:3</td><td class="tooltip grayback">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>SRCSEL</td><td class="center"> 2:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Clock generator input source.<br/>000: IOPLL<br/>010: RPLL<br/>011: DPLL_CLK_TO_LPD</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

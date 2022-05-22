@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<title>DBICTL (DDRC) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddrc.html")>DDRC Module</a> &gt; DBICTL (DDRC) Register</p><h1>DBICTL (DDRC) Register</h1>
+<h2>DBICTL (DDRC) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>DBICTL</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x00000001C0</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD0701C0 (DDRC)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000001</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>DM/DBI Control Register</td></tr>
+</table>
+<p>All register fields are quasi-dynamic group 1, unless described otherwise in the register field description. Group 1 registers can be written when no read/write traffic is present at the DFI.</p>
+<h2>DBICTL (DDRC) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>rd_dbi_en</td><td class="center"> 2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Read DBI enable signal in DDRC.<br/>- 0 - Read DBI is disabled.<br/>- 1 - Read DBI is enabled.<br/>This signal must be set the same value as DRAM's mode register.<br/>- DDR4:<br/>MR5 bit A12.<br/>- LPDDR4: MR3[6]</td></tr>
+<tr valign=top><td>wr_dbi_en</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Write DBI enable signal in DDRC.<br/>- 0 - Write DBI is disabled.<br/>- 1 - Write DBI is enabled.<br/>This signal must be set the same value as DRAM's mode register.<br/>- DDR4:<br/>MR5 bit A11.<br/>- LPDDR4: MR3[7]</td></tr>
+<tr valign=top><td>dm_en</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>DM enable signal in DDRC.<br/>- 0 - DM is disabled.<br/>- 1 - DM is enabled.<br/>This signal must be set the same logical value as DRAM's mode register.<br/>- DDR4:<br/>Set this to same value as MR5 bit A10.<br/>- LPDDR4: Set this to inverted value of MR13[5] which is opposite polarity from this signal<br/>Programming Mode: Quasi-dynamic Group 3</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

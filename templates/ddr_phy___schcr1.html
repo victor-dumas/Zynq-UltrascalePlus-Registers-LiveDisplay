@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<title>SCHCR1 (DDR_PHY) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddr_phy.html")>DDR_PHY Module</a> &gt; SCHCR1 (DDR_PHY) Register</p><h1>SCHCR1 (DDR_PHY) Register</h1>
+<h2>SCHCR1 (DDR_PHY) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>SCHCR1</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000016C</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD08016C (DDR_PHY)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Scheduler Command Register 1</td></tr>
+</table>
+<p></p>
+<h2>SCHCR1 (DDR_PHY) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>SCRNK</td><td class="center">31:28</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Scheduler Rank Address: When set a the corresponding mode register is<br/>accessed. Only valid when the ALLRANK value is b0</td></tr>
+<tr valign=top><td>SCADDR</td><td class="center">27:8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Scheduler Command Address Specifies the value to be driven on the<br/>address bus.</td></tr>
+<tr valign=top><td>SCBG</td><td class="center"> 7:6</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Scheduler Command Bank Group: Specifies the value to be driven on<br/>BG[1:0].</td></tr>
+<tr valign=top><td>SCBK</td><td class="center"> 5:4</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Scheduler Command Bank Address: Specifies the value to be driven<br/>on BA[1:0].</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 3</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Return zeroes on reads.</td></tr>
+<tr valign=top><td>ALLRANK</td><td class="center"> 2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>All Ranks enabled: When set the commands issued by the mode<br/>register command FSM are set to all ranks.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 1:0</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Return zeroes on reads.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

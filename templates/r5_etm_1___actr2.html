@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<title>ACTR2 (R5_ETM_1) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___r5_etm_1.html")>R5_ETM_1 Module</a> &gt; ACTR2 (R5_ETM_1) Register</p><h1>ACTR2 (R5_ETM_1) Register</h1>
+<h2>ACTR2 (R5_ETM_1) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>ACTR2</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000084</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FEBFD084 (CORESIGHT_R5_ETM_1)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Address Comparator Access Type 2 Register</td></tr>
+</table>
+<p></p>
+<h2>ACTR2 (R5_ETM_1) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>Secure_level</td><td class="center">11:10</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Security level control.<br/>The permitted value is 00 (security level ignored) since the connected processor does not implements the Security Extensions.</td></tr>
+<tr valign=top><td>Context_cmp_ctrl</td><td class="center"> 9:8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>Context ID comparator control. The permitted values of this field are:<br/>00: Ignore Context ID comparator.<br/>01: Address comparator matches only if Context ID comparator value 1 matches.<br/>10: Address comparator matches only if Context ID comparator value 2 matches.<br/>11: Address comparator matches only if Context ID comparator value 3 matches.</td></tr>
+<tr valign=top><td>Exact_match</td><td class="center"> 7</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>Exact match bit.<br/>Specifies comparator behavior when exceptions, aborts, and load misses occur.</td></tr>
+<tr valign=top><td>Data_cmp_ctrl</td><td class="center"> 6:5</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>Data value comparison control. The permitted values of this field are:<br/>00: No data value comparison is made.<br/>10: Reserved and must not be used.<br/>01: Comparator can match only if data value matches.<br/>11: Comparator can match only if data value does not match.</td></tr>
+<tr valign=top><td>Cmp_access_size</td><td class="center"> 4:3</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>Comparison access size. The permitted values of this field are:<br/>00: Java instruction or byte data.<br/>01: Thumb instruction or halfword data.<br/>10: Reserved and must not be used.<br/>11: Arm instruction or word data.</td></tr>
+<tr valign=top><td>Access_type</td><td class="center"> 2:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>Access type. The permitted values of this field are:<br/>000: Instruction fetch.<br/>001: Instruction execute.<br/>010: Instruction executed and passed condition code test.<br/>011: Instruction executed and failed condition code test.<br/>100: Data load or store.<br/>101: Data load.<br/>110: Data store.<br/>111: Reserved and must not be used.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

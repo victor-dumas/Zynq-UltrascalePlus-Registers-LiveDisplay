@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<title>IRQ_ACK (PMU_IOMODULE) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___pmu_iomodule.html")>PMU_IOMODULE Module</a> &gt; IRQ_ACK (PMU_IOMODULE) Register</p><h1>IRQ_ACK (PMU_IOMODULE) Register</h1>
+<h2>IRQ_ACK (PMU_IOMODULE) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>IRQ_ACK</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000003C</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FFD4003C (PMU_IOMODULE)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Interrupt Acknowledge Register</td></tr>
+</table>
+<p>This register is used as a command register for clearing individual interrupts in IRQ_STATUS and IRQ_PENDING registers.  All bits set to 1 clear the corresponding bits in the IRQ_STATUS and IRQ_PENDING registers.  The register is write-only</p>
+<h2>IRQ_ACK (PMU_IOMODULE) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>CSU_PMU_SEC_LOCK</td><td class="center">31</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Secure lockdown request from CSU</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">30</td><td class="tooltip grayback">wo<span class="tooltiptext">Write-only</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>INV_ADDR</td><td class="center">29</td><td class="tooltip">raz<span class="tooltiptext">Read as zero</span></td><td class="hex">0x0</td><td>Interrupt for Address Errors generated during accesses to PS SLCRs or PMU Global registers</td></tr>
+<tr valign=top><td>PWR_DN_REQ</td><td class="center">28</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Interrupt to signal a power-down request</td></tr>
+<tr valign=top><td>PWR_UP_REQ</td><td class="center">27</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Interrupt to signal a power-up request</td></tr>
+<tr valign=top><td>SW_RST_REQ</td><td class="center">26</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Interrupt to signal a software-generated reset request</td></tr>
+<tr valign=top><td>HW_RST_REQ</td><td class="center">25</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Interrupt for all hardware-generated Block Reset requests</td></tr>
+<tr valign=top><td>ISO_REQ</td><td class="center">24</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Interrupt to signal an isolation request</td></tr>
+<tr valign=top><td>FW_REQ</td><td class="center">23</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Interrupt to signal a custom request to FW</td></tr>
+<tr valign=top><td>IPI3</td><td class="center">22</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Interrupt Associated with IPI slice 3 to PMU</td></tr>
+<tr valign=top><td>IPI2</td><td class="center">21</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Interrupt Associated with IPI slice 2 to PMU</td></tr>
+<tr valign=top><td>IPI1</td><td class="center">20</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Interrupt Associated with IPI slice 1 to PMU</td></tr>
+<tr valign=top><td>IPI0</td><td class="center">19</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Interrupt Associated with IPI slice 0 to PMU</td></tr>
+<tr valign=top><td>RTC_ALARM</td><td class="center">18</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Interrupt from RTC to signal the Alarm</td></tr>
+<tr valign=top><td>RTC_EVERY_SECOND</td><td class="center">17</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Interrupt from RTC triggered every second</td></tr>
+<tr valign=top><td>CORRECTABLE_ECC</td><td class="center">16</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Interrupt for a single bit ECC detection in the PMU RAM</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">15</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>GPI3</td><td class="center">14</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>GPI3 changed</td></tr>
+<tr valign=top><td>GPI2</td><td class="center">13</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>GPI2 changed</td></tr>
+<tr valign=top><td>GPI1</td><td class="center">12</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>GPI1 changed</td></tr>
+<tr valign=top><td>GPI0</td><td class="center">11</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>GPI0 changed</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">10:7</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>PIT3</td><td class="center"> 6</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>PIT3 interrupt enabled</td></tr>
+<tr valign=top><td>PIT2</td><td class="center"> 5</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>PIT2 interrupt enabled</td></tr>
+<tr valign=top><td>PIT1</td><td class="center"> 4</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>PIT1 interrupt enabled</td></tr>
+<tr valign=top><td>PIT0</td><td class="center"> 3</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>PIT0 interrupt enabled</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 2</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 1</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 0</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<title>VICTLR (A53_ETM_0) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___a53_etm_0.html")>A53_ETM_0 Module</a> &gt; VICTLR (A53_ETM_0) Register</p><h1>VICTLR (A53_ETM_0) Register</h1>
+<h2>VICTLR (A53_ETM_0) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>VICTLR</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000080</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FEC40080 (CORESIGHT_A53_ETM_0)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>ViewInst Main Control Register</td></tr>
+</table>
+<p></p>
+<h2>VICTLR (A53_ETM_0) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>EXLEVEL_NS</td><td class="center">23:20</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>In Non-secure state, each bit controls whether instruction tracing is enabled for the corresponding exception level:The exception levels are:Bit[20]Exception level 0.Bit[21]Exception level 1.Bit[22]Exception level 2.Bit[23]RAZ/WI. EXLEVEL_NS[3] is never implemented.The content of the field is IMPLEMENTATION DEFINED and is set by the value of IDR3.EXLEVEL_NS. If instruction tracing is not implemented for a given exception level, the corresponding bit in this field is not implemented. Unimplemented bits are RAZ/WI.</td></tr>
+<tr valign=top><td>EXLEVEL_S</td><td class="center">19:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>In Secure state, each bit controls whether instruction tracing is enabled for the corresponding exception level:The exception levels are:Bit[16]Exception level 0.Bit[17]Exception level 1.Bit[18]RAZ/WI. EXLEVEL_S[2] is never implemented.Bit[19]Exception level 3.The content of the field is IMPLEMENTATION DEFINED and is set by the value of IDR3.EXLEVEL_S. If instruction tracing is not implemented for a given exception level, the corresponding bit in this field is not implemented. Unimplemented bits are RAZ/WI.</td></tr>
+<tr valign=top><td>TRCERR</td><td class="center">11</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>Controls whether a trace unit must trace a system error exception</td></tr>
+<tr valign=top><td>TRCRESET</td><td class="center">10</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>Controls whether a trace unit must trace a Reset exception</td></tr>
+<tr valign=top><td>SSSTATUS</td><td class="center"> 9</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Indicates the status of the start-stop logic</td></tr>
+<tr valign=top><td>TYPE</td><td class="center"> 7</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Selects the rsource type for the viewinst event: 0-single selected resource, 1-Boolean combined resource pair</td></tr>
+<tr valign=top><td>SEL</td><td class="center"> 3:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>When TYPE is 0, selects a singal selected resource from 0-15 defined by bits[3:0]; when TYPE is 1, selects a Boolean combined resource pair from 0-7 define by bits[2:0].</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

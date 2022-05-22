@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<title>Packet_Register (NAND) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___nand.html")>NAND Module</a> &gt; Packet_Register (NAND) Register</p><h1>Packet_Register (NAND) Register</h1>
+<h2>Packet_Register (NAND) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>Packet_Register</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000000</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF100000 (NAND)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000200</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Packet Configuration.</td></tr>
+</table>
+<p></p>
+<h2>Packet_Register (NAND) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:24</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>Packet_count</td><td class="center">23:12</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Packet count:<br/>12'h001: 1<br/>12'h002: 2<br/>..<br/>12'h7FF: 2047<br/>12'h800: 2048.<br/>Note: Change this value only when controller is not communicating with the memory device.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">11</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>packet_size</td><td class="center">10:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x200</td><td>Size of the packet.<br/>Typical packet size is 11'h200bytes or 0x80<br/>Dwords for BCH 4bit, 8bit, and 12bit Error correction.<br/>Typical packet size is 11'h400bytes or 0x100 Dwords for BCH 24bit Error correction.<br/>Note: Change this value only when controller is not communicating with the memory device.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

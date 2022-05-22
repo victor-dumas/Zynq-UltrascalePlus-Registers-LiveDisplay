@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<title>DRCR (R5_DBG_1) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___r5_dbg_1.html")>R5_DBG_1 Module</a> &gt; DRCR (R5_DBG_1) Register</p><h1>DRCR (R5_DBG_1) Register</h1>
+<h2>DRCR (R5_DBG_1) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>DRCR</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000090</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FEBF2090 (CORESIGHT_R5_DBG_1)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">wo<span class="tooltiptext">Write-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Debug Run Control Register</td></tr>
+</table>
+<p></p>
+<h2>DRCR (R5_DBG_1) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>Cancel_memory_requests</td><td class="center"> 4</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0</td><td>If 1 is written to this bit, the processor abandons any pending memorytransactions until it can enter debug state. Debug state entry is the acknowledge event that clears this request. Abandoned transactions have the following behavior:<br/>. abandoned stores might write an Unpredictable value to the target address<br/>. abandoned loads return an Unpredictable value to the register bank.<br/>An abandoned transaction does not cause any exception. Additional instruction fetches or data accesses after the processor entered debug state have an Unpredictable behavior. This bit enables the debugger to progress on a deadlock so the processor can enter debug state. For a debug state entry to occur, a halting debug event must be requested before this bit is set. If you write a 1 to this bit when DBGENm is LOW, the write has no effect.</td></tr>
+<tr valign=top><td>Clear_sticky_pipeline_advance</td><td class="center"> 3</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0</td><td>Writing a 1 to this bit clears DSCR[25].</td></tr>
+<tr valign=top><td>Clear_sticky_exceptions</td><td class="center"> 2</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0</td><td>Writing a 1 to this bit clears DSCR[8:6].</td></tr>
+<tr valign=top><td>Restart_request</td><td class="center"> 1</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0</td><td>Writing a 1 to this bit requests that the processor leaves debug state. This request is held until the processor exits debug state. When the debugger makes this request, it polls DSCR[1] until it reads 1. This bit always reads as zero. Writes are ignored when the processor is not in debug state.</td></tr>
+<tr valign=top><td>Halt_request</td><td class="center"> 0</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0</td><td>Writing a 1 to this bit triggers a halting debug event, that is, a request that the processor enters debug state. This request is held until the debug state entry occurs. When the debugger makes this request, it must poll DSCR[0] until it reads 1. This bit always reads as zero. Writes are ignored when the processor is already in debug state.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

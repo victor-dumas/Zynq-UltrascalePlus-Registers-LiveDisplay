@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<title>PTR2 (DDR_PHY) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddr_phy.html")>DDR_PHY Module</a> &gt; PTR2 (DDR_PHY) Register</p><h1>PTR2 (DDR_PHY) Register</h1>
+<h2>PTR2 (DDR_PHY) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>PTR2</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000048</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD080048 (DDR_PHY)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00083DEF</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>PHY Timing Register 2</td></tr>
+</table>
+<p></p>
+<h2>PTR2 (DDR_PHY) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:20</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Return zeroes on reads.</td></tr>
+<tr valign=top><td>tWLDLYS</td><td class="center">19:15</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x10</td><td>Write Leveling Delay Settling Time: Number of controller clock cycles<br/>from when a new value of the write leveling delay is applies to the LCDL<br/>to when to DQS high is driven high.</td></tr>
+<tr valign=top><td>tCALH</td><td class="center">14:10</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0xF</td><td>Calibration Hold Time: Number of controller clock cycles from when the<br/>clock was disabled (cal_clk_en de-asserted) to when calibration is enable<br/>(cal_en asserted). The default value is the recommended minimum<br/>value.</td></tr>
+<tr valign=top><td>tCALS</td><td class="center"> 9:5</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0xF</td><td>Calibration Setup Time: Number of controller clock cycles from when<br/>calibration is enabled (cal_en asserted) to when the calibration clock is<br/>asserted again (cal_clk_en asserted).). The default value is the<br/>recommended minimum value.</td></tr>
+<tr valign=top><td>tCALON</td><td class="center"> 4:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0xF</td><td>Calibration On Time: Number of controller clock cycles that the<br/>calibration clock is enabled (cal_clk_en asserted). The default value is<br/>the recommended minimum value.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

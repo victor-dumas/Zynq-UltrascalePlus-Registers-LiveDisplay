@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<title>DRAMTMG2 (DDRC) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddrc.html")>DDRC Module</a> &gt; DRAMTMG2 (DDRC) Register</p><h1>DRAMTMG2 (DDRC) Register</h1>
+<h2>DRAMTMG2 (DDRC) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>DRAMTMG2</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000108</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD070108 (DDRC)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x0305060D</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>SDRAM Timing Register 2</td></tr>
+</table>
+<p>This register is quasi-dynamic group 1, group 2, and group 4. Group 1 registers can be written when no read/write traffic is present at the DFI. Group 2 registers can be written in self-refresh, deep power-down, and maximum power saving modes. Group 4 registers can be written depending on MSTR.frequency_mode.</p>
+<h2>DRAMTMG2 (DDRC) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>write_latency</td><td class="center">29:24</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x3</td><td>Set to WL<br/>Time from write command to write data on SDRAM interface. This must be set to WL.<br/>Note that, depending on the PHY, if using RDIMM, it may be necessary to use a value of WL + 1 to compensate for the extra cycle of latency through the RDIMM<br/>Divide the value calculated using the above equation by 2, and round it up to next integer.<br/>This register field is not required for DDR3, as the DFI read and write latencies defined in DFITMG0 and DFITMG1 are sufficient for those protocols<br/>Unit: clocks</td></tr>
+<tr valign=top><td>read_latency</td><td class="center">21:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x5</td><td>Set to RL<br/>Time from read command to read data on SDRAM interface. This must be set to RL. Note that, depending on the PHY, if using RDIMM, it mat be necessary to use a value of RL + 1 to compensate for the extra cycle of latency through the RDIMM<br/>Divide the value calculated using the above equation by 2, and round it up to next integer.<br/>This register field is not required for DDR3, as the DFI read and write latencies defined in DFITMG0 and DFITMG1 are sufficient for those protocols<br/>Unit: clocks</td></tr>
+<tr valign=top><td>rd2wr</td><td class="center">13:8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x6</td><td>DDR3: RL + BL/2 + 2 - WL<br/>DDR4: RL + BL/2 + 1 + WR_PREAMBLE - WL<br/>LPDDR3: RL + BL/2 + RU(tDQSCKmax/tCK) + 1 - WL<br/>LPDDR4(DQ ODT is Disabled): RL + BL/2 + RU(tDQSCKmax/tCK) + WR_PREAMBLE + RD_POSTAMBLE - WL<br/>LPDDR4(DQ ODT is Enabled): RL + BL/2 + RU(tDQSCKmax/tCK) + RD_POSTAMBLE - ODTLon - RU(tODTon(min)/tCK)<br/>Minimum time from read command to write command. Include time for bus turnaround and all per-bank, per-rank, and global constraints.<br/>Unit: Clocks.<br/>Where:<br/>- WL = write latency<br/>- BL = burst length. This must match the value programmed in the BL bit of the mode register to the SDRAM<br/>- RL = read latency = CAS latency<br/>- WR_PREAMBLE = write preamble. This is unique to DDR4 and LPDDR4.<br/>- RD_POSTAMBLE = read postamble. This is unique to LPDDR4.<br/>For LPDDR3/LPDDR4, if derating is enabled (DERATEEN.derate_enable=1), derated tDQSCKmax should be used.<br/>Divide the value calculated using the above equation by 2, and round it up to next integer.</td></tr>
+<tr valign=top><td>wr2rd</td><td class="center"> 5:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0xD</td><td>DDR4: CWL + PL + BL/2 + tWTR_L<br/>Others: CWL + BL/2 + tWTR<br/>In DDR4, minimum time from write command to read command for same bank group. In others, minimum time from write command to read command. Includes time for bus turnaround, recovery times, and all per-bank, per-rank, and global constraints.<br/>Unit: Clocks.<br/>Where:<br/>- CWL = CAS write latency<br/>- PL = Parity latency<br/>- BL = burst length. This must match the value programmed in the BL bit of the mode register to the SDRAM<br/>- tWTR_L = internal write to read command delay for same bank group. This comes directly from the SDRAM specification.<br/>- tWTR = internal write to read command delay. This comes directly from the SDRAM specification.<br/>Add one extra cycle for LPDDR3/LPDDR4 operation.<br/>Divide the value calculated using the above equation by 2, and round it up to next integer.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

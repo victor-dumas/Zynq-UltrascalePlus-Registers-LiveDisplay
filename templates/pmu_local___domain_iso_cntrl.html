@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<title>DOMAIN_ISO_CNTRL (PMU_LOCAL) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___pmu_local.html")>PMU_LOCAL Module</a> &gt; DOMAIN_ISO_CNTRL (PMU_LOCAL) Register</p><h1>DOMAIN_ISO_CNTRL (PMU_LOCAL) Register</h1>
+<h2>DOMAIN_ISO_CNTRL (PMU_LOCAL) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>DOMAIN_ISO_CNTRL</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x00000000F0</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FFD600F0 (PMU_LOCAL)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000028</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Isolation Wall Enable Control. Reset only by POR.</td></tr>
+</table>
+<p>Controls the Isolation walls for various power domains and subsystems. 0: not isolated. 1: isolated. The register maintains its contents during a System Reset.</p>
+<h2>DOMAIN_ISO_CNTRL (PMU_LOCAL) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>LP_FP_Locked</td><td class="center">31</td><td class="tooltip">rwso<span class="tooltiptext">Read/write, set only</span></td><td class="hex">0x0</td><td>Isolates the FPD-PL domains by clamping all inputs to each domain. Once this bit is set, the FPD-PL remain isolated until POR is asserted.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">30:6</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>FP_PL</td><td class="center"> 5</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Isolates the FPD-PL domains by clamping all inputs to each domain to their disabled values (1=Isolated)</td></tr>
+<tr valign=top><td>LP_PL_PCAP</td><td class="center"> 4</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Isolates the LPD-PL domains of the PCAP interface signals by clamping all inputs to each domain to their disabled values. This is used mainly during power-down of the PL.</td></tr>
+<tr valign=top><td>LP_PL_Non_PCAP</td><td class="center"> 3</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Isolates the LPD-PL domains by disabling interface signals except the ones associated with the PCAP subystem by clamping all inputs to each domain to their disabled values. This is used during Partial Reconfiguration of the PL.</td></tr>
+<tr valign=top><td>LP_FP_2</td><td class="center"> 2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Isolates the LPD-FPD domains by disabling interface signals that includes Clock, Resets and Controls that may have to be unisolated while the rest of the interface stays in isolation.</td></tr>
+<tr valign=top><td>LP_FP_1</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Isolates the LPD-FPD domains by disabling interface signals except the ones that are controlled by the [LP_FP_2] bit.</td></tr>
+<tr valign=top><td>PMU</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Isolates the PMU from the rest of the LPD. Clamps all inputs to the PMU to their disabled values.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<title>CTRL (XMPU_OCM) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___xmpu_ocm.html")>XMPU_OCM Module</a> &gt; CTRL (XMPU_OCM) Register</p><h1>CTRL (XMPU_OCM) Register</h1>
+<h2>CTRL (XMPU_OCM) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>CTRL</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000000</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FFA70000 (OCM_XMPU_CFG)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000003</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Control and Implementation.</td></tr>
+</table>
+<p>Read/Write permissions, poison method and region page size.</p>
+<h2>CTRL (XMPU_OCM) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:4</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>AlignCfg</td><td class="center"> 3</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Region Alignment, value fixed at 0.<br/>0: Aligned to 4kB page (12 address bits). Read-only.</td></tr>
+<tr valign=top><td>PoisonCfg</td><td class="center"> 2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Poisoning Method.<br/>0: attribute poisoning; asserts the AxUser [10] poison signal to the OCM memory controller. The level is defined by the POISON [ATTRIB] bit.<br/>1: reserved.</td></tr>
+<tr valign=top><td>DefWrAllowed</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Default Write Allowed. If a write transaction address and master ID miss in the Region List, then:<br/>0: poison the transaction with a Write Permission Violation.<br/>1: allowed the transaction, regardless of security level.</td></tr>
+<tr valign=top><td>DefRdAllowed</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Default Read Allowed. If a read transaction address and master ID miss in the Region List, then:<br/>0: poison the transaction with a Read Permission Violation.<br/>1: allowed the transaction, regardless of security level.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

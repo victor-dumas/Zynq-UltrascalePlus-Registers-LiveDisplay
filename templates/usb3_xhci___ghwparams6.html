@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<title>GHWPARAMS6 (USB3_XHCI) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___usb3_xhci.html")>USB3_XHCI Module</a> &gt; GHWPARAMS6 (USB3_XHCI) Register</p><h1>GHWPARAMS6 (USB3_XHCI) Register</h1>
+<h2>GHWPARAMS6 (USB3_XHCI) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>GHWPARAMS6</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000C158</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FE20C158 (USB3_0_XHCI)<br/>0x00FE30C158 (USB3_1_XHCI)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">ro<span class="tooltiptext">Read-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x07BAAC20</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Global Hardware Parameter Register 6</td></tr>
+</table>
+<p></p>
+<h2>GHWPARAMS6 (USB3_XHCI) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>ghwparams6_31_16</td><td class="center">31:16</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x7BA</td><td>`DWC_USB3_RAM0_DEPTH</td></tr>
+<tr valign=top><td>BusFltrsSupport</td><td class="center">15</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>`DWC_USB3_EN_BUS_FILTERS</td></tr>
+<tr valign=top><td>BCSupport</td><td class="center">14</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>`DWC_USB3_EN_BC</td></tr>
+<tr valign=top><td>OTG_SS_Support</td><td class="center">13</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>OTG 3.0 Support Enabled<br/>This bit indicates whether the parameter `DWC_USB3_EN_OTG is set to 2. In other words, it indicates that whether the controller supports OTG 3.0.<br/>- 1'b0: No OTG 3.0 support<br/>- 1'b1: Supports OTG 3.0</td></tr>
+<tr valign=top><td>ADPSupport</td><td class="center">12</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>`DWC_USB3_EN_ADP</td></tr>
+<tr valign=top><td>HNPSupport</td><td class="center">11</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>RSP/HNP Support Enabled<br/>The application uses this bit to determine the controller's RSP/HNP support.<br/>If DWC_USB3_EN_OTG=2,<br/>- 1'b0: RSP and HNP support is not enabled. The only exception for this rule is for SSPC-OTG devices where RSP support is not enabled, but HNP support is enabled. (Refer to the<br/>OCFG.SSPC-OTG bit.)<br/>- 1'b1: RSP and HNP support is enabled<br/>If DWC_USB3_EN_OTG=1,<br/>- 1'b0: HNP support is not enabled;<br/>- 1'b1: HNP support is enabled;</td></tr>
+<tr valign=top><td>SRPSupport</td><td class="center">10</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>SRP Support Enabled<br/>The application uses this bit to determine the controller's SRP support.<br/>- 1'b0: SRP support is not enabled;<br/>- 1'b1: SRP support is enabled;<br/>This bit is 1'b1 when the parameter DWC_USB3_EN_OTG is not 0.</td></tr>
+<tr valign=top><td>ghwparams6_9_8</td><td class="center"> 9:8</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Reserved</td></tr>
+<tr valign=top><td>ghwparams6_7</td><td class="center"> 7</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>`DWC_USB3_EN_FPGA</td></tr>
+<tr valign=top><td>ghwparams6_6</td><td class="center"> 6</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>`DWC_USB3_EN_DBG_PORTS</td></tr>
+<tr valign=top><td>ghwparams6_5_0</td><td class="center"> 5:0</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x20</td><td>`DWC_USB3_PSQ_FIFO_DEPTH</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

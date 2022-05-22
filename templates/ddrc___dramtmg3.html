@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<title>DRAMTMG3 (DDRC) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddrc.html")>DDRC Module</a> &gt; DRAMTMG3 (DDRC) Register</p><h1>DRAMTMG3 (DDRC) Register</h1>
+<h2>DRAMTMG3 (DDRC) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>DRAMTMG3</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000010C</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD07010C (DDRC)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x0050400C</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>SDRAM Timing Register 3</td></tr>
+</table>
+<p>This register is quasi-dynamic group 2 and group 4. Group 2 registers can be written in self-refresh, deep power-down, and maximum power saving modes. Group 4 registers can be written depending on MSTR.frequency_mode.</p>
+<h2>DRAMTMG3 (DDRC) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>t_mrw</td><td class="center">29:20</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x5</td><td>Time to wait after a mode register write or read (MRW or MRR).<br/>LPDDR3 typically requires value of 10.<br/>LPDDR4: Set this to the larger of tMRW and tMRWCKEL.<br/>For<br/>this register is used for the time from a MRW/MRR to all other commands.<br/>For LDPDR3, this register is used for the time from a MRW/MRR to a MRW/MRR.</td></tr>
+<tr valign=top><td>t_mrd</td><td class="center">17:12</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x4</td><td>tMRD: Cycles to wait after a mode register write or read. Depending on the connected SDRAM, tMRD represents:<br/>DDR3/4: Time from MRS to MRS command<br/>LPDDR3/4: Time from MRS to non-MRS command<br/>Program this to (tMRD/2) and round it up to the next integer value.<br/>If C/A parity for DDR4 is used, set to tMRD_PAR(tMOD+PL) instead.</td></tr>
+<tr valign=top><td>t_mod</td><td class="center"> 9:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0xC</td><td>tMOD: Parameter used only in DDR3 and DDR4. Cycles between load mode command and following non-load mode command.<br/>If C/A parity for DDR4 is used, set to tMOD_PAR(tMOD+PL) instead.<br/>Set to tMOD/2 (rounded up to next integer). Note that if using RDIMM, depending on the PHY, it may be necessary to use a value of tMOD + 1 or (tMOD + 1)/2 to compensate for the extra cycle of latency applied to mode register writes by the RDIMM chip.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

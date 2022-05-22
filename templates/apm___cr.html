@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<title>CR (APM) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___apm.html")>APM Module</a> &gt; CR (APM) Register</p><h1>CR (APM) Register</h1>
+<h2>CR (APM) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>CR</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000300</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD490300 (APM_CCI_INTC)<br/>0x00FFA00300 (APM_INTC_OCM)<br/>0x00FFA10300 (APM_LPD_FPD)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Control</td></tr>
+</table>
+<p>0: disable. 1: enable.</p>
+<h2>CR (APM) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>STR_FIFO_RST</td><td class="center">25</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>1: Resets the streaming FIFO</td></tr>
+<tr valign=top><td>GCCR_RST</td><td class="center">17</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>1: Resets the free-running Global Clock Counter.</td></tr>
+<tr valign=top><td>GCCR_EN</td><td class="center">16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>1: Enables the free-running Global Clock Counter.</td></tr>
+<tr valign=top><td>LATENCY_READ_END</td><td class="center"> 7</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Read Latency End Point. 1: Enables first read as read latency end point 0: Enables last read as read latency end point</td></tr>
+<tr valign=top><td>LATENCY_READ_START</td><td class="center"> 6</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Read Latency Start Point. 0: Enables address issuance by the master interface as read latency start point (ARVALID)1: Enables address acceptance by slave as read latency start point (ARVALID and ARREADY)</td></tr>
+<tr valign=top><td>LATENCY_WRITE_END</td><td class="center"> 5</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Write Latency End Point. 1: Enables first write as write latency end point. 0: Enables Last write as write latency end point</td></tr>
+<tr valign=top><td>LATENCY_WRITE_START</td><td class="center"> 4</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Write Latency Start Point. 0: Enables address issuance by master interface as write latency start point (AWVALID). 1: Enables address acceptance by the slave interface as write latency start point (AWVALID and AWREADY)</td></tr>
+<tr valign=top><td>ID_MASKING_EN</td><td class="center"> 3</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Enable ID Based Filtering/Masking. This bit is only valid in Advanced mode.0: Ignore ID for metric calculation 1: Enables ID filtering and masking. When enabled, all metric corresponds to the ID configured in the IDR and IDMR registers.</td></tr>
+<tr valign=top><td>MET_CNT_RST</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>1: Resets all metric counters and sampled metric counters in the monitor</td></tr>
+<tr valign=top><td>MET_CNT_EN</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>1: Enables all metric counters in the monitor</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<title>DBGCAM (DDRC) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddrc.html")>DDRC Module</a> &gt; DBGCAM (DDRC) Register</p><h1>DBGCAM (DDRC) Register</h1>
+<h2>DBGCAM (DDRC) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>DBGCAM</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000308</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD070308 (DDRC)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">ro<span class="tooltiptext">Read-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>CAM Debug Register</td></tr>
+</table>
+<p>This register is dynamic. Dynamic registers can be written at any time during operation.</p>
+<h2>DBGCAM (DDRC) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>dbg_stall_rd</td><td class="center">31</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Stall for Read channel<br/>FOR DEBUG ONLY</td></tr>
+<tr valign=top><td>dbg_stall_wr</td><td class="center">30</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Stall for Write channel<br/>FOR DEBUG ONLY</td></tr>
+<tr valign=top><td>wr_data_pipeline_empty</td><td class="center">29</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>This bit indicates that the write data pipeline on the DFI interface is empty.<br/>This register is intended to be polled after setting DBG1.dis_dq, to ensure that all remaining commands/data have completed.</td></tr>
+<tr valign=top><td>rd_data_pipeline_empty</td><td class="center">28</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>This bit indicates that the read data pipeline on the DFI interface is empty.<br/>This register is intended to be polled after setting DBG1.dis_dq, to ensure that all remaining commands/data have completed.</td></tr>
+<tr valign=top><td>dbg_wr_q_empty</td><td class="center">26</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>When 1, all the Write command queues and Write data buffers inside DDRC are empty. This register is to be used for debug purpose.<br/>An example use-case scenario: When Controller enters Self-Refresh using the Low-Power entry sequence, Controller is expected to have executed all the commands in its queues and the write and read data drained. Hence this register should be 1 at that time.<br/>FOR DEBUG ONLY</td></tr>
+<tr valign=top><td>dbg_rd_q_empty</td><td class="center">25</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>When 1, all the Read command queues and Read data buffers inside DDRC are empty. This register is to be used for debug purpose.<br/>An example use-case scenario: When Controller enters Self-Refresh using the Low-Power entry sequence, Controller is expected to have executed all the commands in its queues and the write and read data drained. Hence this register should be 1 at that time.<br/>FOR DEBUG ONLY</td></tr>
+<tr valign=top><td>dbg_stall</td><td class="center">24</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Stall<br/>FOR DEBUG ONLY</td></tr>
+<tr valign=top><td>dbg_w_q_depth</td><td class="center">22:16</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Write queue depth<br/>FOR DEBUG ONLY</td></tr>
+<tr valign=top><td>dbg_lpr_q_depth</td><td class="center">14:8</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Low priority read queue depth<br/>FOR DEBUG ONLY</td></tr>
+<tr valign=top><td>dbg_hpr_q_depth</td><td class="center"> 6:0</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>High priority read queue depth<br/>FOR DEBUG ONLY</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

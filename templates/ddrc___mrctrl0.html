@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<title>MRCTRL0 (DDRC) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddrc.html")>DDRC Module</a> &gt; MRCTRL0 (DDRC) Register</p><h1>MRCTRL0 (DDRC) Register</h1>
+<h2>MRCTRL0 (DDRC) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>MRCTRL0</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000010</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD070010 (DDRC)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000030</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Mode Register Read/Write Control Register 0.<br/>Note: Do not enable more than one of the following fields simultaneously:<br/>- sw_init_int<br/>- pda_en<br/>- mpr_en</td></tr>
+</table>
+<p>All register fields are dynamic. Dynamic registers can be written at any time during operation.</p>
+<h2>MRCTRL0 (DDRC) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>mr_wr</td><td class="center">31</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Setting this register bit to 1 triggers a mode register read or write operation. When the MR operation is complete, the DDRC automatically clears this bit. The other register fields of this register must be written in a separate APB transaction, before setting this mr_wr bit. It is recommended NOT to set this signal if in Init, Deep power-down or MPSM operating modes.</td></tr>
+<tr valign=top><td>mr_addr</td><td class="center">15:12</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Address of the mode register that is to be written to.<br/>- 0000 - MR0<br/>- 0001 - MR1<br/>- 0010 - MR2<br/>- 0011 - MR3<br/>- 0100 - MR4<br/>- 0101 - MR5<br/>- 0110 - MR6<br/>- 0111 - MR7<br/>Don't Care for LPDDR3/LPDDR4 (see MRCTRL1.mr_data for mode register addressing in LPDDR3/LPDDR4)<br/>This signal is also used for writing to control words of RDIMMs. In that case, it corresponds to the bank address bits sent to the RDIMM<br/>In case of DDR4, the bit[3:2] corresponds to the bank group bits. Therefore, the bit[3] as well as the bit[2:0] must be set to an appropriate value which is considered both the Address Mirroring of UDIMMs/RDIMMs and the Output Inversion of RDIMMs.</td></tr>
+<tr valign=top><td>mr_rank</td><td class="center"> 5:4</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x3</td><td>Controls which rank is accessed by MRCTRL0.mr_wr. Normally, it is desired to access all ranks, so all bits should be set to 1. However, for multi-rank UDIMMs/RDIMMs which implement address mirroring, it may be necessary to access ranks individually.<br/>Examples (assume DDRC is configured for 2 ranks):<br/>- 0x1 - select rank 0 only<br/>- 0x2 - select rank 1 only<br/>- 0x3 - select ranks 0 and 1</td></tr>
+<tr valign=top><td>sw_init_int</td><td class="center"> 3</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Indicates whether Software intervention is allowed via MRCTRL0/MRCTRL1 before automatic SDRAM initialization routine or not.<br/>For DDR4, this bit can be used to initialize the DDR4 RCD (MR7) before automatic SDRAM initialization.<br/>For LPDDR4, this bit can be used to program additional mode registers before automatic SDRAM initialization if necessary.<br/>Note: This must be cleared to 0 after completing Software operation. Otherwise, SDRAM initialization routine will not re-start.<br/>- 0 - Software intervention is not allowed<br/>- 1 - Software intervention is allowed</td></tr>
+<tr valign=top><td>pda_en</td><td class="center"> 2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Indicates whether the mode register operation is MRS in PDA mode or not<br/>- 0 - MRS<br/>- 1 - MRS in Per DRAM Addressability mode</td></tr>
+<tr valign=top><td>mpr_en</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Indicates whether the mode register operation is MRS or WR/RD for MPR (only supported for DDR4)<br/>- 0 - MRS<br/>- 1 - WR/RD for MPR</td></tr>
+<tr valign=top><td>mr_type</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Indicates whether the mode register operation is read or write. Only used for LPDDR3/LPDDR4/DDR4.<br/>- 0 - Write<br/>- 1 - Read</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

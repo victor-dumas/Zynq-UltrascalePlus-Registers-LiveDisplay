@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<title>DSTS (USB3_XHCI) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___usb3_xhci.html")>USB3_XHCI Module</a> &gt; DSTS (USB3_XHCI) Register</p><h1>DSTS (USB3_XHCI) Register</h1>
+<h2>DSTS (USB3_XHCI) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>DSTS</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000C70C</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FE20C70C (USB3_0_XHCI)<br/>0x00FE30C70C (USB3_1_XHCI)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Device Status Register<br/>This register indicates the status of the device controller with respect to USB-related events.<br/>Note:<br/>When Hibernation is not enabled, RSS and SSS fields always return 0 when read.</td></tr>
+</table>
+<p></p>
+<h2>DSTS (USB3_XHCI) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:30</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>DCNRD</td><td class="center">29</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0</td><td>Device Controller Not Ready<br/>The bit indicates that the core is in the process of completing the state transitions after exiting from hibernation.<br/>To complete the state transitions, it takes 256 bus clock cycles from the time DCTL[31].Run/Stop is set. During hibernation, if the UTMI/ULPI PHY is in suspended state, then the 256-bus clock cycle delay starts after the PHY exited suspended state. Software must set DCTL[31].Run/Stop to '1' and wait for this bit to be de-asserted to zero before processing DSTS.USBLnkSt.<br/>This bit is valid only when DWC_USB3_EN_PWROPT is set to 2 and GCTL[1].GblHibernationEn =1.</td></tr>
+<tr valign=top><td>SRE</td><td class="center">28</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Save Restore Error. Currently not supported.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">27:26</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>RSS</td><td class="center">25</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0</td><td>RSS Restore State Status<br/>This bit is similar to the USBSTS.RSS in host mode.<br/>When the controller finishes the restore process, it completes the command by setting DSTS.RSS to '0'.</td></tr>
+<tr valign=top><td>SSS</td><td class="center">24</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0</td><td>SSS Save State Status<br/>This bit is similar to the USBSTS.SSS in host mode.<br/>When the controller has finished the save process, it completes the command by setting DSTS.SSS to '0'.</td></tr>
+<tr valign=top><td>COREIDLE</td><td class="center">23</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0</td><td>Core Idle<br/>The bit indicates that the core finished transferring all RxFIFO data to system memory, writing out all completed descriptors, and all Event Counts are zero.<br/>Note: While testing for Reset values, mask out the read value. This bit represents the changing state of the core and does not hold a static value.</td></tr>
+<tr valign=top><td>DEVCTRLHLT</td><td class="center">22</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0</td><td>Device Controller Halted<br/>This bit is set to 0 when the Run/Stop bit in the DCTL register is set to 1.<br/>The core sets this bit to 1 when, after SW sets Run/Stop to 0, the core is idle and the lower layer finishes the disconnect process.<br/>When Halted=1, the core does not generate Device events.<br/>Note: The core does not set this bit to 1 if GEVNTCOUNTn has some valid value. Software needs to acknowledge the events that are generated (by writing to GEVNTCOUNTn) while it is waiting for this bit to be set to 1.</td></tr>
+<tr valign=top><td>USBLNKST</td><td class="center">21:18</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0</td><td>USBLNKST.<br/>USB/Link State<br/>In SS mode: LTSSM State<br/>- 4'h0: U0<br/>- 4'h1: U1<br/>- 4'h2: U2<br/>- 4'h3: U3<br/>- 4'h5: RX_DET<br/>- 4'h6: SS_INACT<br/>- 4'h7: POLL<br/>- 4'h8: RECOV<br/>- 4'h9: HRESET<br/>- 4'ha: CMPLY<br/>- 4'hb: LPBK<br/>- 4'hf: Resume/Reset<br/>In HS/FS/LS mode:<br/>- 4'h0: On state<br/>- 4'h2: Sleep (L1) state<br/>- 4'h3: Suspend (L2) state<br/>- 4'h4: Disconnected state (Default state)<br/>- 4'h5: Early Suspend state (valid only when Hibernation is disabled, GCTL[1].GblHibernationEn = 0)<br/>- 4'he: Reset (valid only when Hibernation is enabled, GCTL[1].GblHibernationEn = 1)<br/>- 4'hf: Resume (valid only when Hibernation is enabled, GCTL[1].GblHibernationEn = 1)<br/>The link state Resume/Reset indicates that the core received a resume or USB reset request from the host while the link was in hibernation. Software must write '8' (Recovery) to the DCTL.ULStChngReq field to acknowledge the resume/reset request.<br/>When Hibernation is enabled, GCTL[1].GblHibernationEn = 1, this field USBLnkSt is valid only when DCTL[31].Run/Stop set to '1' and DSTS[29].DCNRD = 0.<br/>Note: If SSIC is enabled, while exiting a low power state, the USBLnkSt field indicates Resume/Reset even for a disconnect condition because a resume precedes the disconnect.</td></tr>
+<tr valign=top><td>RXFIFOEMPTY</td><td class="center">17</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0</td><td>RxFIFO Empty.</td></tr>
+<tr valign=top><td>SOFFN</td><td class="center">16:3</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0</td><td>Frame/Microframe Number of the Received SOF.<br/>When the core is operating at high-speed,<br/>- [16:6] indicates the frame number<br/>- [5:3] indicates the microframe number<br/>When the core is operating at full-speed,<br/>- [16:14] is not used. Software can ignore these 3 bits<br/>- [13:3] indicates the frame number</td></tr>
+<tr valign=top><td>CONNECTSPD</td><td class="center"> 2:0</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0</td><td>Connected Speed (ConnectSpd)<br/>Indicates the speed at which the controller has come up after speed detection through a chirp sequence.<br/>- 3'b100: SuperSpeed (PHY clock is running at 125 or 250 MHz)<br/>- 3'b000: High-speed (PHY clock is running at 30 or 60 MHz)<br/>- 3'b001: Full-speed (PHY clock is running at 30 or 60 MHz)<br/>- 3'b010: Low-speed (PHY clock is running at 6 MHz)<br/>- 3'b011: Full-speed (PHY clock is running at 48 MHz)<br/>Low-speed is not supported for devices using a UTMI+ PHY.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

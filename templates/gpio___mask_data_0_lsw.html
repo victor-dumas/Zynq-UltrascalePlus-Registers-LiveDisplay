@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<title>MASK_DATA_0_LSW (GPIO) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___gpio.html")>GPIO Module</a> &gt; MASK_DATA_0_LSW (GPIO) Register</p><h1>MASK_DATA_0_LSW (GPIO) Register</h1>
+<h2>MASK_DATA_0_LSW (GPIO) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>MASK_DATA_0_LSW</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000000</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF0A0000 (GPIO)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Maskable Output Data (GPIO Bank0, MIO, Lower 16bits)</td></tr>
+</table>
+<p>This register enables software to change the value being output on up to 16bits at one time selectively. Only data values with a corresponding deasserted mask bit will be changed. Output data values are unchanged and hold their previous value for bits which are masked. This register avoids the need for a read-modify-write sequence for unchanged bits. NOTE: This register does not affect the enabling of the output driver. See the DIRM_0 and OEN_0 registers. This register controls the output values for the lower 16bits of bank0, which corresponds to MIO[15:0].</p>
+<h2>MASK_DATA_0_LSW (GPIO) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>MASK_0_LSW</td><td class="center">31:16</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>On a write, only bits with a corresponding deasserted mask will change the output value.<br/>0: pin value is updated<br/>1: pin is masked<br/>Each bit controls the corresponding pin within the 16-bit half-bank.<br/>Reads return 0's.</td></tr>
+<tr valign=top><td>DATA_0_LSW</td><td class="center">15:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>On a write, these are the data values for the corresponding GPIO output bits. Each bit controls the corresponding pin within the 16-bit half-bank. Reads return the previous value written to this register or DATA_0[15:0]. Reads do not return the value on the GPIO pin.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<title>CONFIG_REG1 (PLSYSMON) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___plsysmon.html")>PLSYSMON Module</a> &gt; CONFIG_REG1 (PLSYSMON) Register</p><h1>CONFIG_REG1 (PLSYSMON) Register</h1>
+<h2>CONFIG_REG1 (PLSYSMON) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>CONFIG_REG1</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000104</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FFA50D04 (AMS_PL_SYSMON)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>16</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Configuration, Reg 1.</td></tr>
+</table>
+<p>Alarm disables: 0: enabled. 1: disabled. Sequence mode, see below.</p>
+<h2>CONFIG_REG1 (PLSYSMON) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>sequence_mode</td><td class="center">15:12</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Select Sequence Mode:<br/>0000: Default channels; Loop sequence.<br/>0001: Selected channels; Single pass.<br/>0010: Selected channgls; Loop sequence (will include calibration and temperature).<br/>0011: Single channel (sequencer off), select channel in CONFIG_REG0 [mux_channel].<br/>11xx: Default mode.<br/>Others: reserved</td></tr>
+<tr valign=top><td>alarm_disable6to3</td><td class="center">11:8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Alarm Disables.<br/>Bit[8] Alarm 3, VCCBRAM.<br/>Bit[9] Alarm 4, VCCPSINTLP (from PS).<br/>Bit[10] Alarm 5, VCCPSINTFP (from PS).<br/>Bit[11] Alarm 6, VCC_PSAUX (from PS).</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 7:4</td><td class="tooltip grayback">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>alarm_disable2to0</td><td class="center"> 3:1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Alarm Disables.<br/>Bit[1] Alarm 0, PL temperature.<br/>Bit[2] Alarm 1, VCCADC Voltage.<br/>Bit[3] Alarm 2, VCCAUX_IO Voltage.</td></tr>
+<tr valign=top><td>over_temp_disable</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Alarm Disable: Over Temperature (OT).</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

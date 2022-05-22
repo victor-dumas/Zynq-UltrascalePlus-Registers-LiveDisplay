@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<title>ATTR_101 (PCIE_ATTRIB) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___pcie_attrib.html")>PCIE_ATTRIB Module</a> &gt; ATTR_101 (PCIE_ATTRIB) Register</p><h1>ATTR_101 (PCIE_ATTRIB) Register</h1>
+<h2>ATTR_101 (PCIE_ATTRIB) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>ATTR_101</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000194</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD480194 (PCIE_ATTRIB)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>ATTR_101</td></tr>
+</table>
+<p>This register should only be written to during reset of the PCIe block</p>
+<h2>ATTR_101 (PCIE_ATTRIB) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>attr_enable_msg_route</td><td class="center">15:5</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Enable the routing of message TLPs to the user through the TRN RX interface.<br/>A bit value of 1 enables routing of the message TLP to the user.<br/>Messages are always decoded by the message decoder.<br/>Bit 0 - ERR COR, Bit 1 - ERR NONFATAL, Bit 2 - ERR FATAL, Bit 3 - INTA Bit 4 - INTB, Bit 5 - INTC, Bit 6 - INTD, Bit 7 PM_PME, Bit 8 - PME_TO_ACK, Bit 9 - unlock, Bit 10 PME_Turn_Off; EP=0x0000; RP=0x07FF</td></tr>
+<tr valign=top><td>attr_disable_rx_poisoned_resp</td><td class="center"> 4</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Disable error message and status bit response due to receiving a Poisoned TLP.; EP=0x0000; RP=0x0000</td></tr>
+<tr valign=top><td>attr_disable_rx_tc_filter</td><td class="center"> 3</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Disable TC filtering of received TLP's; EP=0x0000; RP=0x0000</td></tr>
+<tr valign=top><td>attr_disable_id_check</td><td class="center"> 2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Disable checking for Requester ID of received completions; EP=0x0000; RP=0x0000</td></tr>
+<tr valign=top><td>attr_disable_bar_filtering</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Disable BAR filtering.<br/>Does not change the behavior of the bar hit outputs; EP=0x0000; RP=0x0001</td></tr>
+<tr valign=top><td>attr_disable_aspm_l1_timer</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Disables the internal timer that causes an Upstream Port enter into ASPM L1.; EP=0x0000; RP=0x0000</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

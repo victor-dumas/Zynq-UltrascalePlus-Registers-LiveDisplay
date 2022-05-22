@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<title>DX1GCR3 (DDR_PHY) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddr_phy.html")>DDR_PHY Module</a> &gt; DX1GCR3 (DDR_PHY) Register</p><h1>DX1GCR3 (DDR_PHY) Register</h1>
+<h2>DX1GCR3 (DDR_PHY) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>DX1GCR3</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000080C</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD08080C (DDR_PHY)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x3F000008</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>DATX8 n General Configuration Register 3</td></tr>
+</table>
+<p></p>
+<h2>DX1GCR3 (DDR_PHY) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:30</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Returns zeros on reads.</td></tr>
+<tr valign=top><td>RDBVT</td><td class="center">29</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Read Data BDL VT Compensation: Enables, if set the VT drift<br/>compensation of the read data bit delay lines.</td></tr>
+<tr valign=top><td>WDBVT</td><td class="center">28</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Write Data BDL VT Compensation: Enables, if set the VT drift<br/>compensation of the write data bit delay lines.</td></tr>
+<tr valign=top><td>RGLVT</td><td class="center">27</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Read DQS Gating LCDL Delay VT Compensation: Enables, if set<br/>the VT drift compensation of the read DQS gating LCDL.</td></tr>
+<tr valign=top><td>RDLVT</td><td class="center">26</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Read DQS LCDL Delay VT Compensation: Enables, if set the VT<br/>drift compensation of the read DQS LCDL.</td></tr>
+<tr valign=top><td>WDLVT</td><td class="center">25</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Write DQ LCDL Delay VT Compensation: Enables, if set the VT<br/>drift compensation of the write DQ LCDL.<br/>Note: WDLVT register must be set 0 when the INCWEYE bit is set<br/>1 in the 'Data Training Configuration Register 0 (DTCR0)'.</td></tr>
+<tr valign=top><td>WLLVT</td><td class="center">24</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Write Leveling LCDL Delay VT Compensation: Enables, if set, the<br/>VT drift compensation of the write leveling LCDL.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">23:22</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Returns zeros on reads.</td></tr>
+<tr valign=top><td>DSNOEMODE</td><td class="center">21:20</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Enables the OE mode values for DQS. Valid values are:<br/>2b00 = OE Dynamic<br/>2b01 = OE always ON<br/>2b10 = OE always OFF<br/>2b11 = Reserved</td></tr>
+<tr valign=top><td>DSNTEMODE</td><td class="center">19:18</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Enables the TE mode values for DQS. Valid values are:<br/>2b00 = TE (ODT) Dynamic<br/>2b01 = TE (ODT) always ON<br/>2b10 = TE (ODT) always OFF<br/>2b11 = Reserved</td></tr>
+<tr valign=top><td>DSNPDRMODE</td><td class="center">17:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Enables the PDR mode values for DQS. Valid values are:<br/>2b00 = PDR Dynamic<br/>2b01 = PDR always ON<br/>2b10 = PDR always OFF<br/>2b11 = Reserved</td></tr>
+<tr valign=top><td>DMOEMODE</td><td class="center">15:14</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Enables the OE mode values for DM. Valid values are:<br/>2b00 = OE Dynamic<br/>2b01 = OE always ON<br/>2b10 = OE always OFF<br/>2b11 = Reserved</td></tr>
+<tr valign=top><td>DMTEMODE</td><td class="center">13:12</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Enables the TE mode values for DM. Valid values are:<br/>2b00 = TE (ODT) Dynamic<br/>2b01 = TE (ODT) always ON<br/>2b10 = TE (ODT) always OFF<br/>2b11 = Reserved</td></tr>
+<tr valign=top><td>DMPDRMODE</td><td class="center">11:10</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Enables the PDR mode values for DM. Valid values are:<br/>2b00 = PDR Dynamic<br/>2b01 = PDR always ON<br/>2b10 = PDR always OFF<br/>2b11 = Reserved</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 9:8</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Returns zeros on reads.</td></tr>
+<tr valign=top><td>DSOEMODE</td><td class="center"> 7:6</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Enables the OE mode values for DQS. Valid values are:<br/>2b00 = OE Dynamic<br/>2b01 = OE always ON<br/>2b10 = OE always OFF<br/>2b11 = Reserved</td></tr>
+<tr valign=top><td>DSTEMODE</td><td class="center"> 5:4</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Enables the TE mode values for DQS. Valid values are:<br/>2b00 = TE (ODT) Dynamic<br/>2b01 = TE (ODT) always ON<br/>2b10 = TE (ODT) always OFF<br/>2b11 = Reserved</td></tr>
+<tr valign=top><td>DSPDRMODE</td><td class="center"> 3:2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x2</td><td>Enables the PDR mode values for DQS. Valid values are:<br/>2b00 = PDR Dynamic<br/>2b01 = PDR always ON<br/>2b10 = PDR always OFF<br/>2b11 = Reserved</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 1:0</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Returns zeros on reads.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

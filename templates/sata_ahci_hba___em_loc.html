@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<title>EM_LOC (SATA_AHCI_HBA) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___sata_ahci_hba.html")>SATA_AHCI_HBA Module</a> &gt; EM_LOC (SATA_AHCI_HBA) Register</p><h1>EM_LOC (SATA_AHCI_HBA) Register</h1>
+<h2>EM_LOC (SATA_AHCI_HBA) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>EM_LOC</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000001C</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD0C001C (SATA_AHCI_HBA)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">ro<span class="tooltiptext">Read-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Enclosure Management Location</td></tr>
+</table>
+<p>The enclosure management location register identifies the location and size of the enclosure management message buffer.</p>
+<h2>EM_LOC (SATA_AHCI_HBA) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>OFST</td><td class="center">31:16</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Offset (OFST): The offset of the message buffer in Dwords from the beginning of the ABAR.</td></tr>
+<tr valign=top><td>SZ</td><td class="center">15:0</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Buffer Size (SZ): Specifies the size of the transmit message buffer area in Dwords.<br/>If both transmit and receive buffers are supported, then the transmit buffer begins at ABAR[EM_LOC.OFST*4] and the receive buffer directly follows it.<br/>If both transmit and receive buffers are supported, both buffers are of the size indicated in the Buffer Size field.<br/>A value of '0' is invalid.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

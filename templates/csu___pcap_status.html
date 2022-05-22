@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<title>pcap_status (CSU) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___csu.html")>CSU Module</a> &gt; pcap_status (CSU) Register</p><h1>pcap_status (CSU) Register</h1>
+<h2>pcap_status (CSU) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>pcap_status</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000003010</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FFCA3010 (CSU)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">ro<span class="tooltiptext">Read-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000003</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>PCAP Status</td></tr>
+</table>
+<p></p>
+<h2>pcap_status (CSU) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">28:14</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>pcfg_gwe</td><td class="center">13</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>PL global write enable</td></tr>
+<tr valign=top><td>pcfg_mcap_mode</td><td class="center">12</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Idicantes that the MCAP is active on the PL CFG.</td></tr>
+<tr valign=top><td>pl_gts_usr_b</td><td class="center">11</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Indicates that the PL IO are globally tri-stated under user control</td></tr>
+<tr valign=top><td>pl_gts_cfg_b</td><td class="center">10</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Indicates that the PL IO are globally tri-stated under cfg control</td></tr>
+<tr valign=top><td>pl_gpwrdwn_b</td><td class="center"> 9</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Indicates that the PL is in a power down state (PL controlled)</td></tr>
+<tr valign=top><td>pl_ghigh_b</td><td class="center"> 8</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Indicates that the PL interconnect is being held high</td></tr>
+<tr valign=top><td>pl_fst_cfg</td><td class="center"> 7</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Indicates that the PL has completed its first configuration</td></tr>
+<tr valign=top><td>pl_cfg_reset_b</td><td class="center"> 6</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Indicates that the PL is under reset</td></tr>
+<tr valign=top><td>pl_seu_error</td><td class="center"> 5</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Indicates that the PL has encouted and SEU error (feature must be enabled in the PL)</td></tr>
+<tr valign=top><td>pl_eos</td><td class="center"> 4</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Indicates that the PL has reached the end of startup</td></tr>
+<tr valign=top><td>pl_done</td><td class="center"> 3</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Indicates that the PL configuration is done (done pad)</td></tr>
+<tr valign=top><td>pl_init</td><td class="center"> 2</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Indicates that the PL has completed its init sequence</td></tr>
+<tr valign=top><td>pcap_rd_idle</td><td class="center"> 1</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>Indicates that all reads from the PL have completed. This should be used in conjuction with the CSU DMA status to determine when the PL readback has completed. This bit is not valid when the PCAP is in reset.<br/>0x1 - Idle<br/>0x0 - Readback in progress</td></tr>
+<tr valign=top><td>pcap_wr_idle</td><td class="center"> 0</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>Indicates that all writes to the PL have completed. This should be used in conjunction with the CSU DMA status to indicate when a PCAP write cycle has fully finished. This bit is not valid when the PCAP is in reset.<br/>0x1 - Idle<br/>0x0 - Writing to PL in progress</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

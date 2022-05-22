@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<title>Control_Override_Register (CCI400) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___cci400.html")>CCI400 Module</a> &gt; Control_Override_Register (CCI400) Register</p><h1>Control_Override_Register (CCI400) Register</h1>
+<h2>Control_Override_Register (CCI400) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>Control_Override_Register</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000000</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD6E0000 (CCI_GPV)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Control_Override_Register</td></tr>
+</table>
+<p></p>
+<h2>Control_Override_Register (CCI400) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>Disable_Retry_Reduction_Buffers</td><td class="center"> 5</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>disable the retry reduction buffers in all master interfaces</td></tr>
+<tr valign=top><td>Disable_Priority_Promotion</td><td class="center"> 4</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>ARQOSARBS inputs are ignored</td></tr>
+<tr valign=top><td>Terminate_Barriers</td><td class="center"> 3</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>all master interfaces terminate barriers</td></tr>
+<tr valign=top><td>Disable_Speculative_Fetches</td><td class="center"> 2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>disable speculative fetches from all master interfaces</td></tr>
+<tr valign=top><td>DVM_Message_Disable</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>disable propagation of all DVM messages</td></tr>
+<tr valign=top><td>Snoop_Disable</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>disable all snoops (not DVM messages)</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

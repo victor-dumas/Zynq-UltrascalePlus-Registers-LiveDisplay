@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<title>reg_normalintrstsena (SDIO) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___sdio.html")>SDIO Module</a> &gt; reg_normalintrstsena (SDIO) Register</p><h1>reg_normalintrstsena (SDIO) Register</h1>
+<h2>reg_normalintrstsena (SDIO) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>reg_normalintrstsena</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000034</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF160034 (SD0)<br/>0x00FF170034 (SD1)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>16</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Normal-type Interrupts Status Enables.</td></tr>
+</table>
+<p>Bit 0 through 7: 0: masked. 1: enabled.</p>
+<h2>reg_normalintrstsena (SDIO) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>normalintrsts_enableregbit15</td><td class="center">15</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>The HC shall control error Interrupts using the Error Interrupt Status Enable register.</td></tr>
+<tr valign=top><td>normalintrsts_enableregbit14</td><td class="center">14</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Bit 14.</td></tr>
+<tr valign=top><td>normalintrsts_enableregbit13</td><td class="center">13</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Bit 13.</td></tr>
+<tr valign=top><td>normalintrsts_enableregbit12</td><td class="center">12</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>This status is set if Re-Tuning Request in the Present State register changes from 0 to 1.</td></tr>
+<tr valign=top><td>normalintrsts_enableregbit11</td><td class="center">11</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>If this bit is set to 0, the Host Controller shall clear the interrupt request to the System. The Host Driver may clear this bit before servicing the INT_C and may set this bit again after all interrupt requests to INT_C pin are cleared to prevent inadvertent interrupts.</td></tr>
+<tr valign=top><td>normalintrsts_enableregbit10</td><td class="center">10</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>If this bit is set to 0, the Host Controller shall clear the interrupt request to the System. The Host Driver may clear this bit before servicing the INT_B and may set this bit again after all interrupt requests to INT_B pin are cleared to prevent inadvertent interrupts.</td></tr>
+<tr valign=top><td>normalintrsts_enableregbit9</td><td class="center"> 9</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>If this bit is set to 0, the Host Controller shall clear the interrupt request to the System. The Host Driver may clear this bit before servicing the INT_A and may set this bit again after all interrupt requests to INT_A pin are cleared to prevent inadvertent interrupts.</td></tr>
+<tr valign=top><td>sdhcregset_cardintstsena</td><td class="center"> 8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>If this bit is set to 0, the HC shall clear Interrupt request to the System. The Card Interruptdetection is stopped when this bit is cleared and restarted when this bit is set to 1. The HD may clear the Card Interrupt Status Enable before servicing the Card Interrupt and may set this bit again after all Interrupt requests from the card are cleared to prevent inadvertent Interrupts.</td></tr>
+<tr valign=top><td>sdhcregset_cardremstsena</td><td class="center"> 7</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Bit 7.</td></tr>
+<tr valign=top><td>sdhcregset_cardinsstsena</td><td class="center"> 6</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Bit 6.</td></tr>
+<tr valign=top><td>normalintrsts_enableregbit5</td><td class="center"> 5</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Bit 5.</td></tr>
+<tr valign=top><td>normalintrsts_enableregbit4</td><td class="center"> 4</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Bit 4.</td></tr>
+<tr valign=top><td>normalintrsts_enableregbit3</td><td class="center"> 3</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Bit 3.</td></tr>
+<tr valign=top><td>normalintrsts_enableregbit2</td><td class="center"> 2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Bit 2.</td></tr>
+<tr valign=top><td>normalintrsts_enableregbit1</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Bit 1.</td></tr>
+<tr valign=top><td>normalintrsts_enableregbit0</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Bit 0.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

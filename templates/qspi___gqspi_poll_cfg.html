@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<title>GQSPI_POLL_CFG (QSPI) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___qspi.html")>QSPI Module</a> &gt; GQSPI_POLL_CFG (QSPI) Register</p><h1>GQSPI_POLL_CFG (QSPI) Register</h1>
+<h2>GQSPI_POLL_CFG (QSPI) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>GQSPI_POLL_CFG</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000154</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF0F0154 (QSPI)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>GQSPI Poll Configuration Register</td></tr>
+</table>
+<p></p>
+<h2>GQSPI_POLL_CFG (QSPI) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>EN_MASK_UPPER</td><td class="center">31</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Enable Upper Data<br/>bus mask:<br/>0: Disable.<br/>1: Enable.<br/>Note: Change this value only when controller is not polling.</td></tr>
+<tr valign=top><td>EN_MASK_LOWER</td><td class="center">30</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Enable Lower Data<br/>bus mask:<br/>0: Disable.<br/>1: Enable.<br/>This is a static signal - should not be changed while polling operation is in progress.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">29:16</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>MASK_EN</td><td class="center">15:8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Data<br/>bus mask value during Poll operation<br/>0: Do not mask the bit<br/>1: Mask the bit<br/>When any of the 8 bits are set, the specific bit(s) will be masked during Poll operation and comparison with received data against the POLL_DATA field will not consider these bits. When all the bits are zero, no masking is used and all the 8 bits of POLL_DATA field will be used for comparison during Poll.<br/>Note: Change this value only when controller is not polling.</td></tr>
+<tr valign=top><td>DATA_VALUE</td><td class="center"> 7:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Poll data value.<br/>When Poll bit of Generic FIFO is set, Generic QSPI Controller continuously reads the data and checks with the POLL_DATA value. When the received data matches with the POLL_DATA filed, Generic QSPI Controller continues executing the next entry in the Generic FIFO. If the value is not matched and EN_POLL_TIMEOUT is set, poll operation will be terminated after POLL_TIMEOUT clock cycles.<br/>This is a static signal - should not be changed while polling operation is in progress.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

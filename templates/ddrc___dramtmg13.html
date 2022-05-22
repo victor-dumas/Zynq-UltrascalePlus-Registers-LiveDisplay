@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<title>DRAMTMG13 (DDRC) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddrc.html")>DDRC Module</a> &gt; DRAMTMG13 (DDRC) Register</p><h1>DRAMTMG13 (DDRC) Register</h1>
+<h2>DRAMTMG13 (DDRC) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>DRAMTMG13</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000134</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD070134 (DDRC)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x1C200004</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>SDRAM Timing Register 13</td></tr>
+</table>
+<p>This register is quasi-dynamic group 2 and group 4. Group 2 registers can be written in self-refresh, deep power-down, and maximum power saving modes. Group 4 registers can be written depending on MSTR.frequency_mode.</p>
+<h2>DRAMTMG13 (DDRC) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>odtloff</td><td class="center">30:24</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1C</td><td>LPDDR4: tODTLoff: This is the latency from CAS-2 command to tODToff reference.<br/>Program this to (tODTLoff/2) and round it up to next integer value.<br/>Unit: Clocks.</td></tr>
+<tr valign=top><td>t_ccd_mw</td><td class="center">21:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x20</td><td>LPDDR4: tCCDMW: This is the minimum time from write or masked write to masked write command for same bank.<br/>Program this to (tCCDMW/2) and round it up to next integer value.<br/>Unit: Clocks.</td></tr>
+<tr valign=top><td>t_ppd</td><td class="center"> 2:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x4</td><td>LPDDR4: tPPD: This is the minimum time from precharge to precharge command.<br/>Program this to (tPPD/2) and round it up to next integer value.<br/>Unit: Clocks.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

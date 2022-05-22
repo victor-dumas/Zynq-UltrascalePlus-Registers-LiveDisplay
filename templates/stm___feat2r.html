@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<title>FEAT2R (STM) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___stm.html")>STM Module</a> &gt; FEAT2R (STM) Register</p><h1>FEAT2R (STM) Register</h1>
+<h2>FEAT2R (STM) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>FEAT2R</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000EA4</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FE9C0EA4 (CORESIGHT_SOC_STM)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">ro<span class="tooltiptext">Read-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x000114F2</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Read the features of the STM.</td></tr>
+</table>
+<p></p>
+<h2>FEAT2R (STM) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>SPTYPE</td><td class="center">17:16</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>Stimulus port type support:<br/>1: Extended only.</td></tr>
+<tr valign=top><td>DSIZE</td><td class="center">15:12</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>Fundamental data size:<br/>1: 64-bit.</td></tr>
+<tr valign=top><td>SPTRTYPE</td><td class="center">10:9</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x2</td><td>Stimulus port transaction type support:<br/>2: invariant timing and Guaranteed.</td></tr>
+<tr valign=top><td>PRIVMASK</td><td class="center"> 8:7</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>STMPRIVMASKR support:<br/>1: not implemented.</td></tr>
+<tr valign=top><td>SPOVERRIDE</td><td class="center"> 6</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>STMOVERRIDER support:<br/>1: implemented.</td></tr>
+<tr valign=top><td>SPCOMP</td><td class="center"> 5:4</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x3</td><td>Data compression on stimulus ports support:<br/>3: programmable.</td></tr>
+<tr valign=top><td>SPER</td><td class="center"> 2</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>STMSPER presence:<br/>0: implemented.</td></tr>
+<tr valign=top><td>SPTER</td><td class="center"> 1:0</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x2</td><td>STMSPTER support:<br/>2: implemented.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<title>GDBGLSPMUX_HST (USB3_XHCI) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___usb3_xhci.html")>USB3_XHCI Module</a> &gt; GDBGLSPMUX_HST (USB3_XHCI) Register</p><h1>GDBGLSPMUX_HST (USB3_XHCI) Register</h1>
+<h2>GDBGLSPMUX_HST (USB3_XHCI) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>GDBGLSPMUX_HST</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000C170</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FE20C170 (USB3_0_XHCI)<br/>0x00FE30C170 (USB3_1_XHCI)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x003F0000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Global Debug LSP MUX Register - Host<br/>This register is for internal use only.<br/>If DWC_USB3_PRESERVE_LOGIC_ANALYZER_SELECT is enabled during core configuration, then the default values readout is X (Undefined).<br/>Bit Bash test should not be done on this debug register.</td></tr>
+</table>
+<p></p>
+<h2>GDBGLSPMUX_HST (USB3_XHCI) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:24</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>logic_analyzer_trace</td><td class="center">23:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x3F</td><td>logic_analyzer_trace Port MUX Select<br/>Currently only bits[21:16] are used. For details on how the mux controls the debug traces, refer to the 'assign logic_analyzer_trace =' code section in the DWC_usb3.v file.<br/>A value of 6'h3F drives 0s on the logic_analyzer_trace signal. If you plan to OR (instead using a mux) this signal with other trace signals in your system to generate a common trace signal, you can use this feature.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">15:14</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>HOSTSELECT</td><td class="center">13:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Device LSP Select<br/>Selects the LSP debug information presented in the GDBGLSP register in host mode.</td></tr>
+</table><p>Alternate Register GDBGLSPMUX_DEV, reset=0x3f0000, mask=0xffc0ffff<br/>Alternate Register Field: EPSELECT Offset=0 Width=4 read-write<br/>[[*]] Description: Device Endpoint Select<br/>Selects the Endpoint debug information presented in the GDBGEPINFO registers in device mode.<br/>Alternate Register Field: DEVSELECT Offset=4 Width=4 read-write<br/>[[*]] Description: Device LSP Select<br/>Selects the LSP debug information presented in the GDBGLSP register in device mode.<br/>Alternate Register Field: HOSTSELECT Offset=8 Width=6 read-write<br/>[[*]] Description: Device LSP Select<br/>Alternate Register Field: reserved_14 Offset=14 Width=1 read-only<br/>[[*]] Description: Reserved<br/>Alternate Register Field: EnDbc Offset=15 Width=1 read-write<br/>[[*]] Description: Enable debugging of Debug capablity LSP in Host mode. <br/>Use HostSelect to select DbC LSP debug information presented in the GDBGLSP register.<br/>Alternate Register Field: logic_analyzer_trace Offset=16 Width=8 read-write<br/>[[*]] Description: Logic Analyzer Trace Port MUX Select<br/>Currently only bits[21:16] are used. For details on how the mux controls the debug traces, refer to 'assign logic_analyzer_trace =' code section in the DWC_usb3.v file.<br/>A value of 6'h3F drives '0's on the logic_analyzer_trace signal. If you plan to OR (instead using a mux) this signal with other trace signals in your system to generate a common trace signal, you can use this feature.<br/>Alternate Register Field: reserved_31_24 Offset=24 Width=8 read-only<br/>[[*]] Description: Reserved</p>
+<p id=foot class=footer></p>
+</body>
+</html>

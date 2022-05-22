@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<title>USBSTS (USB3_XHCI) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___usb3_xhci.html")>USB3_XHCI Module</a> &gt; USBSTS (USB3_XHCI) Register</p><h1>USBSTS (USB3_XHCI) Register</h1>
+<h2>USBSTS (USB3_XHCI) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>USBSTS</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000024</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FE200024 (USB3_0_XHCI)<br/>0x00FE300024 (USB3_1_XHCI)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>USB Status Register Bit Definitions<br/>For a description of this standard USB register field, see the eXtensible Host Controller Interface for Universal Serial Bus (USB) Specification 3.0.</td></tr>
+</table>
+<p></p>
+<h2>USBSTS (USB3_XHCI) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:13</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>HCE</td><td class="center">12</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0</td><td>Host Controller Error (HCE) - RO<br/>Default = 0.'0' = No internal xHC error conditions exist and '1' = Internal xHC error condition. This flag must be set to indicate that an internal error condition has been detected which requires software to reset and reinitialize the xHC.</td></tr>
+<tr valign=top><td>CNR</td><td class="center">11</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0</td><td>Controller Not Ready (CNR) - RO<br/>Default = '1'.'0' = Ready and'1' = Not Ready.<br/>Software must not write to thes Doorbell or Operational register of the xHC, other than the USBSTS register, until CNR = '0'. This flag is set by the xHC after a Chip Hardware Reset and cleared when the xHC is ready to begin accepting register writes. This flag remains cleared ('0') until the next Chip Hardware Reset.</td></tr>
+<tr valign=top><td>SRE</td><td class="center">10</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0</td><td>Save/Restore Error<br/>This bit is currently not supported.</td></tr>
+<tr valign=top><td>RSS</td><td class="center"> 9</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0</td><td>Restore State Status<br/>This bit is similar to the USBSTS.RSS in host mode.<br/>When the controller has finished the restore process, it completes the command by setting DSTS.RSS to '0'.</td></tr>
+<tr valign=top><td>SSS</td><td class="center"> 8</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0</td><td>Save State Status<br/>This bit is similar to the USBSTS.SSS in host mode.<br/>When the controller has finished the save process, it completes the command by setting DSTS.SSS to '0'.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 7:5</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>PCD</td><td class="center"> 4</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0</td><td>Reset Value</td></tr>
+<tr valign=top><td>EINT</td><td class="center"> 3</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0</td><td>Reset Value</td></tr>
+<tr valign=top><td>HSE</td><td class="center"> 2</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0</td><td>HSE<br/>For a description of this standard USB register field, see the eXtensible Host Controller Interface for Universal Serial Bus (USB) Specification 3.0.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 1</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>HCH</td><td class="center"> 0</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0</td><td>HCH<br/>For a description of this standard USB register field, see the eXtensible Host Controller Interface for Universal Serial Bus (USB) Specification 3.0.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

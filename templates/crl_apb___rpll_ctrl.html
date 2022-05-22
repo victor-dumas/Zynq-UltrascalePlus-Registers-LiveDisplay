@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<title>RPLL_CTRL (CRL_APB) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___crl_apb.html")>CRL_APB Module</a> &gt; RPLL_CTRL (CRL_APB) Register</p><h1>RPLL_CTRL (CRL_APB) Register</h1>
+<h2>RPLL_CTRL (CRL_APB) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>RPLL_CTRL</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000030</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF5E0030 (CRL_APB)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00012C09</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>RPLL Clock Unit Control.</td></tr>
+</table>
+<p></p>
+<h2>RPLL_CTRL (CRL_APB) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>POST_SRC</td><td class="center">26:24</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Select the pass-thru clock source for PLL Bypass mode.<br/>0xx: PS_REF_CLK<br/>100: VIDEO_REF_CLK<br/>101: ALT_REF_CLK<br/>110: AUX_REF_CLK<br/>111: GT_REF_CLK</td></tr>
+<tr valign=top><td>PRE_SRC</td><td class="center">22:20</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Select the clock source for PLL input.<br/>0xx: PS_REF_CLK<br/>100: VIDEO_REF_CLK<br/>101: ALT_REF_CLK<br/>110: AUX_REF_CLK<br/>111: GT_REF_CLK</td></tr>
+<tr valign=top><td>DIV2</td><td class="center">16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Enable the divide by 2 function inside of the PLL.<br/>0: no effect.<br/>1: divide clock by 2.<br/>Note: this does not change the VCO frequency, just the output frequency.</td></tr>
+<tr valign=top><td>FBDIV</td><td class="center">14:8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x2C</td><td>Feedback divisor integer portion for the PLL.</td></tr>
+<tr valign=top><td>BYPASS</td><td class="center"> 3</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>PLL Clock Bypass Mode.<br/>0: normal PLL mode; the source clock is selected using [PRE_SRC].<br/>1: bypass the PLL; the source clock is selected using [POST_SRC].</td></tr>
+<tr valign=top><td>RESET</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>PLL reset.<br/>0: active.<br/>1: reset.<br/>Note: Program the PLL into bypass mode before resetting the PLL.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

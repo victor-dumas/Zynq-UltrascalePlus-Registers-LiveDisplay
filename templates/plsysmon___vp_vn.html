@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<title>VP_VN (PLSYSMON) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___plsysmon.html")>PLSYSMON Module</a> &gt; VP_VN (PLSYSMON) Register</p><h1>VP_VN (PLSYSMON) Register</h1>
+<h2>VP_VN (PLSYSMON) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>VP_VN</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000000C</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FFA50C0C (AMS_PL_SYSMON)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>16</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">ro<span class="tooltiptext">Read-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Differencial analog input signal Voltage measurment.</td></tr>
+</table>
+<p>Differencial analog input signals VP and VN support an input mode of 1V uni- or bipolar. READ: ADC measurement. WRITE: Any write to this register causes a PL SysMon reset to pulse asserted and de-asserted. The write data has no meaning.</p>
+<h2>VP_VN (PLSYSMON) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>vp_vn</td><td class="center">15:0</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Bits [15:6] = 10-bit ADC measurement.<br/>Bits [5:0] LSBs.<br/>Read-only.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

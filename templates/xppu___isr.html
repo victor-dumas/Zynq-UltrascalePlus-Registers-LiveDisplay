@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<title>ISR (XPPU) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___xppu.html")>XPPU Module</a> &gt; ISR (XPPU) Register</p><h1>ISR (XPPU) Register</h1>
+<h2>ISR (XPPU) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>ISR</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000010</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF980010 (LPD_XPPU)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Interrupt Status and Clear.</td></tr>
+</table>
+<p>AXI and APB Access Violations. If a Status bit is 1 and its Mask is 0, then the IRQ interrupt signal is activated to the interrupt controller. The first AXI violation is recorded. Once an ISR[7:1] status bit is set, subsequent AXI violations are not recorded, but their transactions are poisoned. The status bits are cleared by a system reset and can be cleared by software.</p>
+<h2>ISR (XPPU) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:8</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>APER_PARITY</td><td class="center"> 7</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Aperture Parity Error detected for an aperture entry fetched from local RAM.<br/>0: no error.<br/>1: error detected.<br/>This parity checking is enable by setting CTRL [APER_PARITY_EN] = 1.</td></tr>
+<tr valign=top><td>APER_TZ</td><td class="center"> 6</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>TrustZone Violation; a non-secure master attempted to access an aperture to a secure memory location.<br/>0: no violation.<br/>1: violation detected.</td></tr>
+<tr valign=top><td>APER_PERM</td><td class="center"> 5</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Master ID Access Violation. The transaction does not match any of the 20 Master ID aperture profile configurations.<br/>0: no violation.<br/>1: violation detected.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 4</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>MID_PARITY</td><td class="center"> 3</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Master ID Parity Error. One of the 20 Master ID entries fetched from the local registers contained a parity error.<br/>0: no error.<br/>1: error detected.<br/>This parity checking is enable by setting CTRL [MID_PARITY_EN] = 1.</td></tr>
+<tr valign=top><td>MID_RO</td><td class="center"> 2</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Read permission Violation. The master attempted a write, but Master ID entry matching the request specifies read-only permission; MASTER_IDxx [MIDR] =1.<br/>0: no violation.<br/>1: violation detected.<br/>This violation checking is enable by setting CTRL [ENABLE] = 1.</td></tr>
+<tr valign=top><td>MID_MISS</td><td class="center"> 1</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Master ID Not Found. The transaction's Master ID, after masking is applied, doesn't match a Master ID in the entry list.<br/>0: no miss.<br/>1: miss detected.</td></tr>
+<tr valign=top><td>INV_APB</td><td class="center"> 0</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Register Access Error on APB. A register access was requested to an unimplemented register location.<br/>The PSLVERR error signal is also asserted back to the APB interconnect.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

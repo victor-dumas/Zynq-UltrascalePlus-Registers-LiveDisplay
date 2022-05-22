@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<title>GSBUSCFG0 (USB3_XHCI) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___usb3_xhci.html")>USB3_XHCI Module</a> &gt; GSBUSCFG0 (USB3_XHCI) Register</p><h1>GSBUSCFG0 (USB3_XHCI) Register</h1>
+<h2>GSBUSCFG0 (USB3_XHCI) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>GSBUSCFG0</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000C100</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FE20C100 (USB3_0_XHCI)<br/>0x00FE30C100 (USB3_1_XHCI)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Global SoC Bus Configuration Register 0<br/>This register configures system bus DMA options for the master bus, which may be configured as AHB, AXI, or Native. Options include burst length and cache type (bufferable/posted, cacheable/snoop, and so on). The application can program this register upon power-on, or a change in mode of operation after the DMA engine is halted.<br/>xHCI Register Power-On Value:<br/>The standard xHCI driver does not access this register.</td></tr>
+</table>
+<p></p>
+<h2>GSBUSCFG0 (USB3_XHCI) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>DATRDREQINFO</td><td class="center">31:28</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>DATRDREQINFO<br/>AHB-prot/AXI-cache/OCP-ReqInfo for Data Read (DatRdReqInfo)<br/>Input to BUS-GM.</td></tr>
+<tr valign=top><td>DESRDREQINFO</td><td class="center">27:24</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>DESRDREQINFO<br/>AHB-prot/AXI-cache/OCP-ReqInfo for Descriptor Read (DesRdReqInfo).<br/>Input to BUS-GM.</td></tr>
+<tr valign=top><td>DATWRREQINFO</td><td class="center">23:20</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>DATWRREQINFO<br/>AHB-prot/AXI-cache/OCP-ReqInfo for Data Write (DatWrReqInfo).<br/>Input to BUS-GM.</td></tr>
+<tr valign=top><td>DESWRREQINFO</td><td class="center">19:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>DESWRREQINFO<br/>AHB-prot/AXI-cache/OCP-ReqInfo for Descriptor Write (DesWrReqInfo)<br/>Input to BUS-GM.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">15:12</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved for future use</td></tr>
+<tr valign=top><td>DATBIGEND</td><td class="center">11</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td></td></tr>
+<tr valign=top><td>DESBIGEND</td><td class="center">10</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td></td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 9:8</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>INCR256BRSTENA</td><td class="center"> 7</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>INCR256 Burst Type Enable<br/>Input to BUS-GM.<br/>For the AHB/AXI configuration, if software set this bit to 1, the AHB/AXI master uses INCR to do the 256-beat burst.</td></tr>
+<tr valign=top><td>INCR128BRSTENA</td><td class="center"> 6</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>INCR128 Burst Type Enable<br/>Input to BUS-GM;<br/>For the AHB/AXI configuration, if software set this bit to 1, the AHB/AXI master uses INCR to do the 128-beat burst.</td></tr>
+<tr valign=top><td>INCR64BRSTENA</td><td class="center"> 5</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>INCR64 Burst Type Enable<br/>- Input to BUS-GM;<br/>For the AHB/AXI configuration, if software set this bit to 1, the AHB/AXI master uses INCR to do the 64-beat burst.</td></tr>
+<tr valign=top><td>INCR32BRSTENA</td><td class="center"> 4</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>INCR32 Burst Type Enable<br/>Input to BUS-GM;<br/>For the AHB/AXI configuration, if software set this bit to 1, the AHB/AXI master uses INCR to do the 32-beat burst.</td></tr>
+<tr valign=top><td>INCR16BRSTENA</td><td class="center"> 3</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>INCR16 Burst Type Enable<br/>Input to BUS-GM. For the AHB/AXI configuration, if software set this bit to '1', the AHB/AXI master uses INCR to do the 16-beat burst.</td></tr>
+<tr valign=top><td>INCR8BRSTENA</td><td class="center"> 2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>INCR8 Burst Type Enable<br/>Input to BUS-GM; For the AHB/AXI configuration, if software set this bit to '1', the AHB/AXI master uses INCR to do the 8-beat burst.</td></tr>
+<tr valign=top><td>INCR4BRSTENA</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>INCR4 Burst Type Enable<br/>Input to BUS-GM; For the AXI configuration, when this bit is enabled the controller is allowed to do bursts of beat length 1, 2, 3, and 4. It is highly recommended that this bit is enabled to prevent descriptor reads and writes from being broken up into separate transfers.</td></tr>
+<tr valign=top><td>INCRBRSTENA</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>Undefined Length INCR Burst Type Enable (INCRBrstEna)<br/>Input to BUS-GM; This bit determines the set of burst lengths the master interface uses. It works in conjunction with the GSBUSCFG0[7:1] enables (INCR256/128/64/32/16/8/4).<br/>0: INCRX burst mode<br/>HBURST (for AHB configurations) and ARLEN/AWLEN (for AXI configurations) do not use INCR. They use only the following burst lengths:<br/>- 1<br/>- 4 (if GSBUSCFG0.INCR4BrstEna = 1)<br/>- 8 (if GSBUSCFG0.INCR8BrstEna = 1)<br/>- 16 (if GSBUSCFG0.INCR16BrstEna = 1)<br/>- 32 (if GSBUSCFG0.INCR32BrstEna = 1)<br/>- 64 (if GSBUSCFG0.INCR64BrstEna = 1)<br/>- 128 (if GSBUSCFG0.INCR128BrstEna = 1)<br/>- 256 (if GSBUSCFG0.INCR256BrstEna = 1)<br/>1: INCR (undefined length) burst mode<br/>- AHB configurations: HBURST uses SINGLE or INCR of any length less than or equal to the largest-enabled burst length of INCR4/8/16/32/64/128/256.<br/>- AXI configurations: ARLEN/AWLEN uses any length less than or equal to the largest-enabled burst length of INCR4/8/16/32/64/128/256.<br/>For cache line-aligned applications, this bit is typically set to 0 to ensure that the master interface uses only power-of-2 burst lengths (as enabled via GSBUSCFG0[7:0]).</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

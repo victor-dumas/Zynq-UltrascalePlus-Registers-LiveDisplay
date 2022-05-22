@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<title>CSUDMA_DST_ADDR_MSB (CSUDMA) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___csudma.html")>CSUDMA Module</a> &gt; CSUDMA_DST_ADDR_MSB (CSUDMA) Register</p><h1>CSUDMA_DST_ADDR_MSB (CSUDMA) Register</h1>
+<h2>CSUDMA_DST_ADDR_MSB (CSUDMA) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>CSUDMA_DST_ADDR_MSB</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000828</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FFC80828 (CSUDMA)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Destination mem address (msbs) for DMA stream->memory data transfer</td></tr>
+</table>
+<p></p>
+<h2>CSUDMA_DST_ADDR_MSB (CSUDMA) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:17</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>RESERVED. Return 0 when read. Writes ignored.</td></tr>
+<tr valign=top><td>ADDR_MSB</td><td class="center">16:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Destination memory address (msbs) for DMA stream to memory data transfer<br/>Refer to the description for CSUDMA_DST_ADDR for full details. This field is the 17 msbs of the full 49-bit DST address<br/>The full 49-bit destination address is comprised of this field concatenated with the CSUDMA_DST_ADDR field as follows:<br/>49-bit DST address = {ADDR_MSB, CSU_DMA_DST_ADDR.ADDR, 2'b00}</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

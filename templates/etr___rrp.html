@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<title>RRP (ETR) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___etr.html")>ETR Module</a> &gt; RRP (ETR) Register</p><h1>RRP (ETR) Register</h1>
+<h2>RRP (ETR) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>RRP</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000014</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FE970014 (CORESIGHT_SOC_ETR)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>The RAM Read Pointer Register contains the value of the read pointer that is used to read entries from the trace memory over the APB interface.The value written to this register must be a byte-address aligned to the width of the trace memory databus and to a frame boundary. For example, for 64_bit wide trace memory and 128_bit wide trace memory, the four LSBs must be 0s. For 256_bit wide trace memory, the five LSBs must be 0s. The width of the trace memory can be obtained by reading the MEMWIDTH field in the DEVID Register, 0xFC8. When one complete buffer or FIFO entry has been read through the RRD Register, the RAM Read Pointer Register is incremented by the number of bytes per memory width of data. For example, for 64_bit wide memory, it is incremented by eight. For 128_bit wide memory, it is incremented by 16 for every complete memory entry read. When the RAM Read Pointer is incremented after having reached its maximum value, it wraps around. The width of this register in the ETB or ETF configurations is log2(MEM_SIZE*4). In the ETR configuration, this register is 32 bits wide, and the contents of this register represents the lower 32 bits of the 40-bit AXI address used to access trace memory. If scatter-gather operation is enabled, this register represents the next address in trace memory to be read, not the address of a page table entry. When in Disabled state (TraceCaptEn=0 and TMCReady=1), a write to this register sets the value of the trace memory address from which data is fetched on a subsequent RRD read. A write to this register when not in Disabled state results in Unpredictable behavior. This register can be read:&lt;ul>&lt;li>when in Disabled state&lt;/li>&lt;li>when in Stopped state (TraceCaptEn=1 and TMCReady=1), in Circular Buffer mode&lt;/li>&lt;li>when in Running (TraceCaptEn=1 and TMCReady=0), Stopping or Stopped states, in Software FIFO mode.&lt;/li>&lt;/ul>When entering Disabled state in Circular Buffer mode with scatter-gather mode disabled, this register points to the next location in the trace buffer to be read. This is for backwards compatibility purposes, so that the buffer can be read while in Disabled state. It is recommended that you read the buffer contents while in Stopped state instead, because the pointers are managed automatically.</td></tr>
+</table>
+<p></p>
+<h2>RRP (ETR) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>RRP</td><td class="center"> 8:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>This value represents the location in trace memory that will be accessed on a subsequent RRD read.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

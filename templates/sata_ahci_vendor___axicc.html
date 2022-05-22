@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<title>AXICC (SATA_AHCI_VENDOR) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___sata_ahci_vendor.html")>SATA_AHCI_VENDOR Module</a> &gt; AXICC (SATA_AHCI_VENDOR) Register</p><h1>AXICC (SATA_AHCI_VENDOR) Register</h1>
+<h2>AXICC (SATA_AHCI_VENDOR) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>AXICC</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000001C</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD0C00BC (SATA_AHCI_VENDOR)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00100010</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>AXI CACHE Control.</td></tr>
+</table>
+<p>Controls the value of the AWCACHE and ARCACHE used to distinguish each address operation on the address bus.</p>
+<h2>AXICC (SATA_AHCI_VENDOR) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:30</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>EARC</td><td class="center">29</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Enable the ARCACHE (EARC): control from the PRDT entries used during the data phase of this operation (Global Control)</td></tr>
+<tr valign=top><td>AWCF</td><td class="center">27:24</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Address Write Cache FIS (AWCF): This is the value driven onto AWCACHE when the AXI master is posting a status FIS write address to the memory controller</td></tr>
+<tr valign=top><td>AWCD</td><td class="center">23:20</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Address Write Cache Data (AWCD): This is the value driven onto AWCACHE when the AXI master is posting a Data burst write address to the memory controller when the data burst is not the final burst in the transfer.</td></tr>
+<tr valign=top><td>AWCFD</td><td class="center">19:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Address Write Cache Final Data (AWCFD): This is the value driven onto AWCACHE when the AXI master is posting a Data burst write address to the memory controller when the data burst is the final burst in the transfer.</td></tr>
+<tr valign=top><td>ARCP</td><td class="center">15:12</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Address Read Cache PRD (ARCP): This is the value driven onto ARCACHE when the AXI master is posting a PRD read address to the memory controller</td></tr>
+<tr valign=top><td>ARCH</td><td class="center">11:8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Address Read Cache Header (ARCH): This is the value driven onto ARCACHE when the AXI master is posting a Header or physical region descriptor read address to the memory controller</td></tr>
+<tr valign=top><td>ARCF</td><td class="center"> 7:4</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Address Read Cache FIS (ARCF): This is the value driven onto ARCACHE when the AXI master is posting a command FIS read address to the memory controller</td></tr>
+<tr valign=top><td>ARCA</td><td class="center"> 3:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Address Read Cache ATAPI (ARCA): This is the value driven onto ARCACHE when the AXI master is posting a data burst or ATAPI FIS read address to the memory controller</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

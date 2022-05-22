@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<title>BCR4 (R5_DBG_0) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___r5_dbg_0.html")>R5_DBG_0 Module</a> &gt; BCR4 (R5_DBG_0) Register</p><h1>BCR4 (R5_DBG_0) Register</h1>
+<h2>BCR4 (R5_DBG_0) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>BCR4</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000150</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FEBF0150 (CORESIGHT_R5_DBG_0)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Breakpoint Control Register 4</td></tr>
+</table>
+<p></p>
+<h2>BCR4 (R5_DBG_0) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>Breakpoint_address_mask</td><td class="center">28:24</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>This field sets a breakpoint on a range of addresses by masking lower order address bits out of the breakpoint comparison.<br/>b00000 = no mask<br/>b00001 = Reserved<br/>b00010 = Reserved<br/>b00011 = 0x00000007 mask for instruction address<br/>b00100 = 0x0000000F mask for instruction address<br/>b00101 = 0x0000001F mask for instruction address<br/>..<br/>b11111 = 0x7FFFFFFF mask for instruction address.<br/>If BCR[28:24] is not set to b00000, thenBCR[8:5] must be set to b1111. Otherwise the behavior is Unpredictable. In addition, if BCR[28:24] is not set to b00000, then the corresponding BVR bits that are not being included in the comparison Should Be Zero. Otherwise the behavior is Unpredictable. Ifthis BRP is programmed for context ID comparison, this field must be set to b00000.Otherwise the behavior is Unpredictable. There is no encoding for a full 32-bit mask but the same effect of a break anywherebreakpoint can be achieved by setting BCR[22] to 1 and BCR[8:5] to b0000.</td></tr>
+<tr valign=top><td>M</td><td class="center">22:20</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>Meaning of BVR:<br/>b000 = instruction address match<br/>b001 = linked instruction address match<br/>b010 = unlinked context ID<br/>b011 = linked context ID<br/>b100 = instruction address mismatch<br/>b101 = linked instruction address mismatch<br/>b11x = reserved.</td></tr>
+<tr valign=top><td>Linked_BRP_number</td><td class="center">19:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>The binary number encoded here indicates another BRPto link this one with.<br/>Note<br/>. if a BRP is linked with itself,it is Unpredictable whether a breakpoint debug event is generated<br/>. if this BRP is linked to another BRP that is not configured for linked context ID matching, it is<br/>Unpredictable whether a breakpoint debug event is generated.</td></tr>
+<tr valign=top><td>Byte_address_select</td><td class="center"> 8:5</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>For breakpoints programmed to match an instruction address, the debugger must write a word-aligned address to the BVR. You can then use this field toprogram the breakpoint soit hits only if certain byte addresses are accessed.<br/>If the BRP is programmed for instruction address match:<br/>b0000 = the breakpoint never hits<br/>bxxx1 = the breakpoint hits if the byte at address (BVR & 0xFFFFFFFC) +0 is accessed<br/>bxx1x = the breakpoint hits if the byte at address (BVR & 0xFFFFFFFC) +1 is accessed<br/>bx1xx = the breakpoint hits if the byte at address (BVR & 0xFFFFFFFC) +2 is accessed<br/>b1xxx = the breakpoint hits if the byte at address (BVR & 0xFFFFFFFC) +3 is accessed<br/>b1111 = the breakpoint hits if any of the four bytes starting at address (BVR & 0xFFFFFFFC) +0 is accessed.<br/>If the BRP is programmed for instruction address mismatch, the breakpoint hits where the corresponding instruction address breakpoint does not hit, that is, the range of addresses covered by an instruction address mismatch breakpoint is the negative image of the corresponding instruction address breakpoint.<br/>If the BRP is programmed for context ID comparison, this field must be set to b1111. Otherwise, breakpoint and watchpoint debug events might not be generated as expected.<br/>Writing a value to BCR[8:5] so that BCR[8] is not equal to BCR[7] or BCR[6] isnot equal to BCR[5] has Unpredictable results.</td></tr>
+<tr valign=top><td>S</td><td class="center"> 2:1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>Supervisor access control. The breakpoint can be conditioned on the mode of the processor:<br/>b00 = User, System, or Supervisor<br/>b01 = Privileged<br/>b10 = User<br/>b11 = any</td></tr>
+<tr valign=top><td>B</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Breakpoint enable:<br/>0 = Breakpoint disabled.<br/>1 = Breakpoint enabled</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

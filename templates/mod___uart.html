@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<title>UART Module</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> > UART Module</p><h1>UART Module</h1>
+<h2>UART Module Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Module Name</th><td width=80% class=noborder>UART Module</td></tr>
+<tr valign=top><th width=20% class=sumparam>Modules of this Type</th><td width=80% class=noborder>UART0, UART1</td></tr>
+<tr valign=top><th class=sumparam>Base Address</th><td class=noborder>0x00FF000000 (UART0)<br/>0x00FF010000 (UART1)</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>UART 0 Controller</td></tr>
+</table>
+<h2>UART Module Register Summary</h2>
+<table>
+<tr valign=top><th width=20%>Register Name</th><th width=10%>Address</th><th width=10%>Width</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=40%>Description</th></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("uart___control_reg0.html")>Control_reg0</a></td><td class="hex">0x0000000000</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000128</td><td>UART Control Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("uart___mode_reg0.html")>mode_reg0</a></td><td class="hex">0x0000000004</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>UART Mode Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("uart___intrpt_en_reg0.html")>Intrpt_en_reg0</a></td><td class="hex">0x0000000008</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>Interrupt Enable Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("uart___intrpt_dis_reg0.html")>Intrpt_dis_reg0</a></td><td class="hex">0x000000000C</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>Interrupt Disable Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("uart___intrpt_mask_reg0.html")>Intrpt_mask_reg0</a></td><td class="hex">0x0000000010</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>Interrupt Mask Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("uart___chnl_int_sts_reg0.html")>Chnl_int_sts_reg0</a></td><td class="hex">0x0000000014</td><td class="center">32</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x00000200</td><td>Channel Interrupt Status Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("uart___baud_rate_gen_reg0.html")>Baud_rate_gen_reg0</a></td><td class="hex">0x0000000018</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x0000028B</td><td>Baud Rate Generator Register.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("uart___rcvr_timeout_reg0.html")>Rcvr_timeout_reg0</a></td><td class="hex">0x000000001C</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>Receiver Timeout Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("uart___rcvr_fifo_trigger_level0.html")>Rcvr_FIFO_trigger_level0</a></td><td class="hex">0x0000000020</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000020</td><td>Receiver FIFO Trigger Level Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("uart___modem_ctrl_reg0.html")>Modem_ctrl_reg0</a></td><td class="hex">0x0000000024</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>Modem Control Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("uart___modem_sts_reg0.html")>Modem_sts_reg0</a></td><td class="hex">0x0000000028</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>Modem Status Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("uart___channel_sts_reg0.html")>Channel_sts_reg0</a></td><td class="hex">0x000000002C</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00000000</td><td>Channel Status Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("uart___tx_rx_fifo0.html")>TX_RX_FIFO0</a></td><td class="hex">0x0000000030</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>Transmit and Receive FIFO</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("uart___baud_rate_divider_reg0.html")>Baud_rate_divider_reg0</a></td><td class="hex">0x0000000034</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x0000000F</td><td>Baud Rate Divider Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("uart___flow_delay_reg0.html")>Flow_delay_reg0</a></td><td class="hex">0x0000000038</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>Flow Control Delay Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("uart___tx_fifo_trigger_level0.html")>Tx_FIFO_trigger_level0</a></td><td class="hex">0x0000000044</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000020</td><td>Transmitter FIFO Trigger Level Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("uart___rx_fifo_byte_status.html")>Rx_FIFO_byte_status</a></td><td class="hex">0x0000000048</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>RX FIFO Byte Status Register</td></tr>
+</table>
+<p id=foot class=footer></p>
+</body>
+</html>

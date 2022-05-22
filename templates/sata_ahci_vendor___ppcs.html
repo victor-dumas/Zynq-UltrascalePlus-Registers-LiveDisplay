@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<title>PPCS (SATA_AHCI_VENDOR) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___sata_ahci_vendor.html")>SATA_AHCI_VENDOR Module</a> &gt; PPCS (SATA_AHCI_VENDOR) Register</p><h1>PPCS (SATA_AHCI_VENDOR) Register</h1>
+<h2>PPCS (SATA_AHCI_VENDOR) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>PPCS</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000048</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD0C00E8 (SATA_AHCI_VENDOR)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0xF8000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Port Phy Status (PhyControlStatus).</td></tr>
+</table>
+<p>Indicates the status of the Phy Control Layer for either Port 0 or Port 1. The Port monitored is controlled by the value programmed into the Port Config Register. Note: All Status Registers have no predefined Reset value. The value shown in reset is a typical value that will be read after reset but will be dependent on the SERDES status, the actual value read can differ from this.</p>
+<h2>PPCS (SATA_AHCI_VENDOR) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>PHYCE</td><td class="center">31:30</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x3</td><td>Current 2 bit Code Error (PHYCE): snapshot within the Phy Control Layer</td></tr>
+<tr valign=top><td>PHYDE</td><td class="center">29:28</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x3</td><td>Current 2 bit Disparity Error (PHYDE): snapshot within the Phy Control Layer</td></tr>
+<tr valign=top><td>PHYKC</td><td class="center">27</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>Current 1 bit K Character (PHYKC): snapshot within the Phy Control Layer</td></tr>
+<tr valign=top><td>PHYD</td><td class="center">26:11</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Current 16 bit Data (PHYD): snapshot within the Phy Control Layer</td></tr>
+<tr valign=top><td>CCAC</td><td class="center">10</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Comma Alignment has changed (CCAC)</td></tr>
+<tr valign=top><td>CCA</td><td class="center"> 9:5</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Current Comma Alignment (CCA)</td></tr>
+<tr valign=top><td>PCTRLS</td><td class="center"> 4:0</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Phy Control State (PCTRLS)<br/>0: HP0_HR_Start<br/>1: HP1_HR_Reset<br/>2: HP2_HR_AwaitCOMINIT<br/>3: HP3_HR_Calibrate<br/>4: HP4_HR_COMWAKE<br/>5: HP5_HR_AwaitCOMWAKE<br/>6: HP6_HR_AwaitAlign<br/>7: HP7_HR_SendAlign<br/>8: HP8_HR_Ready<br/>9: HP9_HR_Partial<br/>10: HP10_HR_Slumber<br/>11: HP11_HR_AdjustSpeed<br/>12: HP2B_HR_AwaitNoCOMINIT<br/>13: HP5B_HR_AwaitNoCOMWAKE</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<title>QSPIDMA_DST_ADDR_MSB (QSPI) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___qspi.html")>QSPI Module</a> &gt; QSPIDMA_DST_ADDR_MSB (QSPI) Register</p><h1>QSPIDMA_DST_ADDR_MSB (QSPI) Register</h1>
+<h2>QSPIDMA_DST_ADDR_MSB (QSPI) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>QSPIDMA_DST_ADDR_MSB</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000828</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF0F0828 (QSPI)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>DMA destination memory address (MSBs)</td></tr>
+</table>
+<p>For DMA stream-to-memory data transfer.</p>
+<h2>QSPIDMA_DST_ADDR_MSB (QSPI) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:12</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>ADDR_MSB</td><td class="center">11:0</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>DMA destination memory address (msbs) for stream to memory data transfer.<br/>Refer to the description for [QSPIDMA_DST_ADDR]. This field is the 12 msbs of the full 44-bit DST address.<br/>MSBs for 44-bit DMA Destination Address.<br/>The address is comprised of three fields:<br/>[ADDR_MSB] with 12 MSBs.<br/>QSPIDMA_DST_ADDR [ADDR] with 30 bits.<br/>00 of two LSBs.<br/>Note: Change this value only when controller is not processing commands.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

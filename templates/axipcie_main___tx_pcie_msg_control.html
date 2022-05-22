@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<title>TX_PCIE_MSG_CONTROL (AXIPCIE_MAIN) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___axipcie_main.html")>AXIPCIE_MAIN Module</a> &gt; TX_PCIE_MSG_CONTROL (AXIPCIE_MAIN) Register</p><h1>TX_PCIE_MSG_CONTROL (AXIPCIE_MAIN) Register</h1>
+<h2>TX_PCIE_MSG_CONTROL (AXIPCIE_MAIN) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>TX_PCIE_MSG_CONTROL</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000624</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD0E0624 (AXIPCIE_MAIN)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>PCIe Message Request Execution - Control</td></tr>
+</table>
+<p></p>
+<h2>TX_PCIE_MSG_CONTROL (AXIPCIE_MAIN) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:25</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback></td></tr>
+<tr valign=top><td>msg_has_data</td><td class="center">24</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Message Payload Presence. When msg_has_data == 1, msg_data is the data payload transmitted with the message. msg_has_data must be consistent with msg_code.</td></tr>
+<tr valign=top><td>msg_tag</td><td class="center">23:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Message Tag[7:0]. Byte 6 of the Message TLP Header. Set to 0x0 if the Tag field is unused by the message.</td></tr>
+<tr valign=top><td>msg_code</td><td class="center">15:8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Message Code[7:0]. Byte 7 of Message TLP Header. Defines the type of Message. Message Codes are defined by the PCI Express Specification and associated ECNs.</td></tr>
+<tr valign=top><td>msg_fmt_type</td><td class="center"> 7:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Message Format and Type. Byte 0 of Message TLP Header. Must be consistent with Message Code.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

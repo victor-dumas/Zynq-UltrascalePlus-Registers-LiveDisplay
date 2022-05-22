@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<title>octets_txed_bottom (GEM) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___gem.html")>GEM Module</a> &gt; octets_txed_bottom (GEM) Register</p><h1>octets_txed_bottom (GEM) Register</h1>
+<h2>octets_txed_bottom (GEM) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>octets_txed_bottom</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000100</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF0B0100 (GEM0)<br/>0x00FF0C0100 (GEM1)<br/>0x00FF0D0100 (GEM2)<br/>0x00FF0E0100 (GEM3)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>These registers reset to zero on a read and stick at all ones when they count to their maximum value. They should be read frequently enough to prevent loss of data. In order to reduce overall design area, the statistics registers may be optionally removed in the configuration file if they are deemed unnecsessary for a particular design. The receive statistics registers are only incremented when the receive enable bit is set in the network control register. The statistics registers optionally have a snapshot capability which, when exercised, will simultaneously store and clear the current values of all the statistics registers into a snapshot register set in order to allow a consistent set of statistics to be read by the processor. The snapshot is controlled using bit 13 of the network control register. The read snapshot control indicated by bit 14 of the network control register determines whether the processor reads the snapshot registers (logic 1) or the incrementing registers (logic 0). The default GEM configuration does not support the snapshot capability. See Parameterization section under Implementation Application Notes for an explanation of how to enable this function. All the statistics registers are read only. For test purposes they may be written by setting bit 7 (Write Enable) in the network control register. Setting bit 6 (increment statistics) in the network control register causes all the statistics registers to increment by one, again for test purposes. Once a statistics register has been read, it is automatically cleared. When reading the octets transmitted and octets received registers, bits 31:0 should be read prior to bits 47:32 to ensure reliable operation. The statistics register block contains the following registers. Octets Transmitted [31:0]</td></tr>
+</table>
+<p></p>
+<h2>octets_txed_bottom (GEM) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>count</td><td class="center">31:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Transmitted octets in frame without errors [31:0]. The number of octets transmitted in valid frames of any type. This counter is 48-bits, and is read through two registers. This count does not include octets from automatically generated pause frames.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

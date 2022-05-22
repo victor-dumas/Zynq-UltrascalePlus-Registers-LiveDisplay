@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<title>REQ_SWRST_TRIG (PMU_GLOBAL) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___pmu_global.html")>PMU_GLOBAL Module</a> &gt; REQ_SWRST_TRIG (PMU_GLOBAL) Register</p><h1>REQ_SWRST_TRIG (PMU_GLOBAL) Register</h1>
+<h2>REQ_SWRST_TRIG (PMU_GLOBAL) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>REQ_SWRST_TRIG</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000420</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FFD80420 (PMU_GLOBAL)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">wo<span class="tooltiptext">Write-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Reset Request; Interrupt Trigger.<br/>Check the REQ_SWRST_STATUS register bits for more information.</td></tr>
+</table>
+<p>Trigger a software reset request. 0: no effect. 1: trigger the request. Write-only.</p>
+<h2>REQ_SWRST_TRIG (PMU_GLOBAL) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>PL</td><td class="center">31</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Programmable Logic, PL reset request.</td></tr>
+<tr valign=top><td>FP</td><td class="center">30</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Full Power Domain, FPD reset request.</td></tr>
+<tr valign=top><td>LP</td><td class="center">29</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Low Power Domain, LPD reset request.</td></tr>
+<tr valign=top><td>PS_ONLY</td><td class="center">28</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>PS-only reset request.</td></tr>
+<tr valign=top><td>IOU</td><td class="center">27</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>IOP reset request.</td></tr>
+<tr valign=top><td>USB1</td><td class="center">25</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>USB1 reset request.</td></tr>
+<tr valign=top><td>USB0</td><td class="center">24</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>USB0 reset request.</td></tr>
+<tr valign=top><td>GEM3</td><td class="center">23</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>GEM3 reset request.</td></tr>
+<tr valign=top><td>GEM2</td><td class="center">22</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>GEM2 reset request.</td></tr>
+<tr valign=top><td>GEM1</td><td class="center">21</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>GEM1 reset request.</td></tr>
+<tr valign=top><td>GEM0</td><td class="center">20</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>GEM0 reset request.</td></tr>
+<tr valign=top><td>LS_R5</td><td class="center">18</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>RPU Lockstep reset request.</td></tr>
+<tr valign=top><td>R5_1</td><td class="center">17</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>RPU1 reset request.</td></tr>
+<tr valign=top><td>R5_0</td><td class="center">16</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>RPU0 reset request.</td></tr>
+<tr valign=top><td>Display_Port</td><td class="center">12</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Display Port.</td></tr>
+<tr valign=top><td>SATA</td><td class="center">10</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>SATA reset request.</td></tr>
+<tr valign=top><td>PCIe</td><td class="center"> 9</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>PCIe reset request.</td></tr>
+<tr valign=top><td>GPU</td><td class="center"> 8</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Both GPU Pixel Processors reset request.</td></tr>
+<tr valign=top><td>PP1</td><td class="center"> 7</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>GPU Pixel Processor 1 reset request.</td></tr>
+<tr valign=top><td>PP0</td><td class="center"> 6</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>GPU Pixel Processor 0 reset request.</td></tr>
+<tr valign=top><td>APU</td><td class="center"> 4</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>All APU processors reset request</td></tr>
+<tr valign=top><td>ACPU3</td><td class="center"> 3</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>APU3 processor reset request.</td></tr>
+<tr valign=top><td>ACPU2</td><td class="center"> 2</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>APU2 processor reset request.</td></tr>
+<tr valign=top><td>ACPU1</td><td class="center"> 1</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>APU1 processor reset request.</td></tr>
+<tr valign=top><td>ACPU0</td><td class="center"> 0</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>APU0 processor reset request.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

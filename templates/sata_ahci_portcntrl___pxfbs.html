@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<title>PxFBS (SATA_AHCI_PORTCNTRL) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___sata_ahci_portcntrl.html")>SATA_AHCI_PORTCNTRL Module</a> &gt; PxFBS (SATA_AHCI_PORTCNTRL) Register</p><h1>PxFBS (SATA_AHCI_PORTCNTRL) Register</h1>
+<h2>PxFBS (SATA_AHCI_PORTCNTRL) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>PxFBS</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000040</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD0C0140 (SATA_AHCI_PORT0_CNTRL)<br/>0x00FD0C01C0 (SATA_AHCI_PORT1_CNTRL)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00004000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Port x FIS-based Switching Control</td></tr>
+</table>
+<p>This register is used to control and obtain status for Port Multiplier FIS-based switching.</p>
+<h2>PxFBS (SATA_AHCI_PORTCNTRL) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:20</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>DWE</td><td class="center">19:16</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Device With Error (DWE): Set by hardware to the value of the Port Multiplier port number of the device that experienced a fatal error condition.<br/>This field is only valid when PxFBS.SDE = '1'.</td></tr>
+<tr valign=top><td>ADO</td><td class="center">15:12</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x4</td><td>Active Device Optimization (ADO): This register exposes the number of active devices that the FIS-based switching implementation has been optimized for. When there are more devices active than indicated in this field, throughput of concurrent traffic may degrade. For optimal performance, software should limit the number of active devices based on this value. The minimum value for this field shall be 2h, indicating that at least two devices may be active with high performance maintained.</td></tr>
+<tr valign=top><td>DEV</td><td class="center">11:8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Device To Issue (DEV): Set by software to the Port Multiplier port value of the next command to issue.<br/>This field enables hardware to know the port the command is to be issued to without fetching the command header.<br/>Software shall not issue commands to multiple Port Multiplier ports on the same write of the PxCI register.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 7:3</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>SDE</td><td class="center"> 2</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Single Device Error (SDE): When set to '1' and a fatal error condition has occurred, hardware believes the error is localized to one device such that software's first error recovery step should be to utilize the PxFBS.DEC functionality.<br/>When cleared to '0' and a fatal error condition has occurred, the error applies to the entire port and to clear the error PxCMD.ST shall be cleared to '0' by software.<br/>This bit is cleared on PxFBS.DEC being set to '1' or on PxCMD.ST being cleared to '0'.</td></tr>
+<tr valign=top><td>DEC</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Device Error Clear (DEC): When set to '1' by software, the HBA shall clear the device specific error condition and the HBA shall flush any commands outstanding for the device that experienced the error, including clearing the PxCI and PxSACT bits for that device to '0'.<br/>When hardware has completed error recovery actions, hardware shall clear the bit to '0'.<br/>A write of '0' to this bit by software shall have no effect.<br/>Software shall only set this bit to '1' if PxFBS.EN is set to '1' and PxFBS.SDE is set to '1'.</td></tr>
+<tr valign=top><td>EN</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Enable (EN): When set to '1', a Port Multiplier is attached and the HBA shall use FIS-based switching to communicate with it.<br/>When cleared to '0', FIS-based switching is not being used. Software shall only change the value of the EN bit when PxCMD.ST is cleared to '0'.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

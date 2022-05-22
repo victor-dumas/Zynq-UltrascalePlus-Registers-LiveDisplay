@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<title>DRAMTMG11_SHADOW (DDRC) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddrc.html")>DDRC Module</a> &gt; DRAMTMG11_SHADOW (DDRC) Register</p><h1>DRAMTMG11_SHADOW (DDRC) Register</h1>
+<h2>DRAMTMG11_SHADOW (DDRC) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>DRAMTMG11_SHADOW</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000212C</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD07212C (DDRC)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x440C021C</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>SDRAM Timing Shadow Register 11</td></tr>
+</table>
+<p>This register is quasi-dynamic group 2 and group 4. Group 2 registers can be written in self-refresh, deep power-down, and maximum power saving modes. Group 4 registers can be written depending on MSTR.frequency_mode.</p>
+<h2>DRAMTMG11_SHADOW (DDRC) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>post_mpsm_gap_x32</td><td class="center">30:24</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x44</td><td>DDR4: tXMPDLL:<br/>This is the minimum Exit MPSM to commands requiring a locked DLL.<br/>Program this to (tXMPDLL/2) and round it up to the next integer value.<br/>Unit: Multiples of 32 clocks.</td></tr>
+<tr valign=top><td>t_mpx_lh</td><td class="center">20:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0xC</td><td>DDR4: tMPX_LH:<br/>This is the minimum CS_n Low hold time to CKE rising edge.<br/>Program this to RoundUp(tMPX_LH/2)+1.<br/>Unit: clocks.</td></tr>
+<tr valign=top><td>t_mpx_s</td><td class="center"> 9:8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x2</td><td>DDR4: tMPX_S:<br/>Minimum time CS setup time to CKE.<br/>Program this to (tMPX_S/2) and round it up to the next integer value.<br/>Unit: Clocks.</td></tr>
+<tr valign=top><td>t_ckmpe</td><td class="center"> 4:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1C</td><td>DDR4: tCKMPE: Minimum valid clock requirement after MPSM entry.<br/>Unit: Clocks.<br/>Divide the value calculated using the above equation by 2, and round it up to next integer.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

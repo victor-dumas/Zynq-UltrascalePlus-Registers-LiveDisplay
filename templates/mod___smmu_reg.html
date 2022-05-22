@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<title>SMMU_REG Module</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> > SMMU_REG Module</p><h1>SMMU_REG Module</h1>
+<h2>SMMU_REG Module Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Module Name</th><td width=80% class=noborder>System Memory Management Unit Configuration and event registers (SMMU_REG)</td></tr>
+<tr valign=top><th width=20% class=sumparam>Modules of this Type</th><td width=80% class=noborder>SMMU_REG</td></tr>
+<tr valign=top><th class=sumparam>Base Address</th><td class=noborder>0x00FD5F0000 (SMMU_REG)</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>SMMU Configuration and Event Control</td></tr>
+</table>
+<h2>SMMU_REG Module Register Summary</h2>
+<table>
+<tr valign=top><th width=20%>Register Name</th><th width=10%>Address</th><th width=10%>Width</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=40%>Description</th></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("smmu_reg___misc_ctrl.html")>MISC_CTRL</a></td><td class="hex">0x0000000000</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>Controls for the register block.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("smmu_reg___isr_0.html")>ISR_0</a></td><td class="hex">0x0000000010</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>Interrupt Status Register. This is a sticky register that holds the value of the interrupt until cleared by a value of 1.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("smmu_reg___imr_0.html")>IMR_0</a></td><td class="hex">0x0000000014</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x8000001F</td><td>Interrupt Mask Register. This is a read-only location and can be atomically altered by either the IDR or the IER.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("smmu_reg___ier_0.html")>IER_0</a></td><td class="hex">0x0000000018</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>Interrupt Enable Register. A write of 1 to this location will unmask the interrupt</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("smmu_reg___idr_0.html")>IDR_0</a></td><td class="hex">0x000000001C</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>Interrupt Disable Register. A write of 1 to this location will mask the interrupt</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("smmu_reg___qreqn.html")>QREQN</a></td><td class="hex">0x0000000040</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00007FFF</td><td>Low Power Signals for TBU</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("smmu_reg___misc.html")>MISC</a></td><td class="hex">0x0000000054</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000016</td><td>Miscellaneous signals</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("smmu_reg___config_signals.html")>CONFIG_SIGNALS</a></td><td class="hex">0x0000000058</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>Miscellaneous signals</td></tr>
+</table>
+<p id=foot class=footer></p>
+</body>
+</html>

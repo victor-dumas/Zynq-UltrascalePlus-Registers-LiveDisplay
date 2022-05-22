@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<title>DBALO (ETR) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___etr.html")>ETR Module</a> &gt; DBALO (ETR) Register</p><h1>DBALO (ETR) Register</h1>
+<h2>DBALO (ETR) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>DBALO</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000118</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FE970118 (CORESIGHT_SOC_ETR)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>This register, together with the DBAHI register, enables the TMC to locate the trace buffer in system memory. This register contains the 32 LSBits of the 40-bit address that is used to locate the trace buffer. Modifying this register other than when in Disabled state (TMCReady=1 and TraceCaptEn=0) results in Unpredictable behavior.If the ScatterGatherMode bit is '0' in the AXICTL register, 0x110, the content of this register is the base address of the trace buffer in system memory. If the ScatterGatherMode bit is '1' in the AXICTL register, 0x110, the content of this register is the address of first page table entry in the linked list.</td></tr>
+</table>
+<p></p>
+<h2>DBALO (ETR) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>BUFADDRLO</td><td class="center">31:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Holds the lower 32 bits of the 40-bit address used to locate the trace buffer in system memory</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

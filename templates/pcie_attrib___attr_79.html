@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<title>ATTR_79 (PCIE_ATTRIB) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___pcie_attrib.html")>PCIE_ATTRIB Module</a> &gt; ATTR_79 (PCIE_ATTRIB) Register</p><h1>ATTR_79 (PCIE_ATTRIB) Register</h1>
+<h2>ATTR_79 (PCIE_ATTRIB) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>ATTR_79</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000013C</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD48013C (PCIE_ATTRIB)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>ATTR_79</td></tr>
+</table>
+<p>This register should only be written to during reset of the PCIe block</p>
+<h2>ATTR_79 (PCIE_ATTRIB) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>attr_slot_cap_no_cmd_completed_support</td><td class="center">13</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>No Command Completed Support. When TRUE, indicates that Slot doesn't issue SW notification when HotPlug Controller completes command.<br/>Transferred to the Slot Capabilities register.; EP=0x0000; RP=0x0000</td></tr>
+<tr valign=top><td>attr_slot_cap_mrl_sensor_present</td><td class="center">12</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>MRL Sensor Present.<br/>When TRUE, indicates that a MRL (Manually-operated Retention Latch) sensor is implemented on the chassis for this slot.<br/>Transferred to the Slot Capabilities register.; EP=0x0000; RP=0x0000</td></tr>
+<tr valign=top><td>attr_slot_cap_hotplug_surprise</td><td class="center">11</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Hot-Plug Surprise.<br/>When TRUE, indicates that a device present in this slot might be removed from the system without any prior notification.<br/>Transferred to the Slot Capabilities register.; EP=0x0000; RP=0x0000</td></tr>
+<tr valign=top><td>attr_slot_cap_hotplug_capable</td><td class="center">10</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Hot-Plug Capable.<br/>When TRUE, indicates that this slot is capable of supporting Hot-Plug operations.<br/>Transferred to the Slot Capabilities register.; EP=0x0000; RP=0x0000</td></tr>
+<tr valign=top><td>attr_slot_cap_elec_interlock_present</td><td class="center"> 9</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Electromechanical Interlock Present. When TRUE, indicates that an Electromechanical Interlock is implemented on the chassis for this slot.<br/>Transferred to the Slot Capabilities register.; EP=0x0000; RP=0x0000</td></tr>
+<tr valign=top><td>attr_slot_cap_att_indicator_present</td><td class="center"> 8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Attention Indicator Present.<br/>When TRUE, indicates that an Attention Indicator is implemented on the chassis for this slot.<br/>Transferred to the Slot Capabilities register.; EP=0x0000; RP=0x0000</td></tr>
+<tr valign=top><td>attr_slot_cap_att_button_present</td><td class="center"> 7</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Attention Button Present.<br/>When TRUE, indicates that an Attention Button is implemented on the chassis for this slot.<br/>Transferred to the Slot Capabilities register.; EP=0x0000; RP=0x0000</td></tr>
+<tr valign=top><td>attr_root_cap_crs_sw_visibility</td><td class="center"> 5</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>CRS SW Visibility. Indicates RC can return CRS to SW.<br/>Transferred to the Root Capabilities register.; EP=0x0000; RP=0x0000</td></tr>
+<tr valign=top><td>attr_rbar_cap_control_encodedbar5</td><td class="center"> 4:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Initial value for the 6th RBAR Control "BAR Size" field (if any). Encoding is 0=1MB, 1=2MB,2=4MB,etc. This value must correspond to the size requested in the attribute BARx (where x is the value of RBAR_CAP_INDEX5). For instance, if RBAR_CAP_INDEX5=3, and BAR3 requests a 16MB aperture, then this attribute must be set to 4 (meaning 16MB).; EP=0x0000; RP=0x0000</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

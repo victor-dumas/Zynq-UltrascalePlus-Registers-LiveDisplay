@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<title>DBGBCR4_EL1 (A53_DBG_0) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___a53_dbg_0.html")>A53_DBG_0 Module</a> &gt; DBGBCR4_EL1 (A53_DBG_0) Register</p><h1>DBGBCR4_EL1 (A53_DBG_0) Register</h1>
+<h2>DBGBCR4_EL1 (A53_DBG_0) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>DBGBCR4_EL1</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000448</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FEC10448 (CORESIGHT_A53_DBG_0)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Debug Breakpoint Control Registers</td></tr>
+</table>
+<p></p>
+<h2>DBGBCR4_EL1 (A53_DBG_0) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>BT</td><td class="center">23:20</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>Breakpoint Type. Possible values are:The field breaks down as follows:BT[3:1]: Base type.000Match address. DBGBVR&lt;n>_EL1 is the address of an instruction.010Mismatch address. Behaves as type 0b000 if in an AArch64 translation, or if halting debug-mode is enabled and halting is allowed. Otherwise, DBGBVR&lt;n>_EL1 is the address of an instruction to be stepped.001Match context ID. DBGBVR&lt;n>_EL1[31:0] is a context ID.100Match VMID. DBGBVR&lt;n>_EL1[39:32] is a VMID.101Match VMID and context ID. DBGBVR&lt;n>_EL1[31:0] is a context ID, and DBGBVR&lt;n>_EL1[39:32] is a VMID.BT[0]: Enable linking.If the breakpoint is not context-aware, BT[3] and BT[1] are RES0. If EL2 is not implemented, BT[3] is RES0. If EL1 using AArch32 is not implemented, BT[2] is RES0.The values 011x and 11xx are reserved, but must behave as if the breakpoint is disabled. Software must not rely on this property as the behavior of reserved values might change in a future revision of the architecture.</td></tr>
+<tr valign=top><td>LBN</td><td class="center">19:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>Linked breakpoint number. For Linked address matching breakpoints, this specifies the index of the Context-matching breakpoint linked to.</td></tr>
+<tr valign=top><td>SSC</td><td class="center">15:14</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>Security state control. Determines the security states under which a breakpoint debug event for breakpoint n is generated. This field must be interpreted along with the HMC and PMC fields.</td></tr>
+<tr valign=top><td>HMC</td><td class="center">13</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>Higher mode control. Determines the debug perspective for deciding when a breakpoint debug event for breakpoint n is generated. This field must be interpreted along with the SSC and PMC fields.</td></tr>
+<tr valign=top><td>BAS</td><td class="center"> 8:5</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>Byte address select. Defines which half-words an address-matching breakpoint matches, regardless of the instruction set and execution state. In an AArch64-only implementation, this field is reserved, RES1. Otherwise:BAS[2] and BAS[0] are read/write.BAS[3] and BAS[1] are read-only copies of BAS[2] and BAS[0] respectively.The values 0b0011 and 0b1100 are only supported if AArch32 is supported at any exception level.The permitted values depend on the breakpoint type.For Address match breakpoints in either AArch32 or AArch64 state:BASMatch instruction atConstraint for debuggers0b0011DBGBVR&lt;n>_EL1Use for T32 and T32EE instructions.0b1100DBGBVR&lt;n>_EL1+2Use for T32 and T32EE instructions.0b1111DBGBVR&lt;n>_EL1Use for A64 and A32 instructions.0b0000 is reserved and must behave as if the breakpoint is disabled or map to a permitted value.For Address mismatch breakpoints in an AArch32 stage 1 translation regime:BASStep instruction atConstraint for debuggers0b0000-Use for a match anywhere breakpoint.0b0011DBGBVR&lt;n>_EL1Use for stepping T32 and T32EE instructions.0b1100DBGBVR&lt;n>_EL1+2Use for stepping T32 and T32EE instructions.0b1111DBGBVR&lt;n>_EL1Use for stepping A64 and A32 instructions.For Context matching breakpoints, this field is RES1 and ignored.</td></tr>
+<tr valign=top><td>PMC</td><td class="center"> 2:1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>Privilege mode control. Determines the exception level or levels at which a breakpoint debug event for breakpoint n is generated. This field must be interpreted along with the SSC and HMC fields.</td></tr>
+<tr valign=top><td>E</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>Enable breakpoint DBGBVR&lt;n>_EL1. Possible values are:</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

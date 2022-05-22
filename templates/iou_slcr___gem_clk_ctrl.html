@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<title>GEM_CLK_CTRL (IOU_SLCR) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___iou_slcr.html")>IOU_SLCR Module</a> &gt; GEM_CLK_CTRL (IOU_SLCR) Register</p><h1>GEM_CLK_CTRL (IOU_SLCR) Register</h1>
+<h2>GEM_CLK_CTRL (IOU_SLCR) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>GEM_CLK_CTRL</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000308</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF180308 (IOU_SLCR)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>GEM I/O Clock Control</td></tr>
+</table>
+<p></p>
+<h2>GEM_CLK_CTRL (IOU_SLCR) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:23</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Writes are ignored, read data is zero.</td></tr>
+<tr valign=top><td>TSU_CLK_LB_SEL</td><td class="center">22</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Selection of TSU Interface clock<br/>0: TSU clock from the PS<br/>1: TSU clock loop backed from the PL</td></tr>
+<tr valign=top><td>TSU_CLK_SEL</td><td class="center">21:20</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Selection of TSU clock source. TSU clock is common for all the GEMs<br/>00: TSU clock from PLL<br/>10: TSU clock from PLL<br/>01: reserved<br/>11: TSU clock from MIO[50] or MIO[51]</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">19</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Writes are ignored, read data is zero.</td></tr>
+<tr valign=top><td>GEM3_FIFO_CLK_SEL</td><td class="center">18</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Selection of FIFO Interface clock<br/>0: Tx clock from the PS<br/>1: Tx clock loop backed from the PL</td></tr>
+<tr valign=top><td>GEM3_SGMII_MODE</td><td class="center">17</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Selection of SGMII or Non SGMII mode<br/>0: Non-SGMII mode.<br/>1: SGMII (clock is from GTR SerDes)<br/>Note<br/>: Irrespective of what Bit 0 is set to, when Bit 2 is selected as SGMII the RX clock is always driven by an internal GT source and so is the reference clock.</td></tr>
+<tr valign=top><td>GEM3_REF_SRC_SEL</td><td class="center">16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>PLL or PHY source selection for gem3_ref_clk generation<br/>0: PLL Reference clock<br/>1: EMIO PLL clock or GTX Clock</td></tr>
+<tr valign=top><td>GEM3_RX_SRC_SEL</td><td class="center">15</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Select source for GEM3_RX_CLK:<br/>0: MIO clock<br/>1: EMIO clock</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">14</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Writes are ignored, read data is zero.</td></tr>
+<tr valign=top><td>GEM2_FIFO_CLK_SEL</td><td class="center">13</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Selection of FIFO Interface clock<br/>0: Tx clock from the PS<br/>1: Tx clock loop backed from the PL</td></tr>
+<tr valign=top><td>GEM2_SGMII_MODE</td><td class="center">12</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Selection of SGMII or Non SGMII mode<br/>0: Non-SGMII mode.<br/>1: SGMII (clock is from GTR SerDes)<br/>Note:<br/>Irrespective of what Bit 0 is set to, when Bit 2 is selected as SGMII the RX clock is always driven by an internal GT source and so is the reference clock.</td></tr>
+<tr valign=top><td>GEM2_REF_SRC_SEL</td><td class="center">11</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>PLL or PHY source selection for GEMn_REF_CLK generation<br/>0: PLL Reference clock<br/>1: EMIO PLL clock or GTX Clock</td></tr>
+<tr valign=top><td>GEM2_RX_SRC_SEL</td><td class="center">10</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Select source for GEMn_RX_CLK:<br/>0: MIO clock<br/>1: EMIO clock</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 9</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Writes are ignored, read data is zero.</td></tr>
+<tr valign=top><td>GEM1_FIFO_CLK_SEL</td><td class="center"> 8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Selection of FIFO Interface clock<br/>0: Tx clock from the PS<br/>1: Tx clock loop backed from the PL</td></tr>
+<tr valign=top><td>GEM1_SGMII_MODE</td><td class="center"> 7</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Selection of SGMII or Non SGMII mode<br/>0: Non-SGMII mode.<br/>1: SGMII (clock is from GTR SerDes)<br/>Note<br/>: Irrespective of what Bit 0 is set to, when Bit 2 is selected as SGMII the RX clock is always driven by an internal GT source and so is the reference clock.</td></tr>
+<tr valign=top><td>GEM1_REF_SRC_SEL</td><td class="center"> 6</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Select source for GEMn_RX_CLK:<br/>0:<br/>PLL Reference clock from Internal(PS) PLL<br/>1: Reference/TX clock from EMIO or GTR Clock (route using [GEM0_RX_SRC_SEL]).<br/>Valid when:<br/>* [GEM0_SGMII_MODE] = 0 (non-SGMII).</td></tr>
+<tr valign=top><td>GEM1_RX_SRC_SEL</td><td class="center"> 5</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Select external source for GEMn_RX_CLK:<br/>0: MIO clock (route using MIO_PIN_xx registers).<br/>1: EMIO clock.<br/>Valid when:<br/>* [GEM0_SGMII_MODE] = 0 (non-SGMII).<br/>* [GEM0_REF_SRC_SEL] = 1.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 4</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Writes are ignored, read data is zero.</td></tr>
+<tr valign=top><td>GEM0_FIFO_CLK_SEL</td><td class="center"> 3</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Selection of FIFO Interface clock<br/>0: Tx clock from the PS<br/>1: Tx clock loop backed from the PL</td></tr>
+<tr valign=top><td>GEM0_SGMII_MODE</td><td class="center"> 2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Selection of SGMII or Non SGMII mode<br/>0: Non-SGMII mode.<br/>1: SGMII (clock is from GTR SerDes)<br/>Note<br/>: Irrespective of what Bit 0 is set to, when Bit 2 is selected as SGMII the RX clock is always driven by an internal GT source and so is the reference clock.</td></tr>
+<tr valign=top><td>GEM0_REF_SRC_SEL</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Select source for GEMn_RX_CLK:<br/>0:<br/>PLL Reference clock from Internal(PS) PLL<br/>1: Reference/TX clock from EMIO or GTR Clock (route using [GEM0_RX_SRC_SEL]).<br/>Valid when:<br/>* [GEM0_SGMII_MODE] = 0 (non-SGMII).</td></tr>
+<tr valign=top><td>GEM0_RX_SRC_SEL</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Select external source for GEMn_RX_CLK:<br/>0: MIO clock (route using MIO_PIN_xx registers).<br/>1: EMIO clock.<br/>Valid when:<br/>* [GEM0_SGMII_MODE] = 0 (non-SGMII).<br/>* [GEM0_REF_SRC_SEL] = 1.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<title>SD_CONFIG_REG1 (IOU_SLCR) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___iou_slcr.html")>IOU_SLCR Module</a> &gt; SD_CONFIG_REG1 (IOU_SLCR) Register</p><h1>SD_CONFIG_REG1 (IOU_SLCR) Register</h1>
+<h2>SD_CONFIG_REG1 (IOU_SLCR) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>SD_CONFIG_REG1</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000031C</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF18031C (IOU_SLCR)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x32403240</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>SD Configuration, Reg 1.</td></tr>
+</table>
+<p></p>
+<h2>SD_CONFIG_REG1 (IOU_SLCR) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Writes are ignored, read data is zero.</td></tr>
+<tr valign=top><td>SD1_BASECLK</td><td class="center">30:23</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x64</td><td>Base Clock Frequency for SD Clock. This is the frequency of the xin_clk. This field is primarily used for defining the input base clock frequency value to the DLL lookup table.<br/>The DLL Lookup table ( from RTL) requires a precise value to be programmed</td></tr>
+<tr valign=top><td>SD1_TUNIGCOUNT</td><td class="center">22:17</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x20</td><td>Configures the Number of Taps (Phases) of the rxclk_in that is supported.</td></tr>
+<tr valign=top><td>SD1_ASYNCWKPENA</td><td class="center">16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Determines the Wakeup Signal Generation Mode.<br/>0: Synchronous Wakeup Mode: The xin_clk has to be running for this mode. The Card Insertion/ Removal/Interrupt events are detected synchronously on the xin_clk and the Wakeup Event is generated. The Assertion and deassertion of the<br/>wakeup Event signal synchronous to xin_clk.<br/>1: Asyncrhonous Wakeup Mode: The xin_clk and the host_clk can be stopped in this mode and the Wake up Event is asynchronously generated based on the Card Insertion/Removal/Interrupt Events. The Assertion and deassertion of the wakeup Event signal is asynchronous.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">15</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Writes are ignored, read data is zero.</td></tr>
+<tr valign=top><td>SD0_BASECLK</td><td class="center">14:7</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x64</td><td>Base Clock Frequency for SD Clock. This is the frequency of the xin_clk. This field is primarily used for defining the input base clock frequency value to the DLL lookup table.<br/>The DLL Lookup table ( from RTL) requires a precise value to be programmed so that it chooses appropriate divisor. The valid range of values for this field is 50 or 100 or 200 any other value other than this will not result in a proper look up of the DLL to choose the divisor value appropriately.</td></tr>
+<tr valign=top><td>SD0_TUNIGCOUNT</td><td class="center"> 6:1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x20</td><td>Configures the Number of Taps (Phases) of the rxclk_in that is supported for auto tuning mode</td></tr>
+<tr valign=top><td>SD0_ASYNCWKPENA</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Select the Wakeup Signal Generation Mode.<br/>0: Synchronous Wakeup Mode: The xin_clk has to be running for this mode. The Card Insertion/Removal/Interrupt events are detected synchronously on the xin_clk and the Wakeup Event is generated. The Assertion and deassertion of the<br/>wakeup Event signal synchronous to xin_clk.<br/>1: Asyncrhonous Wakeup Mode: The xin_clk and the host_clk can be stopped in this mode and the Wake up Event is asynchronously generated based on the Card Insertion/Removal/Interrupt Events. The Assertion and deassertion of the wakeup Event signal is asynchronous.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

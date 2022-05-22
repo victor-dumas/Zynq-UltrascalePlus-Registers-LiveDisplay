@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<title>TCMTR (R5_DBG_1) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___r5_dbg_1.html")>R5_DBG_1 Module</a> &gt; TCMTR (R5_DBG_1) Register</p><h1>TCMTR (R5_DBG_1) Register</h1>
+<h2>TCMTR (R5_DBG_1) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>TCMTR</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000D08</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FEBF2D08 (CORESIGHT_R5_DBG_1)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">ro<span class="tooltiptext">Read-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00010001</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>TCM Type Register</td></tr>
+</table>
+<p></p>
+<h2>TCMTR (R5_DBG_1) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>format</td><td class="center">31:29</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Always 0, indicating v6 format TCMTR.</td></tr>
+<tr valign=top><td>BTCM</td><td class="center">18:16</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>Specifies the number of BTCMs implemented. This is always set to 001 because the processor has one BTCM.</td></tr>
+<tr valign=top><td>ATCM</td><td class="center"> 2:0</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>Specifies the number of ATCMs implemented. Always set to 001. The processor has one ATCM</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

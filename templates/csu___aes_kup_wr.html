@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<title>aes_kup_wr (CSU) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___csu.html")>CSU Module</a> &gt; aes_kup_wr (CSU) Register</p><h1>aes_kup_wr (CSU) Register</h1>
+<h2>aes_kup_wr (CSU) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>aes_kup_wr</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000101C</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FFCA101C (CSU)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>AES KUP Write Control</td></tr>
+</table>
+<p></p>
+<h2>aes_kup_wr (CSU) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>iv_write</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>When this bit is set the IV register will be written with the output of the AES. This bit can be combined with the KUP_WRITE to write the KUP and IV at the same time. The data format is {KUP0:KUP7,IV0:IV3}. All registers must be written before the key/iv will be updated.</td></tr>
+<tr valign=top><td>kup_write</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>When this bit is set, the output of the AES will be written into the KUP. This bit can be combined with the IV_WRITE to write the KUP and IV at the same time. All 12 registers must be written to in order to correctly set the KUP and IV values. The data must be loaded {KUP0:KUP7,IV0:IV3}</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

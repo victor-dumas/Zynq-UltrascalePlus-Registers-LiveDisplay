@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<title>AUD_PATTERN_SELECT1 (DP) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___dp.html")>DP Module</a> &gt; AUD_PATTERN_SELECT1 (DP) Register</p><h1>AUD_PATTERN_SELECT1 (DP) Register</h1>
+<h2>AUD_PATTERN_SELECT1 (DP) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>AUD_PATTERN_SELECT1</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000B104</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD4AB104 (DP)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>AUD_CH1_PAT_SELECT</td></tr>
+</table>
+<p></p>
+<h2>AUD_PATTERN_SELECT1 (DP) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:2</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>PATTERN</td><td class="center"> 1:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Audio pattern generated on ch1. This bit is valid only when 0xB070 is selected for internal pattern generator (Bits 5:4 =2].<br/>00b: Ping pattern. Alternate silence and sine for 250ms<br/>01b: Sine pattern (2kHz when audio frequency = 48kHz. For 44.1kHz, frequency is almost = 2kHz)<br/>10b: Silence</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<title>DRAMTMG9_SHADOW (DDRC) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddrc.html")>DDRC Module</a> &gt; DRAMTMG9_SHADOW (DDRC) Register</p><h1>DRAMTMG9_SHADOW (DDRC) Register</h1>
+<h2>DRAMTMG9_SHADOW (DDRC) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>DRAMTMG9_SHADOW</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000002124</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD072124 (DDRC)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x0004040D</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>SDRAM Timing Shadow Register 9</td></tr>
+</table>
+<p>All register fields are quasi-dynamic group 2 and group 4, unless described otherwise in the register field description. Group 2 registers can be written in self-refresh, deep power-down, and maximum power saving modes. Group 4 registers can be written depending on MSTR.frequency_mode.</p>
+<h2>DRAMTMG9_SHADOW (DDRC) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>ddr4_wr_preamble</td><td class="center">30</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>DDR4 Write preamble mode<br/>- 0: 1tCK preamble<br/>- 1: 2tCK preamble</td></tr>
+<tr valign=top><td>t_ccd_s</td><td class="center">18:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x4</td><td>DDR4: tCCD_S: This is the minimum time between two reads or two writes for different bank group. For bank switching (from bank 'a' to bank 'b'), the minimum time is this value + 1.<br/>Program this to (tCCD_S/2) and round it up to the next integer value.<br/>Unit: clocks.</td></tr>
+<tr valign=top><td>t_rrd_s</td><td class="center">11:8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x4</td><td>DDR4: tRRD_S: Minimum time between activates from bank 'a' to bank 'b' for different bank group.<br/>Program this to (tRRD_S/2) and round it up to the next integer value.<br/>Unit: Clocks.</td></tr>
+<tr valign=top><td>wr2rd_s</td><td class="center"> 5:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0xD</td><td>DDR4: CWL + PL + BL/2 + tWTR_S<br/>Minimum time from write command to read command for different bank group. Includes time for bus turnaround, recovery times, and all per-bank, per-rank, and global constraints.<br/>Unit: Clocks.<br/>Where:<br/>- CWL = CAS write latency<br/>- PL = Parity latency<br/>- BL = burst length. This must match the value programmed in the BL bit of the mode register to the SDRAM<br/>- tWTR_S = internal write to read command delay for different bank group. This comes directly from the SDRAM specification.<br/>Divide the value calculated using the above equation by 2, and round it up to next integer.<br/>Programming Mode: Quasi-dynamic Group 1, Group 2, and Group 4</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

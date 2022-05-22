@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<title>Status_reg0 (I2C) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___i2c.html")>I2C Module</a> &gt; Status_reg0 (I2C) Register</p><h1>Status_reg0 (I2C) Register</h1>
+<h2>Status_reg0 (I2C) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>Status_reg0</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000004</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF020004 (I2C0)<br/>0x00FF030004 (I2C1)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>16</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">ro<span class="tooltiptext">Read-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Status register</td></tr>
+</table>
+<p></p>
+<h2>Status_reg0 (I2C) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">15:9</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved, read as zero, ignored on write.</td></tr>
+<tr valign=top><td>BA</td><td class="center"> 8</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Bus Active<br/>1 - ongoing transfer on the I2C bus.</td></tr>
+<tr valign=top><td>RXOVF</td><td class="center"> 7</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Receiver Overflow<br/>1 - This bit is set whenever FIFO is full and a new byte is received. The new byte is not acknowledged and contents of the FIFO remains unchanged.</td></tr>
+<tr valign=top><td>TXDV</td><td class="center"> 6</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Transmit Data Valid - SW should not use this to determine data completion, it is the RAW value on the interface.<br/>Please use COMP in the ISR.<br/>1 - still a byte of data to be transmitted by the interface.</td></tr>
+<tr valign=top><td>RXDV</td><td class="center"> 5</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Receiver Data Valid<br/>1 -valid, new data to be read from the interface.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 4</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved, read as zero, ignored on write.</td></tr>
+<tr valign=top><td>RXRW</td><td class="center"> 3</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>RX read_write<br/>1 - mode of the transmission received from a master.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 2:0</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved, read as zero, ignored on write.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

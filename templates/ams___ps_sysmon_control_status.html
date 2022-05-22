@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<title>PS_SYSMON_CONTROL_STATUS (AMS) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ams.html")>AMS Module</a> &gt; PS_SYSMON_CONTROL_STATUS (AMS) Register</p><h1>PS_SYSMON_CONTROL_STATUS (AMS) Register</h1>
+<h2>PS_SYSMON_CONTROL_STATUS (AMS) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>PS_SYSMON_CONTROL_STATUS</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000040</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FFA50040 (AMS_CTRL)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>PS SysMon Unit Control and Status</td></tr>
+</table>
+<p></p>
+<h2>PS_SYSMON_CONTROL_STATUS (AMS) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:28</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>startup_state</td><td class="center">27:24</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Reserved.<br/>State of the Configuration sequence, refer to the [startup_trigger] bit for more information.<br/>0: Pre-trim settle.<br/>1: Wait.<br/>2: Memory cell reset.<br/>3: Wait for eFuse readout and oscillator to settle.<br/>4: Pre-configuration wait.<br/>5: Memory cell initialization.<br/>6: Post-configuration wait.<br/>7: Wait for MON_STAT.jtag_locked = 0.<br/>8: Idle (PS SysMon is Ready)<br/>9: reserved<br/>10: Prepare for scan mode<br/>11: Scan mode sequence<br/>Others: reserved</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">23:17</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>startup_done</td><td class="center">16</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Reserved.<br/>Global config sequence completed, refer to the [startup_trigger] bit for more information.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">15:4</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>auto_convst</td><td class="center"> 3</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Enable a sequence of measurements.<br/>0: One conversion (EOC).<br/>1: Sequence of conversions (EOS).<br/>When enabled, the PS SysMon unit will loop through once and set EOS if averaging is off. If averaging is on, the PS SysMon unit will loop through the number times defined for averaging.</td></tr>
+<tr valign=top><td>convst</td><td class="center"> 2</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Trigger start-of-conversion. Write-only.<br/>0: no effect.<br/>1: trigger conversion.<br/>This bit self-clears.<br/>This mechanism is similar to the event trigger in the PL SysMon unit.</td></tr>
+<tr valign=top><td>reset_user</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Reset for the PS SysMon.<br/>0: no reset.<br/>1: reset asserted.<br/>Write a 1 than a 0 to reset and release the PS system monitor.</td></tr>
+<tr valign=top><td>startup_trigger</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Trigger PS Sysmon configuration sequence, if needed for test/debug.<br/>READ:<br/>0: done.<br/>1: in-process.<br/>WRITE:<br/>0: no effect.<br/>1: initiate the configuration sequence.<br/>When the process is done, the hardware clears this bit to 0.<br/>Note: this is similar to the automatic configuration routine run in the PL SysMon after a power-up cycle.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

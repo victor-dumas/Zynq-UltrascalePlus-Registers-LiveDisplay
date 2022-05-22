@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<title>PGCR7 (DDR_PHY) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddr_phy.html")>DDR_PHY Module</a> &gt; PGCR7 (DDR_PHY) Register</p><h1>PGCR7 (DDR_PHY) Register</h1>
+<h2>PGCR7 (DDR_PHY) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>PGCR7</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000002C</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD08002C (DDR_PHY)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>PHY General Configuration Register 7</td></tr>
+</table>
+<p></p>
+<h2>PGCR7 (DDR_PHY) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:8</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Return zeroes on reads.</td></tr>
+<tr valign=top><td>ACRSVD_7_6</td><td class="center"> 7:6</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>These bits are reserved for future AC special PHY modes but the<br/>registers are already connected to existing (unused) AC phy_mode<br/>bits.</td></tr>
+<tr valign=top><td>ACCALCLK</td><td class="center"> 5</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>AC Calibration Clock Select: Valid values are:<br/>1b0 = ddr_clk (x4 clock) is used for delay line calibration<br/>1b1 = ctl_clk (x1 clock) is used for delay line calibration</td></tr>
+<tr valign=top><td>ACRCLKMD</td><td class="center"> 4</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>AC read Clock Mode: Valid values are:<br/>1b0 = Read clock (ctl_rd_clk) is generated from AC ctl_rd_clk pin<br/>1b1 = Read clock (ctl_rd_clk) is generated from AC ctl_clk pin</td></tr>
+<tr valign=top><td>ACDLDT</td><td class="center"> 3</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>AC DDL Load Type: Specifies how the delay select signal is applied to<br/>the AC delay lines. This is only applicable to DDLs that have their<br/>delay select signals pipelined, such address/command LCDL<br/>1b0 = Apply the delay select signal to the delay line only when the<br/>delay select load signal is active and by first loading the delay select<br/>into the pipeline register<br/>1b1 = Apply the delay select signal to the delay line directly, bypassing<br/>any pipeline registers and ignoring the delay select load signal</td></tr>
+<tr valign=top><td>ACRSVD_2</td><td class="center"> 2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>This bit is reserved for future AC special PHY modes but the register is<br/>already connected to existing (unused) AC phy_mode bits.</td></tr>
+<tr valign=top><td>ACDTOSEL</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>AC Digital Test Output Select: This is used to select the AC internal<br/>signals that should be driven on the two AC digital test outputs<br/>(phy_status[1:0]) signals.<br/>Valid values for AC digital test output bit 0 (phy_status[0]) are:<br/>1b0 = Reserved<br/>1b1 = Controller delayed clock (after the LCDL delay) - ctl_dly_clk<br/>Valid values for digital test out bit 1[1] (phy_status[1]) are:<br/>1b0 =Reserved<br/>1b1 = DDR delayed clock (after the LCDL delay) -ddr_dly_clk</td></tr>
+<tr valign=top><td>ACTMODE</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>AC Test Mode: This is used to enable special test mode in the AC<br/>macro. Valid values are:<br/>1b0 = Normal mode<br/>1b1 = Test mode</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

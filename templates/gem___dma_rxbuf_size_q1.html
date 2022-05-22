@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<title>dma_rxbuf_size_q1 (GEM) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___gem.html")>GEM Module</a> &gt; dma_rxbuf_size_q1 (GEM) Register</p><h1>dma_rxbuf_size_q1 (GEM) Register</h1>
+<h2>dma_rxbuf_size_q1 (GEM) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>dma_rxbuf_size_q1</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x00000004A0</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF0B04A0 (GEM0)<br/>0x00FF0C04A0 (GEM1)<br/>0x00FF0D04A0 (GEM2)<br/>0x00FF0E04A0 (GEM3)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000002</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Receive Buffer Queue Size</td></tr>
+</table>
+<p></p>
+<h2>dma_rxbuf_size_q1 (GEM) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:8</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved, read as 0, ignored on write.</td></tr>
+<tr valign=top><td>dma_rx_q_buf_size</td><td class="center"> 7:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x2</td><td>DMA receive buffer size in system memory. The value defined by these bits determines the size of buffer to use in main system memory when writing received data. The value is defined in multiples of 64 bytes.0x01 corresponds to buffers of 64 bytes.0x02 corresponds to 128 bytes etc.For example:0x02: 128 byte0x18: 1536 byte (1*max length frame/buffer)0xA0: 10240 byte (1*10K jumbo frame/buffer)Note that this value should never be written as zero.Note. The reset value of this field is equal to the<br/>gem_rx_buffer_length_def define, which is user configurable.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

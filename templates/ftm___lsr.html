@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<title>LSR (FTM) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ftm.html")>FTM Module</a> &gt; LSR (FTM) Register</p><h1>LSR (FTM) Register</h1>
+<h2>LSR (FTM) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>LSR</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000FB4</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FE9D0FB4 (CORESIGHT_SOC_FTM)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder> 3</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">ro<span class="tooltiptext">Read-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000003</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Lock Status Register</td></tr>
+</table>
+<p></p>
+<h2>LSR (FTM) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>8BIT</td><td class="center"> 2</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Set to 0 since FTM implements a 32-bit lock access register</td></tr>
+<tr valign=top><td>STATUS</td><td class="center"> 1</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>Read behavior depends on PADDRDBG31 pin:<br/>- PADDRDBG31=0 (lower 2GB):<br/>When a lower 2GB address is used to read this register, this bit indicates whether FTM is in locked state<br/>(1= locked, 0= unlocked).<br/>- PADDRDBG31=1 (upper 2GB):<br/>always returns 0.</td></tr>
+<tr valign=top><td>IMP</td><td class="center"> 0</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>Read behavior depends on PADDRDBG31 pin:<br/>- PADDRDBG31=0 (lower 2GB):<br/>always returns 1, meaning lock mechanism are implemented.<br/>- PADDRDBG31=1 (upper 2GB):<br/>always returns 0, meaning lock mechanism is NOT implemented.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

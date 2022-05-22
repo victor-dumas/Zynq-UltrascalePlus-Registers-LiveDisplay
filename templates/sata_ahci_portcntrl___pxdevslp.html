@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<title>PxDEVSLP (SATA_AHCI_PORTCNTRL) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___sata_ahci_portcntrl.html")>SATA_AHCI_PORTCNTRL Module</a> &gt; PxDEVSLP (SATA_AHCI_PORTCNTRL) Register</p><h1>PxDEVSLP (SATA_AHCI_PORTCNTRL) Register</h1>
+<h2>PxDEVSLP (SATA_AHCI_PORTCNTRL) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>PxDEVSLP</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000044</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD0C0144 (SATA_AHCI_PORT0_CNTRL)<br/>0x00FD0C01C4 (SATA_AHCI_PORT1_CNTRL)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000002</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>PxDEVSLP - Port x Device Sleep</td></tr>
+</table>
+<p></p>
+<h2>PxDEVSLP (SATA_AHCI_PORTCNTRL) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:29</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>DM</td><td class="center">28:25</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>DITO Multiplier (DM): 0's based value that specifies the DITO multiplier that the HBA applies to the specified DITO value, effectively extending the range of DITO from 1ms to 16368ms. A value of 0h indicates a multiplier of 1. A maximum multiplier of 16 may be applied. The HBA computes the total idle timeout as a product of DM and DITO (i.e. DITOactual = DITO * (DM+1)).</td></tr>
+<tr valign=top><td>DITO</td><td class="center">24:15</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Device Sleep Idle Timeout (DITO): This field specifies the amount of the time (in approximate 1ms granularity) that the HBA shall wait before driving the DEVSLP signal. Refer to section 8.5.1.1.1 for details.<br/>Hardware reloads its port specific Device Sleep timer with this value each time the port transitions out of the DEVSLP state. For example: from DevSleep to active or PxDEVSLP.ADSE transitions from '0' to a '1'.<br/>If CAP2.SDS is cleared to '0' or CAP2.SADM is cleared to '0' or PxDEVSLP.DSP is cleared to '0' then these bits are read-only 0h and software shall treat these bits as reserved.<br/>If CAP2.SDS is set to '1' and CAP2.SADM is set to '1' and PxDEVSLP.DSP is set to '1' then these bits are read-write.<br/>Software shall only set this value when PxCMD.ST is cleared to '0' and PxDEVSLP.ADSE is cleared to '0'.</td></tr>
+<tr valign=top><td>MDAT</td><td class="center">14:10</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Minimum Device Sleep Assertion Time (MDAT): This field specifies the minimum amount of time (in 1ms granularity) that the HBA must assert the DEVSLP signal before it may be de-asserted. The nominal value is 10ms and the minimum is 1ms depending on device identification information.<br/>If CAP2.SDS is cleared to '0' or PxDEVSLP.DSP is cleared to '0' then these bits are read-only 0h and software shall treat these bits as reserved.<br/>If CAP2.SDS is set to '1' and PxDEVSLP.DSP is set to '1' then these bits are read-write.<br/>Software shall only set this value when PxCMD.ST is cleared to '0', PxDEVSLP.ADSE is cleared to '0', and prior to setting PxCMD.ICC to 8h.</td></tr>
+<tr valign=top><td>DETO</td><td class="center"> 9:2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Device Sleep Exit Timeout (DETO): This field specifies the maximum duration (in approximate 1ms granularity) from DEVSLP de-assertion until the device is ready to accept OOB. The nominal value is 20ms while the max value is 255ms depending on device identification information.<br/>If CAP2.SDS is cleared to '0' or PxDEVSLP.DSP is cleared to '0' then these bits are read-only 0h and software shall treat these bits as reserved.<br/>If CAP2.SDS is set to '1' and PxDEVSLP.DSP is set to '1' then these bits are read-write.<br/>Software shall only set this value when PxCMD.ST is cleared to '0', PxDEVSLP.ADSE is cleared to '0', and prior to setting PxCMD.ICC to 8h.</td></tr>
+<tr valign=top><td>DSP</td><td class="center"> 1</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>Device Sleep Present (DSP): If set to '1', the platform supports Device Sleep on this port. If cleared to '0', the platform does not support Device Sleep on this port. This bit may only be set to '1' if CAP2.SDS is set to '1'. DSP is mutually exclusive with the PxCMD.HPCP bit and PxCMD.ESP bit.</td></tr>
+<tr valign=top><td>ADSE</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Aggressive Device Sleep Enable (ADSE): When this bit is set to '1', the HBA shall assert the DEVSLP signal after the port has been idle (PxCI = 0h and PxSACT = 0h) for the amount of time specified by the PxDEVSLP.DITO register. When this bit is set to '1' and CAP2.DESO is set to '1', the HBA shall assert the DEVSLP signal after the port has been idle (PxCI = 0h and PxSACT = 0h) for the amount of time specified by PxDEVSLP.DITO and the interface is in Slumber (PxSSTS.IPM = 6h).When this bit is cleared to '0', the HBA does not enter DevSleep unless software directed via PxCMD.ICC. This bit shall only be set to '1' if PxDEVSLP.DSP is set to '1'.<br/>If CAP2.SDS is cleared to '0' or CAP2.SADM is cleared to '0' or if PxDEVSLP.DSP is cleared to '0', then these bits are read-only 0h and software shall treat these bits as reserved.<br/>If CAP2.SDS is set to '1' and CAP2.SADM is set to '1' and if PxDEVSLP.DSP is set to '1', then these bits are read-write.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

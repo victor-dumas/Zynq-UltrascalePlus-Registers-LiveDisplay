@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<title>ZQ1SR (DDR_PHY) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddr_phy.html")>DDR_PHY Module</a> &gt; ZQ1SR (DDR_PHY) Register</p><h1>ZQ1SR (DDR_PHY) Register</h1>
+<h2>ZQ1SR (DDR_PHY) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>ZQ1SR</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x00000006BC</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD0806BC (DDR_PHY)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">ro<span class="tooltiptext">Read-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>ZQ 1 Impedance Control Status Register</td></tr>
+</table>
+<p></p>
+<h2>ZQ1SR (DDR_PHY) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:14</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Return zeroes on reads.</td></tr>
+<tr valign=top><td>PD_ODT_SAT</td><td class="center">13</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Pulldown termination strength code saturated due to termination<br/>strength adjustment setting in ZQ1PR register. Will be zero only in<br/>DDR3 mode. If this is set to 1b1, the adjustment factor or ZPROG<br/>setting for the corresponding segment needs to be scaled.</td></tr>
+<tr valign=top><td>PU_ODT_SAT</td><td class="center">12</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Pullup termination strength code saturated due to termination<br/>strength adjustment setting in ZQ1PR register. Will be zero only in<br/>DDR3 mode. If this is set to 1b1, the adjustment factor or ZPROG<br/>setting for the corresponding segment needs to be scaled.</td></tr>
+<tr valign=top><td>PD_DRV_SAT</td><td class="center">11</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Pulldown drive strength code saturated due to drive strength<br/>adjustment setting in ZQ1PR register. Will be non-zero only in DDR4<br/>mode. If this is set to 1b1, the adjustment factor or ZPROG setting<br/>for the corresponding segment needs to be scaled.</td></tr>
+<tr valign=top><td>PU_DRV_SAT</td><td class="center">10</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Pullup drive strength code saturated due to drive strength<br/>adjustment setting in ZQ1PR register. Will be non-zero only in DDR4<br/>mode. If this is set to 1b1, the adjustment factor or ZPROG setting<br/>for the corresponding segment needs to be scaled.</td></tr>
+<tr valign=top><td>ZDONE</td><td class="center"> 9</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Impedance Calibration Done: Indicates that the first round of<br/>impedance calibration has completed. Any time impedance<br/>calibration is restarted (after a ZCAL bypass exit or ZCAL<br/>configuration register write), this bit goes back to '0' till all segments<br/>are re-calibrated, following which this bit returns to '1'.</td></tr>
+<tr valign=top><td>ZERR</td><td class="center"> 8</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Impedance Calibration Error: If set, indicates that there was an error<br/>during impedance calibration.</td></tr>
+<tr valign=top><td>OPU</td><td class="center"> 7:6</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>On-die termination (ODT) pull-up calibration status. Valid status<br/>encodings are:<br/>2b00 = Completed with no errors<br/>2b01 = Overflow error<br/>2b10 = Underflow error<br/>2b11 = Calibration in progress</td></tr>
+<tr valign=top><td>OPD</td><td class="center"> 5:4</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>On-die termination (ODT) pull-down calibration status. Valid status<br/>encodings are:<br/>2b00 = Completed with no errors<br/>2b01 = Overflow error<br/>2b10 = Underflow error<br/>2b11 = Calibration in progress</td></tr>
+<tr valign=top><td>ZPU</td><td class="center"> 3:2</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Output impedance pull-up calibration status. Valid status encodings<br/>are:<br/>2b00 = Completed with no errors<br/>2b01 = Overflow error<br/>2b10 = Underflow error<br/>2b11 = Calibration in progress</td></tr>
+<tr valign=top><td>ZPD</td><td class="center"> 1:0</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Output impedance pull-down calibration status. Valid status<br/>encodings are:<br/>2b00 = Completed with no errors<br/>2b01 = Overflow error<br/>2b10 = Underflow error<br/>2b11 = Calibration in progress</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<title>ZDMA_ERR_CTRL (ZDMA) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___zdma.html")>ZDMA Module</a> &gt; ZDMA_ERR_CTRL (ZDMA) Register</p><h1>ZDMA_ERR_CTRL (ZDMA) Register</h1>
+<h2>ZDMA_ERR_CTRL (ZDMA) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>ZDMA_ERR_CTRL</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000000</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FFA80000 (ADMA_CH0)<br/>0x00FFA90000 (ADMA_CH1)<br/>0x00FFAA0000 (ADMA_CH2)<br/>0x00FFAB0000 (ADMA_CH3)<br/>0x00FFAC0000 (ADMA_CH4)<br/>0x00FFAD0000 (ADMA_CH5)<br/>0x00FFAE0000 (ADMA_CH6)<br/>0x00FFAF0000 (ADMA_CH7)<br/>0x00FD500000 (GDMA_CH0)<br/>0x00FD510000 (GDMA_CH1)<br/>0x00FD520000 (GDMA_CH2)<br/>0x00FD530000 (GDMA_CH3)<br/>0x00FD540000 (GDMA_CH4)<br/>0x00FD550000 (GDMA_CH5)<br/>0x00FD560000 (GDMA_CH6)<br/>0x00FD570000 (GDMA_CH7)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000001</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Enable/Disable a error response</td></tr>
+</table>
+<p>By default, invalid address requests are ignored. However, a maskable interrupt exists. By enabling this slverr_enable invalid address requests cause a slverr to occur.</p>
+<h2>ZDMA_ERR_CTRL (ZDMA) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:1</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved for future use</td></tr>
+<tr valign=top><td>APB_ERR_RES</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>When an APB (register) access occurs to an unimplemented space (there is no register at that location), the resulting pslverr will be:<br/>0: pslverr = 0<br/>1: pslverr = 1<br/>There is also a maskable interrupt , "INV_APB_INT" that could be asserted, independent of what option is selected here.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

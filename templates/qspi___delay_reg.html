@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<title>Delay_REG (QSPI) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___qspi.html")>QSPI Module</a> &gt; Delay_REG (QSPI) Register</p><h1>Delay_REG (QSPI) Register</h1>
+<h2>Delay_REG (QSPI) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>Delay_REG</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000018</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF0F0018 (QSPI)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Timing Control Delay</td></tr>
+</table>
+<p>This register is only used in master mode to introduce relative delays into the generation of the master output signals. All timings are defined in cycles of the SPI _REF_CLK/ext_clk, defined in this table as SPI master ref clock. Note: Change this value only when controller is not communicating with the memory device.</p>
+<h2>Delay_REG (QSPI) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>d_nss</td><td class="center">31:24</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Delay in SPI_REF_CLK or ext_clk cycles for the length that the master mode chip select outputs are de-asserted between words when cpha=0.<br/></td></tr>
+<tr valign=top><td>d_btwn</td><td class="center">23:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Delay in SPI_REF_CLK or ext_clk cycles between one chip select being de-activated and the activation of another.<br/></td></tr>
+<tr valign=top><td>d_after</td><td class="center">15:8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Delay in SPI_REF_CLK or ext_clk cycles between last bit of current word and the first bit of the next word.<br/></td></tr>
+<tr valign=top><td>d_int</td><td class="center"> 7:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Added delay in SPI_REF_CLK or ext_clk cycles between setting n_ss_out low and first bit transfer.<br/></td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

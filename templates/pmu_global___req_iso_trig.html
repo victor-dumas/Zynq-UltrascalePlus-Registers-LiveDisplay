@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<title>REQ_ISO_TRIG (PMU_GLOBAL) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___pmu_global.html")>PMU_GLOBAL Module</a> &gt; REQ_ISO_TRIG (PMU_GLOBAL) Register</p><h1>REQ_ISO_TRIG (PMU_GLOBAL) Register</h1>
+<h2>REQ_ISO_TRIG (PMU_GLOBAL) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>REQ_ISO_TRIG</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000320</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FFD80320 (PMU_GLOBAL)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">wo<span class="tooltiptext">Write-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Isolation Request; Interrupt Trigger.</td></tr>
+</table>
+<p>Trigger an isolation request. 0: no effect. 1: trigger the request. Write-only. There are 3 isolation boundaries: FPD-PL signals. LPD-PL signals (except PCAP). PCAP-PL signals. (include PCAP). The REQ_ISO_STATUS register physically isolates the device sections. Physical isolation abruptly disconnects wires between the sections. The AIB units logically isolate AXI components. The AIB blocks new AXI transactions, but allows active and pending transactions to complete. Software must quiescent the system using the AIB units and other chip features before requesting physical Isolation.</p>
+<h2>REQ_ISO_TRIG (PMU_GLOBAL) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>FP_Locked</td><td class="center"> 4</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Isolate all signals between the FPD and LPD with the exception of the clock and reset signals. The PL Interface remains active.<br/>Note: If the FPD voltage node is not powered up when the PS_POR_B reset pin is released, then the FPD node is permanently locked out and this bit is set.<br/>To re-enable the FPD, a PS_POR_B reset is required with valid power on VCC_PSINTFP.</td></tr>
+<tr valign=top><td>PL_NonPCAP</td><td class="center"> 2</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Isolate PL signals between PL and PS (LPD and FPD) excluding the PCAP in LPD (to allow PS LPD access to PCAP).</td></tr>
+<tr valign=top><td>PL</td><td class="center"> 1</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Isolate PL signals between<br/>PL and PS (LPD and FPD) including PCAP in LPD.</td></tr>
+<tr valign=top><td>FP</td><td class="center"> 0</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Isolate all FPD signals between FPD and LPD and between FPD and PLPD.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

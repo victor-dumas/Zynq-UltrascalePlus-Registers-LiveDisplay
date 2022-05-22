@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<title>PWR_ACK_ERR_LPD (PMU_LOCAL) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___pmu_local.html")>PMU_LOCAL Module</a> &gt; PWR_ACK_ERR_LPD (PMU_LOCAL) Register</p><h1>PWR_ACK_ERR_LPD (PMU_LOCAL) Register</h1>
+<h2>PWR_ACK_ERR_LPD (PMU_LOCAL) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>PWR_ACK_ERR_LPD</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000340</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FFD60340 (PMU_LOCAL)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>PRDY Status Error for Power Islands in LPD. Reset only by POR.</td></tr>
+</table>
+<p>Used by the ROM code to log error status of each power chain within the LPD. If the PRDY is not received during the power-up or power-down of a chain, an error is logged in the corresponding bit within this register. This register is only reset by the POR Reset and maintains its state through a System Reset.</p>
+<h2>PWR_ACK_ERR_LPD (PMU_LOCAL) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>Ack_Error</td><td class="center">31:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>PRDY Status Error for all power control chains within LPD</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

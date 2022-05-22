@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<title>CRCPARCTL0 (DDRC) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddrc.html")>DDRC Module</a> &gt; CRCPARCTL0 (DDRC) Register</p><h1>CRCPARCTL0 (DDRC) Register</h1>
+<h2>CRCPARCTL0 (DDRC) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>CRCPARCTL0</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x00000000C0</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD0700C0 (DDRC)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00008000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>CRC Parity Control Register0</td></tr>
+</table>
+<p>All register fields are dynamic, unless described otherwise in the register field description. Dynamic registers can be written at any time during operation.</p>
+<h2>CRCPARCTL0 (DDRC) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>retry_ctrlupd_enable</td><td class="center">15</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>dfi_ctrlupd_req enable for retry.<br/>- 1: Enable to issue dfi_ctrlupd_req before starting retry sequence<br/>- 0: Disable to issue dfi_ctrlupd_req before starting retry sequence<br/>The DFI controller update can be used to reset PHY FIFO pointers.<br/>If both CRCPARCTL0.retry_cfrlupd_enable and CRCPARCTL1.alert_wait_for_sw are enabled, dfi_ctrlupd_req is issued just before software intervention time.<br/>If CRCPARCTL0.retry_cfrlupd_enable is enabled, dfi_ctrlupd_req will be issued regardless of DFIUPD0.dis_auto_ctrlupd.<br/>Programming Mode: Static</td></tr>
+<tr valign=top><td>dfi_alert_err_max_reached_int_clr</td><td class="center"> 8</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Interrupt clear bit for DFI alert counter saturation. If this bit is set, the alert error interrupt on CRCPARSTAT.dfi_alert_err_max_reached_int is cleared. When the clear operation is complete, the DDRC automatically clears this bit.</td></tr>
+<tr valign=top><td>dfi_alert_err_fatl_int_clr</td><td class="center"> 4</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Interrupt clear bit for dfi_alert_err_fatl_int. If this bit is set, the alert error interrupt on CRCPARSTAT.dfi_alert_err_fatl_int is cleared. When the clear operation is complete, the DDRC automatically clears this bit.</td></tr>
+<tr valign=top><td>dfi_alert_err_cnt_clr</td><td class="center"> 2</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>DFI alert error count clear. Clear bit for DFI alert error counter. Asserting this bit will clear the DFI alert error counter, CRCPARSTAT.dfi_alert_err_cnt. When the clear operation is complete, the DDRC automatically clears this bit.</td></tr>
+<tr valign=top><td>dfi_alert_err_int_clr</td><td class="center"> 1</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Interrupt clear bit for DFI alert error. If this bit is set, the alert error interrupt on CRCPARSTAT.dfi_alert_err_int will be cleared. When the clear operation is complete, the DDRC automatically clears this bit.</td></tr>
+<tr valign=top><td>dfi_alert_err_int_en</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Interrupt enable bit for DFI alert error. If this bit is set, any parity/CRC error detected on the dfi_alert_n input will result in an interrupt being set on CRCPARSTAT.dfi_alert_err_int.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

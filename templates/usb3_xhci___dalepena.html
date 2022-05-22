@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<title>DALEPENA (USB3_XHCI) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___usb3_xhci.html")>USB3_XHCI Module</a> &gt; DALEPENA (USB3_XHCI) Register</p><h1>DALEPENA (USB3_XHCI) Register</h1>
+<h2>DALEPENA (USB3_XHCI) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>DALEPENA</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000C720</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FE20C720 (USB3_0_XHCI)<br/>0x00FE30C720 (USB3_1_XHCI)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Device Active USB Endpoint Enable Register.<br/>This register indicates whether a USB endpoint is active in a given configuration or interface.</td></tr>
+</table>
+<p></p>
+<h2>DALEPENA (USB3_XHCI) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>USBACTEP</td><td class="center">31:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>USBACTEP<br/>USB Active Endpoints (USBActEP)<br/>This field indicates if a USB endpoint is active in the current configuration and interface. It applies to USB IN endpoints 0.15 and OUT endpoints 0.15, with one bit for each of the 32 possible endpoints. Even numbers are for USB OUT endpoints, and odd numbers are for USB IN endpoints, as follows:<br/>- Bit[0]: USB EP0-OUT<br/>- Bit[1]: USB EP0-IN<br/>- Bit[2]: USB EP1-OUT<br/>- Bit[3]: USB EP1-IN<br/>The entity programming this register must set bits 0 and 1 because they enable control endpoints that map to physical endpoints (resources) after USBReset.<br/>Hardware clears these bits for all endpoints (other than EP0-OUT and EP0-IN) after detecting a USB reset event. After receiving SetConfiguration and SetInterface requests, the application must program endpoint registers accordingly and set these bits.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

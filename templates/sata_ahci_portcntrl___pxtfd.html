@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<title>PxTFD (SATA_AHCI_PORTCNTRL) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___sata_ahci_portcntrl.html")>SATA_AHCI_PORTCNTRL Module</a> &gt; PxTFD (SATA_AHCI_PORTCNTRL) Register</p><h1>PxTFD (SATA_AHCI_PORTCNTRL) Register</h1>
+<h2>PxTFD (SATA_AHCI_PORTCNTRL) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>PxTFD</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000020</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD0C0120 (SATA_AHCI_PORT0_CNTRL)<br/>0x00FD0C01A0 (SATA_AHCI_PORT1_CNTRL)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">ro<span class="tooltiptext">Read-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x0000007F</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Port x Task File Data (PxTFD)</td></tr>
+</table>
+<p>This is a 32-bit register that copies specific fields of the task file when FISes are received. This is a 32-bit register that copies specific fields of the task file when FISes are received. The FISes that contain this information are: * D2H Register FIS * PIO Setup FIS * Set Device Bits FIS (BSY and DRQ are not updated with this FIS) Status (STS): Contains the latest copy of the task file status register. The HBA shall update the entire 8-bit field, not just the bits noted above.</p>
+<h2>PxTFD (SATA_AHCI_PORTCNTRL) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:16</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>ERR</td><td class="center">15:8</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Error (ERR): Contains the latest copy of the task file error register.</td></tr>
+<tr valign=top><td>STS_BSY</td><td class="center"> 7</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>STS.BSY: Indicates the interface is busy.</td></tr>
+<tr valign=top><td>STS_CS1</td><td class="center"> 6:4</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x7</td><td>STS.CS1: Command specific.</td></tr>
+<tr valign=top><td>STS_DRQ</td><td class="center"> 3</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>STS.DRQ: Indicates a data transfer is requested.</td></tr>
+<tr valign=top><td>STS_CS</td><td class="center"> 2:1</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x3</td><td>STS.CS: Command specific.</td></tr>
+<tr valign=top><td>STS_ERR</td><td class="center"> 0</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>STS.ERR: Indicates an error during the transfer.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

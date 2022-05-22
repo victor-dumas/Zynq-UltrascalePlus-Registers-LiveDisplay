@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<title>SYNCR (STM) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___stm.html")>STM Module</a> &gt; SYNCR (STM) Register</p><h1>SYNCR (STM) Register</h1>
+<h2>SYNCR (STM) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>SYNCR</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000E90</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FE9C0E90 (CORESIGHT_SOC_STM)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Interval Between Synchronization Packets.</td></tr>
+</table>
+<p>This register controls the interval between synchronization packets, in terms of the number of bytes of trace generated.This register only provides a hint of the desired synchronization frequency, implementations are permitted to be inaccurate. Writing a value of 0x00000000 to this register disables the synchronization counter however any other IMPLEMENTATION DEFINED synchronizations mechanism continue to operate independently.</p>
+<h2>SYNCR (STM) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>MODE</td><td class="center">12</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Mode control:<br/>0: N bytes.<br/>1: 2^N bytes.</td></tr>
+<tr valign=top><td>COUNT</td><td class="center">11:3</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Counter value for the number of bytes between synchronization packets. Reads return the value of this register.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

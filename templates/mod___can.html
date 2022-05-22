@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<title>CAN Module</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> > CAN Module</p><h1>CAN Module</h1>
+<h2>CAN Module Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Module Name</th><td width=80% class=noborder>CAN Module</td></tr>
+<tr valign=top><th width=20% class=sumparam>Modules of this Type</th><td width=80% class=noborder>CAN0, CAN1</td></tr>
+<tr valign=top><th class=sumparam>Base Address</th><td class=noborder>0x00FF060000 (CAN0)<br/>0x00FF070000 (CAN1)</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>CAN 0 Controller</td></tr>
+</table>
+<h2>CAN Module Register Summary</h2>
+<table>
+<tr valign=top><th width=20%>Register Name</th><th width=10%>Address</th><th width=10%>Width</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=40%>Description</th></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("can___srr.html")>SRR</a></td><td class="hex">0x0000000000</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>Software Reset and Enable</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("can___msr.html")>MSR</a></td><td class="hex">0x0000000004</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>Mode Select</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("can___brpr.html")>BRPR</a></td><td class="hex">0x0000000008</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>Baud Rate Prescaler</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("can___btr.html")>BTR</a></td><td class="hex">0x000000000C</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>Bit Timing and Synchronization</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("can___ecr.html")>ECR</a></td><td class="hex">0x0000000010</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00000000</td><td>Rx and Tx Error Counters</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("can___esr.html")>ESR</a></td><td class="hex">0x0000000014</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>Error Status</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("can___sr.html")>SR</a></td><td class="hex">0x0000000018</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000001</td><td>Controller Status</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("can___isr.html")>ISR</a></td><td class="hex">0x000000001C</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00006000</td><td>Interrupt Status</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("can___ier.html")>IER</a></td><td class="hex">0x0000000020</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>Interrupt Enable</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("can___icr.html")>ICR</a></td><td class="hex">0x0000000024</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>Interrupt Clear</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("can___tcr.html")>TCR</a></td><td class="hex">0x0000000028</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>Timestamp Clear.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("can___wir.html")>WIR</a></td><td class="hex">0x000000002C</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00003F3F</td><td>Rx and Tx Watermark Settings.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("can___txfifo_id.html")>TXFIFO_ID</a></td><td class="hex">0x0000000030</td><td class="center">32</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x00000000</td><td>Tx Message FIFO, Identifier, Request.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("can___txfifo_dlc.html")>TXFIFO_DLC</a></td><td class="hex">0x0000000034</td><td class="center">32</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x00000000</td><td>Tx Message FIFO Data Length Code.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("can___txfifo_data1.html")>TXFIFO_DATA1</a></td><td class="hex">0x0000000038</td><td class="center">32</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x00000000</td><td>Tx Message FIFO, data word 1.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("can___txfifo_data2.html")>TXFIFO_DATA2</a></td><td class="hex">0x000000003C</td><td class="center">32</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x00000000</td><td>Tx Message FIFO, data word 2.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("can___txhpb_id.html")>TXHPB_ID</a></td><td class="hex">0x0000000040</td><td class="center">32</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x00000000</td><td>High Priority Tx Message FIFO, Identifier, Request.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("can___txhpb_dlc.html")>TXHPB_DLC</a></td><td class="hex">0x0000000044</td><td class="center">32</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x00000000</td><td>High Priority Tx Message FIFO Data Length Code.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("can___txhpb_data1.html")>TXHPB_DATA1</a></td><td class="hex">0x0000000048</td><td class="center">32</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x00000000</td><td>High Priority Tx Message FIFO, data word 1.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("can___txhpb_data2.html")>TXHPB_DATA2</a></td><td class="hex">0x000000004C</td><td class="center">32</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x00000000</td><td>High Priority Tx Message FIFO, data word 0.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("can___rxfifo_id.html")>RXFIFO_ID</a></td><td class="hex">0x0000000050</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00000000</td><td>Rx Message FIFO, Identifier, Request.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("can___rxfifo_dlc.html")>RXFIFO_DLC</a></td><td class="hex">0x0000000054</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>Rx Message FIFO Data Length Code.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("can___rxfifo_data1.html")>RXFIFO_DATA1</a></td><td class="hex">0x0000000058</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>Rx Message FIFO, data word 1.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("can___rxfifo_data2.html")>RXFIFO_DATA2</a></td><td class="hex">0x000000005C</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>Rx Message FIFO, data word 2.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("can___afr.html")>AFR</a></td><td class="hex">0x0000000060</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>Acceptance Filter Enables.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("can___afmr1.html")>AFMR1</a></td><td class="hex">0x0000000064</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>Acceptance Filter 1 Mask.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("can___afir1.html")>AFIR1</a></td><td class="hex">0x0000000068</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>Acceptance Filter 1 ID.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("can___afmr2.html")>AFMR2</a></td><td class="hex">0x000000006C</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>Acceptance Filter 2 Mask.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("can___afir2.html")>AFIR2</a></td><td class="hex">0x0000000070</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>Acceptance Filter 2 ID.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("can___afmr3.html")>AFMR3</a></td><td class="hex">0x0000000074</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>Acceptance Filter 3 Mask.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("can___afir3.html")>AFIR3</a></td><td class="hex">0x0000000078</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>Acceptance Filter 3 ID.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("can___afmr4.html")>AFMR4</a></td><td class="hex">0x000000007C</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>Acceptance Filter 4 Mask.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("can___afir4.html")>AFIR4</a></td><td class="hex">0x0000000080</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>Acceptance Filter 4 ID.</td></tr>
+</table>
+<p id=foot class=footer></p>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<title>RDIMMGCR0 (DDR_PHY) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddr_phy.html")>DDR_PHY Module</a> &gt; RDIMMGCR0 (DDR_PHY) Register</p><h1>RDIMMGCR0 (DDR_PHY) Register</h1>
+<h2>RDIMMGCR0 (DDR_PHY) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>RDIMMGCR0</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000140</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD080140 (DDR_PHY)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x08400020</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>RDIMM General Configuration Register 0</td></tr>
+</table>
+<p></p>
+<h2>RDIMMGCR0 (DDR_PHY) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Return zeroes on reads.</td></tr>
+<tr valign=top><td>QCSEN</td><td class="center">30</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>RDMIMM Quad CS Enable: Enables, if set, the Quad CS mode for<br/>the RDIMM registering buffer chip. This register bit controls the<br/>buffer chip QCSEN# signal.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">29:28</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Return zeroes on reads.</td></tr>
+<tr valign=top><td>RDIMMIOM</td><td class="center">27</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>RDIMM Outputs I/O Mode: Selects SSTL mode (when set to 0) or<br/>CMOS mode (when set to 1) of the I/O for QCSEN# and MIRROR<br/>pins.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">26:24</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Return zeroes on reads.</td></tr>
+<tr valign=top><td>ERROUTOE</td><td class="center">23</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>ERROUT# Output Enable: Enables, when set, the output driver on<br/>the I/O for ERROUT# pin.</td></tr>
+<tr valign=top><td>ERROUTIOM</td><td class="center">22</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>ERROUT# I/O Mode: Selects SSTL mode (when set to 0) or<br/>CMOS mode (when set to 1) of the I/O for ERROUT# pin.</td></tr>
+<tr valign=top><td>ERROUTPDR</td><td class="center">21</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>ERROUT# Power Down Receiver: Powers down, when set, the<br/>input receiver on the I/O for ERROUT# pin.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">20</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Return zeroes on reads.</td></tr>
+<tr valign=top><td>ERROUTODT</td><td class="center">19</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>ERROUT# On-Die Termination: Enables, when set, the on-die<br/>termination on the I/O for ERROUT# pin.</td></tr>
+<tr valign=top><td>PARINIOM</td><td class="center">17</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>PAR_IN I/O Mode: Selects SSTL mode (when set to 0) or CMOS<br/>mode (when set to 1) of the I/O for PAR_IN pin.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">16:8</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Return zeroes on reads.</td></tr>
+<tr valign=top><td>RNKMRREN_RSVD</td><td class="center"> 7:6</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Return zeroes on reads.</td></tr>
+<tr valign=top><td>RNKMRREN</td><td class="center"> 5:4</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x2</td><td>Rank Mirror Enable: Specifies the ranks that are mirrored. Bit 0<br/>controls rank 0, bit 1 controls rank 1, etc. Setting the bit to 1b1<br/>enables the address mirroring for that rank and setting it to 1b0<br/>disables the mirroring for that rank. This is valid for RDIMM and<br/>UDIMM.<br/>Default Mirroring on ODD rank is enabled.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 3</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Return zeroes on reads.</td></tr>
+<tr valign=top><td>SOPERR</td><td class="center"> 2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Stop on Parity Error: Stops PUB transactions when RDIMM parity<br/>error is asserted.<br/>This bit should be programmed to 1'b0 when the PUB is executing<br/>BIST in loopback mode.</td></tr>
+<tr valign=top><td>ERRNOREG</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Parity Error No Registering: Indicates, if set, that parity error signal<br/>from the RDIMM should be passed to the DFI controller without<br/>any synchronization or registering. Otherwise, the error signal is<br/>synchronized.</td></tr>
+<tr valign=top><td>RDIMM</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Registered DIMM: If set, indicates that a registered DIMM is used.<br/>For PUB internal SDRAM transactions, the PUB enforces that<br/>accesses adhere to RDIMM buffer chip.<br/>Transactions generated by the controller make adjustments to<br/>WL/RL when using a registered DIMM.<br/>Note: The NOSRA bit in the 'DRAM Configuration Register (DCR)'must be set to '1' if using the standard RDIMM buffer<br/>chip so that normal DRAM accesses do not assert multiple chip<br/>select bits at the same time.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

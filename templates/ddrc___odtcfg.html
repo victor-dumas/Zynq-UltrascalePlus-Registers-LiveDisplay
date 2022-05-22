@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<title>ODTCFG (DDRC) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddrc.html")>DDRC Module</a> &gt; ODTCFG (DDRC) Register</p><h1>ODTCFG (DDRC) Register</h1>
+<h2>ODTCFG (DDRC) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>ODTCFG</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000240</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD070240 (DDRC)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x04000400</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>ODT Configuration Register</td></tr>
+</table>
+<p>This register is quasi-dynamic group 1 and group 4. Group 1 registers can be written when no read/write traffic is present at the DFI. Group 4 registers can be written depending on MSTR.frequency_mode.</p>
+<h2>ODTCFG (DDRC) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>wr_odt_hold</td><td class="center">27:24</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x4</td><td>Cycles to hold ODT for a write command. The minimum supported value is 2.<br/>Recommended values:<br/>DDR3:<br/>- BL8: 0x6<br/>DDR4:<br/>- BL8: 5 + WR_PREAMBLE + CRC_MODE<br/>WR_PREAMBLE = 1 (1tCK write preamble),<br/>2 (2tCK write preamble)<br/>CRC_MODE = 0 (not CRC mode),<br/>1 (CRC mode)<br/>LPDDR3:<br/>- BL8: 7 + RU(tODTon(max)/tCK)</td></tr>
+<tr valign=top><td>wr_odt_delay</td><td class="center">20:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>The delay, in clock cycles, from issuing a write command to setting ODT values associated with that command. ODT setting must remain constant for the entire time that DQS is driven by the DDRC.<br/>Recommended values:<br/>DDR3:<br/>- 0x0<br/>DDR4:<br/>- DFITMG1.dfi_t_cmd_lat (to adjust for CAL mode)<br/>LPDDR3:<br/>- WL - 1 - RU(tODTon(max)/tCK))</td></tr>
+<tr valign=top><td>rd_odt_hold</td><td class="center">11:8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x4</td><td>Cycles to hold ODT for a read command. The minimum supported value is 2.<br/>Recommended values:<br/>DDR3:<br/>- BL8 - 0x6<br/>DDR4:<br/>- BL8: 5 + RD_PREAMBLE<br/>RD_PREAMBLE = 1 (1tCK write preamble),<br/>2 (2tCK write preamble)<br/>LPDDR3:<br/>- BL8:<br/>5 + RU(tDQSCK(max)/tCK) - RD(tDQSCK(min)/tCK) + RU(tODTon(max)/tCK)</td></tr>
+<tr valign=top><td>rd_odt_delay</td><td class="center"> 6:2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>The delay, in clock cycles, from issuing a read command to setting ODT values associated with that command. ODT setting must remain constant for the entire time that DQS is driven by the DDRC.<br/>Recommended values:<br/>DDR3:<br/>- CL - CWL<br/>DDR4:<br/>- CL - CWL - RD_PREAMBLE + WR_PREAMBLE + DFITMG1.dfi_t_cmd_lat (to adjust for CAL mode)<br/>WR_PREAMBLE = 1 (1tCK write preamble),<br/>2 (2tCK write preamble)<br/>RD_PREAMBLE = 1 (1tCK write preamble),<br/>2 (2tCK write preamble)<br/>If (CL - CWL - RD_PREAMBLE + WR_PREAMBLE) &lt; 0,<br/>DDRC does not support ODT for read operation.<br/>LPDDR3:<br/>- RL + RD(tDQSCK(min)/tCK) - 1 - RU(tODTon(max)/tCK)</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

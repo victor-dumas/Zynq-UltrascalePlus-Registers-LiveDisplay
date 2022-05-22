@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<title>ATTR_25 (PCIE_ATTRIB) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___pcie_attrib.html")>PCIE_ATTRIB Module</a> &gt; ATTR_25 (PCIE_ATTRIB) Register</p><h1>ATTR_25 (PCIE_ATTRIB) Register</h1>
+<h2>ATTR_25 (PCIE_ATTRIB) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>ATTR_25</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000064</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD480064 (PCIE_ATTRIB)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000905</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>ATTR_25</td></tr>
+</table>
+<p>This register should only be written to during reset of the PCIe block</p>
+<h2>ATTR_25 (PCIE_ATTRIB) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>attr_dev_cap2_atomicop_routing_supported</td><td class="center">15</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Drives value on Device Capabilities2[6]. Not supported for EP.; EP=0x0000; RP=0x0000</td></tr>
+<tr valign=top><td>attr_dev_cap2_ari_forwarding_supported</td><td class="center">14</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Drives value on Device Capabilities2[5]. Not supported for EP.; EP=0x0000; RP=0x0000</td></tr>
+<tr valign=top><td>attr_cpl_timeout_ranges_supported</td><td class="center">13:10</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x2</td><td>Supported range of completion timeouts. Drives Device Capability 2 [3:0]; EP=0x0002; RP=0x0002</td></tr>
+<tr valign=top><td>attr_cpl_timeout_disable_supported</td><td class="center"> 9</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>If TRUE Completion Timeout Disable is supported. This is required to be TRUE for Endpoint and either setting allowed for Root ports. Drives Device Capability 2 [4]; EP=0x0001; RP=0x0001</td></tr>
+<tr valign=top><td>attr_cmd_intx_implemented</td><td class="center"> 8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>INTX Interrupt Generation Capable. If FALSE, this will cause Command[10] to be hardwired to 0.; EP=0x0001; RP=0x0001</td></tr>
+<tr valign=top><td>attr_class_code</td><td class="center"> 7:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x5</td><td>Code identifying basic function, subclass and applicable programming interface.<br/>Transferred to the Class Code register.; EP=0x0005; RP=0x0006</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

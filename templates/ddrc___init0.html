@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<title>INIT0 (DDRC) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddrc.html")>DDRC Module</a> &gt; INIT0 (DDRC) Register</p><h1>INIT0 (DDRC) Register</h1>
+<h2>INIT0 (DDRC) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>INIT0</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x00000000D0</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD0700D0 (DDRC)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x0002004E</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>SDRAM Initialization Register 0</td></tr>
+</table>
+<p>All register fields are static, unless described otherwise in the register field description. Static registers can only be written when the controller is in reset.</p>
+<h2>INIT0 (DDRC) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>skip_dram_init</td><td class="center">31:30</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>If lower bit is enabled the SDRAM initialization routine is skipped. The upper bit decides what state the controller starts up in when reset is removed<br/>- 00 - SDRAM Initialization routine is run after power-up<br/>- 01 - SDRAM Initialization routine is skipped after power-up. Controller starts up in Normal Mode<br/>- 11 - SDRAM Initialization routine is skipped after power-up. Controller starts up in Self-refresh Mode<br/>- 10 - SDRAM Initialization routine is run after power-up.<br/>Note: The only 2'b00 is supported for LPDDR4 in this version of the DDRC.<br/>Programming Mode: Quasi-dynamic Group 2</td></tr>
+<tr valign=top><td>post_cke_x1024</td><td class="center">25:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x2</td><td>Cycles to wait after driving CKE high to start the SDRAM initialization sequence.<br/>Unit: 1024 clocks.<br/>LPDDR3 typically requires this to be programmed for a delay of 200us.<br/>LPDDR4 typically requires this to be programmed for a delay of 2us.<br/>Program this to JEDEC spec value divided by 2, and round it up to next integer value.</td></tr>
+<tr valign=top><td>pre_cke_x1024</td><td class="center">11:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x4E</td><td>Cycles to wait after reset before driving CKE high to start the SDRAM initialization sequence.<br/>Unit: 1024 clock cycles.<br/>LPDDR3: tINIT1 of 100 ns (min)<br/>LPDDR4: tINIT3 of 2 ms (min)<br/>Program this to JEDEC spec value divided by 2, and round it up to next integer value.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

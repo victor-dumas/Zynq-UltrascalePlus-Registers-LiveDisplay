@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<title>DRAMTMG12_SHADOW (DDRC) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddrc.html")>DDRC Module</a> &gt; DRAMTMG12_SHADOW (DDRC) Register</p><h1>DRAMTMG12_SHADOW (DDRC) Register</h1>
+<h2>DRAMTMG12_SHADOW (DDRC) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>DRAMTMG12_SHADOW</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000002130</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD072130 (DDRC)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00020610</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>SDRAM Timing Shadow Register 12</td></tr>
+</table>
+<p>This register is quasi-dynamic group 2 and group 4. Group 2 registers can be written in self-refresh, deep power-down, and maximum power saving modes. Group 4 registers can be written depending on MSTR.frequency_mode.</p>
+<h2>DRAMTMG12_SHADOW (DDRC) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>t_cmdcke</td><td class="center">17:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x2</td><td>tCMDCKE:<br/>Delay from valid command to CKE input LOW.<br/>Set this to the larger of tESCKE or tCMDCKE<br/>Program this to (max(tESCKE, tCMDCKE)/2) and round it up to next integer value.</td></tr>
+<tr valign=top><td>t_ckehcmd</td><td class="center">11:8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x6</td><td>tCKEHCMD:<br/>Valid command requirement after CKE input HIGH.<br/>Program this to (tCKEHCMD/2) and round it up to next integer value.</td></tr>
+<tr valign=top><td>t_mrd_pda</td><td class="center"> 4:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x10</td><td>tMRD_PDA:<br/>This is the Mode Register Set command cycle time in PDA mode.<br/>Program this to (tMRD_PDA/2) and round it up to next integer value.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

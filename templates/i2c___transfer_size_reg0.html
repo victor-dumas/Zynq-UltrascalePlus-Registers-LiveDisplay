@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<title>Transfer_size_reg0 (I2C) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___i2c.html")>I2C Module</a> &gt; Transfer_size_reg0 (I2C) Register</p><h1>Transfer_size_reg0 (I2C) Register</h1>
+<h2>Transfer_size_reg0 (I2C) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>Transfer_size_reg0</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000014</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF020014 (I2C0)<br/>0x00FF030014 (I2C1)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder> 8</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Transfer Size Register</td></tr>
+</table>
+<p>This register's meaning varies according to the operating mode as follows: * Master transmitter mode: number of data bytes still not transmitted minus one * Master receiver mode: number of data bytes that are still expected to be received * Slave transmitter mode: number of bytes remaining in the FIFO after the master terminates the transfer * Slave receiver mode: number of valid data bytes in the FIFO This register is cleared if CLR_FIFO bit in the control register is set.</p>
+<h2>Transfer_size_reg0 (I2C) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>Transfer_Size</td><td class="center"> 7:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Transfer Size<br/>0-255</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

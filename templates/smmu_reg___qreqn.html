@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<title>QREQN (SMMU_REG) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___smmu_reg.html")>SMMU_REG Module</a> &gt; QREQN (SMMU_REG) Register</p><h1>QREQN (SMMU_REG) Register</h1>
+<h2>QREQN (SMMU_REG) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>QREQN</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000040</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD5F0040 (SMMU_REG)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00007FFF</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Low Power Signals for TBU</td></tr>
+</table>
+<p></p>
+<h2>QREQN (SMMU_REG) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:15</td><td class="tooltip grayback">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>tbu_TBU5_5_cg</td><td class="center">14</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Low power entry request signal for TBU TBU5_5</td></tr>
+<tr valign=top><td>tbu_TBU5_5_pd</td><td class="center">13</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Low power entry request signal for TBU TBU5_5</td></tr>
+<tr valign=top><td>tbu_TBU4_4_cg</td><td class="center">12</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Low power entry request signal for TBU TBU4_4</td></tr>
+<tr valign=top><td>tbu_TBU4_4_pd</td><td class="center">11</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Low power entry request signal for TBU TBU4_4</td></tr>
+<tr valign=top><td>tbu_TBU3_3_cg</td><td class="center">10</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Low power entry request signal for TBU TBU3_3</td></tr>
+<tr valign=top><td>tbu_TBU3_3_pd</td><td class="center"> 9</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Low power entry request signal for TBU TBU3_3</td></tr>
+<tr valign=top><td>pd_mst_br_TBU2_2</td><td class="center"> 8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Power down request signal for TBU Bridge Master TBU2_2</td></tr>
+<tr valign=top><td>pd_slv_br_TBU2_2</td><td class="center"> 7</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Power down request signal for TBU Bridge Slave TBU2_2</td></tr>
+<tr valign=top><td>tbu_TBU2_2_cg</td><td class="center"> 6</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Low power entry request signal for TBU TBU2_2</td></tr>
+<tr valign=top><td>tbu_TBU2_2_pd</td><td class="center"> 5</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Low power entry request signal for TBU TBU2_2</td></tr>
+<tr valign=top><td>tbu_TBU1_1_cg</td><td class="center"> 4</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Low power entry request signal for TBU TBU1_1</td></tr>
+<tr valign=top><td>tbu_TBU1_1_pd</td><td class="center"> 3</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Low power entry request signal for TBU TBU1_1</td></tr>
+<tr valign=top><td>tbu_TBU0_0_cg</td><td class="center"> 2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Low power entry request signal for TBU TBU0_0</td></tr>
+<tr valign=top><td>tbu_TBU0_0_pd</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Low power entry request signal for TBU TBU0_0</td></tr>
+<tr valign=top><td>tcu</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Low power entry request signal for TCU</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

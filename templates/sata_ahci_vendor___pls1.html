@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<title>PLS1 (SATA_AHCI_VENDOR) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___sata_ahci_vendor.html")>SATA_AHCI_VENDOR Module</a> &gt; PLS1 (SATA_AHCI_VENDOR) Register</p><h1>PLS1 (SATA_AHCI_VENDOR) Register</h1>
+<h2>PLS1 (SATA_AHCI_VENDOR) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>PLS1</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000040</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD0C00E0 (SATA_AHCI_VENDOR)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Port Link-layer Status 1.</td></tr>
+</table>
+<p>Indicates the status of the Link Layer for either Port 0 or Port 1. The Port monitored is controlled by the value programmed into the Port Config Register. This register acts as an accumulator for the SERDES errors.  Each counter can be cleared by writing 8'hFF to the individual byte. Note: All Status Registers have no predefined Reset value. The value shown in reset is a typical value that will be read after reset but will be dependent on the SERDES status, the actual value read can differ from this.</p>
+<h2>PLS1 (SATA_AHCI_VENDOR) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>KCEC</td><td class="center">31:24</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Kchar Error Count (KCEC): The number of DWords that have been received from the Phy, where one or more control character errors have been detected. A value of 255 indicates an error count of 255 or more as this counter does not wrap around to zero. The count value is updated with its current value each time the Status1 register is read.</td></tr>
+<tr valign=top><td>PIEC</td><td class="center">23:16</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Phy Internal Error Count (PIEC): The number of DWords that have been received from the Phy, where one or more internal errors have been detected. A value of 255 indicates an error count of 255 or more as this counter does not wrap around to zero. The count value is updated with its current value each time the Status1 register is read.</td></tr>
+<tr valign=top><td>CEC</td><td class="center">15:8</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Code Error Count (CEC): The number of DWords that have been received from the Phy, where one or more code errors have been detected. A value of 255 indicates an error count of 255 or more as this counter does not wrap around to zero. The count value is updated with its current value each time the Status1 register is read.</td></tr>
+<tr valign=top><td>DEC</td><td class="center"> 7:0</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Disparity Error Count (DEC): The number of DWords that have been received from the Phy, where one or more disparity errors have been detected. A value of 255 indicates an error count of 255 or more as this counter does not wrap around to zero. The count value is updated with its current value each time the Status1 register is read.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

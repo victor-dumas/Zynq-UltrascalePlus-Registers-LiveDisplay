@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<title>GSBUSCFG1 (USB3_XHCI) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___usb3_xhci.html")>USB3_XHCI Module</a> &gt; GSBUSCFG1 (USB3_XHCI) Register</p><h1>GSBUSCFG1 (USB3_XHCI) Register</h1>
+<h2>GSBUSCFG1 (USB3_XHCI) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>GSBUSCFG1</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000C104</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FE20C104 (USB3_0_XHCI)<br/>0x00FE30C104 (USB3_1_XHCI)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Global SoC Bus Configuration Register 1<br/>xHCI Register Power-On Value:<br/>The standard xHCI driver does not access this register.</td></tr>
+</table>
+<p></p>
+<h2>GSBUSCFG1 (USB3_XHCI) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:13</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>EN1KPAGE</td><td class="center">12</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>1k Page Boundary Enable<br/>By default (this bit is disabled) the AXI breaks transfers at the 4k page boundary. When this bit is enabled, the AXI master (DMA data) breaks transfers at the 1k page boundary.</td></tr>
+<tr valign=top><td>PipeTransLimit</td><td class="center">11:8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>AXI Pipelined Transfers Burst Request Limit<br/>The field controls the number of outstanding pipelined transfer requests the AXI master pushes to the AXI slave.<br/>When the AXI master reaches this limit, it does not make any more requests on the AXI ARADDR and AWADDR buses until the associated data phases complete.<br/>This field is encoded as follows:<br/>- 'h0: 1 request<br/>- 'h1: 2 requests<br/>- 'h2: 3 requests<br/>- 'h3: 4 requests<br/>-<br/>..<br/>- 'hF: 16 requests</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 7:0</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

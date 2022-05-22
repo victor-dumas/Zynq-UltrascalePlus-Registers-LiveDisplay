@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<title>WIR (CAN) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___can.html")>CAN Module</a> &gt; WIR (CAN) Register</p><h1>WIR (CAN) Register</h1>
+<h2>WIR (CAN) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>WIR</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000002C</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF06002C (CAN0)<br/>0x00FF07002C (CAN1)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00003F3F</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Rx and Tx Watermark Settings.</td></tr>
+</table>
+<p>The TXFIFO Empty watermark (EW) programmed in this register will be applied to TX FIFO only. The RXFIFO Full watermark (FW) programmed in this register will be applied to RX FIFO only. The watermark register is allowed to program only when CEN=0 in SRR register. The TXFIFO Watermark EMPTY interrupt (TXFWMEMP) will continue to assert as long as the number of empty spaces in the TX FIFO is greater than the TXFIFO Empty watermark (EW). The RXFLL interrupt will continue to assert as long as the RX FIFO count remains above the RXFIFO Full watermark (FW).</p>
+<h2>WIR (CAN) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:16</td><td class="tooltip grayback">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>EW</td><td class="center">15:8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x3F</td><td>TXFIFO Empty watermark<br/>TXFIFO generates an EMPTY interrupt based on the value programmed in this field. The valid range is (1-63). No protection is given for illegal programming in this field. This field can be written to only when CEN bit in SRR is 0.</td></tr>
+<tr valign=top><td>FW</td><td class="center"> 7:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x3F</td><td>RXFIFO Full watermark<br/>RXFIFO generates FULL interrupt based on the value programmed in this field. The valid range is (1-63). No protection is given for illegal programming in this field. This field can be written to only when CEN bit in SRR is 0.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

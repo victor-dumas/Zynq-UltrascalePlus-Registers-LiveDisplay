@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<title>ERROR_POR_MASK_1 (PMU_GLOBAL) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___pmu_global.html")>PMU_GLOBAL Module</a> &gt; ERROR_POR_MASK_1 (PMU_GLOBAL) Register</p><h1>ERROR_POR_MASK_1 (PMU_GLOBAL) Register</h1>
+<h2>ERROR_POR_MASK_1 (PMU_GLOBAL) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>ERROR_POR_MASK_1</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000550</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FFD80550 (PMU_GLOBAL)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">ro<span class="tooltiptext">Read-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0xFFFF32FF</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>System Errors to POR; Interrupt Mask, Reg 1.</td></tr>
+</table>
+<p>0: unmasked (enabled). 1: masked (disabled). If the status bit = 1 (asserted interrupt) and the mask bit = 0 (not masked), then the IRQ to the interrupt controllers is asserted. Software checks the ISR to determine the cause of the interrupt. Read-only. For details on the bit fields, refer to the ERROR_STATUS_1 register description. The [CLK_MON] and [CSU_SWDT] bits are reset only by the PS_POR_B signal (external).</p>
+<h2>ERROR_POR_MASK_1 (PMU_GLOBAL) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>DFT</td><td class="center">27</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>CSU_SWDT timeout. Bit is reset only by the PS_POR_B reset signal pin.</td></tr>
+<tr valign=top><td>CLK_MON</td><td class="center">26</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>Clock Monitor (ClkMon). Bit is reset only by the PS_POR_B reset signal pin.</td></tr>
+<tr valign=top><td>XMPU</td><td class="center">25:24</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x3</td><td>XMPU and XPPU error signals.</td></tr>
+<tr valign=top><td>PWR_SUPPLY</td><td class="center">23:16</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0xFF</td><td>Eight (8) PS VCC and VCCO power supplies.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">15:14</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>FPD_SWDT</td><td class="center">13</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>FPD_SWDT timeout.</td></tr>
+<tr valign=top><td>LPD_SWDT</td><td class="center">12</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>LPD_SWDT timeout.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">11:10</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>RPU_CCF</td><td class="center"> 9</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>RPU common cause failures.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 8</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>RPU_LS</td><td class="center"> 7:6</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x3</td><td>RPU lockstep error.</td></tr>
+<tr valign=top><td>FPD_TEMP</td><td class="center"> 5</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>FPD over tempurature alarm.</td></tr>
+<tr valign=top><td>LPD_TEMP</td><td class="center"> 4</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>LPD over tempurature alarm.</td></tr>
+<tr valign=top><td>RPU1</td><td class="center"> 3</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>RPU1 RAM (all ECC errors).</td></tr>
+<tr valign=top><td>RPU0</td><td class="center"> 2</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>RPU0 RAM (all ECC errors).</td></tr>
+<tr valign=top><td>OCM_ECC</td><td class="center"> 1</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>OCM (uncorrectable only).</td></tr>
+<tr valign=top><td>DDR_ECC</td><td class="center"> 0</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>DDR (uncorrectable only).</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

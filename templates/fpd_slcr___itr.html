@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<title>itr (FPD_SLCR) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___fpd_slcr.html")>FPD_SLCR Module</a> &gt; itr (FPD_SLCR) Register</p><h1>itr (FPD_SLCR) Register</h1>
+<h2>itr (FPD_SLCR) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>itr</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000018</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD610018 (FPD_SLCR)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder> 1</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">wo<span class="tooltiptext">Write-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Interrupt Trigger Register</td></tr>
+</table>
+<p>A write of one to this location will set the interrupt status register related to this interrupt.</p>
+<h2>itr (FPD_SLCR) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>addr_decode_err</td><td class="center"> 0</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Trigger an address decode error interrupt.<br/>0: Ignored<br/>1: isr -> 1</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

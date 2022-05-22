@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<title>ECCSTAT (DDRC) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddrc.html")>DDRC Module</a> &gt; ECCSTAT (DDRC) Register</p><h1>ECCSTAT (DDRC) Register</h1>
+<h2>ECCSTAT (DDRC) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>ECCSTAT</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000078</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD070078 (DDRC)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">ro<span class="tooltiptext">Read-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>ECC Status Register</td></tr>
+</table>
+<p></p>
+<h2>ECCSTAT (DDRC) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>ecc_uncorrected_err</td><td class="center">19:16</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Double-bit error indicators, 1 per ECC lane.</td></tr>
+<tr valign=top><td>ecc_corrected_err</td><td class="center">11:8</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Single-bit error indicators, 1<br/>per data beat.<br/>ECCCADDR1 [ecc_corr_col] = 0:<br/>0001: beat 0<br/>0010: beat 1<br/>0100: beat 2<br/>1000: beat 3<br/>ECCCADDR1 [ecc_corr_col] = 4:<br/>0001: beat 4<br/>0010: beat 5<br/>0100: beat 6<br/>1000: beat 7</td></tr>
+<tr valign=top><td>ecc_corrected_bit_num</td><td class="center"> 6:0</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Bit number (within the data beat) corrected by single-bit ECC error.<br/>If more than one data lane has an error, the lower data lane is selected. This register is 7 bits wide in order to handle 72 bits of the data present in a single lane.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

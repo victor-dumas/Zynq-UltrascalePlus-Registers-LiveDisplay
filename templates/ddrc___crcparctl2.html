@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<title>CRCPARCTL2 (DDRC) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddrc.html")>DDRC Module</a> &gt; CRCPARCTL2 (DDRC) Register</p><h1>CRCPARCTL2 (DDRC) Register</h1>
+<h2>CRCPARCTL2 (DDRC) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>CRCPARCTL2</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x00000000C8</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD0700C8 (DDRC)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x0030050C</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>CRC Parity Control Register2</td></tr>
+</table>
+<p>This register is static. Static registers can only be written when the controller is in reset.</p>
+<h2>CRCPARCTL2 (DDRC) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>t_par_alert_pw_max</td><td class="center">24:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x30</td><td>Value from the DRAM spec indicating the maximum width of the dfi_alert_n pulse when a parity error occurs.<br/>Recommended values:<br/>- tPAR_ALERT_PW.MAX<br/>Program this to tPAR_ALERT_PW.MAX/2 and round up to next integer value.<br/>Values of 0, 1, and 2 are illegal.<br/>This value must be greater than CRCPARCTL2.t_crc_alert_pw_max.</td></tr>
+<tr valign=top><td>t_crc_alert_pw_max</td><td class="center">12:8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x5</td><td>Value from the DRAM spec indicating the maximum width of the dfi_alert_n pulse when a CRC error occurs.<br/>Recommended values:<br/>- tCRC_ALERT_PW.MAX<br/>Program this to tCRC_ALERT_PW.MAX/2 and round up to next integer value.<br/>Values of 0, 1, and 2 are illegal.<br/>This value must be less than CRCPARCTL2.t_par_alert_pw_max.</td></tr>
+<tr valign=top><td>retry_fifo_max_hold_timer_x4</td><td class="center"> 5:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0xC</td><td>Indicates the maximum duration in number of DRAM clock cycles for which a command should be held in the Command Retry FIFO before it is popped out. Every location in the Command Retry FIFO has an associated down counting timer that will use this register as the start value.<br/>The down counting starts when a command is loaded into the FIFO. The timer counts down every 4 DRAM cycles.<br/>When the counter reaches zero, the entry is popped from the FIFO. All the counters are frozen, if a C/A Parity or CRC error occurs before the counter reaches zero.<br/>The counter is reset to 0, after all the commands in the FIFO are retried.<br/>Recommended(minimum) values:<br/>- Only C/A Parity is enabled.<br/>RoundUp((PHY Command Latency(DRAM CLK) + CAL + RDIMM delay + tPAR_ALERT_ON.max + tPAR_UNKNOWN + PHY Alert Latency(DRAM CLK) + board delay) / 4) + 2<br/>- Both C/A Parity and CRC is enabled/ Only CRC is enabled.<br/>RoundUp((PHY Command Latency(DRAM CLK) + CAL + RDIMM delay + WL + 5(BL10)+ tCRC_ALERT.max + PHY Alert Latency(DRAM CLK) + board delay) / 4) + 2<br/>Note 1: All value (e.g. tPAR_ALERT_ON) should be in terms of DRAM Clock and round up<br/>Note 2: Board delay(Command/Alert_n) should be considered.<br/>Note 3: Use the worst case(longer) value for PHY Latencies/Board delay<br/>Note 4: The Recommended values are minimum value to be set.<br/>For mode detail, See 'Calculation of FIFO Depth' section.<br/>Max value can be set to this register is defined below:<br/>Full bus Mode (CRC=OFF)<br/>Max value = 39<br/>Full bus Mode (CRC=ON)<br/>Max value = 38<br/>Half bus Mode (CRC=OFF)<br/>Max value = 38<br/>Half bus Mode (CRC=ON)<br/>Max value = 37<br/>Quarter bus Mode (CRC=OFF)<br/>Max value = 36<br/>Quarter bus Mode (CRC=ON)<br/>Max value = 34<br/>Values of 0, 1 and 2 are illegal.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

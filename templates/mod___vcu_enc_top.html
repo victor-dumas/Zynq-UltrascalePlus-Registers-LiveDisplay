@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<title>VCU_ENC_TOP Module</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> > VCU_ENC_TOP Module</p><h1>VCU_ENC_TOP Module</h1>
+<h2>VCU_ENC_TOP Module Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Module Name</th><td width=80% class=noborder>HEVC/AVC Encoder IP (VCU_ENC_TOP)</td></tr>
+<tr valign=top><th width=20% class=sumparam>Modules of this Type</th><td width=80% class=noborder>VCU_ENCODE</td></tr>
+<tr valign=top><th class=sumparam>Base Address</th><td class=noborder>0x00A0000000 (VCU_ENCODE)</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>VCU Encoder, VCU Encoder</td></tr>
+</table>
+<h2>VCU_ENC_TOP Module Register Summary</h2>
+<table>
+<tr valign=top><th width=20%>Register Name</th><th width=10%>Address</th><th width=10%>Width</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=40%>Description</th></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("vcu_enc_top___mcu_reset.html")>MCU_RESET</a></td><td class="hex">0x0000009000</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>MCU Subsystem Reset</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("vcu_enc_top___mcu_reset_mode.html")>MCU_RESET_MODE</a></td><td class="hex">0x0000009004</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000001</td><td>MCU Reset Mode</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("vcu_enc_top___mcu_sta.html")>MCU_STA</a></td><td class="hex">0x0000009008</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>MCU Status</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("vcu_enc_top___mcu_wakeup.html")>MCU_WAKEUP</a></td><td class="hex">0x000000900C</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>MCU Wake-up</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("vcu_enc_top___mcu_addr_offset_ic0.html")>MCU_ADDR_OFFSET_IC0</a></td><td class="hex">0x0000009010</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>MCU Instruction Cache Address Offset 0</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("vcu_enc_top___mcu_addr_offset_ic1.html")>MCU_ADDR_OFFSET_IC1</a></td><td class="hex">0x0000009014</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>MCU Instruction Cache Address Offset 1</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("vcu_enc_top___mcu_addr_offset_dc0.html")>MCU_ADDR_OFFSET_DC0</a></td><td class="hex">0x0000009018</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>MCU Data Cache Address Offset 0</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("vcu_enc_top___mcu_addr_offset_dc1.html")>MCU_ADDR_OFFSET_DC1</a></td><td class="hex">0x000000901C</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>MCU Data Cache Address Offset 1</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("vcu_enc_top___itc_mcu_irq.html")>ITC_MCU_IRQ</a></td><td class="hex">0x0000009100</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>MCU Interrupt Trigger</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("vcu_enc_top___itc_cpu_irq_msk.html")>ITC_CPU_IRQ_MSK</a></td><td class="hex">0x0000009104</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>CPU Interrupt Mask</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("vcu_enc_top___itc_cpu_irq_clr.html")>ITC_CPU_IRQ_CLR</a></td><td class="hex">0x0000009108</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>CPU Interrupt Clear</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("vcu_enc_top___itc_cpu_irq_sta.html")>ITC_CPU_IRQ_STA</a></td><td class="hex">0x000000910C</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>CPU Interrupt Status</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("vcu_enc_top___axi_bw.html")>AXI_BW</a></td><td class="hex">0x0000009204</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>AXI Bandwidth Measurement Window</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("vcu_enc_top___axi_addr_offset_ip.html")>AXI_ADDR_OFFSET_IP</a></td><td class="hex">0x0000009208</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>Video Data Address Offset</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("vcu_enc_top___axi_rbw0.html")>AXI_RBW0</a></td><td class="hex">0x0000009210</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00000000</td><td>AXI Read Bandwidth Status 0</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("vcu_enc_top___axi_rbw1.html")>AXI_RBW1</a></td><td class="hex">0x0000009214</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00000000</td><td>AXI Read Bandwidth Status 1</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("vcu_enc_top___axi_wbw0.html")>AXI_WBW0</a></td><td class="hex">0x0000009218</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00000000</td><td>AXI Write Bandwidth Status 0</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("vcu_enc_top___axi_wbw1.html")>AXI_WBW1</a></td><td class="hex">0x000000921C</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00000000</td><td>AXI Write Bandwidth Status 1</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("vcu_enc_top___axi_rbl0.html")>AXI_RBL0</a></td><td class="hex">0x0000009220</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>AXI Read Bandwidth Limiter 0</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("vcu_enc_top___axi_rbl1.html")>AXI_RBL1</a></td><td class="hex">0x0000009224</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>AXI Read Bandwidth Limiter 1</td></tr>
+</table>
+<p id=foot class=footer></p>
+</body>
+</html>

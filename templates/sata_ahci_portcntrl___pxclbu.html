@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<title>PxCLBU (SATA_AHCI_PORTCNTRL) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___sata_ahci_portcntrl.html")>SATA_AHCI_PORTCNTRL Module</a> &gt; PxCLBU (SATA_AHCI_PORTCNTRL) Register</p><h1>PxCLBU (SATA_AHCI_PORTCNTRL) Register</h1>
+<h2>PxCLBU (SATA_AHCI_PORTCNTRL) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>PxCLBU</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000004</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD0C0104 (SATA_AHCI_PORT0_CNTRL)<br/>0x00FD0C0184 (SATA_AHCI_PORT1_CNTRL)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Port x Command List Base Address Upper 32-bits (PxCLBU)</td></tr>
+</table>
+<p></p>
+<h2>PxCLBU (SATA_AHCI_PORTCNTRL) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>CLBU</td><td class="center">31:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Command List Base Address Upper (CLBU):<br/>Indicates the upper 32-bits for the command list base physical address for this port.<br/>This base is used when fetching commands to execute. This register shall be read only '0' for HBAs that do not support 64-bit addressing.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

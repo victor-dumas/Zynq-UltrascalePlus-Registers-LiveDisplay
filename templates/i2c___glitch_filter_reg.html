@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<title>Glitch_filter_reg (I2C) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___i2c.html")>I2C Module</a> &gt; Glitch_filter_reg (I2C) Register</p><h1>Glitch_filter_reg (I2C) Register</h1>
+<h2>Glitch_filter_reg (I2C) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>Glitch_filter_reg</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000002C</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF02002C (I2C0)<br/>0x00FF03002C (I2C1)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>16</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000005</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Glitch Filter Control Register<br/>It is used for setting the length of the glitch filter shift register.<br/>If the length of glitch filter shift register is set to zero (0x0) then the glitch filter is bypassed.</td></tr>
+</table>
+<p></p>
+<h2>Glitch_filter_reg (I2C) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">15:4</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved, read as zero, ignored on write.</td></tr>
+<tr valign=top><td>GF</td><td class="center"> 3:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x5</td><td>Length of the glitch filter shift register.<br/>The filter length is specified in terms of APB interface clock cycles (LPD_LSBUS).<br/>The default value is 5. If it is set to zero (0x0) then the glitch filter is bypassed.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

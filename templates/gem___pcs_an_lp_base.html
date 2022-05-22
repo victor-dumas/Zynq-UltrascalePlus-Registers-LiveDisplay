@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<title>pcs_an_lp_base (GEM) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___gem.html")>GEM Module</a> &gt; pcs_an_lp_base (GEM) Register</p><h1>pcs_an_lp_base (GEM) Register</h1>
+<h2>pcs_an_lp_base (GEM) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>pcs_an_lp_base</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000214</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF0B0214 (GEM0)<br/>0x00FF0C0214 (GEM1)<br/>0x00FF0D0214 (GEM2)<br/>0x00FF0E0214 (GEM3)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">ro<span class="tooltiptext">Read-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>For non SGMII (default) mode, the value of this register contains the link partner's base page received information. This register is updated in the ABILITY_DETECT state of the PCS auto-negotiation state machine so bit 14 will only be set if the link partner is sending acknowledge while the PCS in this state. The register is not updated in the ACK_DETECT state. For SGMII mode, the contents of this register change to the one defined in the SGMII standard. The value of this register contains the link partner's base page received information. In this case the link partner is the PHY connected by the SGMII.</td></tr>
+</table>
+<p></p>
+<h2>pcs_an_lp_base (GEM) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:16</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Set to zero.</td></tr>
+<tr valign=top><td>link_partner_next_page_status</td><td class="center">15</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>The contents of this register change depending on SGMII or non SGMII (default) mode.Default Mode:Link partner next page - when set active high, this bit indicates the link partner's intention to exchange next pages.SGMII Mode: Link Status.0: Link Down.1: Link Up.</td></tr>
+<tr valign=top><td>link_partner_acknowledge</td><td class="center">14</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Link partner acknowledge - indicates the link partner has successfully received the transmitted base page</td></tr>
+<tr valign=top><td>link_partner_remote_fault_duplex_mode</td><td class="center">13:12</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>The contents of this register change depending on SGMII or non SGMII (default) mode.Default Mode:Link partner remote fault [1:0] - indicates and classifies a remote fault condition has been detected by the link partner as follows:00: No error, Link O.K.01: Link Failure.10: Off line. 11: Auto-negotiation error.SGMII Mode: Bit 13: Reserved. Read as Zero.Bit 12: 0: Half Duplex. 1: Full Duplex.</td></tr>
+<tr valign=top><td>speed_reserved</td><td class="center">11:9</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>The contents of this register change depending on SGMII or non SGMII (default) mode.Default Mode: Reserved. Set to zero.SGMII Mode: Bits 11:10: Speed: 11: Reserved10: 1000 Mbps01: 100Mbps00: 10 Mbps Bit 9: Reserved. Read as Zero.</td></tr>
+<tr valign=top><td>pause</td><td class="center"> 8:7</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>The contents of this register change depending on SGMII or non SGMII (default) mode.Default Mode: Pause[1:0] - provides the link partner's pause frame capability as follows:00: No pause. 01: Symmetric pause. 10: Asymmetric pause toward link partner. 11: Both symmetric pause and asymmetric pause toward link device.SGMII Mode: Reserved. Read as Zero.</td></tr>
+<tr valign=top><td>link_partner_half_duplex</td><td class="center"> 6</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>The contents of this register change depending on SGMII or non SGMII (default) mode.Default Mode: Link partner half duplex - this bit indicates whether the link partner is capable of supporting half duplex operation. 0: The link partner cannot support half duplex. 1: The link partner can support half duplex.SGMII Mode: Reserved. Read as Zero.</td></tr>
+<tr valign=top><td>link_partner_full_duplex</td><td class="center"> 5</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>The contents of this register change depending on SGMII or non SGMII (default) mode.Default Mode: Link partner full duplex - this bit indicates whether the link partner is capable of supporting full duplex operation. 0: The link partner cannot support full duplex. 1: The link partner can support full duplex.SGMII Mode: Reserved. Read as Zero.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 4:0</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Set to zero.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

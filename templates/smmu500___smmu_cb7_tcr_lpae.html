@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<title>SMMU_CB7_TCR_lpae (SMMU500) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___smmu500.html")>SMMU500 Module</a> &gt; SMMU_CB7_TCR_lpae (SMMU500) Register</p><h1>SMMU_CB7_TCR_lpae (SMMU500) Register</h1>
+<h2>SMMU_CB7_TCR_lpae (SMMU500) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>SMMU_CB7_TCR_lpae</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000017030</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD817030 (SMMU_GPV)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>The Translation Table base control register determines which of the TTBRs(SMMU_CBn_TTBR0 or SMMU_CBn_TTBR1) defines the base address for the translation table walk that is required when the input address is not found in the TLB.</td></tr>
+</table>
+<p></p>
+<h2>SMMU_CB7_TCR_lpae (SMMU500) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>EAE</td><td class="center">31</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Refer to Arm SMMU v2 Architecture Spec (Arm IHI0062B) for more details</td></tr>
+<tr valign=top><td>NSCFG1_TG1</td><td class="center">30</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>Refer to Arm SMMU v2 Architecture Spec (Arm IHI0062B) for more details</td></tr>
+<tr valign=top><td>SH1</td><td class="center">29:28</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>Refer to Arm SMMU v2 Architecture Spec (Arm IHI0062B) for more details</td></tr>
+<tr valign=top><td>ORGN1</td><td class="center">27:26</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>Refer to Arm SMMU v2 Architecture Spec (Arm IHI0062B) for more details</td></tr>
+<tr valign=top><td>IRGN1</td><td class="center">25:24</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>Refer to Arm SMMU v2 Architecture Spec (Arm IHI0062B) for more details</td></tr>
+<tr valign=top><td>EPD1</td><td class="center">23</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>Refer to Arm SMMU v2 Architecture Spec (Arm IHI0062B) for more details</td></tr>
+<tr valign=top><td>A1</td><td class="center">22</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Refer to Arm SMMU v2 Architecture Spec (Arm IHI0062B) for more details</td></tr>
+<tr valign=top><td>T1SZ_5_3</td><td class="center">21:19</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>Refer to Arm SMMU v2 Architecture Spec (Arm IHI0062B) for more details</td></tr>
+<tr valign=top><td>T1SZ_2_0_PASIZE</td><td class="center">18:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>Refer to Arm SMMU v2 Architecture Spec (Arm IHI0062B) for more details</td></tr>
+<tr valign=top><td>NSCFG0_TG0</td><td class="center">14</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>Refer to Arm SMMU v2 Architecture Spec (Arm IHI0062B) for more details</td></tr>
+<tr valign=top><td>SH0</td><td class="center">13:12</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>Refer to Arm SMMU v2 Architecture Spec (Arm IHI0062B) for more details</td></tr>
+<tr valign=top><td>ORGN0</td><td class="center">11:10</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>Refer to Arm SMMU v2 Architecture Spec (Arm IHI0062B) for more details</td></tr>
+<tr valign=top><td>IRGN0</td><td class="center"> 9:8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>Refer to Arm SMMU v2 Architecture Spec (Arm IHI0062B) for more details</td></tr>
+<tr valign=top><td>SL0_1_EPD0</td><td class="center"> 7</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>Refer to Arm SMMU v2 Architecture Spec (Arm IHI0062B) for more details</td></tr>
+<tr valign=top><td>SL0_0</td><td class="center"> 6</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>Refer to Arm SMMU v2 Architecture Spec (Arm IHI0062B) for more details</td></tr>
+<tr valign=top><td>PD1_T0SZ_5</td><td class="center"> 5</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>Refer to Arm SMMU v2 Architecture Spec (Arm IHI0062B) for more details</td></tr>
+<tr valign=top><td>S_PD0_T0SZ_4</td><td class="center"> 4</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>Refer to Arm SMMU v2 Architecture Spec (Arm IHI0062B) for more details</td></tr>
+<tr valign=top><td>T0SZ_3_0</td><td class="center"> 3:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>Refer to Arm SMMU v2 Architecture Spec (Arm IHI0062B) for more details</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

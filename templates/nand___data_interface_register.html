@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<title>Data_interface_register (NAND) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___nand.html")>NAND Module</a> &gt; Data_interface_register (NAND) Register</p><h1>Data_interface_register (NAND) Register</h1>
+<h2>Data_interface_register (NAND) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>Data_interface_register</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000006C</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF10006C (NAND)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Data Interface Configuration</td></tr>
+</table>
+<p></p>
+<h2>Data_interface_register (NAND) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:11</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>data_intf</td><td class="center">10:9</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>00: SDR mode is enabled<br/>01: NV-DDR mode is enabled<br/>Note: Change this value only when controller is not communicating with the memory device.</td></tr>
+<tr valign=top><td>NVDDR</td><td class="center"> 5:3</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>000: NV-DDR mode 0<br/>001: NV-DDR mode 1<br/>010: NV-DDR mode 2<br/>011: NV-DDR mode 3<br/>100: NV-DDR mode 4<br/>101: NV-DDR mode 5<br/>110: reserved<br/>Note: Change this value only when controller is not communicating with the memory device.</td></tr>
+<tr valign=top><td>SDR</td><td class="center"> 2:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>000: SDR mode 0<br/>001: SDR mode 1<br/>010: SDR mode 2<br/>011: SDR mode 3<br/>100: SDR mode 4<br/>101: SDR mode 5<br/>110: reserved<br/>Note: Change this value only when controller is not communicating with the memory device.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<title>PGCR4 (DDR_PHY) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddr_phy.html")>DDR_PHY Module</a> &gt; PGCR4 (DDR_PHY) Register</p><h1>PGCR4 (DDR_PHY) Register</h1>
+<h2>PGCR4 (DDR_PHY) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>PGCR4</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000020</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD080020 (DDR_PHY)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x001800C3</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>PHY General Configuration Register 4</td></tr>
+</table>
+<p></p>
+<h2>PGCR4 (DDR_PHY) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:30</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Return zeroes on reads.</td></tr>
+<tr valign=top><td>ACDDLLD</td><td class="center">29</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>AC DDL Delay Select Dynamic Load: Specifies whether the registers<br/>inside the AC that hold the delay select signal of AC DDL should be<br/>dynamically loaded only when the delay select changes or should be<br/>continuously (always) loaded. This only applies to the AC delay LCDL.<br/>Valid values are:<br/>1b0 = Delay select signal registers should be dynamically loaded only<br/>when the delay select signal has change and the delay load signal is high<br/>1b1 = Delay select signal should be continuously (always) loaded on<br/>every clock cycle</td></tr>
+<tr valign=top><td>ACDDLBYP</td><td class="center">28:24</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>AC DDL Bypass: Specifies, if set to 1b1 that the DDL delay should be<br/>bypassed. Otherwise the DDL bypass is turned off. Different bits control<br/>different AC DDLs as follows:<br/>ACDDLBYP [0] = CKN BDL delay bypass<br/>ACDDLBYP [1] = CK BDL delay bypass<br/>ACDDLBYP [2] = Address/command BDL delay bypass<br/>ACDDLBYP [3] = Address/command LCDL delay bypass<br/>ACDDLBYP [4] = Master delay line LCDL delay bypass</td></tr>
+<tr valign=top><td>OEDDLBYP</td><td class="center">23</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>AC OE DDL Bypass: Specifies, if set to 1b1 that the DDL delay should be<br/>bypassed. Otherwise the DDL bypass is turned off</td></tr>
+<tr valign=top><td>TEDDLBYP</td><td class="center">22</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>AC ODT DDL Bypass: Specifies, if set to 1b1 that the DDL delay should<br/>be bypassed. Otherwise the DDL bypass is turned off</td></tr>
+<tr valign=top><td>PDRDDLBYP</td><td class="center">21</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>AC PDR DDL Bypass: Specifies, if set to 1b1 that the DDL delay should<br/>be bypassed. Otherwise the DDL bypass is turned off</td></tr>
+<tr valign=top><td>RRRMODE</td><td class="center">20</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>AC Macro Read Path Rise-to-Rise Mode: Indicates if set that the PHY<br/>mission mode is configured to run in rise-to-rise mode for the read path.<br/>Otherwise if not set the PHY mission mode for the read path is running in<br/>rise-to-fall mode.</td></tr>
+<tr valign=top><td>WRRMODE</td><td class="center">19</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>AC Macro Write Path Rise-to-Rise Mode: Indicates if set that the PHY<br/>mission mode is configured to run in rise-to-rise mode for the write path.<br/>Otherwise if not set the PHY mission mode for the write path is running in<br/>rise-to-fall mode.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">18:8</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Returns zeros on Reads.</td></tr>
+<tr valign=top><td>LPWAKEUP_THRSH</td><td class="center"> 7:4</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0xC</td><td>AC Low Power Wakeup Threshold: If dfi_lp_wakeup is greater than this<br/>threshold value, PLLs will be powered down when entering DFI low power<br/>mode.<br/>The value of the dfi_lp_wakeup signal at the time that the dfi_lp_ctrl_req<br/>or dfi_lp_data_req signal is asserted sets the tlp_wakeup time. Valid<br/>values in terms of number clock cycles are:<br/>4b0000 = 16 cycles<br/>4b0001 = 32 cycles<br/>4b0010 = 64 cycles<br/>4b0011 = 128 cycles<br/>4b0100 = 256 cycles<br/>4b0101 = 512 cycles<br/>4b0110 = 1024 cycles<br/>4b0111 = 2048 cycles<br/>4b1000 = 4096 cycles<br/>4b1001 = 8192 cycles<br/>4b1010 = 16384 cycles<br/>4b1011 = 32768 cycles<br/>4b1100 = 65536 cycles<br/>4b1101 = 131072 cycles<br/>4b1110 = 262144 cycles<br/>4b1111 = Unlimited cycles<br/>LPWAKEUP_THRSH calculation: <br/>MINIMUM LPWAKEUP CYCLES = pll_lock_time / ctl_clk_period +<br/>MDL calibration cycles<br/>where,<br/>MDL calibration cycles = N * DDL calibration cycles<br/>N is Decoded value of PGCR1.FDEPTH.<br/>Example,<br/>With tCK= 938 ps; ctl_clk = 1876 ps; and PGCR1.FDEPTH = 2b10:<br/>From the PGCR1 register description, FDEPTH=2b10 decodes to a depth<br/>of 8.<br/>Pll_lock_time from PLL spec is 25us.<br/>So LPWAKEUP_THRSH= 25 ns / 1876 ps + 8 * (800 cycles) = 13326<br/>+ 6400 = 19726 cycles<br/>Setting LPWAKEUP_THRSH to 4b1010 would trigger PLL power down<br/>for tlp_wakeup value of 32768 cycles and above; which meets the<br/>calculations for MINIMUM LPWAKEUP CYCLES of 19726 cycles</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 3:2</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Return zeroes on reads.</td></tr>
+<tr valign=top><td>LPPLLPD</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>AC Low Power PLL Power Down: Specifies if set that the PHY should<br/>respond to the DFI low power opportunity request and power down the<br/>PLL of the byte if the wakeup time request satisfies the<br/>LPWAKEUP_THRSH.<br/>LPWAKEUP_THRSH is the Minimum threshold value of tlp_wakeup<br/>required to make PHY go into low power mode by powering down PLL.<br/>The value of the dfi_lp_wakeup signal at the time that the<br/>dfi_lp_data_req&dfi_lp_ctrl_req signal is de-asserted sets the tlp_wakeup<br/>time. The value is in terms of number clock cycles.<br/>Refer Table 11 description of LPWAKEUP_THRSH for decoding details</td></tr>
+<tr valign=top><td>LPIOPD</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>AC Low Power I/O Power Down: Specifies if set that the PHY should<br/>respond to the DFI low power opportunity request and power down the<br/>I/Os of the byte.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

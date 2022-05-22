@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<title>PGCR6 (DDR_PHY) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddr_phy.html")>DDR_PHY Module</a> &gt; PGCR6 (DDR_PHY) Register</p><h1>PGCR6 (DDR_PHY) Register</h1>
+<h2>PGCR6 (DDR_PHY) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>PGCR6</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000028</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD080028 (DDR_PHY)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00013000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>PHY General Configuration Register 6</td></tr>
+</table>
+<p></p>
+<h2>PGCR6 (DDR_PHY) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:24</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Returns zeroes on reads.</td></tr>
+<tr valign=top><td>DLDLMT</td><td class="center">23:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Delay Line VT Drift Limit: Specifies the minimum change in the delay line<br/>VT drift in one direction which should result in the assertion of the delay<br/>line VT drift status signal (vt_drift). The limit is specified in terms of delay<br/>select values. A value of 0 disables the assertion of delay line VT drift<br/>status signal.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">15:14</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Returns zeroes on reads.</td></tr>
+<tr valign=top><td>ACDLVT</td><td class="center">13</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>AC Address/Command Delay LCDL VT Compensation: Enables, if set,<br/>the VT drift compensation of the address/command (ACD) LCDL.</td></tr>
+<tr valign=top><td>ACBVT</td><td class="center">12</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Address/Command Bit Delay VT Compensation: Enables, if set the VT<br/>drift compensation of the address/command bit delay registers<br/>ACBLDR1,2,6,7,8,9.<br/>This bit doesn't control VT compensation for CK, CSN, CKE and ODT<br/>BDLs.</td></tr>
+<tr valign=top><td>ODTBVT</td><td class="center">11</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>ODT Bit Delay VT Compensation: Enables, if set the VT drift<br/>compensation of the AC macro ODT bit delay registers ACBLDR4. The<br/>VT compensation of ODT may produce a glitch on the SDRAM ODT and<br/>should only be enabled if the SDRAM ODT is inactive.</td></tr>
+<tr valign=top><td>CKEBVT</td><td class="center">10</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>CKE Bit Delay VT Compensation: Enables, if set the VT drift<br/>compensation of the AC macro CKE bit delay registers ACBLDR5. The<br/>VT compensation of CKE may produce a glitch on the SDRAM CKE and<br/>should only be enabled if the SDRAM CKE is inactive.</td></tr>
+<tr valign=top><td>CSNBVT</td><td class="center"> 9</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>CSN Bit Delay VT Compensation: Enables, if set the VT drift<br/>compensation of the AC macro CSN bit delay registers ACBLDR3. The<br/>VT compensation of CSN may produce a glitch on the SDRAM CSN and<br/>should only be enabled if the SDRAM CSN is inactive.</td></tr>
+<tr valign=top><td>CKBVT</td><td class="center"> 8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>CK Bit Delay VT Compensation: Enables, if set the VT drift compensation<br/>of the AC macro CK bit delay registers ACBLDR0. The VT compensation<br/>of CK BDLs may produce a glitch on the SDRAM CK and should only be<br/>enabled if the SDRAM CK is inactive.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 7:1</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Returns zeroes on reads.</td></tr>
+<tr valign=top><td>INHVT</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>VT Calculation Inhibit: Inhibits calculation of the next VT compensated<br/>delay line values. A value of 1 will initiate a stop of the VT compensation<br/>logic. The bit PGSR1[30] (VSTOP) will be set to a logic x1 when VT<br/>compensation has stopped. This bit should be set to 1 during writes to<br/>the delay line registers. A value of 0 will re-enable the VT compensation<br/>logic.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<title>INIT1 (DDRC) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddrc.html")>DDRC Module</a> &gt; INIT1 (DDRC) Register</p><h1>INIT1 (DDRC) Register</h1>
+<h2>INIT1 (DDRC) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>INIT1</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x00000000D4</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD0700D4 (DDRC)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>SDRAM Initialization Register 1</td></tr>
+</table>
+<p>This register is static. Static registers can only be written when the controller is in reset.</p>
+<h2>INIT1 (DDRC) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>dram_rstn_x1024</td><td class="center">24:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>DDR3/DDR4/LPDDR4: Number of cycles to assert SDRAM reset signal during init sequence. This should be set to a minimum of 1</td></tr>
+<tr valign=top><td>final_wait_x32</td><td class="center">14:8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Cycles to wait after completing the SDRAM initialization sequence before starting the dynamic scheduler.<br/>Unit: Counts of a global timer that pulses every 32 clock cycles.<br/>There is no known specific requirement for this; it may be set to zero.</td></tr>
+<tr valign=top><td>pre_ocd_x32</td><td class="center"> 3:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Wait period before driving the OCD complete command to SDRAM.<br/>Unit: Counts of a global timer that pulses every 32 clock cycles.<br/>There is no known specific requirement for this; it may be set to zero.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

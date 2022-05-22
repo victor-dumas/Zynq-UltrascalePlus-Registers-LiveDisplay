@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<title>ESR (CAN) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___can.html")>CAN Module</a> &gt; ESR (CAN) Register</p><h1>ESR (CAN) Register</h1>
+<h2>ESR (CAN) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>ESR</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000014</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF060014 (CAN0)<br/>0x00FF070014 (CAN1)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Error Status</td></tr>
+</table>
+<p>The Error Status Register (ESR) indicates the type of error that has occurred on the bus. If more than one error occurs, all relevant error flag bits are set in this register. The ESR is a write-to-clear register. Writes to this register will not set any bits, but will clear the bits that are set.</p>
+<h2>ESR (CAN) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:5</td><td class="tooltip grayback">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>ACKER</td><td class="center"> 4</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>ACK Error<br/>Indicates an acknowledgment error.<br/>1: Indicates an acknowledgment error has occurred.<br/>0: Indicates an acknowledgment error has not occurred on the bus since the last write to this register.<br/>If this bit is set, writing a 1 clears it.</td></tr>
+<tr valign=top><td>BERR</td><td class="center"> 3</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Bit Error<br/>Indicates the received bit is not the same as the transmitted bit during bus communication.<br/>1: Indicates a bit error has occurred.<br/>0: Indicates a bit error has not occurred on the bus since the last write to this register.<br/>If this bit is set, writing a 1 clears it.</td></tr>
+<tr valign=top><td>STER</td><td class="center"> 2</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Stuff Error<br/>Indicates an error if there is a stuffing violation.<br/>1: Indicates a stuff error has occurred.<br/>0: Indicates a stuff error has not occurred on the bus since the last write to this register.<br/>If this bit is set, writing a 1 clears it.</td></tr>
+<tr valign=top><td>FMER</td><td class="center"> 1</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Form Error<br/>Indicates an error in one of the fixed form fields in the message frame.<br/>1: Indicates a form error has occurred.<br/>0: Indicates a form error has not occurred on the bus since the last write to this register.<br/>If this bit is set, writing a 1 clears it.</td></tr>
+<tr valign=top><td>CRCER</td><td class="center"> 0</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>CRC Error<br/>Indicates a CRC error has occurred.<br/>1: Indicates a CRC error has occurred.<br/>0: Indicates a CRC error has not occurred on the<br/>bus since the last write to this register.<br/>If this bit is set, writing a 1 clears it.<br/>In case of a CRC Error and a CRC delimiter corruption, only the FMER bit is set.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

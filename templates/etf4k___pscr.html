@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<title>PSCR (ETF4K) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___etf4k.html")>ETF4K Module</a> &gt; PSCR (ETF4K) Register</p><h1>PSCR (ETF4K) Register</h1>
+<h2>PSCR (ETF4K) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>PSCR</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000308</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FE940308 (CORESIGHT_SOC_ETF_1)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>This register determines the reload value of the Periodic Synchronization Counter. This counter enables the frequency of synchronization information to be optimized to the trace capture buffer size.When the TMC is enabled, the Periodic Synchronization counter counts the number of bytes of trace data stored into the trace memory (regardless of whether the trace data has been formatted by the TMC or not) since the occurrence of the last synchronization request on the ATB slave interface. The value programmed into this register determines the reload value of the Periodic Synchronization counter.This counter is enabled only when the TraceCaptEn bit in the Control Register, CTL, 0x020, is set. Writing to this register other than when TraceCaptEn=0 and TMCReady=1 will result in Unpredictable behavior.</td></tr>
+</table>
+<p></p>
+<h2>PSCR (ETF4K) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>PSCount</td><td class="center"> 4:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Determines the reload value of the Synchronization Counter. The reload value takes effect the next time the counter reaches 0. Reads from this register return the reload value programmed into this register. This register is set to 0xA on reset, corresponding to a synchronization period of 1024 bytes.0x0: Synchronization disabled. 0x1-0x6: Reserved/UNP.0x7-0x1B: Synchronisation period is 2**PSCount bytes. For example, a value of 0x7 gives a synchronization period of 128 bytes.0x1C-0x1F: Reserved/UNP.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

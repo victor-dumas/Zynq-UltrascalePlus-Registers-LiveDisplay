@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<title>ODTCR (DDR_PHY) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddr_phy.html")>DDR_PHY Module</a> &gt; ODTCR (DDR_PHY) Register</p><h1>ODTCR (DDR_PHY) Register</h1>
+<h2>ODTCR (DDR_PHY) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>ODTCR</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000098</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD080098 (DDR_PHY)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00010000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>ODT Configuration Register</td></tr>
+</table>
+<p></p>
+<h2>ODTCR (DDR_PHY) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:28</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved; Do not change from default value.</td></tr>
+<tr valign=top><td>WRODT_RSVD</td><td class="center">27:18</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Reserved. Return zeroes on reads.</td></tr>
+<tr valign=top><td>WRODT</td><td class="center">17:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Write ODT: Specifies whether ODT should be enabled (1b1) or disabled<br/>(1b0) on each of the up to 2 ranks when a write command is sent to<br/>rank n, n=0 to 1. Each rank has its own 2-bit WRDODT field which is<br/>indirectly accessed using RANKIDR register. The 2 bits of the field<br/>each represent a rank, the LSB being rank 0 and the MSB being rank<br/>1. Default is to enable ODT only on rank being written to. The default<br/>shown in this register is for rank 0 - the default for the other ranks will<br/>have the nth bit set where n corresponds to the number of the rank.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">15:12</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Return zeroes on reads.</td></tr>
+<tr valign=top><td>RDODT_RSVD</td><td class="center">11:2</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Reserved. Return zeroes on reads</td></tr>
+<tr valign=top><td>RDODT</td><td class="center"> 1:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Read ODT: Specifies whether ODT should be enabled (1b1) or<br/>disabled (1b0) on each of the up to 2 ranks when a read command is<br/>sent to rank n, n=0 to 1. Each rank has its own 2-bit RDODT field<br/>which is indirectly accessed using RANKIDR register. The 2 bits of the<br/>field each represent a rank, the LSB being rank 0 and the MSB being<br/>rank 1. Default is to disable ODT during reads.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

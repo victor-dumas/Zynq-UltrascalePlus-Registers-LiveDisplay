@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<title>afifm0M_intfpd_max_ot (FPD_GPV) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___fpd_gpv.html")>FPD_GPV Module</a> &gt; afifm0M_intfpd_max_ot (FPD_GPV) Register</p><h1>afifm0M_intfpd_max_ot (FPD_GPV) Register</h1>
+<h2>afifm0M_intfpd_max_ot (FPD_GPV) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>afifm0M_intfpd_max_ot</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000045110</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD745110 (FPD_GPV)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Maximum number of outstanding transactions</td></tr>
+</table>
+<p>A value of 0 for both the integer and fractional parts disables the programmable regulation so that the NIC-301 base product configuration limits apply. A value of 0 for the fractional part programs disables the regulation of fractional outstanding transactions. The AW and AR outstanding transaction limits are enabled when you set the corresponding en_aw_ot or en_ar_ot control bits of the QoS control register. The maximum combined outstanding transactions register enables you to program the maximum number of address requests for the AR and AW channels. The combined limit is applied after any individual channel limits.</p>
+<h2>afifm0M_intfpd_max_ot (FPD_GPV) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>ar_max_oti</td><td class="center">29:24</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Integer part of max outstanding AR addresses.</td></tr>
+<tr valign=top><td>ar_max_otf</td><td class="center">23:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Fraction part of max outstanding AR addresses.</td></tr>
+<tr valign=top><td>aw_max_oti</td><td class="center">13:8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Integer part of max outstanding AW addresses.</td></tr>
+<tr valign=top><td>aw_max_otf</td><td class="center"> 7:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Fraction part of max outstanding AW addresses.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

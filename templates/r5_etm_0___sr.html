@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<title>SR (R5_ETM_0) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___r5_etm_0.html")>R5_ETM_0 Module</a> &gt; SR (R5_ETM_0) Register</p><h1>SR (R5_ETM_0) Register</h1>
+<h2>SR (R5_ETM_0) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>SR</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000010</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FEBFC010 (CORESIGHT_R5_ETM_0)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000002</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Status Register</td></tr>
+</table>
+<p></p>
+<h2>SR (R5_ETM_0) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>Trigger</td><td class="center"> 3</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Trigger bit. Set when the trigger occurs, and prevents the trigger from being output until the ETM is next programmed.</td></tr>
+<tr valign=top><td>Status</td><td class="center"> 2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Holds the current status of the trace start/stop resource. If set to 1, it indicates that a trace on address has been matched, without a corresponding trace off address match.</td></tr>
+<tr valign=top><td>Programming</td><td class="center"> 1</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>The current effective value of the ETM Programming bit (ETM Control Register bit [10]). You must wait for this bit to go to 1 before you start to program the ETM. If you read other bits in the ETM Status Register while this bit is 0, some instructions might not have taken effect. It is recommended that you set the ETM Programming bit and wait for this bit to go to 1 before reading the overflow bit. This bit remains 0 if there is any data in the FIFO. This ensures that the FIFO is empty before the ETM programming is changed.</td></tr>
+<tr valign=top><td>Overflow</td><td class="center"> 0</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>If set to 1, there is an overflow that has not yet been traced. This bit is cleared to 0 when either:<br/>- trace is restarted.<br/>- the ETM Power Down bit, bit [0] of the ETM Control Register, 0x00, is set to 1.<br/>Note: Setting or clearing the ETM Programming bit does not cause this bit to be cleared.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

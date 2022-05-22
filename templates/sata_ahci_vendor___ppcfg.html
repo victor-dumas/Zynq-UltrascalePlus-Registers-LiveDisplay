@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<title>PPCFG (SATA_AHCI_VENDOR) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___sata_ahci_vendor.html")>SATA_AHCI_VENDOR Module</a> &gt; PPCFG (SATA_AHCI_VENDOR) Register</p><h1>PPCFG (SATA_AHCI_VENDOR) Register</h1>
+<h2>PPCFG (SATA_AHCI_VENDOR) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>PPCFG</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000008</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD0C00A8 (SATA_AHCI_VENDOR)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0xA001FFFE</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Phy Control Layer 1 configuration for port 0 or 1.</td></tr>
+</table>
+<p>Port Phy1Cfg. Controls the configuration of the Phy Control Layer 1 register for either Port 0 or Port 1. The Port configured is controlled by the value programmed into the Port Config Register.</p>
+<h2>PPCFG (SATA_AHCI_VENDOR) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>ESDF</td><td class="center">31</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>ESDF: Enable signal det filter, if set the a single de-assertion of signal detect or the coreRxDataValid when the Phy Init state machine is in the PhyReady state will cause the state machine to exit the PhyReady state and return to a PhyNotReady state,<br/>this will result in the OOB and speed negotiation running again.</td></tr>
+<tr valign=top><td>ERSN</td><td class="center">30</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Enable reset speed negotiation (ERSN): If enabled then the Phy control layer will enable only a single speed on the Rx path during speed negotiation.<br/>This speed is determined as the fastest support for the first round falling to the lowest speed for the final round. Each round of speed negotiation is terminated by the host issuing a COMRESET and rerunning OOB before beginning the next round of speed negotiation as detailed in RSN Reset Speed Negotiation</td></tr>
+<tr valign=top><td>PSS</td><td class="center">29</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>PSS: PhyControl select SERDES Slumber CMU during Link Slumber.<br/>When the controller enters slumber if this bit is set an extra control signal is applied to the Serdes to slumber the Clock block within the Serdes.<br/>This will yield extra power savings but is Serdes specific.</td></tr>
+<tr valign=top><td>PSSO</td><td class="center">28</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>PSSO: PhyControl select SERDES OOB or internally decoded OOB signaling as inputs.<br/>0: INT_OOB.<br/>1: SER_OOB.</td></tr>
+<tr valign=top><td>STB</td><td class="center">27</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>STB: Status Bit. Reading this bit will show that status of the Gen Fixed clocks parameter.<br/>This bit indicates if the Phy Control layer is running from a fixed frequency clock or a variable clock derived from the tx clock of the SERDES.</td></tr>
+<tr valign=top><td>PBPNA</td><td class="center">26</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>PBPNA: PhyControl BIST Pattern no Aligns. Setting this bit will cause the Phy Ctrl Pattern generator to transmit each pattern continuously.</td></tr>
+<tr valign=top><td>PBCE</td><td class="center">25</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>PBCE: PhyControl BIST Clear Error. Setting this bit to 1 clears the pattern match error bit. When a pattern mismatch occurs this bit needs to be set then negated to clear the error.</td></tr>
+<tr valign=top><td>PBPE</td><td class="center">24</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>PBPE: PhyControl BIST Pattern Enable. Setting this bit to 1 enables the Phy Control Test Pattern generation.</td></tr>
+<tr valign=top><td>PBPS</td><td class="center">23:21</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>PBPS: PhyControl BIST Pattern Select<br/>0: LBP.<br/>1: LFTP.<br/>2: MFTP.<br/>3: HFTP.<br/>4: PRBS.<br/>5: BIST.</td></tr>
+<tr valign=top><td>FPR</td><td class="center">20</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>FPR: Force PHY Ready signal level.<br/>0: Normal.<br/>1: frcPhyRdy.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">19</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>SNR</td><td class="center">18</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>SNR: Speed Negotiation Rate, when set to 1 the speed negotiation is run only at the rate programmed in the SPD field of the SControl register.</td></tr>
+<tr valign=top><td>SNM</td><td class="center">17</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>SNM: Speed Negotiation Method, when set to 1 the speed negotiation is run starting at gen1 speed up to fastest supported speed, when cleared to o the speed negotiation is run starting at the fastest supported speed down to gen1 speed.</td></tr>
+<tr valign=top><td>TTA</td><td class="center">16:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1FFFE</td><td>TTA: This value determines the time period the Controller transmits and waits for ALIGNp during speed negotiation. This value is derived for the PM_CLK period.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

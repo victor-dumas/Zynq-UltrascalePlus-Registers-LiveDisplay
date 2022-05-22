@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<title>GQSPI_IDR (QSPI) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___qspi.html")>QSPI Module</a> &gt; GQSPI_IDR (QSPI) Register</p><h1>GQSPI_IDR (QSPI) Register</h1>
+<h2>GQSPI_IDR (QSPI) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>GQSPI_IDR</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000010C</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF0F010C (QSPI)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>GQSPI Interrupt disable</td></tr>
+</table>
+<p>Writing a 1 to this register resets the corresponding bits of the interrupt mask register. 0: no effect. 1: disable the interrupt  (set mask = 1).</p>
+<h2>GQSPI_IDR (QSPI) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:12</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>RX_FIFO_EMPTY</td><td class="center">11</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>RX FIFO Empty interrupt disable<br/><br/></td></tr>
+<tr valign=top><td>Gen_FIFO_full</td><td class="center">10</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Generic FIFO full<br/>interrupt disable<br/><br/></td></tr>
+<tr valign=top><td>Gen_FIFO_not_full</td><td class="center"> 9</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Generic FIFO not full interrupt disable<br/><br/></td></tr>
+<tr valign=top><td>TX_FIFO_EMPTY</td><td class="center"> 8</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>TX FIFO Empty interrupt disable<br/><br/></td></tr>
+<tr valign=top><td>Gen_FIFO_Empty</td><td class="center"> 7</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Generic FIFO Empty<br/>interrupt disable<br/><br/></td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 6</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>RX_FIFO_full</td><td class="center"> 5</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>RX FIFO full<br/>disable<br/><br/></td></tr>
+<tr valign=top><td>RX_FIFO_not_empty</td><td class="center"> 4</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>RX FIFO not empty<br/>disable<br/><br/></td></tr>
+<tr valign=top><td>TX_FIFO_full</td><td class="center"> 3</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>TX FIFO full<br/>disable<br/><br/></td></tr>
+<tr valign=top><td>TX_FIFO_not_full</td><td class="center"> 2</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>TX FIFO not full<br/>disable<br/><br/></td></tr>
+<tr valign=top><td>Poll_Time_Expire</td><td class="center"> 1</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Poll Time out counter expire<br/>interrupt disable<br/><br/></td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 0</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

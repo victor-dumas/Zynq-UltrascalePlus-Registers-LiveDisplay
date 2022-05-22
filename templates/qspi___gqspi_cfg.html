@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<title>GQSPI_CFG (QSPI) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___qspi.html")>QSPI Module</a> &gt; GQSPI_CFG (QSPI) Register</p><h1>GQSPI_CFG (QSPI) Register</h1>
+<h2>GQSPI_CFG (QSPI) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>GQSPI_CFG</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000100</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF0F0100 (QSPI)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>GQSPI Configuration</td></tr>
+</table>
+<p>Note: Change register value only when controller is not communicating with the memory device.</p>
+<h2>GQSPI_CFG (QSPI) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>MODE_EN</td><td class="center">31:30</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Flash memory interface mode control:<br/>00: IO mode.<br/>10: DMA mode.<br/>others: reserved.<br/><br/><br/><br/></td></tr>
+<tr valign=top><td>GEN_FIFO_START_MODE</td><td class="center">29</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Start mode of Generic FIFO<br/>0: Auto Start Mode.<br/>1: Manual Start Mode.<br/></td></tr>
+<tr valign=top><td>START_GEN_FIFO</td><td class="center">28</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Trigger Generic FIFO Command Execution.<br/>0:disable executing requests.<br/>1: enable executing requests.<br/></td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">27</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>ENDIAN</td><td class="center">26</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Endian format transmit data register<br/>writes (GQSPI_TXD) and receive data register reads (GQSPI_RXD):<br/>0: little endian.<br/>1: big endian.<br/></td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">25:21</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>EN_POLL_TIMEOUT</td><td class="center">20</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Poll Timeout Enable:<br/>0: disable.<br/>1: enable.<br/></td></tr>
+<tr valign=top><td>WP_HOLD</td><td class="center">19</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>If set, Holdb and WPn pins are actively driven by the qspi controller in 1-bit and 2-bit modes.<br/>If not set, then external pull up is required on HOLDb and WPn pins.<br/>Note that this bit doesn't affect the quad(4-bit) mode as Controller always drives these pins in quad mode.<br/>It is highly recommended to set this bit always(irrespective of mode of operation) while using GQSPI<br/></td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">18:6</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>BAUD_RATE_DIV</td><td class="center"> 5:3</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Clock Prescaler:<br/>000: divide by 2.<br/>001: divide by 4.<br/>010: divide by 8.<br/>011: divide by 16.<br/>100: divide by 32.<br/>101: divide by 64.<br/>110: divide by 128.<br/>111: divide by 256.<br/>Note: 000 is requried for loopback, [USE_LPBK].</td></tr>
+<tr valign=top><td>CLK_PH</td><td class="center"> 2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Clock phase<br/>1: the QSPI clock is inactive outside the word<br/>0: the QSPI clock is active outside the word<br/>Note: For {CLK_PH, CLK_POL}, only 2'b11 and 2'b00 are supported.<br/></td></tr>
+<tr valign=top><td>CLK_POL</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Clock polarity outside QSPI word.<br/>0: QSPI clock is quiescent low.<br/>1: QSPI clock is quiescent high.<br/>Note: For [CLK_PH, CLK_POL], only 2'b11 and 2'b00 are supported.<br/></td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 0</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

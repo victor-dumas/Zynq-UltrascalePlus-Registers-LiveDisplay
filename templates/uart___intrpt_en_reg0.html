@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<title>Intrpt_en_reg0 (UART) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___uart.html")>UART Module</a> &gt; Intrpt_en_reg0 (UART) Register</p><h1>Intrpt_en_reg0 (UART) Register</h1>
+<h2>Intrpt_en_reg0 (UART) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>Intrpt_en_reg0</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000008</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF000008 (UART0)<br/>0x00FF010008 (UART1)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Interrupt Enable Register</td></tr>
+</table>
+<p>This write only register is used to enable interrupts. When any bit is written high, the corresponding interrupt is enabled. Writing a low to any bit has no effect.</p>
+<h2>Intrpt_en_reg0 (UART) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:14</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved, read as zero, ignored on write.</td></tr>
+<tr valign=top><td>RBRK</td><td class="center">13</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Receiver break detect interrupt:<br/>0: no effect<br/>1: When set to 1, the Receiver break detect interrupt is enabled (clears mask = 0)</td></tr>
+<tr valign=top><td>TOVR</td><td class="center">12</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Transmitter FIFO Overflow interrupt:<br/>0: no effect<br/>1: enable (clears mask = 0)</td></tr>
+<tr valign=top><td>TNFUL</td><td class="center">11</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Transmitter FIFO Nearly Full interrupt:<br/>0: no effect<br/>1: enable (clears mask = 0)</td></tr>
+<tr valign=top><td>TTRIG</td><td class="center">10</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Transmitter FIFO Trigger interrupt:<br/>0: disable 1: enable</td></tr>
+<tr valign=top><td>DMSI</td><td class="center"> 9</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Delta Modem Status Indicator interrupt:<br/>0: no effect<br/>1: enable (clears mask = 0)</td></tr>
+<tr valign=top><td>TIMEOUT</td><td class="center"> 8</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Receiver Timeout Error interrupt:<br/>0: no effect<br/>1: enable (clears mask = 0)</td></tr>
+<tr valign=top><td>PARE</td><td class="center"> 7</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Receiver Parity Error interrupt:<br/>0: disable 1: enable</td></tr>
+<tr valign=top><td>FRAME</td><td class="center"> 6</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Receiver Framing Error interrupt:<br/>0: no effect<br/>1: enable (clears mask = 0)</td></tr>
+<tr valign=top><td>ROVR</td><td class="center"> 5</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Receiver Overflow Error interrupt:<br/>0: no effect<br/>1: enable (clears mask = 0)</td></tr>
+<tr valign=top><td>TFUL</td><td class="center"> 4</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Transmitter FIFO Full interrupt:<br/>0: no effect<br/>1: enable (clears mask = 0)</td></tr>
+<tr valign=top><td>TEMPTY</td><td class="center"> 3</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Transmitter FIFO Empty interrupt:<br/>0: disable<br/>1: enable</td></tr>
+<tr valign=top><td>RFUL</td><td class="center"> 2</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Receiver FIFO Full interrupt:<br/>0: no effect<br/>1: enable (clears mask = 0)</td></tr>
+<tr valign=top><td>REMPTY</td><td class="center"> 1</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Receiver FIFO Empty interrupt:<br/>0: no effect<br/>1: enable (clears mask = 0)</td></tr>
+<tr valign=top><td>RTRIG</td><td class="center"> 0</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Receiver FIFO Trigger interrupt:<br/>0: no effect<br/>1: enable (clears mask = 0)</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

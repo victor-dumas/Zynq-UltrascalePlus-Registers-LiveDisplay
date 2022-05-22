@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<title>screening_type_2_register_2 (GEM) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___gem.html")>GEM Module</a> &gt; screening_type_2_register_2 (GEM) Register</p><h1>screening_type_2_register_2 (GEM) Register</h1>
+<h2>screening_type_2_register_2 (GEM) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>screening_type_2_register_2</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000548</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF0B0548 (GEM0)<br/>0x00FF0C0548 (GEM1)<br/>0x00FF0D0548 (GEM2)<br/>0x00FF0E0548 (GEM3)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Screener Type 2 match registers allow a screen to be configured that is the combination of all or any of the following comparisons:1) An enabled VLAN Priority. A VLAN Priority match will be performed if the VLAN priority enable is set. The extracted priority field in the VLAN header is compared against 3 bits within the screener type 2 register itself.2) An enabled EtherType.3) An enabled Field Compare A. 4) An enabled Field Compare B. 5) An enabled Field Compare C. If a match is successful, then the queue value programmed in bits 3:0 is allocated to the frame. The required number of Type 2 screening registers is configured in the gem defines file. Up to 16 type 2 screening registers have been allocated APB address space between 0x540 and 0x57C.</td></tr>
+</table>
+<p></p>
+<h2>screening_type_2_register_2 (GEM) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved, read as 0, ignored on write. </td></tr>
+<tr valign=top><td>compare_c_enable</td><td class="center">30</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Compare C Enable</td></tr>
+<tr valign=top><td>compare_c</td><td class="center">29:25</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Compare C<br/>- Index to screener type 2 Compare register</td></tr>
+<tr valign=top><td>compare_b_enable</td><td class="center">24</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Compare B Enable</td></tr>
+<tr valign=top><td>compare_b</td><td class="center">23:19</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Compare B<br/>- Index to screener type 2 Compare register</td></tr>
+<tr valign=top><td>compare_a_enable</td><td class="center">18</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Compare A Enable</td></tr>
+<tr valign=top><td>compare_a</td><td class="center">17:13</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Compare A<br/>- Index to screener type 2 Compare register </td></tr>
+<tr valign=top><td>ethertype_enable</td><td class="center">12</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>EtherType Enable</td></tr>
+<tr valign=top><td>index</td><td class="center">11:9</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Index to screener type 2 EtherType register</td></tr>
+<tr valign=top><td>vlan_enable</td><td class="center"> 8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>VLAN Enable</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 7</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved, read as 0, ignored on write</td></tr>
+<tr valign=top><td>vlan_priority</td><td class="center"> 6:4</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>VLAN Priority</td></tr>
+<tr valign=top><td>queue_number</td><td class="center"> 3:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Queue Number (0 -> 1)</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

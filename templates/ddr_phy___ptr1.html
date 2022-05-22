@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<title>PTR1 (DDR_PHY) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddr_phy.html")>DDR_PHY Module</a> &gt; PTR1 (DDR_PHY) Register</p><h1>PTR1 (DDR_PHY) Register</h1>
+<h2>PTR1 (DDR_PHY) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>PTR1</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000044</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD080044 (DDR_PHY)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0xD05612C0</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>PHY Timing Register 1</td></tr>
+</table>
+<p></p>
+<h2>PTR1 (DDR_PHY) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>tPLLLOCK</td><td class="center">31:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0xD056</td><td>PLL Lock Time: Number of ctl_clk cycles for the PLL to stabilize and lock,<br/>i.e. number of clock cycles from when the PLL reset pin is de-asserted to<br/>when the PLL has lock and is ready for use.<br/>The default value, 0d53334, is set for 100uS at CTL_CLK = 533 MHz and<br/>may be changed to a value that meets, or exceeds, the PLL Lock time,<br/>Tlock = 25us.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">15:13</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Returns zeroes on reads.</td></tr>
+<tr valign=top><td>tPLLRST</td><td class="center">12:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x12C0</td><td>PLL Reset Time: Number of ctl_clk cycles that the PLL must remain in<br/>reset mode, i.e. number of clock cycles from when PLL power-down pin is<br/>de-asserted and PLL reset pin is asserted to when PLL reset pin is de-<br/>asserted. This must correspond to a value that is equal to or more than<br/>9us. Default value corresponds to 9us.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

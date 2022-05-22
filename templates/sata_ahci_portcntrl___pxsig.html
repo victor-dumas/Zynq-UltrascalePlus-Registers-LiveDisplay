@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<title>PxSIG (SATA_AHCI_PORTCNTRL) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___sata_ahci_portcntrl.html")>SATA_AHCI_PORTCNTRL Module</a> &gt; PxSIG (SATA_AHCI_PORTCNTRL) Register</p><h1>PxSIG (SATA_AHCI_PORTCNTRL) Register</h1>
+<h2>PxSIG (SATA_AHCI_PORTCNTRL) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>PxSIG</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000024</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD0C0124 (SATA_AHCI_PORT0_CNTRL)<br/>0x00FD0C01A4 (SATA_AHCI_PORT1_CNTRL)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">ro<span class="tooltiptext">Read-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0xFFFFFFFF</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Port x Signature (PxSIG).</td></tr>
+</table>
+<p>This is a 32-bit register which contains the initial signature of an attached device when the first D2H Register FIS is received from that device.  It is updated once after a reset sequence.</p>
+<h2>PxSIG (SATA_AHCI_PORTCNTRL) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>SIG</td><td class="center">31:0</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0xFFFFFFFF</td><td>Signature (SIG): Contains the signature received from a device on the first D2H Register FIS.<br/>The bit order is as follows:<br/>Bit Field<br/>31:24 LBA High Register<br/>23:16 LBA Mid Register<br/>15:08 LBA Low Register<br/>07:00 Sector Count Register</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

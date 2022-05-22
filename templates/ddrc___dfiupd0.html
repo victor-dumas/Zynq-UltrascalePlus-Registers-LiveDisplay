@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<title>DFIUPD0 (DDRC) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddrc.html")>DDRC Module</a> &gt; DFIUPD0 (DDRC) Register</p><h1>DFIUPD0 (DDRC) Register</h1>
+<h2>DFIUPD0 (DDRC) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>DFIUPD0</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x00000001A0</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD0701A0 (DDRC)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00400003</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>DFI Update Register 0</td></tr>
+</table>
+<p>All register fields are static, unless described otherwise in the register field description. Static registers can only be written when the controller is in reset.</p>
+<h2>DFIUPD0 (DDRC) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>dis_auto_ctrlupd</td><td class="center">31</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>When '1', disable the automatic dfi_ctrlupd_req generation by the DDRC. The core must issue the dfi_ctrlupd_req signal using register reg_ddrc_ctrlupd.<br/>When '0', DDRC issues dfi_ctrlupd_req periodically.<br/>Quasi-dynamic Group 2</td></tr>
+<tr valign=top><td>dis_auto_ctrlupd_srx</td><td class="center">30</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>When '1', disable the automatic dfi_ctrlupd_req generation by the DDRC following a self-refresh exit. The core must issue the dfi_ctrlupd_req signal using register reg_ddrc_ctrlupd.<br/>When '0', DDRC issues a dfi_ctrlupd_req after exiting self-refresh.</td></tr>
+<tr valign=top><td>dfi_t_ctrlup_max</td><td class="center">25:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x40</td><td>Specifies the maximum number of clock cycles that the dfi_ctrlupd_req signal can assert. Lowest value to assign to this variable is 0x40.<br/>Unit: Clocks</td></tr>
+<tr valign=top><td>dfi_t_ctrlup_min</td><td class="center"> 9:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x3</td><td>Specifies the minimum number of clock cycles that the dfi_ctrlupd_req signal must be asserted. The DDRC expects the PHY to respond within this time.<br/>If the PHY does not respond, the DDRC will de-assert dfi_ctrlupd_req after dfi_t_ctrlup_min + 2 cycles.<br/>Lowest value to assign to this variable is 0x3.<br/>Unit: Clocks</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

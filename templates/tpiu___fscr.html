@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<title>FSCR (TPIU) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___tpiu.html")>TPIU Module</a> &gt; FSCR (TPIU) Register</p><h1>FSCR (TPIU) Register</h1>
+<h2>FSCR (TPIU) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>FSCR</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000308</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FE980308 (CORESIGHT_SOC_TPIU)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000040</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>The Formatter Synchronization Counter Register enables effective use on different sized Trace Port Analyzers (TPAs) without wasting large amounts of the storage capacity of the capture device.This counter is the number of formatter frames since the last synchronization packet of 128 bits, and is a 12-bit counter with a maximum count value of 4096. This equates to synchronization every 65536 bytes, that is, 4096 packets x 16 bytes per packet. The default is set up for a synchronization packet every 1024 bytes, that is, every 64 formatter frames.If the formatter has been configured for continuous mode, full and half-word sync frames are inserted during normal operation. Under these circumstances the count value represents the maximum number of complete frames between full synchronization packets.</td></tr>
+</table>
+<p></p>
+<h2>FSCR (TPIU) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>CycCount</td><td class="center">11:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x40</td><td>12-bit counter value to indicate the number of complete frames between full synchronization packets. Default value is 64 (0x40).</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

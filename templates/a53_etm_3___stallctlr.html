@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<title>STALLCTLR (A53_ETM_3) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___a53_etm_3.html")>A53_ETM_3 Module</a> &gt; STALLCTLR (A53_ETM_3) Register</p><h1>STALLCTLR (A53_ETM_3) Register</h1>
+<h2>STALLCTLR (A53_ETM_3) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>STALLCTLR</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000002C</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FEF4002C (CORESIGHT_A53_ETM_3)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Stall Control Register</td></tr>
+</table>
+<p></p>
+<h2>STALLCTLR (A53_ETM_3) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>ISTALL</td><td class="center"> 8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Instuction stall bit. Controls if the trace unit can stall the processor when the instruction trace buffer space is less then LEVEL</td></tr>
+<tr valign=top><td>LEVEL</td><td class="center"> 3:2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Thereshold level field. The field can support 4 monotonic levels from 0b00 to 0b11, where:<br/>0b00: Zero invations. This setting has a greater risk of an ETM trace unit FIFO overflow<br/>0b11: Maximum invations occurs but there is less risk of a FIFO overflow</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

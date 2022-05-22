@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<title>WVR0 (R5_DBG_1) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___r5_dbg_1.html")>R5_DBG_1 Module</a> &gt; WVR0 (R5_DBG_1) Register</p><h1>WVR0 (R5_DBG_1) Register</h1>
+<h2>WVR0 (R5_DBG_1) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>WVR0</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000180</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FEBF2180 (CORESIGHT_R5_DBG_1)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Watchpoint Value Register 0</td></tr>
+</table>
+<p></p>
+<h2>WVR0 (R5_DBG_1) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>Watchpoint_address</td><td class="center">31:2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>Each WVR is associated with a Watchpoint Control Register(WCR). WCRy is the corresponding register for WVRy.<br/>A pair of watchpoint registers, WVRy and WCRy, is called a Watchpoint Register Pair(WRP). WVR0-7 are paired with WCR0-7 to make WRP0-7.<br/>The watchpoint value contained in the WVR always corresponds to a data address and can be set either on:<br/>. a data address<br/>. a data address and context ID pair.<br/>For a data address and context ID pair, a WRP and the BRP with context ID comparison capability must be linked. A debug event is generated when both the data address and the context ID pair match simultaneously.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

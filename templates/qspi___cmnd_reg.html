@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<title>CMND_REG (QSPI) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___qspi.html")>QSPI Module</a> &gt; CMND_REG (QSPI) Register</p><h1>CMND_REG (QSPI) Register</h1>
+<h2>CMND_REG (QSPI) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>CMND_REG</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x00000000C0</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF0F00C0 (QSPI)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Command control</td></tr>
+</table>
+<p>This register needs to be programmed for every request.</p>
+<h2>CMND_REG (QSPI) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:21</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>RESERVED. Return 0 when read. Writes ignored.</td></tr>
+<tr valign=top><td>RXFIFO_DRAIN</td><td class="center">20</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>When this bit is set to 1'b1, data in the RXFIFO is drained by the HW as soon as the data available in RXIFO. This bit can be set for any write transfer to the Flash so that the HW will discard the data captured while transmitting the write data.<br/>0: Do not discard the data in RXFIFO.<br/>1: Discard the data in RXFIFO.<br/></td></tr>
+<tr valign=top><td>RXFIFO_DRAIN_STATUS</td><td class="center">19</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>This bit provides the status of RXFIFO_DRAIN.<br/>0: RXFIFO_DRAIN is reset.<br/>1: RXFIFO_DRAIN is set.</td></tr>
+<tr valign=top><td>PARTIAL_BYTE_LEN</td><td class="center">18:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Value in this field along with TXD1, TXD2, TXD3 represents the number of bits to be transmitted. (TXDx length - PARTIAL_BYTE_LEN) is the number of bits to be transmitted<br/>For example, if only 4 bits to be transmitted, program PARTIAL_BYTE_LEN with a value of 4 and then configure TXD1 register.<br/>Similar way to transmit 12 bits, program PARTIAL_BYTE_LEN a value of 4 and then configure TXD2 register.<br/>Value in this files is cleared by HW soon after completing transmission of partial byte. SW need to write into this register again if need to transfer partial byte.<br/></td></tr>
+<tr valign=top><td>RX_DISCARD_REG</td><td class="center">14:8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Value in this field reflects the number of QSPI clocks for which the data need to be discarded before writing into RXFIFO. In general value in this field should be equal to QSPI clocks required to transmit Command+Address+Dummy cycles.<br/></td></tr>
+<tr valign=top><td>DUMMY_CYCLES</td><td class="center"> 7:2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Number of dummy cycles to be inserted after the address phase to the flash.<br/></td></tr>
+<tr valign=top><td>DMA_EN</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>This bit along with LQSPI_CFG[31] forms the mode selection. And the encoding is as mentioned below<br/>{DMA_EN, LQSPI_CFG[31]}:<br/>01: <br/>Linear Mode.<br/>10: <br/>DMA Mode.<br/>Others: reserved.<br/>Never set both the [DMA_EN] and LQSPI_SFG [31] bits to 1 as it is not a valid condition.<br/></td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

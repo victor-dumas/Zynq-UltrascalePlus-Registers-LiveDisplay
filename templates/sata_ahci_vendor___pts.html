@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<title>PTS (SATA_AHCI_VENDOR) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___sata_ahci_vendor.html")>SATA_AHCI_VENDOR Module</a> &gt; PTS (SATA_AHCI_VENDOR) Register</p><h1>PTS (SATA_AHCI_VENDOR) Register</h1>
+<h2>PTS (SATA_AHCI_VENDOR) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>PTS</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000002C</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD0C00CC (SATA_AHCI_VENDOR)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">ro<span class="tooltiptext">Read-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x0000012D</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Transport Layer Status (TransStatus).</td></tr>
+</table>
+<p>This register can be read to determine the status of the Transport Layer for either Port 0 or Port 1. The Port monitored is controlled by the value programmed into the Port Config Register. Note: All Status Registers have no predefined Reset value. The value shown in reset is a typical value that will be read after reset but will be dependent on the SERDES status, the actual value read can differ from this.</p>
+<h2>PTS (SATA_AHCI_VENDOR) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:9</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>TXSM</td><td class="center"> 8:4</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x12</td><td>Tx State Machine (TXSM) states<br/>0: TxTrnIdle<br/>1: TxTrnReset<br/>2: TxTrnWaitResetComplete<br/>3: TxTrnNonDataInitial<br/>4: TxTrnNonDataAbort<br/>5: TxTrnNonDataSend<br/>6: TxTrnNonDataComp<br/>7: TxTrnNonDataOk<br/>8: TxTrnNonDataNotOk<br/>9: TxTrnDataHeader<br/>10: TxTrnDataHeaderOut<br/>11: TxTrnDataSend<br/>12: TxTrnDataComp<br/>13: TxTrnDataNotOk<br/>14: TxTrnDataOk<br/>15: TxTrnCmdReset<br/>16: TxTrnCmdResetComp<br/>17: TxTrnCmdResetOverFlow<br/>18: TxTrnNonDataBackDown</td></tr>
+<tr valign=top><td>RXSM</td><td class="center"> 3:0</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0xD</td><td>Rx State Machine (RXSM) tates<br/>0: p_rx_idle<br/>1: p_rx_enable<br/>2: p_rx_datafis<br/>3: p_rx_datafis_rxd<br/>4: p_rx_nondatafis<br/>5: p_rx_unknownfis<br/>6: p_rx_unknownfis_rxd<br/>7: p_rx_badcrc<br/>8: p_rx_good<br/>9: p_rx_bad<br/>10: p_rx_reset<br/>11: p_rx_cmdreset<br/>12: p_rx_cmdreset_comp<br/>13: p_rx_reset_oflow<br/>14: p_rx_forcebad</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

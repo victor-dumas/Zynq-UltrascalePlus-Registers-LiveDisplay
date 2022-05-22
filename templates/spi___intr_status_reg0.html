@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<title>Intr_status_reg0 (SPI) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___spi.html")>SPI Module</a> &gt; Intr_status_reg0 (SPI) Register</p><h1>Intr_status_reg0 (SPI) Register</h1>
+<h2>Intr_status_reg0 (SPI) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>Intr_status_reg0</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000004</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF040004 (SPI0)<br/>0x00FF050004 (SPI1)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000004</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>SPI interrupt status</td></tr>
+</table>
+<p>This register is set when the described event occurs and the interrupt is enabled in the mask register. When any of these bits are set the interrupt output is asserted high. In the default configuration, these bits are all cleared simultaneously by reading this register, though this may be configured for an individual write-one-to-clear scheme.</p>
+<h2>Intr_status_reg0 (SPI) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:7</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved, read as zero, ignored on write.</td></tr>
+<tr valign=top><td>TX_FIFO_underflow</td><td class="center"> 6</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>TX FIFO underflow, write one to this bit location to clear.<br/>1: underflow is detected<br/>0: no underflow has been detected</td></tr>
+<tr valign=top><td>RX_FIFO_full</td><td class="center"> 5</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>RX FIFO full<br/>1: FIFO is full<br/>0: FIFO is not full</td></tr>
+<tr valign=top><td>RX_FIFO_not_empty</td><td class="center"> 4</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>RX FIFO not empty<br/>1: FIFO has more than or equal to THRESHOLD entries<br/>0: FIFO has less than RX THRESHOLD entries</td></tr>
+<tr valign=top><td>TX_FIFO_full</td><td class="center"> 3</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>TX FIFO full<br/>1: FIFO is full<br/>0: FIFO is not full</td></tr>
+<tr valign=top><td>TX_FIFO_not_full</td><td class="center"> 2</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x1</td><td>TX FIFO not full<br/>1: FIFO has less than THRESHOLD entries<br/>0: FIFO has more than or equal toTHRESHOLD entries</td></tr>
+<tr valign=top><td>MODE_FAIL</td><td class="center"> 1</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Logic level on n_ss_in pin is inconsistent with the SPI mode.<br/>1: Use if n_ss_in is low in master mode (multi-master contention) or n_ss_in goes high during a transmission in slave mode. These conditions will clear the spi_enable bit and disable the SPI. This bit is reset only by a system reset and cleared only when this register is read.<br/>ModeFail interrupt, write one to this bit location to clear.<br/>1: a mode fault has occurred<br/>0: no mode fault has been detected</td></tr>
+<tr valign=top><td>RX_OVERFLOW</td><td class="center"> 0</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Receive Overflow interrupt, write one to this bit location to clear.<br/>1: overflow occured<br/>0: no overflow occurred</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<title>HCCPARAMS1 (USB3_XHCI) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___usb3_xhci.html")>USB3_XHCI Module</a> &gt; HCCPARAMS1 (USB3_XHCI) Register</p><h1>HCCPARAMS1 (USB3_XHCI) Register</h1>
+<h2>HCCPARAMS1 (USB3_XHCI) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>HCCPARAMS1</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000010</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FE200010 (USB3_0_XHCI)<br/>0x00FE300010 (USB3_1_XHCI)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">ro<span class="tooltiptext">Read-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x0238F66D</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Capability Parameters 1 Register<br/>For register definitions, refer to the xHCI specification.</td></tr>
+</table>
+<p></p>
+<h2>HCCPARAMS1 (USB3_XHCI) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>XECP</td><td class="center">31:16</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x238</td><td>xHCI Extended Capabilities Pointer (xECP)<br/>Based on configuration, core automatically updates it.<br/>Refer to &lt;workspace>/src/DWC_usb3_params.v for details on DWC_USB3_HC_XECP.</td></tr>
+<tr valign=top><td>MAXPSASIZE</td><td class="center">15:12</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0xF</td><td>Maximum Primary Stream Array Size (MaxPSASize)<br/>For a description of this standard USB register field, see the eXtensible Host Controller Interface for Universal Serial Bus (USB) Specification 3.0.</td></tr>
+<tr valign=top><td>CFC</td><td class="center">11</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Contiguous Frame ID Capability (CFC)</td></tr>
+<tr valign=top><td>SEC</td><td class="center">10</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>Stopped EDLTA Capability (SEC)<br/>For a description of this standard USB register field, see the eXtensible Host Controller Interface for Universal Serial Bus (USB) Specification 3.0.</td></tr>
+<tr valign=top><td>SPC</td><td class="center"> 9</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>Short Packet Capability (SPC)<br/>For a description of this standard USB register field, see the eXtensible Host Controller Interface for Universal Serial Bus (USB) Specification 3.0.</td></tr>
+<tr valign=top><td>PAE</td><td class="center"> 8</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Parse All Event Data (PAE)<br/>For a description of this standard USB register field, see the eXtensible Host Controller Interface for Universal Serial Bus (USB) Specification 3.0.</td></tr>
+<tr valign=top><td>NSS</td><td class="center"> 7</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>No Secondary SID Support (NSS)<br/>For a description of this standard USB register field, see the eXtensible Host Controller Interface for Universal Serial Bus (USB) Specification 3.0.</td></tr>
+<tr valign=top><td>LTC</td><td class="center"> 6</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>Latency Tolerance Messaging Capability (LTC)<br/>For a description of this standard USB register field, see the eXtensible Host Controller Interface for Universal Serial Bus (USB) Specification 3.0.</td></tr>
+<tr valign=top><td>LHRC</td><td class="center"> 5</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>Light HC Reset Capability<br/>For a description of this standard USB register field, see the eXtensible Host Controller Interface for Universal Serial Bus (USB) Specification 3.0.</td></tr>
+<tr valign=top><td>PIND</td><td class="center"> 4</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Port Indicators (PIND)<br/>For a description of this standard USB register field, see the eXtensible Host Controller Interface for Universal Serial Bus (USB) Specification 3.0.</td></tr>
+<tr valign=top><td>PPC</td><td class="center"> 3</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>Port Power Control<br/>For a description of this standard USB register field, see the eXtensible Host Controller Interface for Universal Serial Bus (USB) Specification 3.0.</td></tr>
+<tr valign=top><td>CSZ</td><td class="center"> 2</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>Context Size (CSZ)<br/>For a description of this standard USB register field, see the eXtensible Host Controller Interface for Universal Serial Bus (USB) Specification 3.0.</td></tr>
+<tr valign=top><td>BNC</td><td class="center"> 1</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>BW Negotiation Capability (BNC)<br/>For a description of this standard USB register field, see the eXtensible Host Controller Interface for Universal Serial Bus (USB) Specification 3.0.</td></tr>
+<tr valign=top><td>AC64</td><td class="center"> 0</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>64-bit Addressing Capability (AC64)<br/>For a description of this standard USB register field, see the eXtensible Host Controller Interface for Universal Serial Bus (USB) Specification 3.0.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

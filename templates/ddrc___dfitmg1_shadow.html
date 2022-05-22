@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<title>DFITMG1_SHADOW (DDRC) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddrc.html")>DDRC Module</a> &gt; DFITMG1_SHADOW (DDRC) Register</p><h1>DFITMG1_SHADOW (DDRC) Register</h1>
+<h2>DFITMG1_SHADOW (DDRC) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>DFITMG1_SHADOW</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000002194</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD072194 (DDRC)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000404</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>DFI Timing Shadow Register 1</td></tr>
+</table>
+<p>All register fields are quasi-dynamic group 4, unless described otherwise in the register field description. Group 4 registers can be written depending on MSTR.frequency_mode.</p>
+<h2>DFITMG1_SHADOW (DDRC) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>dfi_t_cmd_lat</td><td class="center">31:28</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Specifies the number of DFI PHY clocks between when the dfi_cs signal is asserted and when the associated command is driven.<br/>This field is used for CAL mode, should be set to '0' or the value which matches the CAL mode register setting in the DRAM.<br/>If the PHY can add the latency for CAL mode, this should be set to '0'.<br/>Valid Range: 0, 3, 4, 5, 6, and 8<br/>Programming Mode: Quasi-dynamic Group 2 and Group 4</td></tr>
+<tr valign=top><td>dfi_t_parin_lat</td><td class="center">25:24</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Specifies the number of DFI PHY clocks between when the dfi_cs signal is asserted and when the associated dfi_parity_in signal is driven.</td></tr>
+<tr valign=top><td>dfi_t_wrdata_delay</td><td class="center">20:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Specifies the number of DFI clocks between when the dfi_wrdata_en<br/>signal is asserted and when the corresponding write data transfer is completed on the DRAM bus.<br/>This corresponds to the DFI timing parameter twrdata_delay.<br/>Set to twrdata_delay, a new timing parameter introduced in DFI 3.0.<br/>Value to be programmed is in terms of DFI clocks, not PHY clocks.<br/>Divide PHY's value by 2 and round up to next integer.<br/>If using DFITMG0.dfi_wrdata_use_sdr=1, add 1 to the value.<br/>For DDR4 and LPDDR4, this should be set to 3.<br/>For DDR3 and LPDDR3, this should be set to 2.<br/>Unit: Clocks</td></tr>
+<tr valign=top><td>dfi_t_dram_clk_disable</td><td class="center">11:8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x4</td><td>Specifies the number of DFI clock cycles from the assertion of the dfi_dram_clk_disable signal on the DFI until the clock to the DRAM memory devices, at the PHY-DRAM boundary, maintains a low value. If the DFI clock and the memory clock are not phase aligned, this timing parameter should be rounded up to the next integer value.</td></tr>
+<tr valign=top><td>dfi_t_dram_clk_enable</td><td class="center"> 3:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x4</td><td>Specifies the number of DFI clock cycles from the de-assertion of the dfi_dram_clk_disable signal on the DFI until the first valid rising edge of the clock to the DRAM memory devices, at the PHY-DRAM boundary. If the DFI clock and the memory clock are not phase aligned, this timing parameter should be rounded up to the next integer value.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

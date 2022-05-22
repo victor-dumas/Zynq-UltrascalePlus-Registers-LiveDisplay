@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<title>PM_CTRL (PCIE_ATTRIB) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___pcie_attrib.html")>PCIE_ATTRIB Module</a> &gt; PM_CTRL (PCIE_ATTRIB) Register</p><h1>PM_CTRL (PCIE_ATTRIB) Register</h1>
+<h2>PM_CTRL (PCIE_ATTRIB) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>PM_CTRL</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000218</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD480218 (PCIE_ATTRIB)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000007</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>PM_CTRL</td></tr>
+</table>
+<p></p>
+<h2>PM_CTRL (PCIE_ATTRIB) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>cfg_trn_pending</td><td class="center"> 3</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>If asserted, sets the Transactions Pending bit in the Device Status Register (Device_Status[5]). Note: The user is required to assert this input if the User Application has not received a completion to a request.</td></tr>
+<tr valign=top><td>cfg_pm_send_pme_to</td><td class="center"> 2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Active-low signal causes core to to send Turn Off Message. When the link responds with a Turn Off Ack, this will be reported on cfg_msg_received_pme_to_ack, and the final transition to L3 Ready will be reported on cfg_pcie_link_state.</td></tr>
+<tr valign=top><td>cfg_pm_turnoff_ok</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Active low power turn-off ready signal to notify the endpoint that it is safe for power to be turned off. This input will be sampled during or after the cycle in which cfg_msg_received_pme_to pulses.</td></tr>
+<tr valign=top><td>cfg_pm_wake</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>One-clock cycle active low pulse to generate and send a Power Management Wake Event (PM_PME) Message TLP to the upstream link partner.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

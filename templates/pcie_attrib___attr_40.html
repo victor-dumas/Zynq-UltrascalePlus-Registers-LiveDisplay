@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<title>ATTR_40 (PCIE_ATTRIB) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___pcie_attrib.html")>PCIE_ATTRIB Module</a> &gt; ATTR_40 (PCIE_ATTRIB) Register</p><h1>ATTR_40 (PCIE_ATTRIB) Register</h1>
+<h2>ATTR_40 (PCIE_ATTRIB) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>ATTR_40</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x00000000A0</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD4800A0 (PCIE_ATTRIB)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000405</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>ATTR_40</td></tr>
+</table>
+<p>This register should only be written to during reset of the PCIe block</p>
+<h2>ATTR_40 (PCIE_ATTRIB) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>attr_msi_cap_multimsgcap</td><td class="center">11:9</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x2</td><td>Multiple Message Capable.<br/>Each MSI function may request up to 32 unique messages.<br/>System software may read this field to determine the number of messages requested.<br/>Number of messages requested are encoded as follows:<br/>0h = 1 vector<br/>1h=<br/>2 vectors<br/>2h=<br/>4.vectors<br/>3h=<br/>8 vectors<br/>4h= 16 vectors<br/>,5h= 32 vectors<br/>6h, 7h=<br/>Rsvd; EP=0x2; RP=0x0000</td></tr>
+<tr valign=top><td>attr_msi_cap_multimsg_extension</td><td class="center"> 8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Multiple Message Capable Extension - When set this allows 256 unique messages to be sent by the user (regardless of what MSI_CAP_MULTIMSGCAP is set to).; EP=0x0000; RP=0x0000</td></tr>
+<tr valign=top><td>attr_msi_cap_id</td><td class="center"> 7:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x5</td><td>The capability identifier of MSI capability. The value is transferred to the MSI Capabilities Register[7:0].; EP=0x0005; RP=0x0005</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

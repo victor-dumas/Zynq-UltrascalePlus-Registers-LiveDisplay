@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<title>DX2GSR3 (DDR_PHY) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddr_phy.html")>DDR_PHY Module</a> &gt; DX2GSR3 (DDR_PHY) Register</p><h1>DX2GSR3 (DDR_PHY) Register</h1>
+<h2>DX2GSR3 (DDR_PHY) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>DX2GSR3</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x00000009EC</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD0809EC (DDR_PHY)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">ro<span class="tooltiptext">Read-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>DATX8 n General Status Register 3</td></tr>
+</table>
+<p></p>
+<h2>DX2GSR3 (DDR_PHY) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:27</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Return zeroes on reads.</td></tr>
+<tr valign=top><td>ESTAT</td><td class="center">26:24</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>VREF Training Error Status Code: Indicates which phase of error<br/>check failed. Valid status encodings are:<br/>ESTAT[0] = Init vref check failed.<br/>ESTAT[1] = Final check for DRAM VREF failed<br/>ESTAT[2] = Final check for Host VREF failed.<br/>Note: ESTAT Register field is valid only when there is a bit set in<br/>DXnGSR3.DVERR or DXnGSR3.HVERR.</td></tr>
+<tr valign=top><td>DVERR</td><td class="center">17:16</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>DRAM VREF Training Error: Indicates if set that there was an error in<br/>VREF Training. Each bit indicates an error for one rank.</td></tr>
+<tr valign=top><td>HVERR</td><td class="center"> 9:8</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Host VREF Training Error: Indicates if set that there was an error in<br/>VREF Training. Each bit indicates an error for one rank.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 7:2</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Returns zeroes on reads.<br/>Caution: Do not write to this register field.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

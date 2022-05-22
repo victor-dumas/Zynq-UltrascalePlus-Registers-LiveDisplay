@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<title>ACPU3_PWR_STATUS (PMU_LOCAL) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___pmu_local.html")>PMU_LOCAL Module</a> &gt; ACPU3_PWR_STATUS (PMU_LOCAL) Register</p><h1>ACPU3_PWR_STATUS (PMU_LOCAL) Register</h1>
+<h2>ACPU3_PWR_STATUS (PMU_LOCAL) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>ACPU3_PWR_STATUS</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000034</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FFD60034 (PMU_LOCAL)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">ro<span class="tooltiptext">Read-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x0000000F</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>APU Core 3 Power Status. Reset by POR only.</td></tr>
+</table>
+<p>Status of the power switch gates. 0: off. 1: on, ready. All fields are read-only and are accessible only by the PMU processor. This register maintains its contents during a System Reset.</p>
+<h2>ACPU3_PWR_STATUS (PMU_LOCAL) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:4</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>Pwr_Gates</td><td class="center"> 3:0</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0xF</td><td>Status of power switch gates {0:3} for APU core 3.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

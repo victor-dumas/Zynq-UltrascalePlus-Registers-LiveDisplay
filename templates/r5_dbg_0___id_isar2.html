@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<title>ID_ISAR2 (R5_DBG_0) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___r5_dbg_0.html")>R5_DBG_0 Module</a> &gt; ID_ISAR2 (R5_DBG_0) Register</p><h1>ID_ISAR2 (R5_DBG_0) Register</h1>
+<h2>ID_ISAR2 (R5_DBG_0) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>ID_ISAR2</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000D48</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FEBF0D48 (CORESIGHT_R5_DBG_0)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">ro<span class="tooltiptext">Read-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x21232141</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>ISA Feature Register 2</td></tr>
+</table>
+<p></p>
+<h2>ID_ISAR2 (R5_DBG_0) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>Reversal</td><td class="center">31:28</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x2</td><td>Indicates support for reversal instructions. 0x2= the processor supports REV, REV16, REVSH, and RBIT.</td></tr>
+<tr valign=top><td>PSR</td><td class="center">27:24</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>Indicates support for PSRinstructions. 0x1= the processor supports MRSand MSR, and the exception return forms of data-processing instructions.</td></tr>
+<tr valign=top><td>Unsigned_multiply</td><td class="center">23:20</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x2</td><td>Indicates support for advanced unsigned multiply instructions. 0x2= the processor supports:<br/>. UMULL and UMLAL<br/>. UMAAL</td></tr>
+<tr valign=top><td>Signed_multiply</td><td class="center">19:16</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x3</td><td>Indicates support for advancedsigned multiply instructions. 0x3= the processor supports:<br/>. SMULL and SMLAL<br/>. SMLABB, SMLABT, SMLALBB,SMLALBT, SMLALTB, SMLALTT, SMLATB, SMLATT, SMLAWB, SMLAWT, SMULBB, SMULBT, SMULTB, SMULTT, SMULWB, SMULWT, and Q flag in PSRs<br/>. SMLAD, SMLADX, SMLALD, SMLALDX, SMLSD, SMLSDX, SMLSLD, SMLSLDX, SMMLA, SMMLAR, SMMLS, SMMLSR, SMPUL, SMPULR, SMUAD, SMUADX, SMUSD, and SMUSDX</td></tr>
+<tr valign=top><td>Multiply</td><td class="center">15:12</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x2</td><td>Indicates support for multiply instructions. 0x2= the processor supports MUL, MLA, and MLS.</td></tr>
+<tr valign=top><td>Interruptible</td><td class="center">11:8</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>Indicates support for multi-access interruptible instructions. 0x1= the processor supports restartable LDMand STM.</td></tr>
+<tr valign=top><td>Memory_hint</td><td class="center"> 7:4</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x4</td><td>Indicates support for memory hint instructions. 0x4= the processor supports PLD, PLIand PLDW. Applies from Cortex-R5, r1p0</td></tr>
+<tr valign=top><td>Load_store</td><td class="center"> 3:0</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>Indicates support for additional load and store instructions. 0x1= the processor supports LDRDand STRD.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

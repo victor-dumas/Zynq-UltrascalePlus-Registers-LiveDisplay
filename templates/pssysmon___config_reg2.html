@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<title>CONFIG_REG2 (PSSYSMON) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___pssysmon.html")>PSSYSMON Module</a> &gt; CONFIG_REG2 (PSSYSMON) Register</p><h1>CONFIG_REG2 (PSSYSMON) Register</h1>
+<h2>CONFIG_REG2 (PSSYSMON) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>CONFIG_REG2</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000108</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FFA50908 (AMS_PS_SYSMON)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>16</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Configuration, Reg 2.</td></tr>
+</table>
+<p>Sleep mode, Clk divider.</p>
+<h2>CONFIG_REG2 (PSSYSMON) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>clock_divider</td><td class="center">15:8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>ADC Clock Divide Ratio.<br/>The reference clock is divided-down to generate the ADC clock.<br/>00h: divide by 8.<br/>01h, 02h: divide by 2.<br/>03h through FFh: divide by 3 through 255.<br/>Note: for a value of 00h, this encoding is different than the PL SysMon unit.</td></tr>
+<tr valign=top><td>power_down</td><td class="center"> 7:4</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Enable Power-down Sleep Modes.<br/>0000: normal operation.<br/>0001: partial sleep mode. SysOsc is operational, but all other analog circuits are in power-down. The SysOsc is left running for other units to utilize, as needed.<br/>0010: reserved<br/>0011: sleep mode. All analog circuits are in power-down.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

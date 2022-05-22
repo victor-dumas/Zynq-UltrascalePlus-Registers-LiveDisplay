@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<title>Chnl_int_sts_reg0 (UART) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___uart.html")>UART Module</a> &gt; Chnl_int_sts_reg0 (UART) Register</p><h1>Chnl_int_sts_reg0 (UART) Register</h1>
+<h2>Chnl_int_sts_reg0 (UART) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>Chnl_int_sts_reg0</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000014</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF000014 (UART0)<br/>0x00FF010014 (UART1)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000200</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Channel Interrupt Status Register</td></tr>
+</table>
+<p>The Channel Interrupt Status register indicates any interrupt events that have occurred since this register was last cleared. The bits in this register are compared with the interrupt mask and used to assert the interrupt output. This register indicated the unmasked status, allowing software to implement a polling method of interrupt handling.</p>
+<h2>Chnl_int_sts_reg0 (UART) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:14</td><td class="tooltip grayback">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved, read as zero, ignored on write.</td></tr>
+<tr valign=top><td>RBRK</td><td class="center">13</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Receiver break detect interrupt status:<br/>This event is triggered whenever the receiver detects ua_rxd low for more than a full frame (start + data + parity + stop).<br/>0: no interrupt occurred<br/>1: interrupt occurred</td></tr>
+<tr valign=top><td>TOVR</td><td class="center">12</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Transmitter FIFO Overflow interrupt mask status:<br/>This event is triggered whenever a new word is pushed into the transmit FIFO when there is not enough room for all of the data. This will be set as a result of any write when the TFUL flag in Channel_sts_reg0 is already set, or a double byte write when the TNFUL flag in Channel_sts_reg0 is already set.<br/>0: no interrupt occurred<br/>1: interrupt occurred</td></tr>
+<tr valign=top><td>TNFUL</td><td class="center">11</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Transmitter FIFO Nearly Full interrupt mask status:<br/>This event is triggered whenever a new word is pushed into the transmit FIFO causing the fill level to be such that there is not enough space for a further write of the number of bytes currently specified in the WSIZE bits in the Mode register. If this further write were currently attempted it would cause an overflow.<br/>Note that when WSIZE is 00, this assumes that a two byte write would be attempted and hence a single byte write is still possible without overflow by driving byte_sel low for the write.<br/>0: no interrupt occurred<br/>1: interrupt occurred</td></tr>
+<tr valign=top><td>TTRIG</td><td class="center">10</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Transmitter FIFO Trigger continuous status<br/><br/>0: 0: Tx FIFO fill level is less than TTRIG<br/>1:Tx FIFO fill level is greater than or equal to TTRIG.</td></tr>
+<tr valign=top><td>DMSI</td><td class="center"> 9</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x1</td><td>Delta Modem Status Indicator interrupt mask status:<br/>This event is triggered whenever the DCTS, DDSR, TERI, or DDCD in the modem status register are being set.<br/>0: no interrupt occurred<br/>1: interrupt occurred</td></tr>
+<tr valign=top><td>TIMEOUT</td><td class="center"> 8</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Receiver Timeout Error interrupt mask status:<br/>This event is triggered whenever the receiver timeout counter has expired due to a long idle condition.<br/>0: no interrupt occurred<br/>1: interrupt occurred</td></tr>
+<tr valign=top><td>PARE</td><td class="center"> 7</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Receiver Parity Error interrupt mask status:<br/>This event is triggered whenever the received parity bit does not match the expected value.<br/>0: no interrupt occurred<br/>1: interrupt occurred</td></tr>
+<tr valign=top><td>FRAME</td><td class="center"> 6</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Receiver Framing Error interrupt mask status:<br/>This event is triggered whenever the receiver fails to detect a valid stop bit.<br/>0: no interrupt occurred<br/>1: interrupt occurred</td></tr>
+<tr valign=top><td>ROVR</td><td class="center"> 5</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Receiver Overflow Error interrupt mask status:<br/>This event is triggered whenever the contents of the receiver shift register have not yet been transferred to the receiver FIFO and a new start bit is detected. This may be due to the FIFO being full, or due to excessive clock boundary delays.<br/>0: no interrupt occurred<br/>1: interrupt occurred</td></tr>
+<tr valign=top><td>TFUL</td><td class="center"> 4</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Transmitter FIFO Full interrupt mask status:<br/>This event is triggered whenever a new word is inserted into the transmit FIFO causing it to go from a non-full condition to a full condition.<br/>0: no interrupt occurred<br/>1: interrupt occurred</td></tr>
+<tr valign=top><td>TEMPTY</td><td class="center"> 3</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Transmitter FIFO Empty interrupt mask status:<br/>This event is triggered whenever the final word is removed from the transmit FIFO.<br/>0: no interrupt occurred<br/>1: interrupt occurred</td></tr>
+<tr valign=top><td>RFUL</td><td class="center"> 2</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Receiver FIFO Full interrupt mask status:<br/>This event is triggered whenever a new word is inserted into the receive FIFO causing it to go from a non-full condition to a full condition.<br/>0: no interrupt occurred<br/>1: interrupt occurred</td></tr>
+<tr valign=top><td>REMPTY</td><td class="center"> 1</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Receiver FIFO Empty interrupt mask status:<br/>This event is triggered upon exit of the final word from the receive FIFO.<br/>0: no interrupt occurred<br/>1: interrupt occurred</td></tr>
+<tr valign=top><td>RTRIG</td><td class="center"> 0</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Receiver FIFO Trigger interrupt mask status:<br/>This event is triggered whenever a new word is inserted into the receive FIFO.<br/>0: no interrupt occurred<br/>1: interrupt occurred</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

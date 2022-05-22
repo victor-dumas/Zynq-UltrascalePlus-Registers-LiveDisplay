@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<title>DCFG (USB3_XHCI) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___usb3_xhci.html")>USB3_XHCI Module</a> &gt; DCFG (USB3_XHCI) Register</p><h1>DCFG (USB3_XHCI) Register</h1>
+<h2>DCFG (USB3_XHCI) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>DCFG</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000C700</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FE20C700 (USB3_0_XHCI)<br/>0x00FE30C700 (USB3_1_XHCI)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000800</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Device Configuration Register.<br/>This register configures the core in Device mode after power-on or after certain control commands or enumeration. Do not make changes to this register after initial programming.</td></tr>
+</table>
+<p></p>
+<h2>DCFG (USB3_XHCI) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:25</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">24</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>IgnStrmPP</td><td class="center">23</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>IgnoreStreamPP<br/>This bit only affects stream-capable bulk endpoints.<br/>When this bit is set to '0' and the controller receives a Data Packet with the Packet Pending (PP) bit set to 0 for OUT endpoints, or it receives an ACK with the NumP field set to 0 and PP set to 0 for IN endpoints, the core attempts to search for another stream (CStream) to initiate to the host. However, there are two situations where this behavior is not optimal:<br/>- When the host is setting PP=0 even though it has not finished the stream, or<br/>- When the endpoint on the device is configured with one transfer resource and therefore does not have any other streams to initiate to the host.<br/>When this bit is set to '1', the core ignores the Packet Pending bit for the purposes of stream selection and does not search for another stream when it receives DP(PP=0) or ACK(NumP=0, PP=0). This can enhance the performance when the device system bus bandwidth is low or the host responds to the core's ERDY transmission very quickly.</td></tr>
+<tr valign=top><td>LPMCAP</td><td class="center">22</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>LPM Capable<br/>The application uses this bit to control the controller LPM capabilities. If the core operates as a non-LPM-capable device, it cannot respond to LPM transactions.<br/>- 1'b0: LPM capability is not enabled.<br/>- 1'b1: LPM capability is enabled.</td></tr>
+<tr valign=top><td>NUMP</td><td class="center">21:17</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>Number of Receive Buffers.<br/>This bit indicates the number of receive buffers to be reported in the ACK TP.<br/>The DWC_usb3 controller uses this field if GRXTHRCFG.USBRxPktCntSel is set to '0'. The application can program this value based on RxFIFO size, buffer sizes programmed in descriptors, and system latency.<br/>For an OUT endpoint, this field controls the number of receive buffers reported in the NumP field of the ACK TP transmitted by the core.<br/>Note: This bit is used in host mode when Debug Capability is enabled.</td></tr>
+<tr valign=top><td>INTRNUM</td><td class="center">16:12</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>Interrupt number<br/>Indicates interrupt/EventQ number on which non-endpoint-specific device-related interrupts (see DEVT) are generated.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">11:10</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x2</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>DEVADDR</td><td class="center"> 9:3</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>Device Address.<br/>The application must perform the following:<br/>- Program this field after every SetAddress request.<br/>- Reset this field to zero after USB reset.</td></tr>
+<tr valign=top><td>DEVSPD</td><td class="center"> 2:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>Device Speed.<br/>Indicates the speed at which the application requires the core to connect, or the maximum speed the application can support.<br/>However, the actual bus speed is determined only after the chirp sequence is completed, and is based on the speed of the USB host to which the core is connected.<br/>- 3'b100: SuperSpeed (USB 3.0 PHY clock is 125 MHz or 250 MHz)<br/>- 3'b000: High-speed (USB 2.0 PHY clock is 30 MHz or 60 MHz)<br/>- 3'b001: Full-speed (USB 2.0 PHY clock is 30 MHz or 60 MHz)</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

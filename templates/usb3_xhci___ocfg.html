@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<title>OCFG (USB3_XHCI) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___usb3_xhci.html")>USB3_XHCI Module</a> &gt; OCFG (USB3_XHCI) Register</p><h1>OCFG (USB3_XHCI) Register</h1>
+<h2>OCFG (USB3_XHCI) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>OCFG</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000CC00</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FE20CC00 (USB3_0_XHCI)<br/>0x00FE30CC00 (USB3_1_XHCI)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>OTG Configuration Register<br/>This register specifies the HNP and SRP capability of the controller</td></tr>
+</table>
+<p></p>
+<h2>OCFG (USB3_XHCI) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:6</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>DisPrtPwrCutoff</td><td class="center"> 5</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>OTG Disable Port Power Cut Off (DisPrtPwrCutoff)<br/>- 0: The core automatically turns off the VBUS by clearing the OCTL.PrtPwrCtl after A_WAIT_BCON Timeout whenever the port is disconnected in disconnected state. If Hibernation is enabled and when a hibernation request is received in disconnected state, the core switches off VBUS instantly by clearing the OCTL.PrtPwrCtl.<br/>- 1: The core maintains VBUS ON even after A_WAIT_BCON Timeout when port is in disconnected state. The core is in a A_WAIT_BCON state continuously waiting for a Connect. If hibernation is enabled and when hibernation request is received in disconnected state, the core maintains VBUS ON and continues to drive VBUS even in hibernation.</td></tr>
+<tr valign=top><td>OTGHibDisMask</td><td class="center"> 4</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>OTG Hibernation Disable Mask.<br/>- 0 - Any change in PHY input signals relevant to OTG (ID, Vbus-valid, B-Valid) are masked from generating a corresponding event when the core receives Hibernation Save request from Host or Device Driver. The change in signals is masked until the Host or Device Run/Stop is programmed to 1.<br/>- 1 - The PHY input signals are not masked even after the core receives the Hibernation Save request from Host or Device Driver.<br/>For normal functionality, this bit must be 1'b0.</td></tr>
+<tr valign=top><td>OTGSftRstMsk</td><td class="center"> 3</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>OTG Soft Reset Mask.<br/>This bit is used to mask specific soft resets from affecting the OTG functionality of the core. When set, the xHCI-based USBCMD.HCRST in host mode and DCTL.CSftRst in device mode is masked from affecting reset signal outputs sent to the PHY, the OTG FSM logic of the core and also the resets to the VBUS filters inside the core.<br/>- 1'b0: The xHCI-based USBCMD.HCRST and DCTL.CSftRst resets the OTG logic of the core.<br/>- 1'b1: The xHCI-based USBCMD.HCRST and DCTL.CSftRst is masked from the OTG logic of the core.<br/>This bit can be programmed to allow existing xHCI flows (with USBCMD.HCRST programming) to function in OTG scenarios without any software changes.<br/>This bit must be programmed only when GCTL.PrtCapDir = 2'b11. Otherwise it must be set at 1'b0.<br/>Note: When using the core for OTG2 or OTG3 applications, it is not recommended to program USBCMD.HCRST during role switch.</td></tr>
+<tr valign=top><td>OTG_Version</td><td class="center"> 2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>This is a debug bit and it must always be set to 1'b0.</td></tr>
+<tr valign=top><td>HNPCap</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>RSP/HNP Capability.<br/>The terminology RSP is used when the core is operating in SS mode, and HNP is used when the core is operating in non-SS mode. The application uses this bit to control the RSP/HNP capabilities.<br/>- 1'b0: RSP/HNP capability is not enabled.<br/>- 1'b1: RSP/HNP capability is enabled.</td></tr>
+<tr valign=top><td>SRPCap</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>SRP Capability.<br/>The application uses this bit to control the SRP capabilities.<br/>- 1'b0: SRP capability is not enabled.<br/>- 1'b1: SRP capability is enabled.<br/>If this bit is not set for B-device, it cannot request the connected A-device (host) to activate Vbus and start a session. If this bit is not set for A-device, it cannot detect the SRP from B-device (device) to activate Vbus and start a session.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

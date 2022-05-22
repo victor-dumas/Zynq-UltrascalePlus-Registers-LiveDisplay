@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<title>PP1_CTRL_MGMT (GPU) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___gpu.html")>GPU Module</a> &gt; PP1_CTRL_MGMT (GPU) Register</p><h1>PP1_CTRL_MGMT (GPU) Register</h1>
+<h2>PP1_CTRL_MGMT (GPU) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>PP1_CTRL_MGMT</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000B00C</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD4BB00C (GPU)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Control Management Register</td></tr>
+</table>
+<p></p>
+<h2>PP1_CTRL_MGMT (GPU) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:9</td><td class="tooltip grayback">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved, write as zero, read undefined.</td></tr>
+<tr valign=top><td>CLK_OVERRIDE</td><td class="center"> 8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Disable block level clock gates. Writing a 1 to this bit overrides all the architectural<br/>clock gates in the design, so all clocks are always active.<br/>The status of the clock override is shown as the CLK_OVERRIDE bit in the STATUS<br/>Register. The only way to disable the clock override is by performing a pixel<br/>processor reset.</td></tr>
+<tr valign=top><td>SOFT_RESET</td><td class="center"> 7</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Writing to this bit resets the pixel processor after all outstanding bus-transfers have<br/>completed. Use the RESET_COMPLETED interrupt bit to discover when the reset<br/>has actually completed.</td></tr>
+<tr valign=top><td>START_RENDERING</td><td class="center"> 6</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Writing to this bit initiates rendering. Do not write this value during rendering.</td></tr>
+<tr valign=top><td>FORCE_RESET</td><td class="center"> 5</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Writing to this bit resets the pixel processor, so that it can be brought out of a hang in<br/>a reasonably clean manner.<br/>If FORCE_RESET is asserted while there is a bus transaction in progress the AXI<br/>interconnect might operate at reduced efficiency or lockup.<br/>To ensure a safe reset:<br/>1. Write 1 to STOP_BUS.<br/>2. Wait until all transactions have completed. The BUS_STOP interrupt is<br/>asserted when the bus is idle.<br/>3. Write 1 to FORCE_RESET.<br/>The use of FORCE_RESET must be deprecated, unless you require backwards<br/>compatibility with Mali-200.</td></tr>
+<tr valign=top><td>FORCE_HANG</td><td class="center"> 4</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Writing to this bit causes the pixel processor to hang. Only useful for debugging.</td></tr>
+<tr valign=top><td>FLUSH_CACHES</td><td class="center"> 3</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Writing to this bit causes all the vertex, RSW and texture caches to be flushed<br/>immediately. This must be done only when the renderer is idle, otherwise the<br/>hardware cannot guarantee that caches become clean or that renderer glitches do not<br/>occur. The pixel processor must have an active clock for the flush to have an effect.<br/>The pixel processor might have the clock shut off when idle to conserve power,<br/>depending on the processor integration. This means that the FLUSH_CACHES command<br/>must be issued in of the following states of operation:<br/>1. At the beginning of a frame, after the APB registers have been written to, but<br/>before the START_RENDERING command has been issued.<br/>2. At the end of a frame, after the interrupt has been received but before the<br/>interrupt signal has been masked or acknowledged.<br/>If neither is possible, you can use a FORCE_RESET command to flush the caches.<br/>FLUSH_CACHES is performed implicitly every time the pixel processor starts rendering,<br/>so explicitly using this bit is rarely required.</td></tr>
+<tr valign=top><td>END_AFTER_TILE</td><td class="center"> 2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Writing to this bit causes the renderer to treat a BEGIN-NEW-TILE command, that is,<br/>Cmd 14, as an End-Of-List command, that is Cmd 15.<br/>This action finalizes the rendering of the current tile, leaving the framebuffer<br/>incomplete in most situations, except when the current tile is the last tile of the frame.<br/>Rendering of the rest of the frame can be initiated by writing the<br/>CURRENT_REND_LIST_ADDR value to the REND_LIST_ADDR Register and<br/>issuing the START_RENDERING command.</td></tr>
+<tr valign=top><td>START_BUS</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Writing to this bit reactivates the bus interface after it has been stopped by a STOP_BUS<br/>command or a WRITE_BOUNDARY_LIMIT event. The effect of issuing a START_BUS and a<br/>STOP_BUS command at the same time is not defined.</td></tr>
+<tr valign=top><td>STOP_BUS</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Writing to this bit causes the bus interface to hold back future transactions on the bus.<br/>Any current bus transactions are completed before the interface is stopped. The bus<br/>can be restarted by issuing a START_BUS command. The effect of issuing a START_BUS<br/>and a STOP_BUS command at the same time is not defined.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

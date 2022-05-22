@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<title>DX1GCR0 (DDR_PHY) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddr_phy.html")>DDR_PHY Module</a> &gt; DX1GCR0 (DDR_PHY) Register</p><h1>DX1GCR0 (DDR_PHY) Register</h1>
+<h2>DX1GCR0 (DDR_PHY) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>DX1GCR0</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000800</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD080800 (DDR_PHY)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x40200204</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>DATX8 n General Configuration Register 0</td></tr>
+</table>
+<p></p>
+<h2>DX1GCR0 (DDR_PHY) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>CALBYP</td><td class="center">31</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Calibration Bypass: Prevents, if set, period measurement calibration<br/>from automatically triggering after PHY initialization.</td></tr>
+<tr valign=top><td>MDLEN</td><td class="center">30</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Master Delay Line Enable: Enables, if set, the DATX8 master delay<br/>line calibration to perform subsequent period measurements following<br/>the initial period measurements that are performed after reset or on<br/>when calibration is manually triggered. These additional<br/>measurements are accumulated and filtered as long as this bit<br/>remains high. This bit is combined with the common DATX8 MDL<br/>enable bit.</td></tr>
+<tr valign=top><td>CODTSHFT</td><td class="center">29:28</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Configurable ODT(TE) phase shift applicable only when<br/>DXSL*DXCTL2.CRDEN = 1`b1.<br/>2`b00: no Phase shift on TE input to DQS PAD<br/>2`b01: 0.5 SDR clock Phase shift on TE input to DQS PAD<br/>2`b00: 1<br/>SDR clock Phase shift on TE input to DQS PAD<br/>2`b00: 1.5 SDR clock Phase shift on TE input to DQSPAD</td></tr>
+<tr valign=top><td>RDDLY</td><td class="center">23:20</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x2</td><td>Number of Cycles ( in terms of ctl_rd_clk) to generate<br/>ctl_dx_get_static_rd input for the respective by<br/>t<br/>e lane of the PHY.<br/>Valid only when RDMODE is set as static response mode.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">19:14</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Return zeroes on reads.</td></tr>
+<tr valign=top><td>DQSNSEPDR</td><td class="center">13</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>DQSNSE Power Down Receiver: Powers down, if set, the input<br/>receiver on the I/O for DQSN gate. This bit controls the PDRSE pin on<br/>the PDIFF cell.</td></tr>
+<tr valign=top><td>DQSSEPDR</td><td class="center">12</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>DQSSE Power Down Receiver: Powers down, if set, the input receiver<br/>on the I/O for DQS gate. This bit controls the PDRSE pin on the<br/>PDIFF cell.</td></tr>
+<tr valign=top><td>RTTOAL</td><td class="center">11</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>RTT On Additive Latency: Indicates when the ODT control of DQ/DQS<br/>SSTL I/Os is set to the value in DQODT/DQSODT during read cycles.<br/>Valid values are:<br/>0 = ODT control is set to DQSODT/DQODT almost two cycles before<br/>read data preamble<br/>1 = ODT control is set to DQSODT/DQODT almost one cycle before<br/>read data preamble</td></tr>
+<tr valign=top><td>RTTOH</td><td class="center">10:9</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>RTT Output Hold: Indicates the number of clock cycles (from 0 to 3)<br/>after the read data postamble for which ODT control should remain<br/>set to DQSODT for DQS or DQODT for DQ/DM before disabling it<br/>(setting it to '0') when using dynamic ODT control. ODT is disabled<br/>almost RTTOH clock cycles after the read postamble.</td></tr>
+<tr valign=top><td>CPDRSHFT</td><td class="center"> 8:7</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Configurable PDR phase shift. applicable only when<br/>DXSL*DXCTL2.CRDEN = 1`b1.<br/>2`b00: no Phase shift on PDR input to DQS PAD<br/>2`b01: 0.5 SDR clock Phase shift on PDR input to DQS PAD<br/>2`b00: 1<br/>SDR clock Phase shift on PDR input to DQS PAD<br/>2`b00: 1.5 SDR clock Phase shift on PDR input to DQS PAD</td></tr>
+<tr valign=top><td>DQSRPD</td><td class="center"> 6</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>DQSR Power Down: Powers down, if set, the PDQSR cell. This bit is<br/>ORed with the common PDR configuration bit.</td></tr>
+<tr valign=top><td>DQSGPDR</td><td class="center"> 5</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>DQSG Power Down Receiver: Powers down, if set, the input receiver<br/>on the I/O for DQS gate.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 4</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Return zeroes on reads.</td></tr>
+<tr valign=top><td>DQSGODT</td><td class="center"> 3</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>DQSG On-Die Termination: Enables, when set, the on-die termination<br/>(TE pin) on the I/O for DQS gate. Note that in typical usage, DQSGOE<br/>will always be on, rendering this control bit meaningless.</td></tr>
+<tr valign=top><td>DQSGOE</td><td class="center"> 2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>DQSG Output Enable: Enables, when set, the output driver (OE pin)<br/>on the I/O for DQS gate.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 1:0</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Return zeroes on reads.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

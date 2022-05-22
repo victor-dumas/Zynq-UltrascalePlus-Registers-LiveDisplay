@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<title>ACATRn0 (A53_ETM_2) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___a53_etm_2.html")>A53_ETM_2 Module</a> &gt; ACATRn0 (A53_ETM_2) Register</p><h1>ACATRn0 (A53_ETM_2) Register</h1>
+<h2>ACATRn0 (A53_ETM_2) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>ACATRn0</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000480</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FEE40480 (CORESIGHT_A53_ETM_2)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Address Comparator Access Type Registers 0-7</td></tr>
+</table>
+<p></p>
+<h2>ACATRn0 (A53_ETM_2) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>DTBM</td><td class="center">21</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Controls whether data address comparisons use the data address [63:56] bits</td></tr>
+<tr valign=top><td>DATARANGE</td><td class="center">20</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Controls whether a data value comparison uses the single address comparator or the address range comparator:The trace unit ignores this field when DATAMATCH==0b00.Supported only if the corresponding data value comparator is supported, otherwise this bit is RES0.</td></tr>
+<tr valign=top><td>DATASIZE</td><td class="center">19:18</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Controls the width of the data value comparison</td></tr>
+<tr valign=top><td>DATAMATCH</td><td class="center">17:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Controls how the trace unit performs a data value comparison</td></tr>
+<tr valign=top><td>EXLEVEL_NS</td><td class="center">15:12</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>In Non-secure state, each bit controls whether a comparison can occur for the corresponding exception level:The exception levels are:Bit[12]Exception level 0.Bit[13]Exception level 1.Bit[14]Exception level 2.Bit[15]RAZ/WI. EXLEVEL_NS[3] is never implemented.The content of the field is IMPLEMENTATION DEFINED and is set by the value of IDR3.EXLEVEL_NS. Unimplemented bits are RAZ/WI.</td></tr>
+<tr valign=top><td>EXLEVEL_S</td><td class="center">11:8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>In Secure state, each bit controls whether a comparison can occur for the corresponding exception level:The exception levels are:Bit[8]Exception level 0.Bit[9]Exception level 1.Bit[10]RAZ/WI. EXLEVEL_S[2] is never implemented.Bit[11]Exception level 3.The content of the field is IMPLEMENTATION DEFINED and is set by the value of IDR3.EXLEVEL_S. Unimplemented bits are RAZ/WI.</td></tr>
+<tr valign=top><td>CONTEXT</td><td class="center"> 6:4</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>If IDR4.NUMCIDFC > 0 or IDR4.NUMVMIDC > 0, selects a Context ID comparator or VMID comparator:and so on up to 0b111, which indicates comparator 7.The implemented width of this field is determined by the size of whichever of IDR4.NUMVMIDC and IDR4.NUMCIDC is larger. If the largest field is one bit long, then this field implements one bit, bit[4]. If the largest field is four bits long, then this field implements two bits, bits[5:4]. Unimplemented bits within the field are RAZ/WI.If IDR4.NUMCIDFC==0 and IDR4.NUMVMIDC==0, this field is RES0.</td></tr>
+<tr valign=top><td>CONTEXTTYPE</td><td class="center"> 3:2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>If IDR4.NUMVMIDC>0 and IDR4.NUMCIDC>0, this field controls whether the trace unit performs a Context ID comparison, a virtual machine identifier (VMID) comparison, or both comparisons:If IDR4.NUMVMIDC==0 and IDR4.NUMCIDC>0, bit [3] is RES0 and bit[2] controls whether the trace unit performs a Context ID comparison, as with cases 0b00 and 0b01 above.If IDR4.NUMVMIDC==0 and IDR4.NUMCIDC==0, both bits are RES0.</td></tr>
+<tr valign=top><td>TYPE</td><td class="center"> 1:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Controls what type of comparison the trace unit performs:If IDR4.SUPPDAC does not indicate that data address comparisons are implemented, then this field is RES0. This means that any comparison performed by this address comparator is an instruction address comparison.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

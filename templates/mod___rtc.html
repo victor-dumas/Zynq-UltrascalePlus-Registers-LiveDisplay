@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<title>RTC Module</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> > RTC Module</p><h1>RTC Module</h1>
+<h2>RTC Module Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Module Name</th><td width=80% class=noborder>RTC Registers (RTC)</td></tr>
+<tr valign=top><th width=20% class=sumparam>Modules of this Type</th><td width=80% class=noborder>RTC</td></tr>
+<tr valign=top><th class=sumparam>Base Address</th><td class=noborder>0x00FFA60000 (RTC)</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Real Time Clock Control and Configuration</td></tr>
+</table>
+<h2>RTC Module Register Summary</h2>
+<table>
+<tr valign=top><th width=20%>Register Name</th><th width=10%>Address</th><th width=10%>Width</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=40%>Description</th></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("rtc___set_time_write.html")>SET_TIME_WRITE</a></td><td class="hex">0x0000000000</td><td class="center">32</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x00000000</td><td>Set the Current Time.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("rtc___set_time_read.html")>SET_TIME_READ</a></td><td class="hex">0x0000000004</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00000000</td><td>Last Current-time Value Programmed.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("rtc___calib_write.html")>CALIB_WRITE</a></td><td class="hex">0x0000000008</td><td class="center">21</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x00000000</td><td>One Second Time Based.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("rtc___calib_read.html")>CALIB_READ</a></td><td class="hex">0x000000000C</td><td class="center">21</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00000000</td><td>Read-back Calibration Value.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("rtc___current_time.html")>CURRENT_TIME</a></td><td class="hex">0x0000000010</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00000000</td><td>Current time in seconds.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("rtc___alarm.html")>ALARM</a></td><td class="hex">0x0000000018</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>Alarm Value.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("rtc___rtc_int_status.html")>RTC_INT_STATUS</a></td><td class="hex">0x0000000020</td><td class="center"> 2</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x00000000</td><td>Interrupt Status.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("rtc___rtc_int_mask.html")>RTC_INT_MASK</a></td><td class="hex">0x0000000024</td><td class="center"> 2</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00000003</td><td>Interrupt Mask.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("rtc___rtc_int_en.html")>RTC_INT_EN</a></td><td class="hex">0x0000000028</td><td class="center"> 2</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x00000000</td><td>Interrupt Enable.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("rtc___rtc_int_dis.html")>RTC_INT_DIS</a></td><td class="hex">0x000000002C</td><td class="center"> 2</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x00000000</td><td>Interrupt Disable.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("rtc___addr_error.html")>ADDR_ERROR</a></td><td class="hex">0x0000000030</td><td class="center"> 1</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x00000000</td><td>Address Decode Error Status.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("rtc___addr_error_int_mask.html")>ADDR_ERROR_INT_MASK</a></td><td class="hex">0x0000000034</td><td class="center"> 1</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00000001</td><td>Address Decode Error Interrupt Mask.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("rtc___addr_error_int_en.html")>ADDR_ERROR_INT_EN</a></td><td class="hex">0x0000000038</td><td class="center"> 1</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x00000000</td><td>Address Decode Error Interrupt Enable.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("rtc___addr_error_int_dis.html")>ADDR_ERROR_INT_DIS</a></td><td class="hex">0x000000003C</td><td class="center"> 1</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x00000000</td><td>Address Decode Error Interrupt Disable.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("rtc___control.html")>CONTROL</a></td><td class="hex">0x0000000040</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x01000000</td><td>Control.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("rtc___safety_chk.html")>SAFETY_CHK</a></td><td class="hex">0x0000000050</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>Safety Check.</td></tr>
+</table>
+<p id=foot class=footer></p>
+</body>
+</html>

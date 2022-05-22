@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<title>BOHC (SATA_AHCI_HBA) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___sata_ahci_hba.html")>SATA_AHCI_HBA Module</a> &gt; BOHC (SATA_AHCI_HBA) Register</p><h1>BOHC (SATA_AHCI_HBA) Register</h1>
+<h2>BOHC (SATA_AHCI_HBA) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>BOHC</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000028</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD0C0028 (SATA_AHCI_HBA)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>BIOS/OS Handoff Control and Status</td></tr>
+</table>
+<p>Controls various global actions of the HBA.</p>
+<h2>BOHC (SATA_AHCI_HBA) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:5</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>BB</td><td class="center"> 4</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>BIOS Busy (BB): This bit is used by the BIOS to indicate that it is busy cleaning up for ownership change.</td></tr>
+<tr valign=top><td>OOC</td><td class="center"> 3</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>OS Ownership Change (OOC):<br/>This bit is set to '1' when the OOS bit transitions from '0' to '1'.<br/>This bit is cleared by writing a '1' to it.<br/>Writing '0' has no effect on it.</td></tr>
+<tr valign=top><td>SOOE</td><td class="center"> 2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>SMI on OS Ownership Change Enable (SOOE):<br/>This bit, when set to '1', enables an SMI when the OOC bit has been set to '1'.</td></tr>
+<tr valign=top><td>OOS</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>OS Owned Semaphore (OOS): The system software sets this bit to request ownership of the HBA controller.<br/>Ownership is obtained when this bit reads '1' and the BOS bit reads '0'. This bit is not affected by an HBA reset.</td></tr>
+<tr valign=top><td>BOS</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>BIOS Owned Semaphore (BOS): The BIOS sets this bit to establish ownership of the HBA controller. BIOS will clear this bit in response to a request for ownership of the HBA by system software via OOS. This bit is not affected by an HBA reset.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<title>PxSACT (SATA_AHCI_PORTCNTRL) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___sata_ahci_portcntrl.html")>SATA_AHCI_PORTCNTRL Module</a> &gt; PxSACT (SATA_AHCI_PORTCNTRL) Register</p><h1>PxSACT (SATA_AHCI_PORTCNTRL) Register</h1>
+<h2>PxSACT (SATA_AHCI_PORTCNTRL) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>PxSACT</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000034</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD0C0134 (SATA_AHCI_PORT0_CNTRL)<br/>0x00FD0C01B4 (SATA_AHCI_PORT1_CNTRL)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Port x Serial ATA Active (SCR3: SActive)</td></tr>
+</table>
+<p></p>
+<h2>PxSACT (SATA_AHCI_PORTCNTRL) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>DS</td><td class="center">31:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Device Status (DS): This field is bit significant. Each bit corresponds to the TAG and command slot of a native queued command, where bit 0 corresponds to TAG 0 and command slot 0. This field is set by software prior to issuing a native queued command for a particular command slot.<br/>Prior to writing PxCI[TAG] to '1', software will set DS[TAG] to '1' to indicate that a command with that TAG is outstanding.<br/>The device clears bits in this field by sending a Set Device Bits FIS to the host.<br/>The HBA clears bits in this field that are set to '1' in the SActive field of the Set Device Bits FIS. The HBA only clears bits that correspond to native queued commands that have completed successfully. Software should only write this field when PxCMD.ST is set to '1'. This field is cleared when PxCMD.ST is written from a '1' to a '0' by software. This field is not cleared by a COMRESET or a software reset.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

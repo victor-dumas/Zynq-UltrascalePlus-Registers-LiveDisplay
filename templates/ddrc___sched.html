@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<title>SCHED (DDRC) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddrc.html")>DDRC Module</a> &gt; SCHED (DDRC) Register</p><h1>SCHED (DDRC) Register</h1>
+<h2>SCHED (DDRC) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>SCHED</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000250</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD070250 (DDRC)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00002005</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Scheduler Control Register</td></tr>
+</table>
+<p>All register fields are static, unless described otherwise in the register field description. Static registers can only be written when the controller is in reset.</p>
+<h2>SCHED (DDRC) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>rdwr_idle_gap</td><td class="center">30:24</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>When the preferred transaction store is empty for these many clock cycles, switch to the alternate transaction store if it is non-empty.<br/>The read transaction store (both high and low priority) is the default preferred transaction store and the write transaction store is the alternative store.<br/>When prefer write over read is set this is reversed.<br/>0x0 is a legal value for this register. When set to 0x0, the transaction store switching will happen immediately when the switching conditions become true.<br/>FOR PERFORMANCE ONLY</td></tr>
+<tr valign=top><td>go2critical_hysteresis</td><td class="center">23:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>UNUSED</td></tr>
+<tr valign=top><td>lpr_num_entries</td><td class="center">13:8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x20</td><td>Number of entries in the low priority transaction store is this value + 1.<br/>(64 - (SCHED.lpr_num_entries + 1)) is the number of entries available for the high priority transaction store.<br/>Setting this to maximum value allocates all entries to low priority transaction store.<br/>Setting this to 0 allocates 1 entry to low priority transaction store and the rest to high priority transaction store.<br/>Note: In ECC configurations, the numbers of write and low priority read credits issued is one less than in the non-ECC case.<br/>One entry each is reserved in the write and low-priority read CAMs for storing the RMW requests arising out of single bit error correction RMW operation.</td></tr>
+<tr valign=top><td>pageclose</td><td class="center"> 2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>If true, bank is kept open only while there are page hit transactions available in the CAM to that bank. The last read or write command in the CAM with a bank and page hit will be executed with auto-precharge if SCHED1.pageclose_timer=0. Even if this register set to 1 and SCHED1.pageclose_timer is set to 0, explicit precharge (and not auto-precharge) may be issued in some cases where there is a mode switch between Write and Read or between LPR and HPR. The Read and Write commands that are executed as part of the ECC scrub requests are also executed without auto-precharge.<br/>If false, the bank remains open until there is a need to close it (to open a different page, or for page timeout or refresh timeout) - also known as open page policy.<br/>The pageclose feature provides a midway between Open and Close page policies.<br/>FOR PERFORMANCE ONLY.<br/>Programming Mode: Quasi-dynamic Group 3</td></tr>
+<tr valign=top><td>prefer_write</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>If set then the bank selector prefers writes over reads.<br/>FOR DEBUG ONLY.</td></tr>
+<tr valign=top><td>force_low_pri_n</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Active low signal. When asserted ('0'), all incoming transactions are forced to low priority. This implies that all High Priority Read (HPR) and Variable Priority Read commands (VPR) will be treated as Low Priority Read (LPR) commands. On the write side, all Variable Priority Write (VPW) commands will be treated as Normal Priority Write (NPW) commands. Forcing the incoming transactions to low priority implicitly turns off Bypass path for read commands.<br/>FOR PERFORMANCE ONLY.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

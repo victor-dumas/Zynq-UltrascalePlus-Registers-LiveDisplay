@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<title>DTPR1 (DDR_PHY) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddr_phy.html")>DDR_PHY Module</a> &gt; DTPR1 (DDR_PHY) Register</p><h1>DTPR1 (DDR_PHY) Register</h1>
+<h2>DTPR1 (DDR_PHY) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>DTPR1</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000114</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD080114 (DDR_PHY)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x5656041E</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>DRAM Timing Parameters Register 1</td></tr>
+</table>
+<p></p>
+<h2>DTPR1 (DDR_PHY) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Return zeroes on reads.</td></tr>
+<tr valign=top><td>tWLMRD</td><td class="center">30:24</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x56</td><td>Minimum delay from when write leveling mode is programmed to the<br/>first DQS/DQS# rising edge. Larger values give more conservative<br/>command-to-command timings</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">23</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Return zeroes on reads.</td></tr>
+<tr valign=top><td>tFAW</td><td class="center">22:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x56</td><td>4-bank activate period. No more than 4-bank activate commands may<br/>be issued in a given tFAW period. Only applies to 8-bank devices. Valid<br/>values are 2 to 127. Larger values give more conservative command-to-<br/>command timings</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">15:11</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Returns zeroes on reads.</td></tr>
+<tr valign=top><td>tMOD</td><td class="center">10:8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x4</td><td>Load mode update delay (DDR4 and DDR3 only). The minimum time<br/>between a load mode register command and a non-load mode register<br/>command.<br/>Valid values for DDR4 are:<br/>3b000 = 24<br/>3b001 = 25<br/>3b010 = 26<br/>3b011 = 27<br/>3b100 = 28<br/>3b101 = 29<br/>3b110 = 30<br/>3b111 = 30<br/>Valid values for DDR3 are:<br/>3b000 = 12<br/>3b001 = 13<br/>3b010 = 14<br/>3b011 = 15<br/>3b100 = 16<br/>3b101 = 17<br/>3b110 - 3b111 = 17<br/>Note: This field should be left at default value for LPDDR3 and<br/>LPDDR4.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 7:5</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Return zeroes on reads.</td></tr>
+<tr valign=top><td>tMRD</td><td class="center"> 4:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1E</td><td>Load mode cycle time: The minimum time between a load mode<br/>register command and any other command. For DDR3 this is the<br/>minimum time between two load mode register commands. An offset is<br/>applied in some DRAM modes to extend the range of the register as<br/>follows:<br/>DDR3: +4 is added to register<br/>LPDDR3 and DDR4: +8 is added to register, and<br/>LPDDR4: no offset is applied (+0 add to register)<br/>Larger values give more conservative command-to-command timings.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

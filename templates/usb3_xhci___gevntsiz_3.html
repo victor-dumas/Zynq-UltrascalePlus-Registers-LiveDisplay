@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<title>GEVNTSIZ_3 (USB3_XHCI) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___usb3_xhci.html")>USB3_XHCI Module</a> &gt; GEVNTSIZ_3 (USB3_XHCI) Register</p><h1>GEVNTSIZ_3 (USB3_XHCI) Register</h1>
+<h2>GEVNTSIZ_3 (USB3_XHCI) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>GEVNTSIZ_3</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000C438</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FE20C438 (USB3_0_XHCI)<br/>0x00FE30C438 (USB3_1_XHCI)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Global Event Buffer Size Register<br/>This register holds the Event Buffer Size and the Event Interrupt Mask bit. During power-on initialization, software must initialize the size with the number of bytes allocated for the Event Buffer. The Event Interrupt Mask will mask the interrupt, but events are still queued. After configuration, software must preserve the Event Buffer Size value when changing the Event Interrupt Mask. Instance 3 of an array of 4.</td></tr>
+</table>
+<p></p>
+<h2>GEVNTSIZ_3 (USB3_XHCI) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>EVNTINTRPTMASK</td><td class="center">31</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>Event Interrupt Mask (EvntIntMask).<br/>When set to '1', this prevents the interrupt from being generated. However, even when the mask is set, the events are queued.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">30:16</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>EVENTSIZ</td><td class="center">15:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>Event Buffer Size in bytes (EVNTSiz)<br/>Holds the size of the Event Buffer in bytes; must be a multiple of four. This is programmed by software once during initialization.<br/>The minimum size of the event buffer is 32 bytes.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

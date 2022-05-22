@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<title>ZDMA_CH_RATE_CTRL (ZDMA) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___zdma.html")>ZDMA Module</a> &gt; ZDMA_CH_RATE_CTRL (ZDMA) Register</p><h1>ZDMA_CH_RATE_CTRL (ZDMA) Register</h1>
+<h2>ZDMA_CH_RATE_CTRL (ZDMA) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>ZDMA_CH_RATE_CTRL</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000018C</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FFA8018C (ADMA_CH0)<br/>0x00FFA9018C (ADMA_CH1)<br/>0x00FFAA018C (ADMA_CH2)<br/>0x00FFAB018C (ADMA_CH3)<br/>0x00FFAC018C (ADMA_CH4)<br/>0x00FFAD018C (ADMA_CH5)<br/>0x00FFAE018C (ADMA_CH6)<br/>0x00FFAF018C (ADMA_CH7)<br/>0x00FD50018C (GDMA_CH0)<br/>0x00FD51018C (GDMA_CH1)<br/>0x00FD52018C (GDMA_CH2)<br/>0x00FD53018C (GDMA_CH3)<br/>0x00FD54018C (GDMA_CH4)<br/>0x00FD55018C (GDMA_CH5)<br/>0x00FD56018C (GDMA_CH6)<br/>0x00FD57018C (GDMA_CH7)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Rate Control Count Register</td></tr>
+</table>
+<p>This register must remain stable while DMA Channel is enabled</p>
+<h2>ZDMA_CH_RATE_CTRL (ZDMA) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:12</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved for future use</td></tr>
+<tr valign=top><td>CNT</td><td class="center">11:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Scheduling interval for SRC AXI transaction, only used if rate control is enabled in control register</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

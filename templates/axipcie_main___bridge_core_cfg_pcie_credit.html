@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<title>BRIDGE_CORE_CFG_PCIE_CREDIT (AXIPCIE_MAIN) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___axipcie_main.html")>AXIPCIE_MAIN Module</a> &gt; BRIDGE_CORE_CFG_PCIE_CREDIT (AXIPCIE_MAIN) Register</p><h1>BRIDGE_CORE_CFG_PCIE_CREDIT (AXIPCIE_MAIN) Register</h1>
+<h2>BRIDGE_CORE_CFG_PCIE_CREDIT (AXIPCIE_MAIN) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>BRIDGE_CORE_CFG_PCIE_CREDIT</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000028</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD0E0028 (AXIPCIE_MAIN)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00200200</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>PCI Express Transmit Completion Header and Data Credit Metering Configuration</td></tr>
+</table>
+<p></p>
+<h2>BRIDGE_CORE_CFG_PCIE_CREDIT (AXIPCIE_MAIN) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>cfg_pcie_credit_en</td><td class="center">31</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Outstanding PCIe read requests are limited to stay within the receive buffer space (CH & CD credits) allocated in the PCI Express Core receive buffer.</td></tr>
+<tr valign=top><td>cfg_pcie_credit_ch_inf</td><td class="center">30</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>CH Credits Infinite</td></tr>
+<tr valign=top><td>cfg_pcie_credit_cd_inf</td><td class="center">29</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>CD Credits Infinite</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">28:24</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback></td></tr>
+<tr valign=top><td>cfg_pcie_credit_ch_val</td><td class="center">23:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x20</td><td>Number of available CH credits.<br/>One CH credit == space for 1 Completion TLP Header.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">15:12</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback></td></tr>
+<tr valign=top><td>cfg_pcie_credit_cd_val</td><td class="center">11:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x200</td><td>Number of available CD credits.<br/>One CD credit == space for 16 bytes of Completion TLP Payload.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<title>RST_LPD_IOU2 (CRL_APB) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___crl_apb.html")>CRL_APB Module</a> &gt; RST_LPD_IOU2 (CRL_APB) Register</p><h1>RST_LPD_IOU2 (CRL_APB) Register</h1>
+<h2>RST_LPD_IOU2 (CRL_APB) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>RST_LPD_IOU2</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000238</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF5E0238 (CRL_APB)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x0017FFFF</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>IOP Software Reset Controls</td></tr>
+</table>
+<p>Each bit controls the reset of a system element.</p>
+<h2>RST_LPD_IOU2 (CRL_APB) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:21</td><td class="tooltip grayback">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>timestamp_reset</td><td class="center">20</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>TimeStamp controller</td></tr>
+<tr valign=top><td>iou_cc_reset</td><td class="center">19</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>CC controller</td></tr>
+<tr valign=top><td>gpio_reset</td><td class="center">18</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>GPIO controller</td></tr>
+<tr valign=top><td>adma_reset</td><td class="center">17</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>LPD DMA controller</td></tr>
+<tr valign=top><td>nand_reset</td><td class="center">16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>NAND controller</td></tr>
+<tr valign=top><td>swdt_reset</td><td class="center">15</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>CSU_SWDT controller</td></tr>
+<tr valign=top><td>ttc3_reset</td><td class="center">14</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>TTC 3 controller</td></tr>
+<tr valign=top><td>ttc2_reset</td><td class="center">13</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>TTC 2 controller</td></tr>
+<tr valign=top><td>ttc1_reset</td><td class="center">12</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>TTC 1 controller</td></tr>
+<tr valign=top><td>ttc0_reset</td><td class="center">11</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>TTC 0 controller</td></tr>
+<tr valign=top><td>i2c1_reset</td><td class="center">10</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>I2C 1 controller</td></tr>
+<tr valign=top><td>i2c0_reset</td><td class="center"> 9</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>I2C 0 controller</td></tr>
+<tr valign=top><td>can1_reset</td><td class="center"> 8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>CAN 1 controller</td></tr>
+<tr valign=top><td>can0_reset</td><td class="center"> 7</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>CAN 0 controller</td></tr>
+<tr valign=top><td>sdio1_reset</td><td class="center"> 6</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>SDIO 1 controller</td></tr>
+<tr valign=top><td>sdio0_reset</td><td class="center"> 5</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>SDIO 0 controller</td></tr>
+<tr valign=top><td>spi1_reset</td><td class="center"> 4</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>SPI 1 controller</td></tr>
+<tr valign=top><td>spi0_reset</td><td class="center"> 3</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>SPI 0 controller</td></tr>
+<tr valign=top><td>uart1_reset</td><td class="center"> 2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>UART 1 controller</td></tr>
+<tr valign=top><td>uart0_reset</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>UART 0 controller</td></tr>
+<tr valign=top><td>qspi_reset</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Quad-SPI controller</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

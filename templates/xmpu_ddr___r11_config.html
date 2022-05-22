@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<title>R11_CONFIG (XMPU_DDR) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___xmpu_ddr.html")>XMPU_DDR Module</a> &gt; R11_CONFIG (XMPU_DDR) Register</p><h1>R11_CONFIG (XMPU_DDR) Register</h1>
+<h2>R11_CONFIG (XMPU_DDR) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>R11_CONFIG</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x00000001BC</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD0001BC (DDR_XMPU0_CFG)<br/>0x00FD0101BC (DDR_XMPU1_CFG)<br/>0x00FD0201BC (DDR_XMPU2_CFG)<br/>0x00FD0301BC (DDR_XMPU3_CFG)<br/>0x00FD0401BC (DDR_XMPU4_CFG)<br/>0x00FD0501BC (DDR_XMPU5_CFG)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000008</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Region 11 Configuration.</td></tr>
+</table>
+<p>Refer to R00_CONFIG for more information.</p>
+<h2>R11_CONFIG (XMPU_DDR) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:5</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>NSCheckType</td><td class="center"> 4</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Non-secure Region Check Type. Secure masters may or may not be allowed to access Non-Secure (NS) memory regions.<br/>0: relaxed checking; secure requests may access a non-secure (NS) region.<br/>1: strict checking; secure requests may only access a secure region.</td></tr>
+<tr valign=top><td>RegionNS</td><td class="center"> 3</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Select security level of region:<br/>0: secure.<br/>1: non-secure (NS).</td></tr>
+<tr valign=top><td>WrAllowed</td><td class="center"> 2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Allow writes to region:<br/>0: not allowed; transaction poisoned.<br/>1: allowed.</td></tr>
+<tr valign=top><td>RdAllowed</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Allow reads within region:<br/>0: not allowed; transaction poisoned.<br/>1: allowed.</td></tr>
+<tr valign=top><td>Enable</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Enable region:<br/>0: disabled.<br/>1: enabled.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

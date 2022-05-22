@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<title>DX8SL0DXCTL1 (DDR_PHY) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddr_phy.html")>DDR_PHY Module</a> &gt; DX8SL0DXCTL1 (DDR_PHY) Register</p><h1>DX8SL0DXCTL1 (DDR_PHY) Register</h1>
+<h2>DX8SL0DXCTL1 (DDR_PHY) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>DX8SL0DXCTL1</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000001428</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD081428 (DDR_PHY)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00040000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>DATX8 0-1 DX Control Register 1</td></tr>
+</table>
+<p></p>
+<h2>DX8SL0DXCTL1 (DDR_PHY) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:25</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Return zeroes on reads.</td></tr>
+<tr valign=top><td>DXCALCLK</td><td class="center">24</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>DATX Calibration Clock Select: Valid values are:<br/>1b0 = ddr_clk (x4 clock) is used for delay line calibration<br/>1b1 = ctl_clk (x1 clock) is used for delay line calibration<br/>Note: Value programmed should be same across all the Slices</td></tr>
+<tr valign=top><td>DXRCLKMD</td><td class="center">23</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>DATX8 read Clock Mode: Valid values are:<br/>1b0 = Read clock (ctl_rd_clk) is generated from DATX8 ctl_rd_clk<br/>pin<br/>1b1 = Read clock (ctl_rd_clk) is generated from DATX8 ctl_clk pin<br/>Note: Value programmed should be same across all the Slices</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">22</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Return zeroes on reads.</td></tr>
+<tr valign=top><td>DXDTOSEL</td><td class="center">21:20</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>DATX8 Digital Test Output Select: This is used to select the DATX8<br/>internal signals that should be driven on the two DATX8 digital test<br/>outputs (phy_status[3:2]) signals.<br/>Valid values for DATX8 digital test output bit 0 (phy_status[2]) are:<br/>2b00 = DQS gate status bit 0<br/>2b01 = DQS gate enable output (after gate output LCDL)<br/>2b10 = DQS clock (qs_clk)<br/>2b11 = CTL delayed clock (ctl_dly_clk)<br/>Valid values for digital test out bit 1[1] (phy_status[3]) are:<br/>2b00 = DQS gate status bit 1<br/>2b01 = DQS gate enable input (after gate status (input) LCDL)<br/>2b10 = DQS delayed clock (qs_n_dly_clk)<br/>2b11 = DDR delayed clock (ddr_dly_clk)</td></tr>
+<tr valign=top><td>DXGSMD</td><td class="center">19</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Read DQS gating status mode: Indicates if set that the read DQS<br/>gating status that is stored in the DQS read FIFO is the gate input.<br/>Otherwise, if not set, the registered DQS gate status is stored in the<br/>FIFO<br/>Note: Value programmed should be same across all the Slices</td></tr>
+<tr valign=top><td>DXQSDBYP</td><td class="center">18</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Read DQS/DQS# delay load bypass mode. Valid values are:<br/>1b0 = Automatically bypass the read DQS/DQS# LCDLs when its<br/>delay select signal is being dynamically changed (i.e. drive the<br/>LCDL bypass signal to the same value as the delay select load<br/>signal)<br/>1b1 = Don't automatically bypass the read DQS/DQS# LCDLs<br/>when its delay select signal is being dynamically changed (i.e. don't<br/>drive the LCDL bypass signal to the same value as the delay select<br/>load signal)<br/>NOTE: This feature (no auto-bypassmode) is automatically<br/>disabled when using delay select direct control mode<br/>(DXPHYMODE[3])<br/>Note: Value programmed should be same across all the Slices</td></tr>
+<tr valign=top><td>DXGDBYP</td><td class="center">17</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Read DQS gate delay load bypass mode. Valid values are:<br/>1b0 = Automatically bypass the read DQS gate LCDL when its<br/>delay select signal is being dynamically changed (i.e. drive the<br/>LCDL bypass signal to the same value as the delay select load<br/>signal)<br/>1b1 = Don't automatically bypass the read gate DQS LCDL when<br/>its delay select signal is being dynamically changed (i.e. don't drive<br/>the LCDL bypass signal to the same value as the delay select load<br/>signal)<br/>NOTE: This feature (no auto-bypassmode) is automatically<br/>disabled when using delay select direct control mode<br/>(DXPHYMODE[3])<br/>Note: Value programmed should be same across all the Slices</td></tr>
+<tr valign=top><td>DXTMODE</td><td class="center">16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>DATX8 Test Mode: This is used to enable special test mode in the<br/>DATX8 macro. Valid values are:<br/>1b0 = Normal mode<br/>1b1 = Test mode<br/>Note: Value programmed should be same across all the Slices</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">15:0</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Return zeroes on reads.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

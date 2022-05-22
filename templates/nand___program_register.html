@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<title>Program_Register (NAND) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___nand.html")>NAND Module</a> &gt; Program_Register (NAND) Register</p><h1>Program_Register (NAND) Register</h1>
+<h2>Program_Register (NAND) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>Program_Register</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000010</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF100010 (NAND)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Initiate Controller Operations.</td></tr>
+</table>
+<p>0: no initiation. 1: Initiate a command or operation. Note: Change values in this register only when controller is not communicating with the memory device.</p>
+<h2>Program_Register (NAND) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:27</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>ODT_configure</td><td class="center">26</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>ODT Configure operation.<br/></td></tr>
+<tr valign=top><td>Volume_select</td><td class="center">25</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Volume select operation.<br/></td></tr>
+<tr valign=top><td>pgm_pg_reg_clr</td><td class="center">24</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Enhanced program page register clear operation to the selected LUN.<br/></td></tr>
+<tr valign=top><td>reset_lun</td><td class="center">23</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Reset operation to the selected LUN.<br/></td></tr>
+<tr valign=top><td>change_row_addr_end</td><td class="center">22</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Finish the Change row address Command.<br/></td></tr>
+<tr valign=top><td>change_row_addr</td><td class="center">21</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Change row address Operation.<br/></td></tr>
+<tr valign=top><td>Small_data_move</td><td class="center">20</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Small Data Move Operation.<br/></td></tr>
+<tr valign=top><td>Read_Cache_End</td><td class="center">19</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Read Cache End Operation.<br/></td></tr>
+<tr valign=top><td>Read_Cache_Random</td><td class="center">18</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Read Cache Random Operation.<br/></td></tr>
+<tr valign=top><td>Read_Cache_Sequential</td><td class="center">17</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Read Cache Sequential Operation.<br/></td></tr>
+<tr valign=top><td>Read_Cache_Start</td><td class="center">16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Read Operation.<br/></td></tr>
+<tr valign=top><td>Copy_Back_Interleaved</td><td class="center">15</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Copy back Interleaved Operation.<br/></td></tr>
+<tr valign=top><td>Change_Read_column_Enhanced</td><td class="center">14</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Change read column Enhanced command.<br/></td></tr>
+<tr valign=top><td>Read_Interleaved</td><td class="center">13</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Read Interleaved Operation.<br/></td></tr>
+<tr valign=top><td>Read_Status_Enhanced</td><td class="center">12</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Read status enhanced command.<br/></td></tr>
+<tr valign=top><td>Read_Unique_ID</td><td class="center">11</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>read_unique_id command.<br/></td></tr>
+<tr valign=top><td>Set_Features</td><td class="center">10</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Set_feature command and set the timing mode.<br/></td></tr>
+<tr valign=top><td>Get_features</td><td class="center"> 9</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Get feature command and get the device current timing mode.<br/></td></tr>
+<tr valign=top><td>Reset</td><td class="center"> 8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Reset operation with Flash device.<br/></td></tr>
+<tr valign=top><td>Read_Parameter_Page</td><td class="center"> 7</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Read Parameter page Operation.<br/></td></tr>
+<tr valign=top><td>Read_ID</td><td class="center"> 6</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Read ID command and read Device ID.<br/></td></tr>
+<tr valign=top><td>Multi_die_rd</td><td class="center"> 5</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Read operation during multi die.<br/></td></tr>
+<tr valign=top><td>Page_Program</td><td class="center"> 4</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Page Program with Flash device.<br/></td></tr>
+<tr valign=top><td>Read_Status</td><td class="center"> 3</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Read status command with Flash device.<br/></td></tr>
+<tr valign=top><td>Block_Erase</td><td class="center"> 2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Block Erase operation with Flash device.<br/></td></tr>
+<tr valign=top><td>Multi_die</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Multi die operation (page program, read, block erase).<br/></td></tr>
+<tr valign=top><td>Read</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Memory Read Operation.<br/></td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

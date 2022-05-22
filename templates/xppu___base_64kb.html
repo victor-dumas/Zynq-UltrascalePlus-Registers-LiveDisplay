@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<title>BASE_64KB (XPPU) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___xppu.html")>XPPU Module</a> &gt; BASE_64KB (XPPU) Register</p><h1>BASE_64KB (XPPU) Register</h1>
+<h2>BASE_64KB (XPPU) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>BASE_64KB</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000054</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF980054 (LPD_XPPU)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">ro<span class="tooltiptext">Read-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0xFF000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Base Address of 64-kB Apertures; fixed value.</td></tr>
+</table>
+<p></p>
+<h2>BASE_64KB (XPPU) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>ADDR</td><td class="center">31:0</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0xFF000000</td><td>The 64-kB apertures start at address 0xFF00_0000. These are used to map accesses to IOP registers in the lower power domain.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

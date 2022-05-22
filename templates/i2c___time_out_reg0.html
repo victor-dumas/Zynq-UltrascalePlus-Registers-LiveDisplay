@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<title>Time_out_reg0 (I2C) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___i2c.html")>I2C Module</a> &gt; Time_out_reg0 (I2C) Register</p><h1>Time_out_reg0 (I2C) Register</h1>
+<h2>Time_out_reg0 (I2C) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>Time_out_reg0</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000001C</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF02001C (I2C0)<br/>0x00FF03001C (I2C1)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder> 8</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x0000001F</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>I/O Clock Signal (SCL) Timeout Period</td></tr>
+</table>
+<p>A timeout interrupt can be generated if the SCL I/O clock signal is held Low for more clocks periods than defined in the [TO] bit field. The sensing is active when the SCL line is held Low by the master or the slave device. This feature detects an interface stall condition.</p>
+<h2>Time_out_reg0 (I2C) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>TO</td><td class="center"> 7:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1F</td><td>Timeout Period Range: 10h to 7Fh.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

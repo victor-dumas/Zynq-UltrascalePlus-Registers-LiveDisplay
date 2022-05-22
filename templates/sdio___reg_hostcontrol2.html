@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<title>reg_hostcontrol2 (SDIO) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___sdio.html")>SDIO Module</a> &gt; reg_hostcontrol2 (SDIO) Register</p><h1>reg_hostcontrol2 (SDIO) Register</h1>
+<h2>reg_hostcontrol2 (SDIO) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>reg_hostcontrol2</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000003E</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF16003E (SD0)<br/>0x00FF17003E (SD1)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>16</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>UHS Mode, I/O Drive, Tuning, Clocking, Intr, and Presets.</td></tr>
+</table>
+<p>Program UHS Select Mode, Driver Strength Select, Execute Tuning, Sampling Clock Select, Asynchronous Interrupt Enable, and Preset value enable.</p>
+<h2>reg_hostcontrol2 (SDIO) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>hostctrl2_presetvalueenable</td><td class="center">15</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Host Controller Version 3.00 supports this bit. As the operating SDCLK frequency and I/O driver strength depend on the Host System implementation, it is difficult to determine these parameters in the Standard Host Driver. When Preset Value Enable is set to automatic. This bit enables the functions defined in the Preset Value registers.'0' SDCLK and Driver Strength are controlled by Host Driver.'1' Automatic Selection by Preset Value are Enabled.<br/>If this bit is set to 0, SDCLK Frequency Select, Clock Generator Select in the Clock Control register and Driver Strength Select in Host Control 2 register are set by Host Driver.<br/>If this bit is set to 1, SDCLK Frequency Select, Clock Generator Select in the Clock Control register and Driver Strength Select in Host Control 2 register are set by Host Controller as specified in the Preset Value registers.</td></tr>
+<tr valign=top><td>hostctrl2_asynchintrenable</td><td class="center">14</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>This bit can be set to 1 if a card support asynchronous interrupt and Asynchronous Interrupt Support is set to 1 in the Capabilities register. Asynchronous interrupt is effective when DAT[1] interrupt is used in 4-bit SD mode (and zero is set to Interrupt Pin Select in the Shared Bus Control register). If this bit is set to 1, the Host Driver can stop the SDCLK during asynchronous interrupt period to save power. During this period, the Host Controller continues to deliver Card Interrupt to the host when it is asserted by the Card.'0' Disabled'1' Enabled</td></tr>
+<tr valign=top><td>hostctrl2_samplingclkselect</td><td class="center"> 7</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>This bit is set by tuning procedure when Execute Tuning is cleared. Writing 1 to this bit is meaningless and ignored. Setting 1 means that tuning is completed successfully and setting 0 means that tuning is failed. Host Controller uses this bit to select sampling clock to receive CMD and DAT. This bit is cleared by writing 0. Change of this bit is not allowed while the Host Controller is receiving response or a read data block.'0' Fixed clock is used to sample data'1' Tuned clock is used to sample data</td></tr>
+<tr valign=top><td>hostctrl2_executetuning</td><td class="center"> 6</td><td class="tooltip">clronwr<span class="tooltiptext">Readable, clears value on write</span></td><td class="hex">0x0</td><td>This bit is set to 1 to start tuning procedure and automatically cleared when tuning procedure is completed. The result of tuning is indicated to Sampling Clock Select. Tuning procedure is aborted by writing 0 for more detail about tuning procedure.'0' Not Tuned or Tuning Completed'1' Execute Tuning</td></tr>
+<tr valign=top><td>hostctrl2_1p8vsignallingena</td><td class="center"> 3</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>This bit controls voltage regulator for I/O cell. 3.3V is supplied to the card regardless of signaling voltage. Setting this bit from 0 to 1 starts changing signal voltage from 3.3V to 1.8V.<br/>1.8V regulator output shall be stable within 5ms. Host Controller clears this bit if switching to 1.8V signaling fails.<br/>Clearing this bit from 1 to 0 starts changing signal voltage from 1.8V to 3.3V.<br/>3.3V regulator output shall be stable within 5ms. Host Driver can set this bit to 1 when Host Controller supports 1.8V signaling (One of support bits is set to 1: SDR50, SDR104 or DDR50 in the Capabilities register) and the card or device supports UHS-I.'0' 3.3V Signalling, '1' 1.8V Signalling</td></tr>
+<tr valign=top><td>hostctrl2_uhsmodeselect</td><td class="center"> 2:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>This field is used to select one of UHS-I modes and effective when 1.8V Signaling Enable is set to 1.If Preset Value Enable in the Host Control 2 register is set to 1, Host Controller sets SDCLK Frequency Select, Clock Generator Select in the Clock Control register and Driver Strength Select according to Preset Value registers. In this case, one of preset value registers is selected by this field. Host Driver needs to reset SD Clock Enable before changing this field to avoid generating clock glitch. After setting this field, Host Driver sets SD Clock Enable again.<br/>000: SDR12<br/>001: SDR25<br/>010: SDR50<br/>011: SDR104<br/>100: DDR50<br/>101 - 111: Reserved.<br/>When SDR50, SDR104 or DDR50 is selected for SDIO card, interrupt detection at the block gap shall not be used. Read Wait timing is changed for these modes. Refer to the SDIO Specification Version 3.00 for more detail.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

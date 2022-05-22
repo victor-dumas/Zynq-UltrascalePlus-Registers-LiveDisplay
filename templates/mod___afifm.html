@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<title>AFIFM Module</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> > AFIFM Module</p><h1>AFIFM Module</h1>
+<h2>AFIFM Module Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Module Name</th><td width=80% class=noborder>AFI FM (AFIFM)</td></tr>
+<tr valign=top><th width=20% class=sumparam>Modules of this Type</th><td width=80% class=noborder>AFIFM0, AFIFM1, AFIFM2, AFIFM3, AFIFM4, AFIFM5, AFIFM6</td></tr>
+<tr valign=top><th class=sumparam>Base Address</th><td class=noborder>0x00FD360000 (AFIFM0)<br/>0x00FD370000 (AFIFM1)<br/>0x00FD380000 (AFIFM2)<br/>0x00FD390000 (AFIFM3)<br/>0x00FD3A0000 (AFIFM4)<br/>0x00FD3B0000 (AFIFM5)<br/>0x00FF9B0000 (AFIFM6)</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>QoS and FIFO Configuration, S_AXI_HPC0_FPD</td></tr>
+</table>
+<h2>AFIFM Module Register Summary</h2>
+<table>
+<tr valign=top><th width=20%>Register Name</th><th width=10%>Address</th><th width=10%>Width</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=40%>Description</th></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("afifm___afifm_rdctrl.html")>AFIFM_RDCTRL</a></td><td class="hex">0x0000000000</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x000003B0</td><td>Read Channel Control Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("afifm___afifm_rdissue.html")>AFIFM_RDISSUE</a></td><td class="hex">0x0000000004</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000007</td><td>Read Issuing Capability Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("afifm___afifm_rdqos.html")>AFIFM_RDQoS</a></td><td class="hex">0x0000000008</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000007</td><td>QoS Read Channel Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("afifm___afifm_rddebug.html")>AFIFM_RDDEBUG</a></td><td class="hex">0x0000000010</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x40000000</td><td>Read Channel Debug Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("afifm___afifm_wrctrl.html")>AFIFM_WRCTRL</a></td><td class="hex">0x0000000014</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x000003B0</td><td>Write Channel Control Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("afifm___afifm_wrissue.html")>AFIFM_WRISSUE</a></td><td class="hex">0x0000000018</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000007</td><td>Write Issuing Capability Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("afifm___afifm_wrqos.html")>AFIFM_WRQoS</a></td><td class="hex">0x000000001C</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000007</td><td>QoS Write Channel Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("afifm___afifm_i_sts.html")>AFIFM_I_STS</a></td><td class="hex">0x0000000E00</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>Interrupt Status Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("afifm___afifm_i_en.html")>AFIFM_I_EN</a></td><td class="hex">0x0000000E04</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>Interrupt Enable</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("afifm___afifm_i_dis.html")>AFIFM_I_DIS</a></td><td class="hex">0x0000000E08</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>Interrupt Disable</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("afifm___afifm_i_mask.html")>AFIFM_I_MASK</a></td><td class="hex">0x0000000E0C</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000001</td><td>Interrupt Mask</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("afifm___afifm_control.html")>AFIFM_CONTROL</a></td><td class="hex">0x0000000F04</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>General Control Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("afifm___afifm_safety_chk.html")>AFIFM_SAFETY_CHK</a></td><td class="hex">0x0000000F0C</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>Safety endpoint connectivity check Register</td></tr>
+</table>
+<p id=foot class=footer></p>
+</body>
+</html>

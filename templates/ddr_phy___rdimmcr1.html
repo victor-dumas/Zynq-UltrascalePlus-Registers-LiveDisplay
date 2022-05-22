@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<title>RDIMMCR1 (DDR_PHY) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddr_phy.html")>DDR_PHY Module</a> &gt; RDIMMCR1 (DDR_PHY) Register</p><h1>RDIMMCR1 (DDR_PHY) Register</h1>
+<h2>RDIMMCR1 (DDR_PHY) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>RDIMMCR1</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000154</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD080154 (DDR_PHY)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>RDIMM Control Register 1</td></tr>
+</table>
+<p></p>
+<h2>RDIMMCR1 (DDR_PHY) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>RC15</td><td class="center">31:28</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Control Word 15: RESERVED for future use.</td></tr>
+<tr valign=top><td>RC14</td><td class="center">27:24</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Control Word 14: RESERVED for future use.</td></tr>
+<tr valign=top><td>RC13</td><td class="center">23:20</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Control Word 13: RESERVED for future use.</td></tr>
+<tr valign=top><td>RC12</td><td class="center">19:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Control Word 12: RESERVED for future use.</td></tr>
+<tr valign=top><td>RC11</td><td class="center">15:12</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Control Word 11 (Operating Voltage VDD Control Word):<br/>RC10[1:0] is VDD operating voltage setting as follows:<br/>00 = DDR3 1.5V mode<br/>01 = DDR3L 1.35V mode<br/>10 = RESERVED<br/>11 = RESERVED<br/>RC10[3:2]: RESERVED.</td></tr>
+<tr valign=top><td>RC10</td><td class="center">11:8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Control Word 10 (RDIMM Operating Speed Control Word):<br/>RC10[2:0] is RDIMM operating speed setting as follows:<br/>000 = DDR3/DDR3L-800<br/>001 = DDR3/DDR3L-1066<br/>010 = DDR3/DDR3L-1333<br/>011 = DDR3/DDR3L-1600<br/>100 = RESERVED<br/>101 = RESERVED<br/>110 = RESERVED<br/>111 = RESERVED<br/>RC10[3]: Don't care.</td></tr>
+<tr valign=top><td>RC9</td><td class="center"> 7:4</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Control Word 9 (Power Saving Settings Control Word): Bit definitions<br/>are:<br/>RC9[0]: 0 = Floating outputs as defined in RC0, 1 = Weak drive<br/>enabled.<br/>RC9[1]: 0 = RESERVED.<br/>RC9[2]: 0 = CKE power down with IBT ON, QxODT is a function of<br/>DxODT, 1 = CKE power down with IBT off, QxODT held LOW. RC9[2]<br/>is valid only when RC9[3] is 1.<br/>RC9[3]: 0 = CKE power down mode disabled, 1 = CKE power down<br/>mode enabled.</td></tr>
+<tr valign=top><td>RC8</td><td class="center"> 3:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Control Word 8 (Additional Input Bus Termination Setting Control<br/>Word):<br/>RC8[2:0] is Input Bus Termination (IBT) setting as follows:<br/>000 = IBT as defined in RC2.<br/>001 = RESERVED<br/>010 = 200 Ohm<br/>011 = RESERVED<br/>100 = 300 Ohm<br/>101 = RESERVED<br/>110 = RESERVED<br/>111 = Off<br/>RC8[3]: 0 = IBT off when MIRROR is HIGH, 1 = IBT on when<br/>MIRROR is high</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

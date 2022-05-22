@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<title>Current_port_size (TPIU) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___tpiu.html")>TPIU Module</a> &gt; Current_port_size (TPIU) Register</p><h1>Current_port_size (TPIU) Register</h1>
+<h2>Current_port_size (TPIU) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>Current_port_size</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000004</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FE980004 (CORESIGHT_SOC_TPIU)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000001</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>The Current Port Size Register has the same format as the Supported Port Sizes register but only one bit is set, and all others must be zero. Writing values with more than one bit set or setting a bit that is not indicated as supported is not supported and causes unpredictable behavior.On reset this defaults to the smallest possible port size, 1 bit, and so reads as 0x00000001.Note: Do not modify the value while the Trace Port is still active, or without correctly stopping the formatter (see Formatter and Flush Control Register, 0x304). This can result in data not being aligned to the port width. For example, data on an 8-bit Trace Port might not be byte aligned.</td></tr>
+</table>
+<p></p>
+<h2>Current_port_size (TPIU) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>PORT_SIZE_32</td><td class="center">31</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Indicates whether the current port size of the TPIU is 32 bits.</td></tr>
+<tr valign=top><td>PORT_SIZE_31</td><td class="center">30</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Indicates whether the current port size of the TPIU is 31 bits.</td></tr>
+<tr valign=top><td>PORT_SIZE_30</td><td class="center">29</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Indicates whether the current port size of the TPIU is 30 bits.</td></tr>
+<tr valign=top><td>PORT_SIZE_29</td><td class="center">28</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Indicates whether the current port size of the TPIU is 29 bits.</td></tr>
+<tr valign=top><td>PORT_SIZE_28</td><td class="center">27</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Indicates whether the current port size of the TPIU is 28 bits.</td></tr>
+<tr valign=top><td>PORT_SIZE_27</td><td class="center">26</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Indicates whether the current port size of the TPIU is 27 bits.</td></tr>
+<tr valign=top><td>PORT_SIZE_26</td><td class="center">25</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Indicates whether the current port size of the TPIU is 26 bits.</td></tr>
+<tr valign=top><td>PORT_SIZE_25</td><td class="center">24</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Indicates whether the current port size of the TPIU is 25 bits.</td></tr>
+<tr valign=top><td>PORT_SIZE_24</td><td class="center">23</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Indicates whether the current port size of the TPIU is 24 bits.</td></tr>
+<tr valign=top><td>PORT_SIZE_23</td><td class="center">22</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Indicates whether the current port size of the TPIU is 23 bits.</td></tr>
+<tr valign=top><td>PORT_SIZE_22</td><td class="center">21</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Indicates whether the current port size of the TPIU is 22 bits.</td></tr>
+<tr valign=top><td>PORT_SIZE_21</td><td class="center">20</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Indicates whether the current port size of the TPIU is 21 bits.</td></tr>
+<tr valign=top><td>PORT_SIZE_20</td><td class="center">19</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Indicates whether the current port size of the TPIU is 20 bits.</td></tr>
+<tr valign=top><td>PORT_SIZE_19</td><td class="center">18</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Indicates whether the current port size of the TPIU is 19 bits.</td></tr>
+<tr valign=top><td>PORT_SIZE_18</td><td class="center">17</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Indicates whether the current port size of the TPIU is 18 bits.</td></tr>
+<tr valign=top><td>PORT_SIZE_17</td><td class="center">16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Indicates whether the current port size of the TPIU is 17 bits.</td></tr>
+<tr valign=top><td>PORT_SIZE_16</td><td class="center">15</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Indicates whether the current port size of the TPIU is 16 bits.</td></tr>
+<tr valign=top><td>PORT_SIZE_15</td><td class="center">14</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Indicates whether the current port size of the TPIU is 15 bits.</td></tr>
+<tr valign=top><td>PORT_SIZE_14</td><td class="center">13</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Indicates whether the current port size of the TPIU is 14 bits.</td></tr>
+<tr valign=top><td>PORT_SIZE_13</td><td class="center">12</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Indicates whether the current port size of the TPIU is 13 bits.</td></tr>
+<tr valign=top><td>PORT_SIZE_12</td><td class="center">11</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Indicates whether the current port size of the TPIU is 12 bits.</td></tr>
+<tr valign=top><td>PORT_SIZE_11</td><td class="center">10</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Indicates whether the current port size of the TPIU is 11 bits.</td></tr>
+<tr valign=top><td>PORT_SIZE_10</td><td class="center"> 9</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Indicates whether the current port size of the TPIU is 10 bits.</td></tr>
+<tr valign=top><td>PORT_SIZE_9</td><td class="center"> 8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Indicates whether the current port size of the TPIU is 9 bits.</td></tr>
+<tr valign=top><td>PORT_SIZE_8</td><td class="center"> 7</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Indicates whether the current port size of the TPIU is 8 bits.</td></tr>
+<tr valign=top><td>PORT_SIZE_7</td><td class="center"> 6</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Indicates whether the current port size of the TPIU is 7 bits.</td></tr>
+<tr valign=top><td>PORT_SIZE_6</td><td class="center"> 5</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Indicates whether the current port size of the TPIU is 6 bits.</td></tr>
+<tr valign=top><td>PORT_SIZE_5</td><td class="center"> 4</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Indicates whether the current port size of the TPIU is 5 bits.</td></tr>
+<tr valign=top><td>PORT_SIZE_4</td><td class="center"> 3</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Indicates whether the current port size of the TPIU is 4 bits.</td></tr>
+<tr valign=top><td>PORT_SIZE_3</td><td class="center"> 2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Indicates whether the current port size of the TPIU is 3 bits.</td></tr>
+<tr valign=top><td>PORT_SIZE_2</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Indicates whether the current port size of the TPIU is 2 bits.</td></tr>
+<tr valign=top><td>PORT_SIZE_1</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Indicates whether the current port size of the TPIU is 1 bit.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

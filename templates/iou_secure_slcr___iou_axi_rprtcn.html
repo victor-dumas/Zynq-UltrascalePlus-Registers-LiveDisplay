@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<title>IOU_AXI_RPRTCN (IOU_SECURE_SLCR) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___iou_secure_slcr.html")>IOU_SECURE_SLCR Module</a> &gt; IOU_AXI_RPRTCN (IOU_SECURE_SLCR) Register</p><h1>IOU_AXI_RPRTCN (IOU_SECURE_SLCR) Register</h1>
+<h2>IOU_AXI_RPRTCN (IOU_SECURE_SLCR) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>IOU_AXI_RPRTCN</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000004</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF240004 (IOU_SECURE_SLCR)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>AXI read protection type selection</td></tr>
+</table>
+<p></p>
+<h2>IOU_AXI_RPRTCN (IOU_SECURE_SLCR) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:25</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Writes are ignored, read data is zero.</td></tr>
+<tr valign=top><td>NAND_AXI_ARPROT</td><td class="center">24:22</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>AXI protection<br/>[0] = '0': Normal access<br/>[0] = '1': Previleged access<br/>[1] = '0': Secure access<br/>[1] = '1': No secure access<br/>[2] = '0': Data access<br/>[2] = '1'': Instruction access</td></tr>
+<tr valign=top><td>SD1_AXI_ARPROT</td><td class="center">21:19</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>AXI protection<br/>[0] = '0': Normal access<br/>[0] = '1': Previleged access<br/>[1] = '0': Secure access<br/>[1] = '1': No secure access<br/>[2] = '0': Data access<br/>[2] = '1'': Instruction access</td></tr>
+<tr valign=top><td>SD0_AXI_ARPROT</td><td class="center">18:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>AXI protection<br/>[0] = '0': Normal access<br/>[0] = '1': Previleged access<br/>[1] = '0': Secure access<br/>[1] = '1': No secure access<br/>[2] = '0': Data access<br/>[2] = '1'': Instruction access</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">15:12</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Writes are ignored, read data is zero.</td></tr>
+<tr valign=top><td>GEM3_AXI_ARPROT</td><td class="center">11:9</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>AXI protection<br/>[0] = '0': Normal access<br/>[0] = '1': Previleged access<br/>[1] = '0': Secure access<br/>[1] = '1': No secure access<br/>[2] = '0': Data access<br/>[2] = '1'': Instruction access</td></tr>
+<tr valign=top><td>GEM2_AXI_ARPROT</td><td class="center"> 8:6</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>AXI protection<br/>[0] = '0': Normal access<br/>[0] = '1': Previleged access<br/>[1] = '0': Secure access<br/>[1] = '1': No secure access<br/>[2] = '0': Data access<br/>[2] = '1'': Instruction access</td></tr>
+<tr valign=top><td>GEM1_AXI_ARPROT</td><td class="center"> 5:3</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>AXI protection<br/>[0] = '0': Normal access<br/>[0] = '1': Previleged access<br/>[1] = '0': Secure access<br/>[1] = '1': No secure access<br/>[2] = '0': Data access<br/>[2] = '1'': Instruction access</td></tr>
+<tr valign=top><td>GEM0_AXI_ARPROT</td><td class="center"> 2:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>AXI protection<br/>[0] = '0': Normal access<br/>[0] = '1': Previleged access<br/>[1] = '0': Secure access<br/>[1] = '1': No secure access<br/>[2] = '0': Data access<br/>[2] = '1'': Instruction access</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

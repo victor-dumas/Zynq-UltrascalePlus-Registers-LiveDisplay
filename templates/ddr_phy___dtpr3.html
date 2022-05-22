@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<title>DTPR3 (DDR_PHY) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddr_phy.html")>DDR_PHY Module</a> &gt; DTPR3 (DDR_PHY) Register</p><h1>DTPR3 (DDR_PHY) Register</h1>
+<h2>DTPR3 (DDR_PHY) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>DTPR3</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000011C</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD08011C (DDR_PHY)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x02000804</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>DRAM Timing Parameters Register 3</td></tr>
+</table>
+<p></p>
+<h2>DTPR3 (DDR_PHY) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>tOFDx</td><td class="center">31:29</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>ODT turn-off delay extension. The delays are in clock cycles. Valid<br/>values are:<br/>000 = 0<br/>001 = 1<br/>010 = 2<br/>011 = 3<br/>100 = 4<br/>101 = 5<br/>110 = 6<br/>111 = 7<br/>Delays ODT turnoff by Extending ODT on time by 0-7 cycles for all<br/>PUB-initiated transactions</td></tr>
+<tr valign=top><td>tCCD</td><td class="center">28:26</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Read to read and write to write command delay. In DDR4 mode of<br/>operation this field is not used, MR6.tCCDL is used instead.<br/>Valid values are:<br/>3b000 = BL/2<br/>3b001 = BL/2 + 1<br/>3b010 - 3b111 = Reserved</td></tr>
+<tr valign=top><td>tDLLK</td><td class="center">25:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x200</td><td>DLL locking time. The PUB adds an offset of 128 to this programmed<br/>register value to derive the final tDLLK value. Valid values are 0 to 1023,<br/>giving valid tDLLK values of 128 to 1151. Default value gives tDLLK value<br/>of 512.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">15:12</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Return zeroes on reads.</td></tr>
+<tr valign=top><td>tDQSCKmax</td><td class="center">11:8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x8</td><td>Maximum DQS output access time from CK/CK# (LPDDR3/4 only).<br/>This value is used for implementing read-to-write spacing. Valid values<br/>are 1 to 8.<br/>Programming larger values increase read-to-write timing margins;<br/>smaller values optimize read-to-write scheduling (provided protocol<br/>requirements are still met).</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 7:3</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Return zeroes on reads.</td></tr>
+<tr valign=top><td>TDQSCK</td><td class="center"> 2:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x4</td><td>DQS output access time from CK/CK# (LPDDR3/4 only). This value is<br/>used for computing the read latency. Valid values are 1 to 7.<br/>* For LPDDR3 operation with gate extension and gate training<br/>disabled, for operation at or above 2000 Mbps, set this to 4.<br/>* For LPDDR3 operation with gate extension and gate training<br/>disabled, for operation below 2000 Mbps, set this to<br/>(tDQSCKmin/tCK) + 1, rounding down to the nearest whole number.<br/>* For LPDDR3 or LPDDR4 operation with gate training enabled, for<br/>operation at or above1600 Mbps, set this to (tDQSCKmin/tCK)<br/>rounded down to the nearest whole number.<br/>* For LPDDR3 or LPDDR4 operation with gate training enabled, for<br/>operation below 1600 Mbps, set this to 1.<br/>* Set to 0 for DDR3 or DDR4 operation.<br/>tCK is the DRAM clock period. See DRAM device specification for<br/>values of tDQSCKmin.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

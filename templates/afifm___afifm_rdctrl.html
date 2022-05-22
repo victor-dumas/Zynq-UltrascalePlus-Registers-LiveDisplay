@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<title>AFIFM_RDCTRL (AFIFM) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___afifm.html")>AFIFM Module</a> &gt; AFIFM_RDCTRL (AFIFM) Register</p><h1>AFIFM_RDCTRL (AFIFM) Register</h1>
+<h2>AFIFM_RDCTRL (AFIFM) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>AFIFM_RDCTRL</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000000</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD360000 (AFIFM0)<br/>0x00FD370000 (AFIFM1)<br/>0x00FD380000 (AFIFM2)<br/>0x00FD390000 (AFIFM3)<br/>0x00FD3A0000 (AFIFM4)<br/>0x00FD3B0000 (AFIFM5)<br/>0x00FF9B0000 (AFIFM6)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x000003B0</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Read Channel Control Register</td></tr>
+</table>
+<p>Control fields for Read Channel operation</p>
+<h2>AFIFM_RDCTRL (AFIFM) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:11</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>RESERVED. Return 0 when read. Writes ignored.</td></tr>
+<tr valign=top><td>PAUSE</td><td class="center"> 3</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Pause the issuing of new read commands to the PS-side. Existing outstanding commands will continue to be processed.</td></tr>
+<tr valign=top><td>FABRIC_QOS_EN</td><td class="center"> 2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Enable control of QoS from the fabric<br/>0: The QoS bits are derived from APB register, AFIFM_RDQoS.staticQoS<br/>1: The QoS bits are dynamically driven from the fabric input, axds_arQoS[3:0]</td></tr>
+<tr valign=top><td>FABRIC_WIDTH</td><td class="center"> 1:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Configures the Read Channel Fabric interface width.<br/>2'b11: Reserved<br/>2'b10: 32-bit Fabric<br/>2'b01: 64-bit enabled<br/>2'b00: 128-bit enabled</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

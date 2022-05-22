@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<title>Access Types Legend</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; Access Types Legend<h1>Access Types Legend</h1><table><tr valign=top><th width=20%>Access Types</th><th width=80%>Description</th></tr><tr valign=top><td width=20%>clronrd</td><td width=80%>Readable, clears value on read</td></tr>
+<tr valign=top><td width=20%>clronwr</td><td width=80%>Readable, clears value on write</td></tr>
+<tr valign=top><td width=20%>nsnsro</td><td width=80%>During non-secure access, if thread is non-secure, it is read only</td></tr>
+<tr valign=top><td width=20%>nsnsrw</td><td width=80%>During non-secure access, if thread is non-secure, it is read write</td></tr>
+<tr valign=top><td width=20%>nsnswo</td><td width=80%>During non-secure access, if thread is non-secure, it is write only</td></tr>
+<tr valign=top><td width=20%>nssraz</td><td width=80%>During non-secure access, if thread is secure, it is read as zero</td></tr>
+<tr valign=top><td width=20%>raz</td><td width=80%>Read as zero</td></tr>
+<tr valign=top><td width=20%>ro</td><td width=80%>Read-only</td></tr>
+<tr valign=top><td width=20%>rs</td><td width=80%>w: no effect, r: sets all bits</td></tr>
+<tr valign=top><td width=20%>rud</td><td width=80%>Read undefined</td></tr>
+<tr valign=top><td width=20%>rw</td><td width=80%>Normal read/write</td></tr>
+<tr valign=top><td width=20%>rwso</td><td width=80%>Read/write, set only</td></tr>
+<tr valign=top><td width=20%>sro</td><td width=80%>During secure access, it is read only</td></tr>
+<tr valign=top><td width=20%>srw</td><td width=80%>During secure access, it is read write</td></tr>
+<tr valign=top><td width=20%>swo</td><td width=80%>During secure access, it is  write only</td></tr>
+<tr valign=top><td width=20%>w0c</td><td width=80%>w: 1/0 no effect on/clears matching bit, r: no effect</td></tr>
+<tr valign=top><td width=20%>w0crs</td><td width=80%>w: 1/0 no effect on/clears matching bit, r: sets all bits</td></tr>
+<tr valign=top><td width=20%>w0s</td><td width=80%>w: 1/0 no effect on/sets matching bit, r: no effect</td></tr>
+<tr valign=top><td width=20%>w0src</td><td width=80%>w: 1/0 no effect on/sets matching bit, r: clears all bits</td></tr>
+<tr valign=top><td width=20%>w0t</td><td width=80%>w: 1/0 no effect on/toggles matching bit, r: no effect</td></tr>
+<tr valign=top><td width=20%>w1</td><td width=80%>w: first one after ~hard~ reset is as-is, other w have no effects, r: no effect</td></tr>
+<tr valign=top><td width=20%>w1crs</td><td width=80%>w: 1/0 clears/no effect on matching bit, r: sets all bits</td></tr>
+<tr valign=top><td width=20%>w1src</td><td width=80%>w: 1/0 sets/no effect on matching bit, r: clears all bits</td></tr>
+<tr valign=top><td width=20%>w1t</td><td width=80%>w: 1/0 toggles/no effect on matching bit, r: no effect</td></tr>
+<tr valign=top><td width=20%>waz</td><td width=80%>Write as zero</td></tr>
+<tr valign=top><td width=20%>wcrs</td><td width=80%>w: clears all bits, r: sets all bits</td></tr>
+<tr valign=top><td width=20%>wo</td><td width=80%>Write-only</td></tr>
+<tr valign=top><td width=20%>wo1</td><td width=80%>w: first one after ~hard~ reset is as-is, other w have no effects, r: error</td></tr>
+<tr valign=top><td width=20%>woc</td><td width=80%>w: clears all bits, r: error</td></tr>
+<tr valign=top><td width=20%>wos</td><td width=80%>w: sets all bits, r: error</td></tr>
+<tr valign=top><td width=20%>wrc</td><td width=80%>w: as-is, r: clears all bits</td></tr>
+<tr valign=top><td width=20%>wrs</td><td width=80%>w: as-is, r: sets all bits</td></tr>
+<tr valign=top><td width=20%>ws</td><td width=80%>w: sets all bits, r: no effect</td></tr>
+<tr valign=top><td width=20%>wsrc</td><td width=80%>w: sets all bits, r: clears all bits</td></tr>
+<tr valign=top><td width=20%>wtc</td><td width=80%>Readable, write a 1 to clear</td></tr>
+<tr valign=top><td width=20%>z</td><td width=80%>Access (read or write) as zero</td></tr>
+</table>
+<p id=foot class=footer></p>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<title>TRAN_INGRESS_CONTROL (AXIPCIE_INGRESS) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___axipcie_ingress.html")>AXIPCIE_INGRESS Module</a> &gt; TRAN_INGRESS_CONTROL (AXIPCIE_INGRESS) Register</p><h1>TRAN_INGRESS_CONTROL (AXIPCIE_INGRESS) Register</h1>
+<h2>TRAN_INGRESS_CONTROL (AXIPCIE_INGRESS) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>TRAN_INGRESS_CONTROL</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000008</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD0E0808 (AXIPCIE_INGRESS0)<br/>0x00FD0E0828 (AXIPCIE_INGRESS1)<br/>0x00FD0E0848 (AXIPCIE_INGRESS2)<br/>0x00FD0E0868 (AXIPCIE_INGRESS3)<br/>0x00FD0E0888 (AXIPCIE_INGRESS4)<br/>0x00FD0E08A8 (AXIPCIE_INGRESS5)<br/>0x00FD0E08C8 (AXIPCIE_INGRESS6)<br/>0x00FD0E08E8 (AXIPCIE_INGRESS7)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Ingress AXI Translation - Control</td></tr>
+</table>
+<p></p>
+<h2>TRAN_INGRESS_CONTROL (AXIPCIE_INGRESS) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>ingress_attr_w</td><td class="center">31:28</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Ingress Write Cache Override. When ingress_attr_enable == 1, the AXI transaction m_awcache port is set to this value when forwarding write transactions hitting this translation to AXI. When ingress_attr_enable == 0, the default cache attributes determined by cfg_pcie_rx_awcache are applied.</td></tr>
+<tr valign=top><td>ingress_attr_r</td><td class="center">27:24</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Ingress Read Cache Override. When ingress_attr_enable == 1, the AXI transaction m_arcache port is set to this value when forwarding read transactions hitting this translation to AXI. When ingress_attr_enable == 0, the default cache attributes determined by cfg_pcie_rx_arcache are applied.</td></tr>
+<tr valign=top><td>ingress_attr_enable</td><td class="center">23</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Ingress Write/Read Cache Override Enable.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">22:21</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback></td></tr>
+<tr valign=top><td>ingress_size</td><td class="center">20:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Translation Size. The translation window size in bytes is configured to be 2^(ingress_size_offset+ingress_size). ingress_size must be &lt;= ingress_size_max.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">15:14</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback></td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">13:8</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback></td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 7:5</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback></td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 4</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback></td></tr>
+<tr valign=top><td>ingress_invalid</td><td class="center"> 3</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Translation Invalidate Enable.</td></tr>
+<tr valign=top><td>ingress_security_enable</td><td class="center"> 2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Translation Security Enable.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 1</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback></td></tr>
+<tr valign=top><td>ingress_enable</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Translation Enable. The translation is hit when both of the following are true:<br/>* ingress_enable == 1<br/>* ingress_src_base[63:(12+ingress_size)] == AXI Address[63:(12+ingress_size)]</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<title>EM_CTL (SATA_AHCI_HBA) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___sata_ahci_hba.html")>SATA_AHCI_HBA Module</a> &gt; EM_CTL (SATA_AHCI_HBA) Register</p><h1>EM_CTL (SATA_AHCI_HBA) Register</h1>
+<h2>EM_CTL (SATA_AHCI_HBA) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>EM_CTL</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000020</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD0C0020 (SATA_AHCI_HBA)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Enclosure Management Control.</td></tr>
+</table>
+<p>Used to control and obtain status for the enclosure management interface. The register includes information on the attributes of the implementation, enclosure management messages supported, the status of the interface, whether any messages are pending, and is used to initiate sending messages.</p>
+<h2>EM_CTL (SATA_AHCI_HBA) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:28</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>ATTR_PM</td><td class="center">27</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Port Multiplier Support (ATTR.PM): If set to '1', the HBA supports enclosure management messages for devices attached via a Port Multiplier.<br/>If cleared to '0', the HBA does not support enclosure management messages for devices attached via a Port Multiplier.<br/>When cleared to '0', software should use the Serial ATA enclosure management bridge that is built into many Port Multipliers for enclosure services with these devices.<br/>For more information on Serial ATA enclosure management bridges, refer to the Serial ATA Revision 2.5 specification.</td></tr>
+<tr valign=top><td>ATTR_ALHD</td><td class="center">26</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Activity LED Hardware Driven (ATTR.ALHD):<br/>If set to '1', the HBA drives the activity LED for the LED message type in hardware and does not utilize software settings for this LED.<br/>The HBA does not begin transmitting the hardware based activity signal until after software has written CTL.TM=1 after a reset condition.</td></tr>
+<tr valign=top><td>ATTR_XMT</td><td class="center">25</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Transmit Only (ATTR.XMT):<br/>If set to '1', the HBA only supports transmitting messages and does not support receiving messages.<br/>If cleared to '0', the HBA supports transmitting and receiving messages.</td></tr>
+<tr valign=top><td>ATTR_SMB</td><td class="center">24</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Single Message Buffer (ATTR.SMB):<br/>If set to '1', the HBA has one message buffer that is shared for messages to transmit and messages received.<br/>In this case, unsolicited receive messages are not supported and it is software's responsibility to manage access to this buffer.<br/>If cleared to '0', there are separate receive and transmit buffers such that unsolicited messages could be supported.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">23:20</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>SUPP_SGPIO</td><td class="center">19</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>SGPIO Enclosure Management Messages (SUPP.SGPIO):<br/>If set to '1', the HBA supports the SGPIO register interface message type.</td></tr>
+<tr valign=top><td>SUPP_SES2</td><td class="center">18</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>SES-2 Enclosure Management Messages (SUPP.SES2):<br/>If set to '1', the HBA supports the SES-2 message type.</td></tr>
+<tr valign=top><td>SUPP_SAFTE</td><td class="center">17</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>SAF-TE Enclosure Management Messages (SUPP.SAFTE):<br/>If set to '1', the HBA supports the SAF-TE message type.</td></tr>
+<tr valign=top><td>SUPP_LED</td><td class="center">16</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>LED Message Types (SUPP.LED):<br/>If set to '1', the HBA supports the LED message type defined in section 12.2.1.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">15:10</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>CTL_RST</td><td class="center"> 9</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Reset (CTL.RST): When set to '1' by software, the HBA shall reset all enclosure management message logic and the attached enclosure processor (if applicable) and take all appropriate reset actions to ensure messages can be transmitted/received after the reset.<br/>After the HBA completes the reset operation, the HBA shall set the value to '0'.<br/>A write of '0' by software to this field shall have no effect.</td></tr>
+<tr valign=top><td>CTL_TM</td><td class="center"> 8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Transmit Message (CTL.TM): When set to '1' by software, the HBA shall transmit the message contained in the message buffer.<br/>When the message is completely sent, the HBA shall clear this bit to '0'.<br/>A write of '0' to this bit by software shall have no effect.<br/>Software shall not change the contents of the message buffer while CTL.TM is set to '1'.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 7:1</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>STS_MR</td><td class="center"> 0</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Message Received (STS.MR): The HBA sets this bit to a '1' when a message is completely received into the message buffer.<br/>When software detects this bit is a '1', software should read the message and perform any actions necessary.<br/>When software is finished reading the message in the buffer, software writes a '1' to this bit in order to clear it.<br/>A write of '0' to this bit by software shall have no effect.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

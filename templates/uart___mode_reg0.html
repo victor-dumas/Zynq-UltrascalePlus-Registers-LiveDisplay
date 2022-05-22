@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<title>mode_reg0 (UART) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___uart.html")>UART Module</a> &gt; mode_reg0 (UART) Register</p><h1>mode_reg0 (UART) Register</h1>
+<h2>mode_reg0 (UART) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>mode_reg0</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000004</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF000004 (UART0)<br/>0x00FF010004 (UART1)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>UART Mode Register</td></tr>
+</table>
+<p>The UART Mode register defines the setup of the data format to be transmitted or received. If this register is modified during transmission or reception, data validity cannot be guaranteed.</p>
+<h2>mode_reg0 (UART) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:14</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved, read as zero, ignored on write.</td></tr>
+<tr valign=top><td>WSIZE</td><td class="center">13:12</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Configure the size of FIFO access from the APB<br/>00: One or two bytes written to TX FIFO or read from RX FIFO. If byte_sel is high then one byte is written or read, if byte_sel is low then two bytes are written or read (default legacy mode)<br/>01: One byte is always written or read from FIFOs, regardless of whether byte_sel is active<br/>10: Two bytes are always written or read from FIFOs, regardless of whether byte_sel is active<br/>11: Four bytes are always written or read from FIFOs regardless of byte_sel (assuming configured width of APB supports four bytes)</td></tr>
+<tr valign=top><td>CHMODE</td><td class="center"> 9:8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Channel mode: Defines the mode of operation of the UART.<br/>00: normal<br/>01: automatic echo<br/>10: local loopback<br/>11: remote loopback</td></tr>
+<tr valign=top><td>NBSTOP</td><td class="center"> 7:6</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Number of stop bits: Defines the number of stop bits to detect on receive and to generate on transmit.<br/>00: 1 stop bit<br/>01: 1.5 stop bits<br/>10: 2 stop bits<br/>11: reserved</td></tr>
+<tr valign=top><td>PAR</td><td class="center"> 5:3</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Parity type select: Defines the expected parity to check on receive and the parity to generate on transmit.<br/>000: even parity<br/>001: odd parity<br/>010: forced to 0 parity (space)<br/>011: forced to 1 parity (mark)<br/>1xx: no parity</td></tr>
+<tr valign=top><td>CHRL</td><td class="center"> 2:1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Character length select: Defines the number of bits in each character.<br/>11: 6 bits<br/>10: 7 bits<br/>0x: 8 bits</td></tr>
+<tr valign=top><td>CLKS</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Clock source select: This field defines whether a pre-scalar of 8 is applied to the baud rate generator input clock.<br/>0: clock source is UART_REF_CLK<br/>1: clock source is UART_REF_CLK/8</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

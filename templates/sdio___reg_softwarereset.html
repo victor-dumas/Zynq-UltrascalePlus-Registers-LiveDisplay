@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<title>reg_softwarereset (SDIO) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___sdio.html")>SDIO Module</a> &gt; reg_softwarereset (SDIO) Register</p><h1>reg_softwarereset (SDIO) Register</h1>
+<h2>reg_softwarereset (SDIO) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>reg_softwarereset</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000002F</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF16002F (SD0)<br/>0x00FF17002F (SD1)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder> 8</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">clronwr<span class="tooltiptext">Readable, clears value on write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Software reset for data, command and all.</td></tr>
+</table>
+<p></p>
+<h2>reg_softwarereset (SDIO) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>swreset_for_dat</td><td class="center"> 2</td><td class="tooltip">clronwr<span class="tooltiptext">Readable, clears value on write</span></td><td class="hex">0x0</td><td>Only part of data circuit is reset. The following registers and bits are cleared by this bit:<br/>Buffer Data Port Register: Buffer is cleared and Initialized.<br/>Present State register:<br/>Buffer read Enable,<br/>Buffer write Enable,<br/>Read Transfer Active,<br/>Write Transfer Active,<br/>DAT Line Active,<br/>Command Inhibit (DAT).<br/>Block Gap Control register:<br/>Continue Request,<br/>Stop At Block Gap Request.<br/>Normal Interrupt Status register:<br/>Buffer Read Ready,<br/>Buffer Write Ready,<br/>Block Gap Event,<br/>Transfer Complete.<br/>0: Operational.<br/>1: Held in reset.</td></tr>
+<tr valign=top><td>swreset_for_cmd</td><td class="center"> 1</td><td class="tooltip">clronwr<span class="tooltiptext">Readable, clears value on write</span></td><td class="hex">0x0</td><td>Only part of command circuit is reset. The following registers and bits are cleared by this bit:<br/>Present State register- Command Inhibit (CMD).<br/>Normal Interrupt Status register- Command Complete.<br/>0: Operational.<br/>1: Held in reset.</td></tr>
+<tr valign=top><td>swreset_for_all</td><td class="center"> 0</td><td class="tooltip">clronwr<span class="tooltiptext">Readable, clears value on write</span></td><td class="hex">0x0</td><td>This reset affects the entire HC except for the card detection circuit. Register bits of type ROC, RW, RW1C, RWAC are cleared to 0. During its initialization, the HD shall set this bit to 1 to reset the HC. The HC shall reset this bit to 0 when capabilities registers are valid and the HD can read them. Additional use of Software Reset For All may not affect the value of the Capabilities registers. If this bit is set to 1, the SD card shall reset itself and must be re initialized by the HD.<br/>0: Operational.<br/>1: Held in reset.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

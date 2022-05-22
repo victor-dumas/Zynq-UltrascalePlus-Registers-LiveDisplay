@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<title>pcs_an_ext_status (GEM) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___gem.html")>GEM Module</a> &gt; pcs_an_ext_status (GEM) Register</p><h1>pcs_an_ext_status (GEM) Register</h1>
+<h2>pcs_an_ext_status (GEM) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>pcs_an_ext_status</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000023C</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF0B023C (GEM0)<br/>0x00FF0C023C (GEM1)<br/>0x00FF0D023C (GEM2)<br/>0x00FF0E023C (GEM3)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">ro<span class="tooltiptext">Read-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00008000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>This register contains PCS auto-negotiation extended status information.</td></tr>
+</table>
+<p></p>
+<h2>pcs_an_ext_status (GEM) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:16</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Set to zero.</td></tr>
+<tr valign=top><td>full_duplex_1000base_x</td><td class="center">15</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>Full duplex 1000BASE-X - hardwired to logic 1, indicates the GEM PCS can support full duplex operation of 1000BASE-X.</td></tr>
+<tr valign=top><td>half_duplex_1000base_x</td><td class="center">14</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Half duplex 1000BASE-X - hardwired to logic 1, indicates the GEM PCS can support half duplex operation of 1000BASE-X.</td></tr>
+<tr valign=top><td>full_duplex_1000base_t</td><td class="center">13</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Full duplex 1000BASE-T - hardwired to logic 0, indicates the GEM PCS cannot support 1000BASE-T full duplex operation.</td></tr>
+<tr valign=top><td>half_duplex_1000base_t</td><td class="center">12</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Half duplex 1000BASE-T - hardwired to logic 0, indicates the GEM PCS cannot support 1000BASE-T half duplex operation.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">11:0</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Set to zero.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

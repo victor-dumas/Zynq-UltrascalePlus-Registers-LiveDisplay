@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<title>PxSERR (SATA_AHCI_PORTCNTRL) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___sata_ahci_portcntrl.html")>SATA_AHCI_PORTCNTRL Module</a> &gt; PxSERR (SATA_AHCI_PORTCNTRL) Register</p><h1>PxSERR (SATA_AHCI_PORTCNTRL) Register</h1>
+<h2>PxSERR (SATA_AHCI_PORTCNTRL) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>PxSERR</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000030</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD0C0130 (SATA_AHCI_PORT0_CNTRL)<br/>0x00FD0C01B0 (SATA_AHCI_PORT1_CNTRL)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Port x Serial ATA Error (SCR1: SError)</td></tr>
+</table>
+<p>Error BIt Fields: The ERR_x field contains error information for use by host software in determining the appropriate response to the error condition. Diagnostics Bit Fields - The DIAG_x diagnostic error information is for use by diagnostic software in validating correct operation or isolating failure modes.</p>
+<h2>PxSERR (SATA_AHCI_PORTCNTRL) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:27</td><td class="tooltip grayback">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>DIAG_X</td><td class="center">26</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Exchanged (X): When set to one this bit indicates that a change in device presence has been detected since the last time this bit was cleared.<br/>The means by which the implementation determines that the device presence has changed is vendor specific. This bit shall always be set to one anytime a COMINIT signal is received.<br/>This bit is reflected in the PxIS.PCS bit.</td></tr>
+<tr valign=top><td>DIAG_F</td><td class="center">25</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Unknown FIS Type (F): Indicates that one or more FISs were received by the Transport layer with good CRC, but had a type field that was not recognized/known.</td></tr>
+<tr valign=top><td>DIAG_T</td><td class="center">24</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Transport state transition error (T): Indicates that an error has occurred in the transition from one state to another within the Transport layer since the last time this bit was cleared.</td></tr>
+<tr valign=top><td>DIAG_S</td><td class="center">23</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Link Sequence Error (S): Indicates that one or more Link state machine error conditions was encountered. The Link Layer state machine defines the conditions under which the link layer detects an erroneous transition.</td></tr>
+<tr valign=top><td>DIAG_H</td><td class="center">22</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Handshake Error (H): Indicates that one or more R_ERR handshake response was received in response to frame transmission. Such errors may be the result of a CRC error detected by the recipient, a disparity or 8b/10b decoding error, or other error condition leading to a negative handshake on a transmitted frame.</td></tr>
+<tr valign=top><td>DIAG_C</td><td class="center">21</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>CRC Error (C): Indicates that one or more CRC errors occurred with the Link Layer.</td></tr>
+<tr valign=top><td>DIAG_D</td><td class="center">20</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Disparity Error (D): This field is not used by AHCI.</td></tr>
+<tr valign=top><td>DIAG_B</td><td class="center">19</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>10B to 8B Decode Error (B): Indicates that one or more 10B to 8B decoding errors occurred.</td></tr>
+<tr valign=top><td>DIAG_W</td><td class="center">18</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Comm Wake (W): Indicates that a Comm Wake signal was detected by the Phy.</td></tr>
+<tr valign=top><td>DIAG_I</td><td class="center">17</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Phy Internal Error (I): Indicates that the Phy detected some internal error.</td></tr>
+<tr valign=top><td>DIAG_N</td><td class="center">16</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>PhyRdy Change (N): Indicates that the PhyRdy signal changed state.<br/>This bit is reflected in the PxIS.PRCS bit.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">15:12</td><td class="tooltip grayback">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>ERR_E</td><td class="center">11</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Internal Error (E): The host bus adapter experienced an internal error that caused the operation to fail and may have put the host bus adapter into an error state.<br/>The internal error may include a master or target abort when attempting to access system memory, an elasticity buffer overflow, a primitive mis-alignment, a synchronization FIFO overflow, and other internal error conditions.<br/>Typically when an internal error occurs, a non-fatal or fatal status bit in the PxIS register will also be set to give software guidance on the recovery mechanism required.</td></tr>
+<tr valign=top><td>ERR_P</td><td class="center">10</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Protocol Error (P): A violation of the Serial ATA protocol was detected</td></tr>
+<tr valign=top><td>ERR_C</td><td class="center"> 9</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Persistent Communication or Data Integrity Error (C): A communication error that was not recovered occurred that is expected to be persistent.<br/>Persistent communications errors may arise from faulty interconnect with the device, from a device that has been removed or has failed, or a number of other causes.</td></tr>
+<tr valign=top><td>ERR_T</td><td class="center"> 8</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Transient Data Integrity Error (T): A data integrity error occurred that was not recovered by the interface.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 7:2</td><td class="tooltip grayback">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>ERR_M</td><td class="center"> 1</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Recovered Communications Error (M): Communications between the device and host was temporarily lost but was re-established. This can arise from a device temporarily being removed, from a temporary loss of Phy synchronization, or from other causes and may be derived from the PhyNRdy signal between the Phy and Link layers.</td></tr>
+<tr valign=top><td>ERR_I</td><td class="center"> 0</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Recovered Data Integrity Error (I): A data integrity error occurred that was recovered by the interface through a retry operation or other recovery action.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

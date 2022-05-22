@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<title>RPU_0_CFG (RPU) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___rpu.html")>RPU Module</a> &gt; RPU_0_CFG (RPU) Register</p><h1>RPU_0_CFG (RPU) Register</h1>
+<h2>RPU_0_CFG (RPU) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>RPU_0_CFG</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000100</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF9A0100 (RPU)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000005</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Configuration Parameters specific to RPU0</td></tr>
+</table>
+<p></p>
+<h2>RPU_0_CFG (RPU) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:4</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved for future use</td></tr>
+<tr valign=top><td>CFGNMFI0</td><td class="center"> 3</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Enables non-maskable fast interrupts for R5 _0,<br/>Low = en FIQ masking by software<br/>High = disable FIQ masking by software</td></tr>
+<tr valign=top><td>VINITHI</td><td class="center"> 2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>High = Start executing form 0xFFFF0000 (OCM) out of reset.<br/>Low = Start executing from 0x00000000 (ATCM) out of reset.</td></tr>
+<tr valign=top><td>COHERENT</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>High = All accesses to peripherals will be through APU Cache Controller.<br/>Low = All accesses to peripherals will be direct and without any Cache Choerency with APU.</td></tr>
+<tr valign=top><td>nCPUHALT</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>nCPUHALT bit can be asserted while the processor is in reset to stop the processor from fetching and executing instructions after coming out of reset.When nCPUHALT has been deasserted to start the processor fetching, nCPUHALT must not be asserted again except when the processor is under processor or power-on reset, that is, nRESET asserted. The processor does not halt if the nCPUHALT pin is asserted while the processor is running<br/>low = stops CPU from fetching instructions out of reset, processor is halted<br/>High = Processor is running</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

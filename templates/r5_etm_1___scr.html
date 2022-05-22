@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<title>SCR (R5_ETM_1) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___r5_etm_1.html")>R5_ETM_1 Module</a> &gt; SCR (R5_ETM_1) Register</p><h1>SCR (R5_ETM_1) Register</h1>
+<h2>SCR (R5_ETM_1) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>SCR</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000014</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FEBFD014 (CORESIGHT_R5_ETM_1)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">ro<span class="tooltiptext">Read-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x0002000C</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>System Configruation Register</td></tr>
+</table>
+<p></p>
+<h2>SCR (R5_ETM_1) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>No_fetch_cmp</td><td class="center">17</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>No Fetch comparisons. Address comparators are not capable of performing fetch-stage comparisons. Setting bits [2:0] of an Address Access Type Register to b000 (instruction fetch) causes the comparator to have UNPREDICTABLE behavior.</td></tr>
+<tr valign=top><td>No_of_sup_cores</td><td class="center">14:12</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Number of supported cores minus 1. The value given here is the maximum value that can be written to bits [27:25] of the Control Register.</td></tr>
+<tr valign=top><td>Port_mode</td><td class="center">11</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Port mode supported.</td></tr>
+<tr valign=top><td>Port_size</td><td class="center">10</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Port size supported.</td></tr>
+<tr valign=top><td>Max_port_size_3</td><td class="center"> 9</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Maximum port size[3]. This bit is used in conjunction with bits [2:0].</td></tr>
+<tr valign=top><td>Fifofull_support</td><td class="center"> 8</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>If set to 1, FIFOFULL is supported. This bit is used in conjunction with bit [23] of the ETM Configuration Register.</td></tr>
+<tr valign=top><td>Full_rate</td><td class="center"> 4</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Full-rate clocking is no longer supported.</td></tr>
+<tr valign=top><td>Half_rate</td><td class="center"> 3</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>All modes use half-rate clocking.</td></tr>
+<tr valign=top><td>Max_port_size_2_0</td><td class="center"> 2:0</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x4</td><td>Maximum port size[2:0]. This bit is used in conjunction with bit [9].</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<title>DGCMD (USB3_XHCI) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___usb3_xhci.html")>USB3_XHCI Module</a> &gt; DGCMD (USB3_XHCI) Register</p><h1>DGCMD (USB3_XHCI) Register</h1>
+<h2>DGCMD (USB3_XHCI) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>DGCMD</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000C714</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FE20C714 (USB3_0_XHCI)<br/>0x00FE30C714 (USB3_1_XHCI)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Device Generic Command Register<br/>This register enables software to program the core using a single generic command interface to send link management packets and notifications. This register contains command, control, and status fields relevant to the current generic command, while the DGCMDPAR register provides the command parameter.</td></tr>
+</table>
+<p></p>
+<h2>DGCMD (USB3_XHCI) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:16</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>CMDSTATUS</td><td class="center">15:12</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0</td><td>Command Status<br/>- 1: CmdErr:<br/>Indicates that the device controller encountered an error while processing the command.<br/>- 0: Indicates command success</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">11</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>CMDACT</td><td class="center">10</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>Command Active<br/>The software sets this bit to 1 to enable the device controller to execute the generic command.<br/>The device controller sets this bit to 0 after executing the command.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 9</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>CMDIOC</td><td class="center"> 8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>Command Interrupt on Complete<br/>When this bit is set, the device controller issues a Generic Command Completion event after executing the command.<br/>Note that this interrupt is mapped to DCFG.IntrNum.<br/>Note: This field must not set to '1' if the DCTL.RunStop field is '0'.</td></tr>
+<tr valign=top><td>CMDTYP</td><td class="center"> 7:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>CMDTYP.<br/>Command Type<br/>Specifies the type of command the software driver is requesting the core to perform.<br/>- 00h: Reserved<br/>- 01h: Set Endpoint Configuration - 64 or 96-bit Parameter<br/>- 02h: Set Endpoint Transfer Resource Configuration - 32-bit Parameter<br/>- 03h: Get Endpoint State - No Parameter Needed<br/>- 05h: Clear Stall (see Set Stall) - No Parameter Needed<br/>- 06h: Start Transfer - 64-bit Parameter<br/>- 07h: Update Transfer - No Parameter Needed<br/>- 08h: End Transfer - No Parameter Needed<br/>- 09h: Start New Configuration - No Parameter Needed</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

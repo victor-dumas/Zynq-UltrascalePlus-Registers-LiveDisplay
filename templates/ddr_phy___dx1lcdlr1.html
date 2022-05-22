@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<title>DX1LCDLR1 (DDR_PHY) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddr_phy.html")>DDR_PHY Module</a> &gt; DX1LCDLR1 (DDR_PHY) Register</p><h1>DX1LCDLR1 (DDR_PHY) Register</h1>
+<h2>DX1LCDLR1 (DDR_PHY) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>DX1LCDLR1</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000884</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD080884 (DDR_PHY)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>DATX8 n Local Calibrated Delay Line Register 1</td></tr>
+</table>
+<p></p>
+<h2>DX1LCDLR1 (DDR_PHY) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:25</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Return zeroes on reads.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">24:16</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Returns zeroes on reads.<br/>Caution: Do not write to this register field.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">15:9</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Return zeroes on reads.</td></tr>
+<tr valign=top><td>WDQD</td><td class="center"> 8:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Write Data Delay: Delay select for the write data (WDQ) LCDL for the<br/>byte.<br/>The WDQ LCDL register is automatically updated after DDL<br/>Calibration (by Tck/4) and after Write leveling when write leveling is<br/>performed.<br/>Total delay should be written into this field. It overrides the delay set<br/>by hardware.<br/>Delay written in this field is converted to following two elements after<br/>20 ctl_clk clock cycles:<br/>1-Number of UI delays (pipelines) added to write dq path that can<br/>be read from DxnGTR0.WDQSL field<br/>2-The remainder of the delay, which is number of LCDL tap delays<br/>(written delay - DxnGTR0.WDQSL * one UI period). It is smaller<br/>than 1 UI delay and will be available to read in this field.<br/>Reading this field returns the delay in item 2.<br/>This field should be programmed only after running calibration.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

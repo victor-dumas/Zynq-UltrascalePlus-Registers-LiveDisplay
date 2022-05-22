@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<title>Current_test_pattern_mode (TPIU) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___tpiu.html")>TPIU Module</a> &gt; Current_test_pattern_mode (TPIU) Register</p><h1>Current_test_pattern_mode (TPIU) Register</h1>
+<h2>Current_test_pattern_mode (TPIU) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>Current_test_pattern_mode</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000204</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FE980204 (CORESIGHT_SOC_TPIU)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>This register indicates the current test pattern/mode selected. Only one of the modes can be set, using bits 17-16, but a multiple number of bits for the patterns can be set using bits 3-0. If Timed Mode is chosen, then after the allotted number of cycles has been reached, the mode automatically switches to Off Mode. On reset this register is set to 18'h00000, Off Mode with no selected patterns.</td></tr>
+</table>
+<p></p>
+<h2>Current_test_pattern_mode (TPIU) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>PCONTEN</td><td class="center">17</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Indicates whether Continuous Mode is enabled.</td></tr>
+<tr valign=top><td>PTIMEEN</td><td class="center">16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Indicates whether Timed Mode is enabled.</td></tr>
+<tr valign=top><td>PATF0</td><td class="center"> 3</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>FF/00 pattern enabled to be output over the Trace Port.</td></tr>
+<tr valign=top><td>PATA5</td><td class="center"> 2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>AA/55 pattern enabled to be output over the Trace Port.</td></tr>
+<tr valign=top><td>PATW0</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Walking 0s Pattern enabled to be output over the Trace Port.</td></tr>
+<tr valign=top><td>PATW1</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Walking 1s Pattern enabled to be output over the Trace Port.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

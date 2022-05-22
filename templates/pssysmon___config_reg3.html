@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<title>CONFIG_REG3 (PSSYSMON) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___pssysmon.html")>PSSYSMON Module</a> &gt; CONFIG_REG3 (PSSYSMON) Register</p><h1>CONFIG_REG3 (PSSYSMON) Register</h1>
+<h2>CONFIG_REG3 (PSSYSMON) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>CONFIG_REG3</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000010C</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FFA5090C (AMS_PS_SYSMON)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>16</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Config Reg 3: Alarm disables.</td></tr>
+</table>
+<p>0: enabled. 1: disabled. PS SysMond does not impletment the I2C interface.</p>
+<h2>CONFIG_REG3 (PSSYSMON) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>alarm_disable13to8</td><td class="center"> 5:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Alarm Disables.<br/>Bit [0] Alarm 8, VCCO_PSIO1.<br/>Bit [1] Alarm 9, VCCO_PSIO2.<br/>Bit [2] Alarm 10, PS_MGTRAVCC.<br/>Bit [3] Alarm 11, PS_MGTRAVTT.<br/>Bit [4] Alarm 12, VCC_PSADC.<br/>Bit [5] Alarm 13, Temp_FPD (near APU).</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

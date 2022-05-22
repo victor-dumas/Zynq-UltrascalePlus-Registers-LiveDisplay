@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<title>slcr_usb (LPD_SLCR_SECURE) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___lpd_slcr_secure.html")>LPD_SLCR_SECURE Module</a> &gt; slcr_usb (LPD_SLCR_SECURE) Register</p><h1>slcr_usb (LPD_SLCR_SECURE) Register</h1>
+<h2>slcr_usb (LPD_SLCR_SECURE) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>slcr_usb</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000034</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF4B0034 (LPD_SLCR_SECURE)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder> 2</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000003</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>USB TrustZone settings.</td></tr>
+</table>
+<p>Modify during bootup (while USB controller is disabled). 0: Secure. 1: Non-Secure.</p>
+<h2>slcr_usb (LPD_SLCR_SECURE) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>tz_usb3_1</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>TrustZone setting for USB1.</td></tr>
+<tr valign=top><td>tz_usb3_0</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>TrustZone setting for USB0.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

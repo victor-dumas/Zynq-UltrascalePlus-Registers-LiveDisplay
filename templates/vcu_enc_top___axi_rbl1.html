@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<title>AXI_RBL1 (VCU_ENC_TOP) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___vcu_enc_top.html")>VCU_ENC_TOP Module</a> &gt; AXI_RBL1 (VCU_ENC_TOP) Register</p><h1>AXI_RBL1 (VCU_ENC_TOP) Register</h1>
+<h2>AXI_RBL1 (VCU_ENC_TOP) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>AXI_RBL1</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000009224</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00A0009224 (VCU_ENCODE)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>AXI Read Bandwidth Limiter 1</td></tr>
+</table>
+<p></p>
+<h2>AXI_RBL1 (VCU_ENC_TOP) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>AxiReadBwLimThr1</td><td class="center">31:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Port 1 Read Bandwidth Limiter Threshold: threshold, in units of 128-bit words, for the number of read accesses that can be requested on the AXI master port 1 during the read bandwidth limiter time window. As soon as the threshold is exceeded at the end of an AXI burst, read requests are stalled until the end of the time window.</td></tr>
+<tr valign=top><td>AxiReadBwLimWin1</td><td class="center">15:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Port 1 Read Bandwidth Limiter Window: this field configures the time window, in units of aclk clock cycles, of the read bandwidth limiter for the 128-bit AXI master port 1. A zero value disables the bandwidth limiter.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

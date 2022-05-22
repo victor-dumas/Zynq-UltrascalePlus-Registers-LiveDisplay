@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<title>DP_AUX_REPLY_CODE (DP) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___dp.html")>DP Module</a> &gt; DP_AUX_REPLY_CODE (DP) Register</p><h1>DP_AUX_REPLY_CODE (DP) Register</h1>
+<h2>DP_AUX_REPLY_CODE (DP) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>DP_AUX_REPLY_CODE</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000138</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD4A0138 (DP)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Reply code received from the most recent AUX Channel request. The AUX Reply Code corresponds to the code from the DisplayPort specification</td></tr>
+</table>
+<p></p>
+<h2>DP_AUX_REPLY_CODE (DP) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:4</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback></td></tr>
+<tr valign=top><td>CODE1</td><td class="center"> 3:2</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>o 00 = I2C ACK<br/>o 01 = I2C NACK<br/>o 10 = I2C DEFER</td></tr>
+<tr valign=top><td>CODE0</td><td class="center"> 1:0</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>o 00 = AUX ACK<br/>o 01 = AUX NACK<br/>O 10 = AUX DEFER</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<title>MSR (CAN) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___can.html")>CAN Module</a> &gt; MSR (CAN) Register</p><h1>MSR (CAN) Register</h1>
+<h2>MSR (CAN) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>MSR</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000004</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF060004 (CAN0)<br/>0x00FF070004 (CAN1)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Mode Select</td></tr>
+</table>
+<p>Writing to the Mode Select Register (MSR) enables the CAN controller to enter Snoop, Sleep, Loopback, or Normal modes. In Normal mode, the CAN controller participates in normal bus communication. If the SLEEP bit is set to '1,' the CAN controller enters Sleep mode. If the LBACK bit is set to '1,' the CAN controller enters Loopback mode. If the SNOOP mode is set to '1', the CAN controller enters Snoop mode and does not participate in bus communication but only receives messages. The LBACK and SLEEP bits should never be set to '1' at the same time. At any given point the CAN controller can be either in Loopback mode or Sleep mode, but not both simultaneously. If both bits are set, then LBACK Mode takes priority. SNOOP Mode has least priority. In order for core to enter SNOOP mode LBACK and SLEEP modes should be set to '0'.</p>
+<h2>MSR (CAN) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:3</td><td class="tooltip grayback">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved.</td></tr>
+<tr valign=top><td>SNOOP</td><td class="center"> 2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Snoop Mode Select<br/>The Snoop Mode Select bit.<br/>1: CAN controller is in Snoop mode.<br/>0: CAN controller is in Normal, Loopback, Configuration, or Sleep mode.<br/>This bit can be written to only when CEN bit in SRR is 0.</td></tr>
+<tr valign=top><td>LBACK</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Loopback Mode Select<br/>The Loopback Mode Select bit.<br/>1: CAN controller is in Loopback mode.<br/>0: CAN controller is in Normal, Snoop, Configuration, or Sleep mode.<br/>This bit can be written to only when CEN bit in SRR is 0.</td></tr>
+<tr valign=top><td>SLEEP</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Sleep Mode Select<br/>The Sleep Mode select bit.<br/>1: CAN controller is in Sleep mode.<br/>0: CAN controller is in Normal, Snoop, Configuration or Loopback mode.<br/>This bit is cleared when the CAN controller wakes up from the Sleep mode.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

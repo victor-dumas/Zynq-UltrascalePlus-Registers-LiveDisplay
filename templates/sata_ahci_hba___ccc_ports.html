@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<title>CCC_PORTS (SATA_AHCI_HBA) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___sata_ahci_hba.html")>SATA_AHCI_HBA Module</a> &gt; CCC_PORTS (SATA_AHCI_HBA) Register</p><h1>CCC_PORTS (SATA_AHCI_HBA) Register</h1>
+<h2>CCC_PORTS (SATA_AHCI_HBA) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>CCC_PORTS</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000018</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD0C0018 (SATA_AHCI_HBA)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Command Completion Coalescing Ports.</td></tr>
+</table>
+<p>The command completion coalescing ports register is used to specify the ports that are coalesced as part of the CCC feature when CCC_CTL [EN] = 1</p>
+<h2>CCC_PORTS (SATA_AHCI_HBA) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>PRT</td><td class="center">31:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Ports (PRT):<br/>This register is bit significant.<br/>Each bit corresponds to a particular port, where bit 0 corresponds to port 0.<br/>If a bit is set to 1, the corresponding port is part of the command completion coalescing feature.<br/>If a bit is cleared to 0, the port is not part of the command completion coalescing feature.<br/>Bits set to 1 in this register must also have the corresponding bit set to 1 in the Ports Implemented register.<br/>An updated value for this field shall take effect within one timer increment (1 millisecond).</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

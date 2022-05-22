@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<title>dma_addr_or_mask (GEM) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___gem.html")>GEM Module</a> &gt; dma_addr_or_mask (GEM) Register</p><h1>dma_addr_or_mask (GEM) Register</h1>
+<h2>dma_addr_or_mask (GEM) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>dma_addr_or_mask</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x00000000D0</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF0B00D0 (GEM0)<br/>0x00FF0C00D0 (GEM1)<br/>0x00FF0D00D0 (GEM2)<br/>0x00FF0E00D0 (GEM3)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Receive DMA Data Buffer Address Mask </td></tr>
+</table>
+<p></p>
+<h2>dma_addr_or_mask (GEM) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>mask_value</td><td class="center">31:28</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Data Buffer Address Mask Value. Values used to force bits 31:28 of the receive data buffer AHB/AXI address to a particular value when the associated enable bits stored in this register [3:0] are set. Any changes to this register will be ignored while the DMA is currently processing a receive packet. It will only affect the next full packet to be written to external system memory.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">27:4</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved, read as 0, ignored on write.</td></tr>
+<tr valign=top><td>mask_enable</td><td class="center"> 3:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Data Buffer Address Mask Enable. These bits are associated directly with bits[31:28].When bit 0 is set, the AHB/AXI address bit 28 used for accessing the receive data buffers will be forced to the value stored in bit 28 of this register. When bit 1 is set, the AHB/AXI address bit 29 used for accessing the receive data buffers will be forced to the value stored in bit 29 of this register. When bit 2 is set, the AHB/AXI address bit 30 used for accessing the receive data buffers will be forced to the value stored in bit 30 of this register. When bit 3 is set, the AHB/AXI address bit 31 used for accessing the receive data buffers will be forced to the value stored in bit 31 of this register. When these bits are clear, the associated value stored in bits 31:28 have no effect on the AHB/AXI address used for receive data buffer accesses. Any changes to this register will be ignored while the DMA is currently processing a receive packet. It will only affect the next full packet to be written to external memory.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

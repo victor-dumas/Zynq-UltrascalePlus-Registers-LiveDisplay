@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<title>Interrupt_status_reg0 (I2C) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___i2c.html")>I2C Module</a> &gt; Interrupt_status_reg0 (I2C) Register</p><h1>Interrupt_status_reg0 (I2C) Register</h1>
+<h2>Interrupt_status_reg0 (I2C) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>Interrupt_status_reg0</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000010</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF020010 (I2C0)<br/>0x00FF030010 (I2C1)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>16</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>IIC interrupt status register</td></tr>
+</table>
+<p></p>
+<h2>Interrupt_status_reg0 (I2C) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">15:10</td><td class="tooltip grayback">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved, read as zero, ignored on write.</td></tr>
+<tr valign=top><td>ARB_LOST</td><td class="center"> 9</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>arbitration lost<br/>1 = master loses bus ownership during a transfer due to ongoing arbitration</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 8</td><td class="tooltip grayback">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved, read as zero, ignored on write.</td></tr>
+<tr valign=top><td>RX_UNF</td><td class="center"> 7</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>FIFO receive underflow<br/>1 = host attempts to read from the I2C data register more times than the value of the transfer size register plus one</td></tr>
+<tr valign=top><td>TX_OVF</td><td class="center"> 6</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>FIFO transmit overflow<br/>1 = host attempts to write to the I2C data register more times than the FIFO depth</td></tr>
+<tr valign=top><td>RX_OVF</td><td class="center"> 5</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Receive overflow<br/>1 = This bit is set whenever FIFO is full and a new byte is received. The new byte is not acknowledged and contents of the FIFO remains unchanged.</td></tr>
+<tr valign=top><td>SLV_RDY</td><td class="center"> 4</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Monitored slave ready<br/>1 = <br/>addressed slave returns ACK.</td></tr>
+<tr valign=top><td>TO</td><td class="center"> 3</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Transfer time out<br/>1 = <br/>I2C sclk line is kept low for longer time</td></tr>
+<tr valign=top><td>NACK</td><td class="center"> 2</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Transfer not acknowledged<br/>1 = slave responds with a NACK or master terminates the transfer before all data is supplied</td></tr>
+<tr valign=top><td>DATA</td><td class="center"> 1</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>More data<br/>1 = <br/>Data being sent or received</td></tr>
+<tr valign=top><td>COMP</td><td class="center"> 0</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>Transfer complete<br/>1 = <br/>transfer is complete</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

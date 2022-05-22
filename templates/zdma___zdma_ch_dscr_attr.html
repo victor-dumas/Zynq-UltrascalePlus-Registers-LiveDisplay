@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<title>ZDMA_CH_DSCR_ATTR (ZDMA) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___zdma.html")>ZDMA Module</a> &gt; ZDMA_CH_DSCR_ATTR (ZDMA) Register</p><h1>ZDMA_CH_DSCR_ATTR (ZDMA) Register</h1>
+<h2>ZDMA_CH_DSCR_ATTR (ZDMA) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>ZDMA_CH_DSCR_ATTR</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000124</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FFA80124 (ADMA_CH0)<br/>0x00FFA90124 (ADMA_CH1)<br/>0x00FFAA0124 (ADMA_CH2)<br/>0x00FFAB0124 (ADMA_CH3)<br/>0x00FFAC0124 (ADMA_CH4)<br/>0x00FFAD0124 (ADMA_CH5)<br/>0x00FFAE0124 (ADMA_CH6)<br/>0x00FFAF0124 (ADMA_CH7)<br/>0x00FD500124 (GDMA_CH0)<br/>0x00FD510124 (GDMA_CH1)<br/>0x00FD520124 (GDMA_CH2)<br/>0x00FD530124 (GDMA_CH3)<br/>0x00FD540124 (GDMA_CH4)<br/>0x00FD550124 (GDMA_CH5)<br/>0x00FD560124 (GDMA_CH6)<br/>0x00FD570124 (GDMA_CH7)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Channel DSCR AXI parameter Register</td></tr>
+</table>
+<p>This register must remain stable while DMA Channel is enabled</p>
+<h2>ZDMA_CH_DSCR_ATTR (ZDMA) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:9</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved for future use</td></tr>
+<tr valign=top><td>AXCOHRNT</td><td class="center"> 8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>This field is only valid for LPD DMA. FPD DMA does not support coherency at descriptor and data.<br/>0: AXI transactions generated for the descriptor read are marked Non-coherent.<br/>1: AXI transactions generated for the descriptor read are marked coherent.</td></tr>
+<tr valign=top><td>AXCACHE</td><td class="center"> 7:4</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>AXI cache bit used for DSCR fetch (both on SRC and DST Side).</td></tr>
+<tr valign=top><td>AXQOS</td><td class="center"> 3:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>QoS bit used for DSCR fetch (both on SRC and DST side).</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

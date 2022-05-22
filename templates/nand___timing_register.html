@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<title>Timing_Register (NAND) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___nand.html")>NAND Module</a> &gt; Timing_Register (NAND) Register</p><h1>Timing_Register (NAND) Register</h1>
+<h2>Timing_Register (NAND) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>Timing_Register</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000002C</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF10002C (NAND)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Interface Timing Control.</td></tr>
+</table>
+<p></p>
+<h2>Timing_Register (NAND) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:19</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>dqs_buff_sel_out</td><td class="center">18:15</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>For write transaction program this value based<br/>on tDS value.<br/>Write data transaction values<br/>NVDDR Mode 0 - 4'h6<br/>NVDDR Mode 1 - 4'h5<br/>NVDDR Mode 2 - 4'h4<br/>NVDDR Mode 3 - 4'h3<br/>NVDDR Mode 4 - 4'h2<br/>NVDDR Mode 5 - 4'h2<br/>Note: Change this value only when controller is not communicating with the memory device.</td></tr>
+<tr valign=top><td>tadl_time</td><td class="center">14:7</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Address Latch Enable to Data Loading time.<br/>During write if pgm_pg_reg_clr bit is set then this value must be programmed.<br/>Note: Change this value only when controller is not communicating with the memory device.</td></tr>
+<tr valign=top><td>dqs_buff_sel_in</td><td class="center"> 6:3</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>For read transaction program this value based on tDQSQ value.<br/>Read data transaction values<br/>NVDDR Mode 0 - 4'h6<br/>NVDDR Mode 1 - 4'h5<br/>NVDDR Mode 2 - 4'h4<br/>NVDDR Mode 3 - 4'h3<br/>NVDDR Mode 4 - 4'h2<br/>NVDDR Mode 5 - 4'h2<br/>Note: Change this value only when controller is not communicating with the memory device.</td></tr>
+<tr valign=top><td>slow_fast_tcad</td><td class="center"> 2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>0: slow device (tCADs).<br/>1: fast device (tCADf).<br/>Note: Change this value only when controller is not communicating with the memory device.</td></tr>
+<tr valign=top><td>tccs_time</td><td class="center"> 1:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Change column setup time.<br/>00: 500ns<br/>01: 100ns<br/>10: 200ns<br/>11: 300ns<br/>Note: Change this value only when controller is not communicating with the memory device.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

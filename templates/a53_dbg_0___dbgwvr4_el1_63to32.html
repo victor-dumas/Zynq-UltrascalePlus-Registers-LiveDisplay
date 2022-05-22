@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<title>DBGWVR4_EL1_63to32 (A53_DBG_0) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___a53_dbg_0.html")>A53_DBG_0 Module</a> &gt; DBGWVR4_EL1_63to32 (A53_DBG_0) Register</p><h1>DBGWVR4_EL1_63to32 (A53_DBG_0) Register</h1>
+<h2>DBGWVR4_EL1_63to32 (A53_DBG_0) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>DBGWVR4_EL1_63to32</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000844</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FEC10844 (CORESIGHT_A53_DBG_0)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Debug Watchpoint Extended Value Registers</td></tr>
+</table>
+<p></p>
+<h2>DBGWVR4_EL1_63to32 (A53_DBG_0) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>RESS</td><td class="center">31:17</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>Reserved, Sign extended. Hardwired to the value of the sign bit, bit [48]. Hardware and software must treat this field as RES0 if bit[48] is 0, and as RES1 if bit[48] is 1.</td></tr>
+<tr valign=top><td>VA</td><td class="center">16:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0</td><td>Bits[48:2] of the address value for comparison.Arm deprecates setting DBGWVR&lt;n>_EL1[2] == 1.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

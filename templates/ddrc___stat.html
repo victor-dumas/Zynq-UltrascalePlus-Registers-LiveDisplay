@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<title>STAT (DDRC) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddrc.html")>DDRC Module</a> &gt; STAT (DDRC) Register</p><h1>STAT (DDRC) Register</h1>
+<h2>STAT (DDRC) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>STAT</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000004</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD070004 (DDRC)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">ro<span class="tooltiptext">Read-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Operating Mode Status Register</td></tr>
+</table>
+<p></p>
+<h2>STAT (DDRC) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>selfref_state</td><td class="center"> 9:8</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Self refresh state. This indicates self refresh or self refresh power down state for LPDDR4.<br/>This register is used for frequency change and MRR/MRW access during self refresh.<br/>- 00 - SDRAM is not in Self Refresh.<br/>- 01 - Self refresh 1<br/>- 10 - Self refresh power down<br/>- 11 - Self refresh 2</td></tr>
+<tr valign=top><td>selfref_type</td><td class="center"> 5:4</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Flags if Self Refresh is entered and if it was under Automatic Self Refresh control only or not.<br/>- 00 - SDRAM is not in Self Refresh. If retry is enabled by CRCPARCTRL1.crc_parity_retry_enable, this also indicates SRE command is still in parity error window or retry is in-progress.<br/>- 11 - SDRAM is in Self Refresh and Self Refresh was caused by Automatic Self Refresh only. If retry is enabled, this guarantees SRE command is executed correctly without parity error.<br/>- 10 - SDRAM is in Self Refresh and Self Refresh was not caused solely under Automatic Self Refresh control. It could have been caused by Hardware Low Power Interface and/or Software (reg_ddrc_selfref_sw). If retry is enabled, this guarantees SRE command is executed correctly without parity error.</td></tr>
+<tr valign=top><td>operating_mode</td><td class="center"> 2:0</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Operating mode.<br/>DDR3 designs:<br/>- 000 - Init<br/>- 001 - Normal<br/>- 010 - Power-down<br/>- 011 - Self refresh<br/>LPDDR3 or DDR4 designs:<br/>- 000 - Init<br/>- 001 - Normal<br/>- 010 - Power-down<br/>- 011 - Self refresh<br/>- 1XX - Deep power-down / Maximum Power Saving Mode<br/>LPDDR4 designs:<br/>- 000 - Init<br/>- 001 - Normal<br/>- 010 - Power-down<br/>- 011 - Self refresh / Self refresh power-down</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

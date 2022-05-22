@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<title>PLC (SATA_AHCI_VENDOR) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___sata_ahci_vendor.html")>SATA_AHCI_VENDOR Module</a> &gt; PLC (SATA_AHCI_VENDOR) Register</p><h1>PLC (SATA_AHCI_VENDOR) Register</h1>
+<h2>PLC (SATA_AHCI_VENDOR) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>PLC</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000030</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD0C00D0 (SATA_AHCI_VENDOR)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x3800FF34</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Link Layer Configuration (LinkCfg).</td></tr>
+</table>
+<p>Controls the configuration of the Link Layer for either Port 0 or Port 1. The Port configured is controlled by the value programmed into the Port Config Register.</p>
+<h2>PLC (SATA_AHCI_VENDOR) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>PMPRA</td><td class="center">31:27</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x7</td><td>Power Management Primitive Rate Acknowledge (PMPRA): This value determines the number of PMACK primitives sent when a power management state transition is requested by the host.</td></tr>
+<tr valign=top><td>POE</td><td class="center">26</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Primitive Override Enable (POE): When set, this bit enables the replacement of a single primitive, as specified by Override Primitive/CD, when the Link Layer state machine is in the Prim Override State. This bit has to be toggled from a '0' to a '1' to enable this feature.</td></tr>
+<tr valign=top><td>PRT</td><td class="center">25:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Phy Ready Timer (PRT): These 10 bits specify the timeout value of the PhyReady Timer. If EnPhyReadyTimeOut is set, the Link Layer will count down on every rising edge of txWordClk, as long as PhyReady is de-asserted. When the counter reaches zero, a PhyReset will be issued to the Phy to try and re-establish communications with the far-end. The timer is initially loaded with a value equal to the concatenation of { Phy Ready Timer, 9'h000}.</td></tr>
+<tr valign=top><td>AIR</td><td class="center">15:8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0xFF</td><td>Align Insertion Rate (AIR): The Serial ATA specification requires that the Link Layer sends a pair of ALIGN primitives at least every 254 DWords of data. This is achieved by setting Align Insertion Rate to '11111111'. However, for test purposes it is possible to send ALIGNs at a higher rate. This can be achieved by setting Align Insertion Rate to a lower value i.e. (Align Insertion Rate-1) DWords will be sent by the Link Layer between each set of ALIGN primitive pairs. Note: If Send 4 Aligns is set, one should not set the Align Insertion Rate to be four or less. If Send 4 Aligns is not set, one should not set the Align Insertion Rate to be two or less.</td></tr>
+<tr valign=top><td>EPNRT</td><td class="center"> 7</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Enable Phy Not Ready Timer (EPNRT): If PhyReady is de-asserted for a length of time, as specified by Phy Ready Timer, then this bit, when asserted, enables the Link Layer to re-issue a PhyReset, thereby re-initiating OOB.</td></tr>
+<tr valign=top><td>S4A</td><td class="center"> 6</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Send 4 Aligns (S4A): When asserted, four ALIGN primitives are transmitted at the specified rate, instead of the normal two ALIGNS.</td></tr>
+<tr valign=top><td>RXSE</td><td class="center"> 5</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Rx Scramble Enable (RXSE): If this bit is asserted then de-scrambling of the Receive data is enabled as per the Serial ATA specification.</td></tr>
+<tr valign=top><td>TXSE</td><td class="center"> 4</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Tx Scramble Enable (TXSE): If this bit is asserted then scrambling of the Transmit data is enabled as per the Serial ATA specification.</td></tr>
+<tr valign=top><td>TXPJ</td><td class="center"> 3</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Tx Prim Junk (TXPJ): If this bit is de-asserted, then scrambled junk data is sent after a CONT primitive, as per the Serial ATA specification. If this bit is asserted, then the single character 32'hDEADBEEF is sent continuously instead. This is to aid debug.</td></tr>
+<tr valign=top><td>TXC</td><td class="center"> 2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Tx Cont (TXC): If this bit is asserted, then the transmission of CONT primitives is enabled. If de-asserted, then long sequences of repeated primitives can be sent by the Link Layer.</td></tr>
+<tr valign=top><td>RXBC</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Rx Bad CRC (RXBC): When a rising edge is detected on this bit, it causes a bad CRC to be detected for the current frame. This bit has to be toggled from a '0' to a '1' to enable this feature.</td></tr>
+<tr valign=top><td>TXBC</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Tx Bad CRC (TXBC): A bad CRC (inverted value of the correct CRC) value will be transmitted for one FIS only by the Link Layer when a rising edge is detected on this signal. This bit has to be toggled from a '0' to a '1' to enable this feature.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

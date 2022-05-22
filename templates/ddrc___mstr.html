@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<title>MSTR (DDRC) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddrc.html")>DDRC Module</a> &gt; MSTR (DDRC) Register</p><h1>MSTR (DDRC) Register</h1>
+<h2>MSTR (DDRC) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>MSTR</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000000</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD070000 (DDRC)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x03040001</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Master Register</td></tr>
+</table>
+<p>All register fields are static, unless described otherwise in the register field description. Static registers can only be written when the controller is in reset.</p>
+<h2>MSTR (DDRC) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>device_config</td><td class="center">31:30</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Indicates the configuration of the device used in the system.<br/>- 00 - Reserved<br/>- 01 - x8 device<br/>- 10 - x16 device<br/>- 11 - x32 device</td></tr>
+<tr valign=top><td>frequency_mode</td><td class="center">29</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Choose which registers are used.<br/>- 0 - Original registers<br/>- 1 - Shadow registers</td></tr>
+<tr valign=top><td>active_ranks</td><td class="center">25:24</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x3</td><td>Each bit represents one rank.<br/>- 1 - populated<br/>- 0 - unpopulated<br/>LSB is the lowest rank number.<br/>For 2 ranks following combinations are legal:<br/>- 01 - One rank<br/>- 11 - Two ranks<br/>- Others - Reserved.</td></tr>
+<tr valign=top><td>burst_rdwr</td><td class="center">19:16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x4</td><td>SDRAM burst length used:<br/>- 0001 - Reserved<br/>- 0010 - Burst length of 4<br/>- 0100 - Burst length of 8<br/>- 1000 - Burst length of 16 (only supported for LPDDR4)<br/>All other values are reserved.<br/>This controls the burst size used to access the SDRAM. This must match the burst length mode register setting in the SDRAM. (For BC4/8 on-the-fly mode of DDR3 and DDR4, set this field to 0x0100).</td></tr>
+<tr valign=top><td>dll_off_mode</td><td class="center">15</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Set to 1 when the DDRC and DRAM has to be put in DLL-off mode for low frequency operation.<br/>Set to 0 to put DDRC and DRAM in DLL-on mode for normal frequency operation.<br/>If DDR4 CRC/parity retry is enabled (CRCPARCTL1.crc_parity_retry_enable = 1), dll_off_mode is not supported, and this bit must be set to '0'.<br/>Programming Mode: Quasi-dynamic Group 2</td></tr>
+<tr valign=top><td>data_bus_width</td><td class="center">13:12</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Selects proportion of DQ bus width that is used by the SDRAM<br/>- 00 - Full DQ bus width to SDRAM<br/>- 01 - Half DQ bus width to SDRAM<br/>- 10 - Quarter DQ bus width to SDRAM<br/>- 11 - Reserved<br/>Note that quarter bus width mode is only supported for DDR4. Bus width refers to DQ bus width (excluding any ECC width).</td></tr>
+<tr valign=top><td>en_2t_timing_mode</td><td class="center">10</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>If 1, then DDRC uses 2T timing. Otherwise, uses 1T timing. In 2T timing, all command signals (except chip select) are held for 2 clocks on the SDRAM bus. Chip select is asserted on the second cycle of the command<br/>Note: 2T timing is not supported in LPDDR3/LPDDR4 mode.</td></tr>
+<tr valign=top><td>lpddr4</td><td class="center"> 5</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Select LPDDR4 SDRAM<br/>- 1 - LPDDR4 SDRAM device in use.<br/>- 0 - non-LPDDR4 device in use</td></tr>
+<tr valign=top><td>ddr4</td><td class="center"> 4</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Select DDR4 SDRAM<br/>- 1 - DDR4 SDRAM device in use.<br/>- 0 - non-DDR4 device in use</td></tr>
+<tr valign=top><td>lpddr3</td><td class="center"> 3</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Select LPDDR3 SDRAM<br/>- 1 - LPDDR3 SDRAM device in use.<br/>- 0 - non-LPDDR3 device in use</td></tr>
+<tr valign=top><td>ddr3</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Select DDR3 SDRAM<br/>- 1 - DDR3 SDRAM device in use<br/>- 0 - non-DDR3 SDRAM device in use</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

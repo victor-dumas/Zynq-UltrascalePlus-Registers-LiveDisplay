@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<title>Rx_FIFO_byte_status (UART) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___uart.html")>UART Module</a> &gt; Rx_FIFO_byte_status (UART) Register</p><h1>Rx_FIFO_byte_status (UART) Register</h1>
+<h2>Rx_FIFO_byte_status (UART) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>Rx_FIFO_byte_status</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000048</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF000048 (UART0)<br/>0x00FF010048 (UART1)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>RX FIFO Byte Status Register</td></tr>
+</table>
+<p>The read/write Receiver FIFO Trigger Level Register is used to set the value at which the transmitter FIFO triggers an interrupt event.</p>
+<h2>Rx_FIFO_byte_status (UART) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:12</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved, read as zero, ignored on write.</td></tr>
+<tr valign=top><td>byte3_break</td><td class="center">11</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>The byte in location3 of the RX FIFO has a break condition associated with it.<br/>0: No break was detected when byte 3 was received<br/>1: A break was detected when byte 3 was received</td></tr>
+<tr valign=top><td>byte3_frm_err</td><td class="center">10</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>The byte in location 3 of the RX FIFO has a frame error associated with it.<br/>0: No frame error was detected when byte 3 was received<br/>1: A frame error was detected when byte 3 was received</td></tr>
+<tr valign=top><td>byte3_par_err</td><td class="center"> 9</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>The byte in location 3 of the RX FIFO has a parity error associated with it<br/>0: No parity error was detected when byte 3 was received<br/>1: A parity error was detected when byte 3 was received</td></tr>
+<tr valign=top><td>byte2_break</td><td class="center"> 8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>The byte in location 2 of the RX FIFO has a break condition associated with it.<br/>0: No break was detected when byte 2 was received<br/>1: A break was detected when byte 2 was received</td></tr>
+<tr valign=top><td>byte2_frm_err</td><td class="center"> 7</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>The byte in location 2 of the RX FIFO has a frame error associated with it.<br/>0: No frame error was detected when byte 0 was received<br/>1: A frame error was detected when byte 2 was received</td></tr>
+<tr valign=top><td>byte2_par_err</td><td class="center"> 6</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>The byte in location 2 of the RX FIFO has a parity error associated with it<br/>0: No parity error was detected when byte 2 was received<br/>1: A parity error was detected when byte 2 was received</td></tr>
+<tr valign=top><td>byte1_break</td><td class="center"> 5</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>The byte in location 1 of the RX FIFO has a break condition associated with it.<br/>0: No break was detected when byte 1 was received<br/>1: A break was detected when byte 1 was received</td></tr>
+<tr valign=top><td>byte1_frm_err</td><td class="center"> 4</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>The byte in location 1 of the RX FIFO has a frame error associated with it.<br/>0: No frame error was detected when byte 1 was received<br/>1: A frame error was detected when byte 1 was received</td></tr>
+<tr valign=top><td>byte1_par_err</td><td class="center"> 3</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>The byte in location 1 of the RX FIFO has a parity error associated with it<br/>0: No parity error was detected when byte 1 was received<br/>1: A parity error was detected when byte 1 was received</td></tr>
+<tr valign=top><td>byte0_break</td><td class="center"> 2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>The byte in location 0 of the RX FIFO has a break condition associated with it.<br/>0: No break was detected when byte 0 was received<br/>1: A break was detected when byte 0 was received</td></tr>
+<tr valign=top><td>byte0_frm_err</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>The byte in location 0 of the RX FIFO has a frame error associated with it.<br/>0: No frame error was detected when byte 0 was received<br/>1: A frame error was detected when byte 0 was received</td></tr>
+<tr valign=top><td>byte0_par_err</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>The byte in location 0 of the RX FIFO has a parity error associated with it<br/>0: No parity error was detected when byte 0 was received<br/>1: A parity error was detected when byte 0 was received</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

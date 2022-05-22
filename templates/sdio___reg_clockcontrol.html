@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<title>reg_clockcontrol (SDIO) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___sdio.html")>SDIO Module</a> &gt; reg_clockcontrol (SDIO) Register</p><h1>reg_clockcontrol (SDIO) Register</h1>
+<h2>reg_clockcontrol (SDIO) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>reg_clockcontrol</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000002C</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF16002C (SD0)<br/>0x00FF17002C (SD1)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>16</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Clock Frequency Control and State.</td></tr>
+</table>
+<p>Program the clock frequency select, generator select, clock enable, and internal clock state.</p>
+<h2>reg_clockcontrol (SDIO) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>clkctrl_sdclkfreqsel</td><td class="center">15:8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>This register is used to select the frequency of the SDCLK pin. The frequency is not programmed directly; rather this register holds the divisor of the Base Clock Frequency For SD clock in the capabilities register. Only the following settings are allowed.<br/>(1) 8-bit Divided Clock Mode<br/>80h - base clock divided by 256<br/>40h - base clock divided by 128<br/>20h - base clock divided by 64<br/>10h - base clock divided by 32<br/>08h - base clock divided by 16<br/>04h - base clock divided by 8<br/>02h - base clock divided by 4<br/>01h - base clock divided by 2<br/>00h - base clock(10MHz-63MHz)<br/>Setting 00h specifies the highest frequency of the SD Clock. When setting multiple bits, the most significant bit is used as the divisor. But multiple bits should not be set. The two default divider values can be calculated by the frequency that is defined by the Base Clock Frequency For SD Clock in the Capabilities register.<br/>1) 25 MHz divider value.<br/>2) 400 KHz divider value.<br/>The frequency of the SDCLK is set by the following formula:<br/>Clock Frequency = (Baseclock) / divisor.<br/>Thus choose the smallest possible divisor which results in a clock frequency that is less than or equal to the target frequency.<br/>Maximum Frequency for SD = 50Mhz (base clock)<br/>Maximum Frequency for MMC = 52Mhz (base clock)<br/>Minimum Frequency = 195.3125Khz (50Mhz / 256), same calculation for MMC also.<br/>(2) 10-bit Divided Clock Mode<br/>Host Controller Version 3.00 supports this mandatory mode instead of the 8-bit Divided Clock Mode. The length of divider is extended to10 bits and all divider values shall be supported.<br/>3FFh --1/2046 Divided Clock<br/>N -------1/2N Divided Clock (Duty 50%)<br/>002h -- 1/4 Divided Clock<br/>001h ---1/2 Divided Clock<br/>000h --- Base Clock (10MHz-254MHz)</td></tr>
+<tr valign=top><td>clkctrl_sdclkfreqsel_upperbits</td><td class="center"> 7:6</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Bit 07-06 is assigned to bit 09-08 of clock divider in SDCLK Frequency Select.</td></tr>
+<tr valign=top><td>clkctrl_clkgensel</td><td class="center"> 5</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>This bit is used to select the clock generator mode in SDCLK Frequency Select. If the Programmable Clock Mode is supported (non-zero value is set to Clock Multiplier in the Capabilities register), this bit attribute is RW, and if not supported, this bit attribute is RO and zero is read. This bit depends on the setting of Preset Value Enable in the Host Control 2 register. If the Preset Value Enable = 0, this bit is set by Host Driver. If the Preset Value Enable = 1, this bit is automatically set to a value specified in one of Preset Value registers.'0' Divided Clock Mode'1' Programmable Clock Mode</td></tr>
+<tr valign=top><td>clkctrl_sdclkena</td><td class="center"> 2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>The HC shall stop SDCLK when writing this bit to 0. SDCLK frequency Select can be changed when this bit is 0. Then, the HC shall maintain the same clock frequency until SDCLK is stopped (Stop at SDCLK = 0). If the HC detects the No Card state, this bit shall be cleared.'0' Disable,'1' Enable</td></tr>
+<tr valign=top><td>sdhcclkgen_intclkstable_dsync</td><td class="center"> 1</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>This bit is set to 1 when SD clock is stable after writing to Internal Clock Enable in this register to 1. The SD Host Driver shall wait to set SD Clock Enable until this bit is set to 1.<br/>Note: This is useful when using PLL for a clock oscillator that requires setup time.'0' Not Ready,'1' Ready</td></tr>
+<tr valign=top><td>clkctrl_intclkena</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>This bit is set to 0 when the HD is not using the HC or the HC awaits a wakeup event. The HC should stop its internal clock to go very low power state. Still, registers shall be able to be read and written. Clock starts to oscillate when this bit is set to 1. When clock oscillation is stable, the HC shall set Internal Clock Stable in this register to 1. This bit shall not affect card detection.'0'<br/>Stop,'1'<br/>Oscillate</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<title>reg_admaerrsts (SDIO) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___sdio.html")>SDIO Module</a> &gt; reg_admaerrsts (SDIO) Register</p><h1>reg_admaerrsts (SDIO) Register</h1>
+<h2>reg_admaerrsts (SDIO) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>reg_admaerrsts</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000054</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF160054 (SD0)<br/>0x00FF170054 (SD1)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder> 8</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">ro<span class="tooltiptext">Read-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>SDIO ADMA Error State and Address.</td></tr>
+</table>
+<p>When the ADMA Error interrupt occur, the ADMA State in ADMA Error States field and ADMA System Address are stored here. Holds address around the error descriptor. Read-only.</p>
+<h2>reg_admaerrsts (SDIO) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>admaerrsts_admalenmismatcherr</td><td class="center"> 2</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>ADMA errors detected; occurs in the following 2 cases.<br/>1) While the Block Count Enable being set, the total data length specified by the Descriptor table is different from that specified by the Block Count and Block Length.<br/>2) Total data length can not be divided evenly by the block length.<br/>1: Error<br/>0: No Error</td></tr>
+<tr valign=top><td>admaerrsts_admaerrorstate</td><td class="center"> 1:0</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>State of ADMA when an error occurred during an ADMA data transfer.<br/>D01 - D00: ADMA Error State when error occurred Contents of SYS_SDR register.<br/>00: ST_STOP (Stop DMA) Points to next of the error descriptor.<br/>01: ST_FDS (Fetch Descriptor)Points to the error descriptor.<br/>10: reserved (ADMA never stops in this state).<br/>11: ST_TFR (Transfer Data) Points to the next error descriptor.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

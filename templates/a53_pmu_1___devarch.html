@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<title>DEVARCH (A53_PMU_1) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___a53_pmu_1.html")>A53_PMU_1 Module</a> &gt; DEVARCH (A53_PMU_1) Register</p><h1>DEVARCH (A53_PMU_1) Register</h1>
+<h2>DEVARCH (A53_PMU_1) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>DEVARCH</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000FBC</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FED30FBC (CORESIGHT_A53_PMU_1)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">ro<span class="tooltiptext">Read-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x47702A16</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Performance Monitors Device Architecture Register</td></tr>
+</table>
+<p></p>
+<h2>DEVARCH (A53_PMU_1) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>ARCHITECT</td><td class="center">31:21</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x23B</td><td>Defines the architecture of the component. For Performance Monitors, this is Arm Limited.Bits [31:28] are the JEP 106 continuation code, 0x4.Bits [27:21] are the JEP 106 ID code, 0x3B.</td></tr>
+<tr valign=top><td>PRESENT</td><td class="center">20</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>When set to 1, indicates that the DEVARCH is present.This field is 1 in v8-A.</td></tr>
+<tr valign=top><td>REVISION</td><td class="center">19:16</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Defines the architecture revision. For architectures defined by Arm this is the minor revision.For Performance Monitors, the revision defined by v8-A is 0x0.All other values are reserved.</td></tr>
+<tr valign=top><td>ARCHID</td><td class="center">15:0</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x2A16</td><td>Defines this part to be a v8-A debug component. For architectures defined by Arm this is further subdivided.For Performance Monitors:Bits [15:12] are the architecture version, 0x2.Bits [11:0] are the architecture part number, 0xA16.This corresponds to Performance Monitors architecture version PMUv3.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<title>Memory_Address_Register1 (NAND) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___nand.html")>NAND Module</a> &gt; Memory_Address_Register1 (NAND) Register</p><h1>Memory_Address_Register1 (NAND) Register</h1>
+<h2>Memory_Address_Register1 (NAND) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>Memory_Address_Register1</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000004</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF100004 (NAND)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Memory Address, reg 1.</td></tr>
+</table>
+<p>Note: Change value in this register only when controller is not communicating with the memory device.</p>
+<h2>Memory_Address_Register1 (NAND) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>Memory_Address</td><td class="center">31:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Consider page size 4k, 4plane, 2Lun flash device.<br/>bit[12:0] indicates column address.<br/>bit[15:13] set = 0.<br/>bit[22:16] page address.<br/>bit[24:23] interleaved address bits:<br/>00: Interleaved address 0 selected (plane 0).<br/>01: Interleaved address 1 selected (plane 1).<br/>10: Interleaved address 2 selected (plane 2).<br/>11: Interleaved address 3 selected (plane 3).<br/>bit[31:25] block address.<br/>Remaining block address bits are programmed in Memory address Register2.<br/></td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<title>PERFWR1 (DDRC) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddrc.html")>DDRC Module</a> &gt; PERFWR1 (DDRC) Register</p><h1>PERFWR1 (DDRC) Register</h1>
+<h2>PERFWR1 (DDRC) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>PERFWR1</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000026C</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD07026C (DDRC)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x0F00007F</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Write CAM Register 1</td></tr>
+</table>
+<p>This register is quasi-dynamic group 3. Group 3 registers can only be written when the controller is empty.</p>
+<h2>PERFWR1 (DDRC) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>w_xact_run_length</td><td class="center">31:24</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0xF</td><td>Number of transactions that are serviced once the WR queue goes critical is the smaller of:<br/>- (a) This number<br/>- (b) Number of transactions available.<br/>Unit: Transaction.<br/>FOR PERFORMANCE ONLY.</td></tr>
+<tr valign=top><td>w_max_starve</td><td class="center">15:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x7F</td><td>Number of clocks that the WR queue can be starved before it goes critical. The minimum valid functional value for this register is 0x1. Programming it to 0x0 will disable the starvation functionality; during normal operation, this function should not be disabled as it will cause excessive latencies.<br/>Unit: Clock cycles.<br/>FOR PERFORMANCE ONLY.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

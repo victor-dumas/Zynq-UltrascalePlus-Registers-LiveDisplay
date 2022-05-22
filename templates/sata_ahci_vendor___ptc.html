@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<title>PTC (SATA_AHCI_VENDOR) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___sata_ahci_vendor.html")>SATA_AHCI_VENDOR Module</a> &gt; PTC (SATA_AHCI_VENDOR) Register</p><h1>PTC (SATA_AHCI_VENDOR) Register</h1>
+<h2>PTC (SATA_AHCI_VENDOR) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>PTC</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000028</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD0C00C8 (SATA_AHCI_VENDOR)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x08000020</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Port Transfer Configuration</td></tr>
+</table>
+<p>Controls the configuration of the Transport Layer for either Port 0 or Port 1. The Port configured is controlled by the value programmed into the Port Config Register.</p>
+<h2>PTC (SATA_AHCI_VENDOR) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:28</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">27</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x1</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">26:10</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>ITM</td><td class="center"> 9</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Initialise Transport Memories (ITM): When set this will cause the memory initialise hardware state machine to enter reset, when cleared the machine will run writing zero to all locations within the memory.</td></tr>
+<tr valign=top><td>ENBD</td><td class="center"> 8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Enable Back down (ENBD): When a port multiplier is attached if an attempt to send a command to an attached drive results in 3 consecutive retries due to an R_ERR receptions then the command removed for the transport layer and returned to the pending queue.<br/>This is to avoid unnecessary retries owing to the device trying to send a Set device bits FIS while the host is trying to send a command. This feature should improve performance as it allows the controller queue any pending commands to the other drives.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 7</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>RXWM</td><td class="center"> 6:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x20</td><td>RxWaterMark (RXWM): This sets the minimum number of free location within the RX FIFO before the watermark is exceeded which in turn will cause the Transport Layer to instruct the Link Layer to transmit HOLDS to the transmitting end. Note that it can take some time for the HOLDs to get to the other end and that in the interim there must be enough room in the FIFO to absorb all data that could arrive. An initial value of 7'h20 is recommended.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

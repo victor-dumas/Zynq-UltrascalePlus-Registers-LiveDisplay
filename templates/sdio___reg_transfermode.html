@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<title>reg_transfermode (SDIO) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___sdio.html")>SDIO Module</a> &gt; reg_transfermode (SDIO) Register</p><h1>reg_transfermode (SDIO) Register</h1>
+<h2>reg_transfermode (SDIO) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>reg_transfermode</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000000C</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF16000C (SD0)<br/>0x00FF17000C (SD1)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>16</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Control the Data Transfer Operations.</td></tr>
+</table>
+<p></p>
+<h2>reg_transfermode (SDIO) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>xfermode_multiblksel</td><td class="center"> 5</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>This bit enables multiple block data transfers.'0' Single Block.'1' Multiple Block.</td></tr>
+<tr valign=top><td>xfermode_dataxferdir</td><td class="center"> 4</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>This bit defines the direction of data transfers.<br/>0: Write from Host to Card.<br/>1: Read from Card to Host.</td></tr>
+<tr valign=top><td>xfermode_autocmdena</td><td class="center"> 3:2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Auto command function enables.<br/>00: Auto Command Disabled.<br/>01: Auto CMD12 Enabled.<br/>10: Auto CMD23 Enabled.<br/>11: reserved.<br/>There are two methods to stop multiple-block read and write operation.<br/>(1) Auto CMD12 Enable:<br/>Multiple-block read and write commands for memory require CMD12 to stop the operation. The controller issues CMD12 automatically when the last block transfer is completed. Auto CMD12 error is indicated in the Auto CMD Error Status register. The driver shall not set this bit if the command does not require Auto CMD12.<br/>(2) Auto CMD23 Enable:<br/>The controller issues an Auto CMD23 before issuing a command specified in the Command Register.<br/>The following conditions are required to use the Auto CMD23.<br/>* Auto CMD23 Supported (Host Controller Version is 3.00 or later).<br/>* A memory card that supports CMD23 (SCR[33]=1).<br/>* If DMA is used, it shall be ADMA.<br/>* Only when CMD18 or CMD25 is issued.<br/>By writing the Command register, the controller issues a CMD23 first and then issues a command specified by the Command Index in Command register 32-bit block count value for CMD23 is set to SDMA System Address / Argument 2 register.</td></tr>
+<tr valign=top><td>xfermode_blkcntena</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Block Count Register Enable.<br/>0: disable (setting is also useful for executing an infinite transfer).<br/>1: enable.<br/>Applicable to multiple block transfers.</td></tr>
+<tr valign=top><td>xfermode_dmaenable</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>DMA can be enabled only if DMA Support bit in the Capabilities register is set. If this bit is set to 1, a DMA operation shall begin when the Host Driver writes to the upper byte of Command register (00Fh).<br/>0: disable DMA.<br/>1: enable DMA.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

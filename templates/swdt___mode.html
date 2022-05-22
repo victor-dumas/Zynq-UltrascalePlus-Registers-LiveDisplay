@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<title>MODE (SWDT) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___swdt.html")>SWDT Module</a> &gt; MODE (SWDT) Register</p><h1>MODE (SWDT) Register</h1>
+<h2>MODE (SWDT) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>MODE</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000000</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FFCB0000 (CSU_WDT)<br/>0x00FF150000 (SWDT)<br/>0x00FD4D0000 (WDT)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>24</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x000001C2</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>WD zero mode register</td></tr>
+</table>
+<p></p>
+<h2>MODE (SWDT) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>ZKEY</td><td class="center">23:12</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Zero access key - writes to the zero mode register are only valid if this field is set to 0xABC; this field is write only.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">11:9</td><td class="tooltip grayback">waz<span class="tooltiptext">Write as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>Should be zero (sbz)</td></tr>
+<tr valign=top><td>IRQLN</td><td class="center"> 8:7</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x3</td><td>Interrupt request length - selects the number of<br/>system bus inteface clock cycles (LPD_LSBUS_CLK) during which an interrupt request is held active after it is invoked:<br/>00 = 4<br/>01 = 8<br/>10 = 16<br/>11 = 32</td></tr>
+<tr valign=top><td>RSTLN</td><td class="center"> 6:4</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x4</td><td>Reset length - selects the number of system bus inteface clock cycles (LPD_LSBUS_CLK) during which the internal system reset is held active after it is invoked:<br/>000 = 2<br/>001 = 4<br/>010 = 8<br/>011 = 16<br/>100 = 32<br/>101 = 64<br/>110 = 128 111 = 256<br/>Note: The minimum number of cycles required for an system bus reset is two.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 3</td><td class="tooltip grayback">waz<span class="tooltiptext">Write as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>Should be zero (sbz)</td></tr>
+<tr valign=top><td>IRQEN</td><td class="center"> 2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Interrupt request enable - if set, the watchdog will issue an interrupt request when the counter reaches zero, if WDEN = 1.</td></tr>
+<tr valign=top><td>RSTEN</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>Reset enable - if set, the watchdog will issue an internal reset when the counter reaches zero, if WDEN = 1.</td></tr>
+<tr valign=top><td>WDEN</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Watchdog enable - if set, the watchdog is enabled and can generate any signals that are enabled.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

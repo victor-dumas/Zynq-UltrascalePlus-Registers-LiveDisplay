@@ -1,0 +1,47 @@
+﻿<!doctype html>
+<html>
+<head>
+<title>Zynq UltraScale+ Devices Register ReferenceOverview</title>
+<link rel="stylesheet" TYPE="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<meta name="robots" content="noindex, nofollow" />
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<!--farOnly-->
+<!--farOnly--><p class=header>Zynq UltraScale+ Devices Register Reference</p>
+<!--farOnly--><h1>Overview</h1>
+<p>This reference provides details of all the memory-mapped registers in Zynq&reg; UltraScale+&trade; Devices.</p>
+<p>Throughout this manual, the names of registers and register bit fields used match those given in the
+hardware. They are called the hardware names. C header files are delivered with this product which
+define register and bit field names for easy use in software code. In some cases, the software names
+are different from the hardware names. This reference includes software names where they differ
+from hardware names:
+<ul>
+<li><b>Software Module Name:</b> This is included in the module introduction section and is named
+<i>Software Name</i>.</li>
+<li><b>Software Register Name:</b> This is included in the detailed register description and is also named
+<i>Software Name</i>.</li>
+<li><b>Software Bit field Name:</b> These are included in the register bit field tables in the Field Name
+column. These names follow the hardware field name and are contained in parentheses.</li>
+</ul>
+</p>
+<p><b>Note:</b> If a software name does not exist in the C header files or if it exists but is the same as the
+hardware name, it is not included in this reference and the above fields are not present.</p>
+<p>The software register name will be:<br/>
+<b>&lt;software module name></b>_<b>&lt;software register name></b>_<b>&lt;optional suffix></b>. One
+common suffix used for register names is “OFFSET”, which would give the OFFSET address of that
+register from the base address for the module.</p>
+<p>The software bit field name will be:<br/>
+<b>&lt;software module name></b>_<b>&lt;software register name></b>_<b>&lt;software bit field
+name></b>_<b>&lt;optional suffix></b>. One common suffix used for bit field names is “MASK”, which would
+be useful when extracting the bit field of interest from the full register.</p>
+<!--farOnly--><h3>See Also</h3>
+<!--farOnly--><ul>
+<!--farOnly--><li><a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a></li>
+<!--farOnly--><li><a href=# onclick=gotoTopic("_legal_notices.html")>Legal Notices</a></li>
+<!--farOnly--><li><a href=# onclick=gotoTopic("_revision_history.html")>Revision History</a></li>
+<!--farOnly--></ul>
+<!--farOnly--><p id="foot" class="footer>"</p>
+<!--farOnly-->
+</body>
+</html>

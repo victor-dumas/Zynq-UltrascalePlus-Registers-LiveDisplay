@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<title>GPO0 (PMU_IOMODULE) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___pmu_iomodule.html")>PMU_IOMODULE Module</a> &gt; GPO0 (PMU_IOMODULE) Register</p><h1>GPO0 (PMU_IOMODULE) Register</h1>
+<h2>GPO0 (PMU_IOMODULE) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>GPO0</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000010</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FFD40010 (PMU_IOMODULE)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">wo<span class="tooltiptext">Write-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>IOModule Misc Control Register (GPO0)</td></tr>
+</table>
+<p>The signals in this register are dedicated to PMU functions.</p>
+<h2>GPO0 (PMU_IOMODULE) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>MAGIC_WORD_1</td><td class="center">31:24</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Used as magic word #1 to reduce the risk of accidental commands controlling TMR operation being issued. To be used for nominal TMR commands, like clearing Fault Tolerance Status register.<br/>10100100: Magic Word Applied (0xA4)</td></tr>
+<tr valign=top><td>MAGIC_WORD_2</td><td class="center">23:16</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Used as magic word #2 to reduce the risk of accidental commands controlling TMR operation being issued. To be used for testing purpose to disable failure mechanism and perform fault injection.<br/>01011110: Magic Word Applied (0x5E)</td></tr>
+<tr valign=top><td>FT_INJECT_FAILURE</td><td class="center">15:13</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Used to inject failures in MicroBlaze #0, #1 or #2.<br/>000: No failures injected<br/>001: With magic word #2 applied Failure injected in MicroBlaze #2.<br/>010: With magic word #2 applied Failure injected in MicroBlaze #1.<br/>100: With magic word #2 applied Failure injected in MicroBlaze #0.</td></tr>
+<tr valign=top><td>DISABLE_RST_FTSM</td><td class="center">12</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Used to control if Fault Tolerance state machine reset of MicroBlaze is generated or not.<br/>0: Reset of MicroBlaze from Fault Tolerance state machine is enabled<br/>1: With magic word #2 applied Reset of MicroBlaze from Fault Tolerance state machine is disabled</td></tr>
+<tr valign=top><td>RST_FTSM</td><td class="center">11</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Used to reset the Fault Tolerance State machine.<br/>0: No effect<br/>1: With magic word #2 applied Reset Fault Tolerance State machine</td></tr>
+<tr valign=top><td>CLR_FTSTS</td><td class="center">10</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Used to clear the value of the Fault Tolerance Status register.<br/>0: No effect<br/>1: With magic word #1 applied Clear value of Fault Tolerance Status register</td></tr>
+<tr valign=top><td>RST_ON_SLEEP</td><td class="center"> 9</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Used to control if MicroBlaze SLEEP instruction will cause a MicroBlaze HW reset, to recover from Lockstep mode to Voting mode.<br/>0: Nominal sleep mode operation<br/>1: With magic word #1 applied Executing SLEEP instruction triggers HW reset of MicroBlaze</td></tr>
+<tr valign=top><td>DISABLE_TRACE_COMP</td><td class="center"> 8</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Used to suppress the comparison of the MicroBlaze Trace Bus. This is to not immediately hit a Trace Bus mis-compare during fault injection.<br/>0: Nominal Trace Bus comparison<br/>1: With Magic word #2 applied Trace Bus comparison suppressed</td></tr>
+<tr valign=top><td>PIT3_PRESCALE</td><td class="center"> 7</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Used to control PIT3 prescaler selection.<br/>00 = PIT3 not prescaled<br/>01 = PIT3 uses external prescaler</td></tr>
+<tr valign=top><td>PIT2_PRESCALE</td><td class="center"> 6:5</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Used to control PIT2 prescaler selection.<br/>00 = PIT2 not prescaled<br/>01 = PIT2 uses external prescaler<br/>11 = PIT2 prescaled by PIT3</td></tr>
+<tr valign=top><td>PIT1_PRESCALE</td><td class="center"> 4:3</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Used to control PIT1 prescaler selection.<br/>00 = PIT1 not prescaled<br/>01 = PIT1 uses external prescaler</td></tr>
+<tr valign=top><td>PIT0_PRESCALE</td><td class="center"> 2:1</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Used to control PIT0 prescaler selection.<br/>00 = PIT0 not prescaled<br/>01 = PIT0 uses external prescaler<br/>11 = PIT0 prescaled by PIT1</td></tr>
+<tr valign=top><td>DEBUG_REMAP</td><td class="center"> 0</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Used during debug to remap the 64-byte base-vectors region to the RAM starting address.<br/>0 = Base Vectors in ROM (default)<br/>1 = Base Vectors in RAM</td></tr>
+</table><p>This register holds the value that will be driven to the corresponding bits in the I/O Module GPO1 port output signals. <br/>All bits are in the register are updated when the register is written.</p>
+<p id=foot class=footer></p>
+</body>
+</html>

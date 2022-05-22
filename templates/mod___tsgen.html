@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<title>TSGEN Module</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> > TSGEN Module</p><h1>TSGEN Module</h1>
+<h2>TSGEN Module Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Module Name</th><td width=80% class=noborder>Timestamp Generator (TSGEN)</td></tr>
+<tr valign=top><th width=20% class=sumparam>Modules of this Type</th><td width=80% class=noborder>CORESIGHT_SOC_TSGEN</td></tr>
+<tr valign=top><th class=sumparam>Base Address</th><td class=noborder>0x00FE900000 (CORESIGHT_SOC_TSGEN)</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Master Timestamp generator</td></tr>
+</table>
+<h2>TSGEN Module Register Summary</h2>
+<table>
+<tr valign=top><th width=20%>Register Name</th><th width=10%>Address</th><th width=10%>Width</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=40%>Description</th></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("tsgen___cntcr.html")>CNTCR</a></td><td class="hex">0x0000000000</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>Controls counter operation by enabling or disabling or halting the counter</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("tsgen___cntsr.html")>CNTSR</a></td><td class="hex">0x0000000004</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00000000</td><td>Counter status register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("tsgen___cntcvl.html")>CNTCVL</a></td><td class="hex">0x0000000008</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>Current value of Counter. Lower 32-bits.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("tsgen___cntcvu.html")>CNTCVU</a></td><td class="hex">0x000000000C</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>Current value of Counter. Upper 32-bits.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("tsgen___cntfid0.html")>CNTFID0</a></td><td class="hex">0x0000000020</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>Base Frequency ID</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("tsgen___devid.html")>DEVID</a></td><td class="hex">0x0000000FC8</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00000000</td><td>This register indicates the capabilities.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("tsgen___devtype.html")>DEVTYPE</a></td><td class="hex">0x0000000FCC</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00000000</td><td>It provides a debugger with information about the component.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("tsgen___pidr4.html")>PIDR4</a></td><td class="hex">0x0000000FD0</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00000004</td><td>Part of the set of Peripheral Identification registers. Contains part of the designer identity and the memory footprint indicator.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("tsgen___pidr5.html")>PIDR5</a></td><td class="hex">0x0000000FD4</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>Reserved</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("tsgen___pidr6.html")>PIDR6</a></td><td class="hex">0x0000000FD8</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>Reserved</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("tsgen___pidr7.html")>PIDR7</a></td><td class="hex">0x0000000FDC</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>Reserved</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("tsgen___pidr0.html")>PIDR0</a></td><td class="hex">0x0000000FE0</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00000001</td><td>Part of the set of Peripheral Identification registers. Contains part of the designer specific part number.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("tsgen___pidr1.html")>PIDR1</a></td><td class="hex">0x0000000FE4</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x000000B1</td><td>Part of the set of Peripheral Identification registers. Contains part of the designer specific part number and part of the designer identity.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("tsgen___pidr2.html")>PIDR2</a></td><td class="hex">0x0000000FE8</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0000001B</td><td>Part of the set of Peripheral Identification registers. Contains part of the designer identity and the product revision.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("tsgen___pidr3.html")>PIDR3</a></td><td class="hex">0x0000000FEC</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00000000</td><td>Part of the set of Peripheral Identification registers. Contains the RevAnd and Customer Modified fields.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("tsgen___cidr0.html")>CIDR0</a></td><td class="hex">0x0000000FF0</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0000000D</td><td>A component identification register, that indicates that the identification registers are present.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("tsgen___cidr1.html")>CIDR1</a></td><td class="hex">0x0000000FF4</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x000000F0</td><td>A component identification register, that indicates that the identification registers are present. This register also indicates the component class.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("tsgen___cidr2.html")>CIDR2</a></td><td class="hex">0x0000000FF8</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00000005</td><td>A component identification register, that indicates that the identification registers are present.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("tsgen___cidr3.html")>CIDR3</a></td><td class="hex">0x0000000FFC</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x000000B1</td><td>A component identification register, that indicates that the identification registers are present.</td></tr>
+</table>
+<p id=foot class=footer></p>
+</body>
+</html>

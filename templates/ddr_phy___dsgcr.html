@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<title>DSGCR (DDR_PHY) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddr_phy.html")>DDR_PHY Module</a> &gt; DSGCR (DDR_PHY) Register</p><h1>DSGCR (DDR_PHY) Register</h1>
+<h2>DSGCR (DDR_PHY) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>DSGCR</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000090</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD080090 (DDR_PHY)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x02A04101</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>DDR System General Configuration Register</td></tr>
+</table>
+<p></p>
+<h2>DSGCR (DDR_PHY) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:28</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Return zeroes on reads.</td></tr>
+<tr valign=top><td>RDBICLSEL</td><td class="center">27</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>When RDBI enabled, this bit is used to select RDBI CL calculation, if<br/>it is 1, calculation will use RDBICL, otherwise use default calculation.</td></tr>
+<tr valign=top><td>RDBICL</td><td class="center">26:24</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x2</td><td>When RDBI enabled, if RDBICLSEL is asserted, RDBI CL adjust<br/>using this value</td></tr>
+<tr valign=top><td>PHYZUEN</td><td class="center">23</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>PHY Impedance Update Enable: Specifies, if set, that in addition to<br/>DDL VT update, the PHY should also perform impedance calibration<br/>(update) whenever there is a DFI update request from the PHY.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">22</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Return zeroes on reads.</td></tr>
+<tr valign=top><td>RSTOE</td><td class="center">21</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>SDRAM Reset Output Enable: Enables, when set, the output driver<br/>on the I/O for SDRAM RST# pin.</td></tr>
+<tr valign=top><td>SDRMODE</td><td class="center">20:19</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Single Data Rate Mode: Indicates if the controller or the PHY is<br/>configured to run in single data rate (SDR) mode. The default is both<br/>the controller and the PHY running in half data rate (HDR) mode.<br/>Valid values are:<br/>2b00 = SDR mode if off. Both controller and PHY run in HDR mode<br/>2b01 = Controller runs in SDR mode; PHY runs in HDR mode<br/>2b10 - 2b11 = Reserved</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">18</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Return zeroes on reads.</td></tr>
+<tr valign=top><td>ATOAE</td><td class="center">17</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>ATO Analog Test Enable: Enables, if set, the analog test output (ATO)<br/>I/O.</td></tr>
+<tr valign=top><td>DTOOE</td><td class="center">16</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>DTO Output Enable: Enables, when set, the output driver on the I/O<br/>for DTO pins.</td></tr>
+<tr valign=top><td>DTOIOM</td><td class="center">15</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>DTO I/O Mode: Selects SSTL mode (when set to 0) or CMOS mode<br/>(when set to 1) of the I/O for DTO pins.</td></tr>
+<tr valign=top><td>DTOPDR</td><td class="center">14</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>DTO Power Down Receiver: Powers down, when set, the input<br/>receiver on the I/O for DTO pins.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">13</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Return zeroes on reads.</td></tr>
+<tr valign=top><td>DTOODT</td><td class="center">12</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>DTO On-Die Termination: Enables, when set, the on-die termination<br/>on the I/O for DTO pins.</td></tr>
+<tr valign=top><td>PUAD</td><td class="center">11:6</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x4</td><td>PHY Update Acknowledge Delay: Specifies the number of clock<br/>cycles that the indication for the completion of PHY update from the<br/>PHY to the controller should be delayed. This essentially delays, by<br/>this many clock cycles, the de-assertion of dfi_ctrlup_ack and<br/>dfi_phyupd_req signals relative to the time when the delay lines or<br/>I/Os are updated.<br/>Note:<br/>PUAD should be set to ceiling (10 ns / [ctl_clk period] ) when<br/>DSGCR.CTLZUEN or DSGCR.PHYZUEN are set 1`b1. Otherwise it<br/>can be programmed to 0.<br/>In LPDDR4 if incremental DQS2DQ WEYE is enabled, PUAD should<br/>be set to ceiling ((tZQLAT/2) / [ctl_clk period]).</td></tr>
+<tr valign=top><td>CUAEN</td><td class="center"> 5</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Controller Update Acknowledge Enable: Specifies, if set, that the<br/>PHY should issue controller update acknowledge when the DFI<br/>controller update request is asserted. By default the PHY does not<br/>acknowledge controller initiated update requests but simply does an<br/>update whenever there is a controller update request. This speeds up<br/>the update.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 4:3</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Return zeroes on reads.</td></tr>
+<tr valign=top><td>CTLZUEN</td><td class="center"> 2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Controller Impedance Update Enable: Specifies, if set, that in<br/>addition to DDL VT update, the PHY should also perform impedance<br/>calibration (update) whenever there is a DFI update request.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 1</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Return zeroes on reads.</td></tr>
+<tr valign=top><td>PUREN</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>PHY Update Request Enable: Specifies if set, that the PHY should<br/>issue PHY-initiated update request when there is DDL VT drift.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<title>MB_FAULT_STATUS (PMU_GLOBAL) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___pmu_global.html")>PMU_GLOBAL Module</a> &gt; MB_FAULT_STATUS (PMU_GLOBAL) Register</p><h1>MB_FAULT_STATUS (PMU_GLOBAL) Register</h1>
+<h2>MB_FAULT_STATUS (PMU_GLOBAL) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>MB_FAULT_STATUS</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000052C</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FFD8052C (PMU_GLOBAL)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">ro<span class="tooltiptext">Read-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>PMU Fault Status; Lockstep, Fatal, Selfcheck, Sleep Instruction.</td></tr>
+</table>
+<p>The faults are handled by the PMU ROM code. But this register is also useful for debugging. Primary (nominal) Fault Detection: The primary detector compares the outputs from the PMU. The status is held in the lower 16 bits of this register. Secondary (redundant) Fault Detection : The secondary detector compares the outputs from the PMU. This is a backup detector in case the operation of the primary detector experiences a fault. The status is held in the upper 16 bits of this register. Read-only. Reset by any PMU reset.</p>
+<h2>MB_FAULT_STATUS (PMU_GLOBAL) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>R_FFail</td><td class="center">31:24</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Redundant (secondary) fatal fault detection. First lockstep mismatch.<br/>Bit [24] between processor 1 and 2.<br/>Bit [25] between processor 1 and 3.<br/>Bit [26] between processor 2 and 3.<br/>Redundant (secondary)<br/>first selfcheck comparator Error.<br/>Bit [27] between processor 1 and 2.<br/>Bit [28] between processor 1 and 3.<br/>Bit [29] between processor 2 and 3.<br/>First Selfcheck Voter Error.<br/>Bit [30] Selfcheck Voter Error.<br/>First Uncorrectable ECC Error.<br/>Bit [31] Uncorrectable Error from PMU RAM ECC.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">23:20</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>R_Sleep_Rst</td><td class="center">19</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Redundant (secondary) fault detection. PMU Sleep Instruction Response.<br/>0: causes the PMU CPUs to go to sleep.<br/>1: causes the PMU CPUs to reset.<br/>Read-only.</td></tr>
+<tr valign=top><td>R_LSFail</td><td class="center">18:16</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Redundant (secondary) fault detection. Frist lockstep mismatch.<br/>Bit [16] processors 1 and 2.<br/>Bit [17] processors 1 and 3.<br/>Bit [18] processors 2 and 3.</td></tr>
+<tr valign=top><td>N_FFail</td><td class="center">15:8</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Nominal (primary) fatal fault detection. First lockstep mismatch.<br/>Bit [8] between processor 1 and 2.<br/>Bit [9] between processor 1 and 3.<br/>Bit [10] between processor 2 and 3.<br/>Nominal (primary) first selfcheck comparator Error.<br/>Bit [11] between processor 1 and 2.<br/>Bit [12] between processor 1 and 3.<br/>Bit [13] between processor 2 and 3.<br/>First Selfcheck Voter Error.<br/>Bit [14] Selfcheck Voter Error.<br/>First Uncorrectable ECC Error.<br/>Bit [15] Uncorrectable Error from PMU RAM ECC.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 7:4</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>N_Sleep_Rst</td><td class="center"> 3</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Nominal (primary) fault detection. PMU Sleep Instruction Response.<br/>0: causes the PMU CPUs to go to sleep.<br/>1: causes the PMU CPUs to reset.<br/>Read-only.</td></tr>
+<tr valign=top><td>N_LSFail</td><td class="center"> 2:0</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Nominal (primary) fault detection. First lockstep mismatch.<br/>Bit [0] processors 1 and 2.<br/>Bit [1] processors 1 and 3.<br/>Bit [2] processors 2 and 3.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

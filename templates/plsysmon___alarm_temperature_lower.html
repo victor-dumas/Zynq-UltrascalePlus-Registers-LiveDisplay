@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<title>ALARM_TEMPERATURE_LOWER (PLSYSMON) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___plsysmon.html")>PLSYSMON Module</a> &gt; ALARM_TEMPERATURE_LOWER (PLSYSMON) Register</p><h1>ALARM_TEMPERATURE_LOWER (PLSYSMON) Register</h1>
+<h2>ALARM_TEMPERATURE_LOWER (PLSYSMON) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>ALARM_TEMPERATURE_LOWER</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000150</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FFA50D50 (AMS_PL_SYSMON)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>16</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>PL Lower temperature Lower Alarm Threshold and config.</td></tr>
+</table>
+<p>The temperature Alarm will be set when the PL measured temperature exceeds the value in ALARM_TEMP_PL_UPPER. The temperature at which the Alarm will be cleared depends on the [threshold_mode] bit setting: 0: Alarm is cleared when temperature falls below ALARM_TEMP_PL_LOWER. 1: Alarm is cleared when temperature falls below ALARM_TEMP_PL_UPPER.</p>
+<h2>ALARM_TEMPERATURE_LOWER (PLSYSMON) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>temperature_alarm</td><td class="center">15:1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Alarm temperature Threshold.<br/>Programmed register value is compared to the measurement register.<br/>When hysteresis is enabled, the Temp_PL Alarm is cleared when the temperature goes below the Lower [temperature_Alarm] Threshold.<br/>Applies only when [threshold_mode] = 0.</td></tr>
+<tr valign=top><td>threshold_mode</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Lower Threshold, Hysteresis Disable.<br/>0: enable hysteresis.<br/>1: disable hysteresis.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<title>EVTYPER3_EL0 (A53_PMU_3) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___a53_pmu_3.html")>A53_PMU_3 Module</a> &gt; EVTYPER3_EL0 (A53_PMU_3) Register</p><h1>EVTYPER3_EL0 (A53_PMU_3) Register</h1>
+<h2>EVTYPER3_EL0 (A53_PMU_3) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>EVTYPER3_EL0</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000040C</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FEF3040C (CORESIGHT_A53_PMU_3)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Performance Monitors Event Type Registers</td></tr>
+</table>
+<p></p>
+<h2>EVTYPER3_EL0 (A53_PMU_3) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>P</td><td class="center">31</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>EL1 modes filtering bit. Controls counting in EL1. If EL3 is implemented, then counting in Non-secure EL1 is further controlled by the NSK bit.</td></tr>
+<tr valign=top><td>U</td><td class="center">30</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>EL0 filtering bit. Controls counting in EL0. If EL3 is implemented, then counting in Non-secure EL0 is further controlled by the NSU bit.</td></tr>
+<tr valign=top><td>NSK</td><td class="center">29</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Non-secure kernel modes filtering bit. Controls counting in Non-secure EL1. If EL3 is not implemented, this bit is RES0.If the value of this bit is equal to the value of P, events in Non-secure EL1 are counted.Otherwise, events in Non-secure EL1 are not counted.</td></tr>
+<tr valign=top><td>NSU</td><td class="center">28</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Non-secure user modes filtering bit. Controls counting in Non-secure EL0. If EL3 is not implemented, this bit is RES0.If the value of this bit is equal to the value of U, events in Non-secure EL0 are counted.Otherwise, events in Non-secure EL0 are not counted.</td></tr>
+<tr valign=top><td>NSH</td><td class="center">27</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Non-secure Hyp modes filtering bit. Controls counting in Non-secure EL2. If EL2 is not implemented, this bit is RES0.</td></tr>
+<tr valign=top><td>M</td><td class="center">26</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Secure EL3 filtering bit. Most applications can ignore this bit and set the value to zero. If EL3 is not implemented, this bit is RES0.If the value of this bit is equal to the value of P, events in Secure EL3 are counted.Otherwise, events in Secure EL3 are not counted.</td></tr>
+<tr valign=top><td>evtCount</td><td class="center"> 9:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Event to count. The event number of the event that is counted by event counter EVCNTR&lt;n>_EL0.Software must program this field with an event defined by the processor or a common event defined by the architecture.If evtCount is programmed to an event that is reserved or not implemented, the behavior depends on the event type.For common architectural and microarchitectural events:No events are counted.The value read back on evtCount is the value written.For IMPLEMENTATION DEFINED events:It is UNPREDICTABLE what event, if any, is counted. UNPREDICTABLE in this case means the event must not expose privileged information.The value read back on evtCount is an UNKNOWN value with the same effect.Arm recommends that the behavior across a family of implementations is defined such that if a given implementation does not include an event from a set of common IMPLEMENTATION DEFINED events, then no event is counted and the value read back on evtCount is the value written.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

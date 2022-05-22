@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<title>ADPEVT (USB3_XHCI) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___usb3_xhci.html")>USB3_XHCI Module</a> &gt; ADPEVT (USB3_XHCI) Register</p><h1>ADPEVT (USB3_XHCI) Register</h1>
+<h2>ADPEVT (USB3_XHCI) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>ADPEVT</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000CC28</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FE20CC28 (USB3_0_XHCI)<br/>0x00FE30CC28 (USB3_1_XHCI)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>ADP Event Register</td></tr>
+</table>
+<p></p>
+<h2>ADPEVT (USB3_XHCI) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:29</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>AdpPrbEvnt</td><td class="center">28</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>ADP Probe Event<br/>When this event is set, it means that the Vbus voltage is greater than VadpPrb or VadpPrb is reached.</td></tr>
+<tr valign=top><td>AdpSnsEvnt</td><td class="center">27</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>ADP Sense Event<br/>When this event is set, it means that the Vbus voltage is greater than VadpSns or VadpSns is reached.</td></tr>
+<tr valign=top><td>AdpTmoutEvnt</td><td class="center">26</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>ADP Timeout Event<br/>This event is relevant when ADP probe command is executed.<br/>When this event is set, it means that the ramp time is completed (GADPCTL.RTIM has reached its terminal value of 0x7FF). This is a debug feature that allows software to read the ramp time after each cycle.</td></tr>
+<tr valign=top><td>ADPRstCmpltEvnt</td><td class="center">25</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x0</td><td>This event, when set, indicates that the ADP Reset command is successful.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">24:16</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>RTIM</td><td class="center">15:0</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0</td><td>RAMP TIME:<br/>These bits capture the latest time it took for Vbus to ramp from VADP_SINK to VADP_PRB. The bits are defined in units of 32 kHz clock cycles as follows:<br/>- 0x000: 1 cycles<br/>- 0x001: 2 cycles<br/>- 0x002: 3 cycles and so on till,<br/>- 0xFFFF: 65536 cycles<br/>The maximum time of 65536 cycles corresponds to a time of 2.04 seconds.<br/>Note: For scaledown ramp_timeout:<br/>- PrbDelta = 2'b11 => 781.25 us<br/>- PrbDelta = 2'b10 => 1562.5 us<br/>- PrbDelta = 2'b01 => 3125 us<br/>- PrbDelta = 2'b00 => 6250 us</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

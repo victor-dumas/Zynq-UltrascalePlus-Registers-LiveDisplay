@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<title>int_q1_disable (GEM) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___gem.html")>GEM Module</a> &gt; int_q1_disable (GEM) Register</p><h1>int_q1_disable (GEM) Register</h1>
+<h2>int_q1_disable (GEM) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>int_q1_disable</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000620</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF0B0620 (GEM0)<br/>0x00FF0C0620 (GEM1)<br/>0x00FF0D0620 (GEM2)<br/>0x00FF0E0620 (GEM3)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Writing a 1 to the relevant bit location disables that particular interrupt. This register is write only and when read will return zero.</td></tr>
+</table>
+<p></p>
+<h2>int_q1_disable (GEM) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:12</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved, read as 0, ignored on write.</td></tr>
+<tr valign=top><td>disable_resp_not_ok_interrupt</td><td class="center">11</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Disable bresp/hresp not OK interrupt</td></tr>
+<tr valign=top><td>disable_receive_overrun_interrupt</td><td class="center">10</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Disable Receive overrun interrupt</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 9:8</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved, read as 0, ignored on write.</td></tr>
+<tr valign=top><td>disable_transmit_complete_interrupt</td><td class="center"> 7</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Disable Transmit complete interrupt</td></tr>
+<tr valign=top><td>disable_transmit_frame_corruption_due_to_amba_error_interrupt</td><td class="center"> 6</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Disable Transmit frame corruption due to AMBA (AHB/AXI) error interrupt</td></tr>
+<tr valign=top><td>disable_retry_limit_exceeded_or_late_collision_interrupt</td><td class="center"> 5</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Disable Retry limit exceeded or late collision interrupt</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 4:3</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved, read as 0, ignored on write.</td></tr>
+<tr valign=top><td>disable_rx_used_bit_read_interrupt</td><td class="center"> 2</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Disable RX used bit read interrupt</td></tr>
+<tr valign=top><td>disable_receive_complete_interrupt</td><td class="center"> 1</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x0</td><td>Disable Receive complete interrupt</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 0</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved, read as 0, ignored on write.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

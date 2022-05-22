@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<title>ATTR_5 (PCIE_ATTRIB) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___pcie_attrib.html")>PCIE_ATTRIB Module</a> &gt; ATTR_5 (PCIE_ATTRIB) Register</p><h1>ATTR_5 (PCIE_ATTRIB) Register</h1>
+<h2>ATTR_5 (PCIE_ATTRIB) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>ATTR_5</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000014</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD480014 (PCIE_ATTRIB)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x0000FF07</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>ATTR_5</td></tr>
+</table>
+<p>This register should only be written to during reset of the PCIe block</p>
+<h2>ATTR_5 (PCIE_ATTRIB) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>attr_aer_cap_optional_err_support</td><td class="center">15:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0xFF07</td><td>Indicates which optional error conditions in the Uncorrectable and Correctable Error Mask/Severity registers are supported. If an error is unsupported, then the corresponding bit in the Mask/Severity register is hardwired to 0. Encoding ("1" indicates support):<br/>[0]<br/>: Corrected Internal Error<br/>[1]<br/>: Header Log Overflow<br/>[2]<br/>: Receiver Error<br/>[3:7]<br/>: undefined<br/>[8]<br/>: Surprise Down<br/>[9]<br/>: Flow Control Protocol Error<br/>[10]<br/>: Completion Timeout<br/>[11]<br/>: Completer Abort<br/>[12]<br/>: Receiver Overflow<br/>[13]<br/>: ECRC Error<br/>[14]<br/>: ACS Violation<br/>[15]<br/>: Uncorrectable Internal Error<br/>; EP=0xFF07; RP=0xFF07</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

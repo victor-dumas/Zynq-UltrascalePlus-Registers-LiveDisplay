@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<title>CRCPARCTL1 (DDRC) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddrc.html")>DDRC Module</a> &gt; CRCPARCTL1 (DDRC) Register</p><h1>CRCPARCTL1 (DDRC) Register</h1>
+<h2>CRCPARCTL1 (DDRC) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>CRCPARCTL1</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x00000000C4</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD0700C4 (DDRC)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x10000200</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>CRC Parity Control Register1</td></tr>
+</table>
+<p>This register is static. Static registers can only be written when the controller is in reset.</p>
+<h2>CRCPARCTL1 (DDRC) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>dfi_t_phy_rdlat</td><td class="center">29:24</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x10</td><td>The maximum number of DFI PHY clock cycles allowed from the assertion of the dfi_rddata_en signal to the assertion of each of the corresponding bits of the dfi_rddata_valid signal.<br/>This corresponds to the DFI timing parameter tphy_rdlat.<br/>This value is only used for detecting read data timeout when DDR4 retry is enabled by CRCPARCTL1.crc_parity_retry_enable=1.<br/>Maximum supported value:<br/>- 1:2 Frequency mode && DFITMG0.dfi_rddata_use_sdr == 1<br/>: CRCPARCTL1.dfi_t_phy_rdlat &lt; 64<br/>Unit: DFI Clocks</td></tr>
+<tr valign=top><td>alert_wait_for_sw</td><td class="center"> 9</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x1</td><td>After a Parity or CRC error is flagged on dfi_alert_n signal, the software has an option to read the mode registers in the DRAM before the hardware begins the retry process<br/>- 1: Wait for software to read/write the mode registers before hardware begins the retry. After software is done with its operations, it will clear the alert interrupt register bit<br/>- 0: Hardware can begin the retry right away after the dfi_alert_n pulse goes away.<br/>The value on this register is valid only when retry is enabled (CRCPARCTRL1.crc_parity_retry_enable = 1)<br/>If this register is set to 1 and if the software doesn't clear the interrupt register after handling the parity/CRC error, then the hardware will not begin the retry process and the system will hang.<br/>In the case of Parity/CRC error, there are two possibilities when the software doesn't reset MR5[4] to 0.<br/>- (i) If 'Persistent parity' mode register bit is NOT set: the commands sent during retry and normal operation are executed without parity checking. The value in the Parity error log register MPR Page 1 is valid.<br/>- (ii) If 'Persistent parity' mode register bit is SET: Parity checking is done for commands sent during retry and normal operation. If multiple errors occur before MR5[4] is cleared, the error log in MPR Page 1 should be treated as 'Don't care'.</td></tr>
+<tr valign=top><td>crc_parity_retry_enable</td><td class="center"> 8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>- 1: Enable command retry mechanism in case of C/A Parity or CRC error<br/>- 0: Disable command retry mechanism when C/A Parity or CRC features are enabled.<br/>Note that retry functionality is not supported if burst chop is enabled (MSTR.burstchop = 1) and/or disable auto-refresh is enabled (RFSHCTL3.dis_auto_refresh = 1)</td></tr>
+<tr valign=top><td>crc_inc_dm</td><td class="center"> 7</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>CRC Calculation setting register<br/>- 1: CRC includes DM signal<br/>- 0: CRC not includes DM signal</td></tr>
+<tr valign=top><td>crc_enable</td><td class="center"> 4</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>CRC enable Register<br/>- 1: Enable generation of CRC<br/>- 0: Disable generation of CRC<br/>The setting of this register should match the CRC mode register setting in the DRAM.</td></tr>
+<tr valign=top><td>parity_enable</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>C/A Parity enable register<br/>- 1: Enable generation of C/A parity and detection of C/A parity error<br/>- 0: Disable generation of C/A parity and disable detection of C/A parity error<br/>If RCD's parity error detection or SDRAM's parity detection is enabled, this register should be 1.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

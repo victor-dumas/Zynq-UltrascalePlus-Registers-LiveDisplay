@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<title>PxIE (SATA_AHCI_PORTCNTRL) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___sata_ahci_portcntrl.html")>SATA_AHCI_PORTCNTRL Module</a> &gt; PxIE (SATA_AHCI_PORTCNTRL) Register</p><h1>PxIE (SATA_AHCI_PORTCNTRL) Register</h1>
+<h2>PxIE (SATA_AHCI_PORTCNTRL) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>PxIE</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000014</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD0C0114 (SATA_AHCI_PORT0_CNTRL)<br/>0x00FD0C0194 (SATA_AHCI_PORT1_CNTRL)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Port x Interrupt Enable (PxIE)</td></tr>
+</table>
+<p>Enables and disables the reporting of the corresponding interrupt to system software. When a bit is set to 1 and the corresponding interrupt condition is active, then an interrupt is generated. Interrupt sources that are disabled (set to 0) are still reflected in the status registers. This register is symmetrical with the PxIS register.</p>
+<h2>PxIE (SATA_AHCI_PORTCNTRL) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>CPDE</td><td class="center">31</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Cold Presence Detect Enable (CPDE):<br/>When set, GHC.IE is set, and PxS.CPDS is set, the HBA shall generate an interrupt. For systems that do not support cold presence detect, this bit shall be a read-only '0'.</td></tr>
+<tr valign=top><td>TFEE</td><td class="center">30</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Task File Error Enable (TFEE):<br/>When set, GHC.IE is set, and PxS.TFES is set, the HBA shall generate an interrupt.</td></tr>
+<tr valign=top><td>HBFE</td><td class="center">29</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Host Bus Fatal Error Enable (HBFE):<br/>When set, GHC.IE is set, and PxIS.HBFS is set, the HBA shall generate an interrupt.</td></tr>
+<tr valign=top><td>HBDE</td><td class="center">28</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Host Bus Data Error Enable (HBDE):<br/>when set, GHC.IE is set, and PxIS.HBDS is set, the HBA shall generate an interrupt.</td></tr>
+<tr valign=top><td>IFE</td><td class="center">27</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Interface Fatal Error Enable (IFE):<br/>When set, GHC.IE is set, and PxIS.IFS is set, the HBA shall generate an interrupt.</td></tr>
+<tr valign=top><td>INFE</td><td class="center">26</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Interface Non-fatal Error Enable (INFE):<br/>When set, GHC.IE is set, and PxIS.INFS is set, the HBA shall generate an interrupt.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">25</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>OFE</td><td class="center">24</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Overflow Enable (OFE):<br/>When set, and GHC.IE and PxIS.OFS are set, the HBA shall generate an interupt.</td></tr>
+<tr valign=top><td>IPME</td><td class="center">23</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Incorrect Port Multiplier Enable (IPME):<br/>When set, and GHC.IE and PxIS.IPMS are set, the HBA shall generate an interupt.</td></tr>
+<tr valign=top><td>PRCE</td><td class="center">22</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>PhyRdy Change Interrupt Enable (PRCE): When set to '1', and GHC.IE is set to '1', and PxIS.PRCS is set to '1', the HBA shall generate an interrupt.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">21:8</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>DMPE</td><td class="center"> 7</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Device Mechanical Presence Enable (DMPE): When set, and GHC.IE is set to '1', and PxIS.DMPS is set, the HBA shall generate an interrupt. For systems that do not support a mechanical presence switch, this bit shall be a read-only '0'.</td></tr>
+<tr valign=top><td>PCE</td><td class="center"> 6</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Port Change Interrupt Enable (PCE): When set, GHC.IE is set,<br/>and PxIS.PCS is set, the HBA shall generate an interrupt.</td></tr>
+<tr valign=top><td>DPE</td><td class="center"> 5</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Descriptor Processed Interrupt Enable (DPE):<br/>When set, GHC.IE is set,<br/>and PxIS.DPS is set, the HBA shall generate an interrupt.</td></tr>
+<tr valign=top><td>UFE</td><td class="center"> 4</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Unknown FIS Interrupt Enable (UFE): When set, GHC.IE is set,<br/>and PxIS.UFS is set to '1', the HBA shall generate an interrupt.</td></tr>
+<tr valign=top><td>SDBE</td><td class="center"> 3</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Set Device Bits FIS Interrupt Enable (SDBE):<br/>When set, GHC.IE is set,<br/>and PxIS.SDBS is set, the HBA shall generate an interrupt.</td></tr>
+<tr valign=top><td>DSE</td><td class="center"> 2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>DMA Setup FIS Interrupt Enable (DSE):<br/>When set, GHC.IE is set,<br/>and PxIS.DSS is set, the HBA shall generate an interrupt.</td></tr>
+<tr valign=top><td>PSE</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>PIO Setup FIS Interrupt Enable (PSE):<br/>When set, GHC.IE is set,<br/>and PxIS.PSS is set, the HBA shall generate an interrupt.</td></tr>
+<tr valign=top><td>DHRE</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Device to Host Register FIS Interrupt Enable (DHRE):<br/>When set, GHC.IE is set,<br/>and PxIS.DHRS is set, the HBA shall generate an interrupt.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

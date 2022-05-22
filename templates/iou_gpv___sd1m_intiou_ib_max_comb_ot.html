@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<title>sd1M_intiou_ib_max_comb_ot (IOU_GPV) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___iou_gpv.html")>IOU_GPV Module</a> &gt; sd1M_intiou_ib_max_comb_ot (IOU_GPV) Register</p><h1>sd1M_intiou_ib_max_comb_ot (IOU_GPV) Register</h1>
+<h2>sd1M_intiou_ib_max_comb_ot (IOU_GPV) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>sd1M_intiou_ib_max_comb_ot</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000049114</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FE049114 (IOU_GPV)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Maximum number of combined outstanding transactions</td></tr>
+</table>
+<p>A value of 0 for both the integer and fractional parts disables the programmable regulation so that the configuration limits apply. A value of 0 for the fractional part programs disables the regulation of fractional outstanding transactions. The regulation of the combined outstanding transaction limit also requires that you set the en_awar_ot control bit of the QoS control register.</p>
+<h2>sd1M_intiou_ib_max_comb_ot (IOU_GPV) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>awar_max_oti</td><td class="center">14:8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Integer part of max combined outstanding AW/AR addresses.</td></tr>
+<tr valign=top><td>awar_max_otf</td><td class="center"> 7:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Fraction part of max combined outstanding AW/AR addresses.</td></tr>
+</table><p>The maximum combined outstanding transactions register enables you to program the maximum number of address requests for the AR and AW channels. The combined limit is applied after any individual channel limits.</p>
+<p id=foot class=footer></p>
+</body>
+</html>

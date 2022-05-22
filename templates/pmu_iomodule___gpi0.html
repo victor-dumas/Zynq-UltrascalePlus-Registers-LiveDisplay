@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<title>GPI0 (PMU_IOMODULE) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___pmu_iomodule.html")>PMU_IOMODULE Module</a> &gt; GPI0 (PMU_IOMODULE) Register</p><h1>GPI0 (PMU_IOMODULE) Register</h1>
+<h2>GPI0 (PMU_IOMODULE) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>GPI0</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000020</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FFD40020 (PMU_IOMODULE)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Fault Tolerance Status Register (GPI0)</td></tr>
+</table>
+<p>GPI0[31:0] Input is internal to the MicroBlaze PMU module and dedicated to show the value of the Fault Tolerance Status register.</p>
+<h2>GPI0 (PMU_IOMODULE) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>RFT_ECC_FATAL_ERR</td><td class="center">31</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Uncorrectable double bit RAM ECC error</td></tr>
+<tr valign=top><td>RFT_VOTER_ERR</td><td class="center">30</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Self-checking voter error</td></tr>
+<tr valign=top><td>RFT_COMPARE_ERR_23</td><td class="center">29</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Self-checking error for comparator between processor #2 and #3</td></tr>
+<tr valign=top><td>RFT_COMPARE_ERR_13</td><td class="center">28</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Self-checking error for comparator between processor #1 and #3</td></tr>
+<tr valign=top><td>RFT_COMPARE_ERR_12</td><td class="center">27</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Self-checking error for comparator between processor #1 and #2</td></tr>
+<tr valign=top><td>RFT_LS_MISMATCH_23_B</td><td class="center">26</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Redundant fault tolerant state machine: Lockstep first failing<br/>BITS 2,10,18,26 -- Mismatch 23 -- Lockstep mismatch between processor #2 and #3</td></tr>
+<tr valign=top><td>RFT_LS_MISMATCH_13_B</td><td class="center">25</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Redundant fault tolerant state machine: Lockstep first failing<br/>BITS 1,9,17,25 -- Mismatch 13 -- Lockstep mismatch between processor #1 and #3</td></tr>
+<tr valign=top><td>RFT_LS_MISMATCH_12_B</td><td class="center">24</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Redundant fault tolerant state machine: Lockstep first failing<br/>BITS 0,8,16,24 -- Mismatch 12 -- Lockstep mismatch between processor #1 and #2</td></tr>
+<tr valign=top><td>RFT_MISMATCH_STATE</td><td class="center">23</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>The two FT State machines have different states</td></tr>
+<tr valign=top><td>RFT_MISMATCH_CPU</td><td class="center">22</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>The two FT State machines have different failing CPUs</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">21</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">20</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>RFT_SLEEP_RESET</td><td class="center">19</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Redundant fault tolerant state machine: Reset was commanded by SW in MicroBlaze through SLEEP instruction</td></tr>
+<tr valign=top><td>RFT_LS_MISMATCH_23_A</td><td class="center">18</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Redundant fault tolerant state machine: Lockstep first failing<br/>BITS 2,10,18,26 -- Mismatch 23 -- Lockstep mismatch between processor #2 and #3</td></tr>
+<tr valign=top><td>RFT_LS_MISMATCH_13_A</td><td class="center">17</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Redundant fault tolerant state machine: Lockstep first failing<br/>BITS 1,9,17,25 -- Mismatch 13 -- Lockstep mismatch between processor #1 and #3</td></tr>
+<tr valign=top><td>RFT_LS_MISMATCH_12_A</td><td class="center">16</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Redundant fault tolerant state machine: Lockstep first failing<br/>BITS 0,8,16,24 -- Mismatch 12 -- Lockstep mismatch between processor #1 and #2</td></tr>
+<tr valign=top><td>NFT_ECC_FATAL_ERR</td><td class="center">15</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Uncorrectable double bit RAM ECC error</td></tr>
+<tr valign=top><td>NFT_VOTER_ERR</td><td class="center">14</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Self-checking voter error</td></tr>
+<tr valign=top><td>NFT_COMPARE_ERR_23</td><td class="center">13</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Self-checking error for comparator between processor #2 and #3</td></tr>
+<tr valign=top><td>NFT_COMPARE_ERR_13</td><td class="center">12</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Self-checking error for comparator between processor #1 and #3</td></tr>
+<tr valign=top><td>NFT_COMPARE_ERR_12</td><td class="center">11</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Self-checking error for comparator between processor #1 and #2</td></tr>
+<tr valign=top><td>NFT_LS_MISMATCH_23_B</td><td class="center">10</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Normal fault tolerant state machine: Lockstep first failing<br/>BITS 2,10,18,26 -- Mismatch 23 -- Lockstep mismatch between processor #2 and #3</td></tr>
+<tr valign=top><td>NFT_LS_MISMATCH_13_B</td><td class="center"> 9</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Normal fault tolerant state machine: Lockstep first failing<br/>BITS 1,9,17,25 -- Mismatch 13 -- Lockstep mismatch between processor #1 and #3</td></tr>
+<tr valign=top><td>NFT_LS_MISMATCH_12_B</td><td class="center"> 8</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Normal fault tolerant state machine: Lockstep first failing<br/>BITS 0,8,16,24 -- Mismatch 12 -- Lockstep mismatch between processor #1 and #2</td></tr>
+<tr valign=top><td>NFT_MISMATCH_STATE</td><td class="center"> 7</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>The two FT State machines have different states</td></tr>
+<tr valign=top><td>NFT_MISMATCH_CPU</td><td class="center"> 6</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>The two FT State machines have different failing CPUs</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 5</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 4</td><td class="tooltip grayback">raz<span class="tooltiptext">Read as zero</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>NFT_SLEEP_RESET</td><td class="center"> 3</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Normal fault tolerant state machine: Reset was commanded by SW in MicroBlaze through SLEEP instruction</td></tr>
+<tr valign=top><td>NFT_LS_MISMATCH_23_A</td><td class="center"> 2</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Normal fault tolerant state machine: Lockstep first failing<br/>BITS 2,10,18,26 -- Mismatch 23 -- Lockstep mismatch between processor #2 and #3</td></tr>
+<tr valign=top><td>NFT_LS_MISMATCH_13_A</td><td class="center"> 1</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Normal fault tolerant state machine: Lockstep first failing<br/>BITS 1,9,17,25 -- Mismatch 13 -- Lockstep mismatch between processor #1 and #3</td></tr>
+<tr valign=top><td>NFT_LS_MISMATCH_12_A</td><td class="center"> 0</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Normal fault tolerant state machine: Lockstep first failing<br/>BITS 0,8,16,24 -- Mismatch 12 -- Lockstep mismatch between processor #1 and #2</td></tr>
+</table><p>The only values that signals valid recovery from Lockstep state to Voting state are:<br/>0x000B000B Processor #1 was faulty<br/>0x000D000D Processor #2 was faulty<br/>0x000E000E Processor #3 was faulty</p>
+<p id=foot class=footer></p>
+</body>
+</html>

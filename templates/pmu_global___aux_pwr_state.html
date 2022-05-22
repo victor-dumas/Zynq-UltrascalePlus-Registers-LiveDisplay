@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<title>AUX_PWR_STATE (PMU_GLOBAL) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___pmu_global.html")>PMU_GLOBAL Module</a> &gt; AUX_PWR_STATE (PMU_GLOBAL) Register</p><h1>AUX_PWR_STATE (PMU_GLOBAL) Register</h1>
+<h2>AUX_PWR_STATE (PMU_GLOBAL) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>AUX_PWR_STATE</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000104</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FFD80104 (PMU_GLOBAL)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">ro<span class="tooltiptext">Read-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x000FF080</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Memory Retention and RPU Emulation State.</td></tr>
+</table>
+<p>Applies to RAM memory retention: 0: active state. 1: low-power, inaccessible in retention state. Applies to RPU and APU Emulation state: 0: normal RPU/APU state. 1: low-power, RPU/APU emulation state. There are 5 power islands: RPUs, APU[0:3}. Emulation mode is used for debug, because it does not actually power down the CPU. The island is logically off, but the power supply is still on so debug accesses via DAP can peek and poke the system. All bits are read-only. Register is reset only by a POR reset.</p>
+<h2>AUX_PWR_STATE (PMU_GLOBAL) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>ACPU3_Emulation</td><td class="center">31</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>APU core 3 emulation state.</td></tr>
+<tr valign=top><td>ACPU2_Emulation</td><td class="center">30</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>APU core 2 emulation state.</td></tr>
+<tr valign=top><td>ACPU1_Emulation</td><td class="center">29</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>APU core 1 emulation state.</td></tr>
+<tr valign=top><td>ACPU0_Emulation</td><td class="center">28</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>APU core 0 emulation state.</td></tr>
+<tr valign=top><td>RPU_Emulation</td><td class="center">27</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>RPU MPCore emulation state.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">26:20</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>OCM_Bank3</td><td class="center">19</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>OCM Bank 3 retention state.</td></tr>
+<tr valign=top><td>OCM_Bank2</td><td class="center">18</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>OCM Bank 2 retention state.</td></tr>
+<tr valign=top><td>OCM_Bank1</td><td class="center">17</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>OCM Bank 1 retention state.</td></tr>
+<tr valign=top><td>OCM_Bank0</td><td class="center">16</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>OCM Bank 0 retention state.</td></tr>
+<tr valign=top><td>TCM1B</td><td class="center">15</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>RPU core 1, TCM_B retention state.</td></tr>
+<tr valign=top><td>TCM1A</td><td class="center">14</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>RPU core 1, TCM_A retention state.</td></tr>
+<tr valign=top><td>TCM0B</td><td class="center">13</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>RPU core 0, TCM_B retention state.</td></tr>
+<tr valign=top><td>TCM0A</td><td class="center">12</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>RPU core 0, TCM_A retention state.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">11:9</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 8</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+<tr valign=top><td>L2_Bank0</td><td class="center"> 7</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>APU L2 Cache RAM retention state.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 6:0</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>reserved</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

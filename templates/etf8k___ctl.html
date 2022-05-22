@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<title>CTL (ETF8K) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___etf8k.html")>ETF8K Module</a> &gt; CTL (ETF8K) Register</p><h1>CTL (ETF8K) Register</h1>
+<h2>CTL (ETF8K) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>CTL</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000020</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FE950020 (CORESIGHT_SOC_ETF_2)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>This register controls trace stream capture.Setting the TraceCaptEn bit to 1 enables the TMC to capture trace data. When trace capture is enabled, Formatter behavior is controlled by the FFCR register.When trace capture is disabled, any remaining data in the formatter is stored to RAM. If the TMC is programmed for Software-read-FIFO mode or hardware-read-FIFO mode and and TraceCaptEn is cleared before TMCReady=1, trace data may get corrupted. In the Hardware-read-FIFO mode, the unformatter drains any trace data in its internal pipelines on to the ATB Master interface, but discards any data that remains in the trace FIFO. Trace capture is fully disabled, or complete, when TMCReady goes HIGH. See Formatter and Flush Status Register, FFSR, 0x300.It is recommended that stopping trace capture be initiated only by programming stop conditions in FFCR register bits. Stopping trace capture by clearing TraceCaptEn is deprecated and is supported only for backwards compatibility with earlier versions of the ETB. Features in the TMC such as the DrainBuffer bit (FFCR register) and the Empty bit (STS register) that are not part of the earlier versions of the ETB do not support stopping trace capture by clearing TraceCaptEn. If trace capture stopping is initiated by clearing this bit, then the DrainBuffer feature (ETF configuration) cannot be invoked. Also, in the ETR configuration, if the TMC is programmed for Scatter_Gather operation and Circular-Buffer mode, clearing TraceCaptEn prevents reading trace data from memory.</td></tr>
+</table>
+<p></p>
+<h2>CTL (ETF8K) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>TraceCaptEn</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Setting this bit to 1 enables the TMC to capture trace data.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<title>reg_presetvalue4 (SDIO) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___sdio.html")>SDIO Module</a> &gt; reg_presetvalue4 (SDIO) Register</p><h1>reg_presetvalue4 (SDIO) Register</h1>
+<h2>reg_presetvalue4 (SDIO) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>reg_presetvalue4</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000068</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FF160068 (SD0)<br/>0x00FF170068 (SD1)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>16</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">ro<span class="tooltiptext">Read-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000002</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>SDR25 Clock and I/O Drive Preset Values.</td></tr>
+</table>
+<p>This register is used to read the SDCLK Frequency Select Value,Clock Generator Select Value,Driver Strength Select Value SDR25</p>
+<h2>reg_presetvalue4 (SDIO) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>DriverStrengthSelectValue</td><td class="center">15:14</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Driver Strength is supported by 1.8V signaling bus speed modes. This field is meaningless for 3.3V signaling.'00' Driver Type B is Selected'01' Driver Type A is Selected'10' Driver Type C is Selected'11' Driver Type D is Selected</td></tr>
+<tr valign=top><td>ClockGeneratorSelectValue</td><td class="center">10</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>This bit is effective when Host Controller supports programmable clock'0'<br/>Host Controller Ver2.00 Compatible Clock Generator'1' Programmable Clock Generator</td></tr>
+<tr valign=top><td>SDCLKFrequencySelectValue</td><td class="center"> 9:0</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x2</td><td>10-bit preset value to set SDCLK Frequency Select in the Clock Control Register is described by a host system.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

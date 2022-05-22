@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<title>PP1_INT_RAWSTAT (GPU) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___gpu.html")>GPU Module</a> &gt; PP1_INT_RAWSTAT (GPU) Register</p><h1>PP1_INT_RAWSTAT (GPU) Register</h1>
+<h2>PP1_INT_RAWSTAT (GPU) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>PP1_INT_RAWSTAT</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000B020</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD4BB020 (GPU)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">rw<span class="tooltiptext">Normal read/write</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Interrupt Rawstat Register</td></tr>
+</table>
+<p></p>
+<h2>PP1_INT_RAWSTAT (GPU) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:13</td><td class="tooltip grayback">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved, write as zero, read undefined.</td></tr>
+<tr valign=top><td>RESET_COMPLETED</td><td class="center">12</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Whenever the pixel processor has been successfully reset, this interrupt<br/>source is set.</td></tr>
+<tr valign=top><td>CALL_STACK_OVERFLOW</td><td class="center">11</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>The polygon list command call has been executed to many times<br/>recursively. It is treated as an end of list command and rendering stops.</td></tr>
+<tr valign=top><td>CALL_STACK_UNDERFLOW</td><td class="center">10</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>The polygon list command return was executed without a call first. The<br/>return command is then treated as an end of list command and rendering<br/>stops.</td></tr>
+<tr valign=top><td>INVALID_PLIST_COMMAND</td><td class="center"> 9</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>A command in the polygon list was invalid and rendering could not<br/>continue. The invalid command is treated as an end of list command.</td></tr>
+<tr valign=top><td>WRITE_BOUNDARY_ERROR</td><td class="center"> 8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>The pixel processor has attempted to write outside the write boundary set<br/>by the WRITE_BOUNDARY registers. The bus interface completes the<br/>previous bus transaction but does not initialize any new transactions before<br/>the WRITE_BOUNDARY is modified or disabled, or the renderer is reset.</td></tr>
+<tr valign=top><td>CNT_1_LIMIT</td><td class="center"> 7</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Performance counter PERF_CNT_1 has passed the limit set in<br/>PERF_CNT_1_LIMIT. The bus interface is stopped as with STOP_BUS,<br/>and this interrupt source set. The BUS_STOP interrupt is asserted when the<br/>bus is actually stopped. This is likely to occur after CNT_1_LIMIT has<br/>been triggered.</td></tr>
+<tr valign=top><td>CNT_0_LIMIT</td><td class="center"> 6</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Performance counter PERF_CNT_0 has passed the limit set in<br/>PERF_CNT_0_LIMIT. The bus interface is stopped as with STOP_BUS,<br/>and this interrupt source set. The BUS_STOP interrupt is asserted when the<br/>bus is actually stopped. This is likely to occur after CNT_0_LIMIT has<br/>been triggered.</td></tr>
+<tr valign=top><td>BUS_STOP</td><td class="center"> 5</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>The renderer has been stopped by a STOP_BUS command. BUS_STOP is<br/>triggered only after the bus is actually stopped, making it likely that<br/>BUS_STOP is delayed a bit after CNT_x_LIMIT has been triggered.<br/>Operation can be continued by issuing the START_BUS command.</td></tr>
+<tr valign=top><td>BUS_ERROR</td><td class="center"> 4</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>A bus transaction has ended with error. The pixel processor has been<br/>stopped and has to be reset before rendering can be started again.</td></tr>
+<tr valign=top><td>FORCE_HANG</td><td class="center"> 3</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>The pixel processor has been forced into an illegal state by the FORCE_HANG<br/>command. The renderer must be reset before rendering can be started<br/>again.</td></tr>
+<tr valign=top><td>HANG</td><td class="center"> 2</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Watchdog timer limit reached.<br/>This state can also be triggered under normal rendering if you are running<br/>a shader where it is near to a never-ending inner loop.<br/>From the software perspective, you can ignore this state, because this is<br/>merely a hint from the HW that something might be wrong. The SW then<br/>decides to either reset the processor, or continue to let it run.</td></tr>
+<tr valign=top><td>END_OF_TILE</td><td class="center"> 1</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Rendering has been ended by an END_AFTER_TILE command. The<br/>framebuffer might be incomplete.</td></tr>
+<tr valign=top><td>END_OF_FRAME</td><td class="center"> 0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>Rendering has ended by completion of the polygon list. The framebuffer is<br/>complete. The interrupt is delayed until all outstanding write requests have<br/>completed.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

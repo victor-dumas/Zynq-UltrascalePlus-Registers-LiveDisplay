@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<title>SATA_AHCI_HBA Module</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> > SATA_AHCI_HBA Module</p><h1>SATA_AHCI_HBA Module</h1>
+<h2>SATA_AHCI_HBA Module Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Module Name</th><td width=80% class=noborder>SATA_AHCI_HBA Module</td></tr>
+<tr valign=top><th width=20% class=sumparam>Modules of this Type</th><td width=80% class=noborder>SATA_AHCI_HBA</td></tr>
+<tr valign=top><th class=sumparam>Base Address</th><td class=noborder>0x00FD0C0000 (SATA_AHCI_HBA)</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>SATA AHCI HBA Spec</td></tr>
+</table>
+<h2>SATA_AHCI_HBA Module Register Summary</h2>
+<table>
+<tr valign=top><th width=20%>Register Name</th><th width=10%>Address</th><th width=10%>Width</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=40%>Description</th></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_hba___cap.html")>CAP</a></td><td class="hex">0x0000000000</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0xE537FF81</td><td>HBA Capabilities</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_hba___ghc.html")>GHC</a></td><td class="hex">0x0000000004</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x80000000</td><td>Global HBA Control</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_hba___is.html")>IS</a></td><td class="hex">0x0000000008</td><td class="center">32</td><td class="tooltip">wtc<span class="tooltiptext">Readable, write a 1 to clear</span></td><td class="hex">0x00000000</td><td>Interrupt Status</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_hba___pi.html")>PI</a></td><td class="hex">0x000000000C</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00000003</td><td>Ports Implemented</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_hba___vs.html")>VS</a></td><td class="hex">0x0000000010</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00010301</td><td>AHCI Version</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_hba___ccc_ctl.html")>CCC_CTL</a></td><td class="hex">0x0000000014</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00010110</td><td>Command Completion Coalescing Control</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_hba___ccc_ports.html")>CCC_PORTS</a></td><td class="hex">0x0000000018</td><td class="center">32</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x00000000</td><td>Command Completion Coalescing Ports.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_hba___em_loc.html")>EM_LOC</a></td><td class="hex">0x000000001C</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00000000</td><td>Enclosure Management Location</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_hba___em_ctl.html")>EM_CTL</a></td><td class="hex">0x0000000020</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>Enclosure Management Control.</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_hba___cap2.html")>CAP2</a></td><td class="hex">0x0000000024</td><td class="center">32</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0000000C</td><td>HBA Capabilities Extended</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("sata_ahci_hba___bohc.html")>BOHC</a></td><td class="hex">0x0000000028</td><td class="center">32</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00000000</td><td>BIOS/OS Handoff Control and Status</td></tr>
+</table>
+<p id=foot class=footer></p>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<title>GDBGLTSSM (USB3_XHCI) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___usb3_xhci.html")>USB3_XHCI Module</a> &gt; GDBGLTSSM (USB3_XHCI) Register</p><h1>GDBGLTSSM (USB3_XHCI) Register</h1>
+<h2>GDBGLTSSM (USB3_XHCI) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>GDBGLTSSM</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x000000C164</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FE20C164 (USB3_0_XHCI)<br/>0x00FE30C164 (USB3_1_XHCI)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">ro<span class="tooltiptext">Read-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x01000442</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Global Debug LTSSM Register<br/>In multi-port host configuration, the port-number is defined by Port-Select[3:0] field in the GDBGFIFOSPACE register.<br/>Note:<br/>- GDBGLTSSM register is not applicable for USB 2.0-only mode.<br/>- Bit Bash test should not be done on this debug register.</td></tr>
+</table>
+<p></p>
+<h2>GDBGLTSSM (USB3_XHCI) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved</td></tr>
+<tr valign=top><td>RxElecidle</td><td class="center">30</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0</td><td>RxElecidle<br/>For description of RxElecIdle, see table 5-4, 'Status Interface Signals' of the PIPE3 Specification. add this as reference https://www.intel.in/content/dam/doc/white-paper/usb3-phy-interface-pci-express-paper.pdf</td></tr>
+<tr valign=top><td>X3_XS_SWAPPING</td><td class="center">29</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>a3_ds_swapping/a3_us_swapping/<br/>b3_ds_swapping/b3_us_swapping<br/>Interpret this field based on the Port direction.<br/>Note: This bit is applicable only for OTG 3.0 mode of operation and is Reserved for other modes.</td></tr>
+<tr valign=top><td>X3_DS_HOST_SHUTDOWN</td><td class="center">28</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>a3_ds_host_shutdown/b3_ds_host_shutdown<br/>Note: This bit is applicable only for OTG 3.0 mode of operation and is Reserved for other modes.</td></tr>
+<tr valign=top><td>PRTDIRECTION</td><td class="center">27</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Port Direction<br/>- 1'b0: Upstream<br/>- 1'b1: Downstream<br/>Note: This bit is applicable only for OTG 3.0 mode of operation and is Reserved for other modes.</td></tr>
+<tr valign=top><td>LTDBTIMEOUT</td><td class="center">26</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>LTDB Timeout (LTDBTimeout)</td></tr>
+<tr valign=top><td>LTDBLINKSTATE</td><td class="center">25:22</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x4</td><td>LTDB Link State (LTDBLinkState)</td></tr>
+<tr valign=top><td>LTDBSUBSTATE</td><td class="center">21:18</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>LTDB Sub-State (LTDBSubState)</td></tr>
+<tr valign=top><td>ELASTICBUFFERMODE</td><td class="center">17</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Elastic Buffer Mode (ElasticBufferMode)<br/>For field definition, refer to Table 5-3 of the PIPE3 specification.add this as reference https://www.intel.in/content/dam/doc/white-paper/usb3-phy-interface-pci-express-paper.pdf</td></tr>
+<tr valign=top><td>TXELECLDLE</td><td class="center">16</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0</td><td>Tx Elec Idle (TxElecIdle)<br/>For field definition, refer to Table 5-3 of the PIPE3 specification.add this as reference https://www.intel.in/content/dam/doc/white-paper/usb3-phy-interface-pci-express-paper.pdf</td></tr>
+<tr valign=top><td>RXPOLARITY</td><td class="center">15</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Rx Polarity (RxPolarity)<br/>For field definition, refer to Table 5-3 of the PIPE3 specification.add this as reference https://www.intel.in/content/dam/doc/white-paper/usb3-phy-interface-pci-express-paper.pdf</td></tr>
+<tr valign=top><td>TxDetRxLoopback</td><td class="center">14</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Tx Detect Rx/Loopback (TxDetRxLoopback)<br/>For field definition, refer to Table 5-3 of the PIPE3 specification.add this as reference https://www.intel.in/content/dam/doc/white-paper/usb3-phy-interface-pci-express-paper.pdf</td></tr>
+<tr valign=top><td>LTDBPhyCmdState</td><td class="center">13:11</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>LTSSM PHY command State (LTDBPhyCmdState)<br/>- 000: PHY_IDLE (PHY command state is in IDLE. No PHY request pending)<br/>- 001: PHY_DET (Request to start Receiver detection)<br/>- 010: PHY_DET_3 (Wait for Phy_Status (Receiver detection))<br/>- 011: PHY_PWR_DLY (Delay Pipe3_PowerDown P0 -> P1/P2/P3 request)<br/>- 100: PHY_PWR_A (Delay for internal logic)<br/>- 101: PHY_PWR_B (Wait for Phy_Status(Power state change request))</td></tr>
+<tr valign=top><td>POWERDOWN</td><td class="center">10:9</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x2</td><td>POWERDOWN (PowerDown)<br/>For field definition, refer to Table 5-3 of the PIPE3 specification. add this as reference https://www.intel.in/content/dam/doc/white-paper/usb3-phy-interface-pci-express-paper.pdf</td></tr>
+<tr valign=top><td>RXEQTRAIN</td><td class="center"> 8</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>RxEq Train<br/>For field definition, refer to Table 5-3 of the PIPE3 specification. add this as reference https://www.intel.in/content/dam/doc/white-paper/usb3-phy-interface-pci-express-paper.pdf</td></tr>
+<tr valign=top><td>TXDEEMPHASIS</td><td class="center"> 7:6</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>TXDEEMPHASIS (TxDeemphasis)<br/>For field definition, refer to Table 5-3 of the PIPE3 specification. add this as reference https://www.intel.in/content/dam/doc/white-paper/usb3-phy-interface-pci-express-paper.pdf</td></tr>
+<tr valign=top><td>LTDBClkState</td><td class="center"> 5:3</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>LTSSM Clock State (LTDBClkState)<br/>In multi-port host configuration, the port number is defined by Port-Select[3:0] field in the GDBGFIFOSPACE register.<br/>Note: GDBGLTSSM register is not applicable for USB 2.0-only mode.<br/>- 000: CLK_NORM (PHY is in non-P3 state and PCLK is running)<br/>- 001: CLK_TO_P3 (P3 entry request to PHY);<br/>- 010: CLK_WAIT1 (Wait for Phy_Status (P3 request));<br/>- 011: CLK_P3 (PHY is in P3 and PCLK is not running);<br/>- 100: CLK_TO_P0 (P3 exit request to PHY);<br/>- 101: CLK_WAIT2 (Wait for Phy_Status (P3 exit request))</td></tr>
+<tr valign=top><td>TXSWING</td><td class="center"> 2</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Tx Swing (TxSwing)<br/>For field definition, refer to Table 5-3 of the PIPE3 specification. add this as reference https://www.intel.in/content/dam/doc/white-paper/usb3-phy-interface-pci-express-paper.pdf</td></tr>
+<tr valign=top><td>RXTERMINATION</td><td class="center"> 1</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x1</td><td>Rx Termination (RxTermination)<br/>For details on `DWC_USB3_PIPE_RXTERM_RESET_VAL, refer to &lt;workspace>/src/DWC_usb3_params.v</td></tr>
+<tr valign=top><td>TXONESZEROS</td><td class="center"> 0</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Tx Ones/Zeros (TxOnesZeros)<br/>For field definition, refer to Table 5-3 of the PIPE3 specification. add this as reference https://www.intel.in/content/dam/doc/white-paper/usb3-phy-interface-pci-express-paper.pdf</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

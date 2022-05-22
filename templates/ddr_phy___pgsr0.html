@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<title>PGSR0 (DDR_PHY) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddr_phy.html")>DDR_PHY Module</a> &gt; PGSR0 (DDR_PHY) Register</p><h1>PGSR0 (DDR_PHY) Register</h1>
+<h2>PGSR0 (DDR_PHY) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>PGSR0</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000030</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD080030 (DDR_PHY)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">ro<span class="tooltiptext">Read-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000000</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>PHY General Status Register 0</td></tr>
+</table>
+<p></p>
+<h2>PGSR0 (DDR_PHY) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>APLOCK</td><td class="center">31</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>AC PLL Lock: Indicates, if set, that the AC PLL has locked. This is a<br/>direct status of the AC PLL lock pin. If DWC_DDRPHYAC_top.v does<br/>not contain a PLL (due to PLL sharing with a DATX8 or due to<br/>configuring the IP with all PLLs omitted), this bit will always remain 0.</td></tr>
+<tr valign=top><td>CAWRN</td><td class="center">29</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>CA Training Warning: Indicates if set that there is a warning in LPDDR3<br/>CA training.</td></tr>
+<tr valign=top><td>CAERR</td><td class="center">28</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>CA Training Error: Indicates if set that there is an error in LPDDR3 CA<br/>training.</td></tr>
+<tr valign=top><td>WEERR</td><td class="center">27</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Write Eye Training Error: Indicates if set that there is an error in write<br/>eye training.</td></tr>
+<tr valign=top><td>REERR</td><td class="center">26</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Read Eye Training Error: Indicates if set that there is an error in read<br/>eye training.</td></tr>
+<tr valign=top><td>WDERR</td><td class="center">25</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Write Bit Deskew Error: Indicates if set that there is an error in write bit<br/>deskew.</td></tr>
+<tr valign=top><td>RDERR</td><td class="center">24</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Read Bit Deskew Error: Indicates if set that there is an error in read bit<br/>deskew.</td></tr>
+<tr valign=top><td>WLAERR</td><td class="center">23</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Write Leveling Adjustment Error: Indicates if set that there is an error in<br/>write leveling adjustment.</td></tr>
+<tr valign=top><td>QSGERR</td><td class="center">22</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>DQS Gate Training Error: Indicates if set that there is an error in DQS<br/>gate training.</td></tr>
+<tr valign=top><td>WLERR</td><td class="center">21</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Write Leveling Error: Indicates if set that there is an error in write<br/>leveling.</td></tr>
+<tr valign=top><td>ZCERR</td><td class="center">20</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Impedance Calibration Error: Indicates if set that there is an error in<br/>impedance calibration.</td></tr>
+<tr valign=top><td>VERR</td><td class="center">19</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>VREF Training Error: Indicates if set that there is and error in VREF<br/>training.</td></tr>
+<tr valign=top><td>DQS2DQERR</td><td class="center">18</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Write DQS2DQ Training Error: Indicates if set that there is an error in<br/>DQS2DQ training.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">17:16</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Returns zeroes on reads.</td></tr>
+<tr valign=top><td>DQS2DQDONE</td><td class="center">15</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Write DQS2DQ Training done. Indicates if set that write DQS2DQ<br/>training has completed.</td></tr>
+<tr valign=top><td>VDONE</td><td class="center">14</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>VREF Training Done: Indicates if set that DRAM and Host VREF<br/>training has completed.</td></tr>
+<tr valign=top><td>CADONE</td><td class="center">12</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>CA Training Done: Indicates if set that LPDDR3 CA training has<br/>completed.</td></tr>
+<tr valign=top><td>WEDONE</td><td class="center">11</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Write Eye Training Done: Indicates if set that write eye training has<br/>completed.</td></tr>
+<tr valign=top><td>REDONE</td><td class="center">10</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Read Eye Training Done: Indicates if set that read eye training has<br/>completed.</td></tr>
+<tr valign=top><td>WDDONE</td><td class="center"> 9</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Write Bit Deskew Done: Indicates if set that write bit deskew has<br/>completed.</td></tr>
+<tr valign=top><td>RDDONE</td><td class="center"> 8</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Read Bit Deskew Done: Indicates if set that read bit deskew has<br/>completed.</td></tr>
+<tr valign=top><td>WLADONE</td><td class="center"> 7</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Write Leveling Adjustment Done: Indicates if set that write leveling<br/>adjustment has completed.</td></tr>
+<tr valign=top><td>QSGDONE</td><td class="center"> 6</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>DQS Gate Training Done: Indicates if set that DQS gate training has<br/>completed.</td></tr>
+<tr valign=top><td>WLDONE</td><td class="center"> 5</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Write Leveling Done: Indicates if set that write leveling has completed.</td></tr>
+<tr valign=top><td>DIDONE</td><td class="center"> 4</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>DRAM Initialization Done: Indicates if set that DRAM initialization has<br/>completed.</td></tr>
+<tr valign=top><td>ZCDONE</td><td class="center"> 3</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Impedance Calibration Done: Indicates if set that impedance<br/>calibration has completed.</td></tr>
+<tr valign=top><td>DCDONE</td><td class="center"> 2</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Digital Delay Line (DDL) Calibration Done: Indicates if set that DDL<br/>calibration has completed.</td></tr>
+<tr valign=top><td>PLDONE</td><td class="center"> 1</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>PLL Lock Done: Indicates if set that PLL locking has completed.</td></tr>
+<tr valign=top><td>IDONE</td><td class="center"> 0</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>Initialization Done: Indicates if set that the DDR system initialization<br/>has completed. This bit is set after all the selected initialization routines<br/>in PIR register have completed.<br/>Wait at least 32 ctl_clk cycles after this is first observed to be 1b1<br/>before starting/resuming traffic to DRAM<br/>or triggering new PIR.INIT.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

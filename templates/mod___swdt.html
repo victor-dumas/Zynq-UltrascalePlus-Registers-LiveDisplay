@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<title>SWDT Module</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> > SWDT Module</p><h1>SWDT Module</h1>
+<h2>SWDT Module Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Module Name</th><td width=80% class=noborder>SWDT Module</td></tr>
+<tr valign=top><th width=20% class=sumparam>Modules of this Type</th><td width=80% class=noborder>CSU_WDT, SWDT, WDT</td></tr>
+<tr valign=top><th class=sumparam>Base Address</th><td class=noborder>0x00FFCB0000 (CSU_WDT)<br/>0x00FF150000 (SWDT)<br/>0x00FD4D0000 (WDT)</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>CSU System Watchdog Timer</td></tr>
+</table>
+<h2>SWDT Module Register Summary</h2>
+<table>
+<tr valign=top><th width=20%>Register Name</th><th width=10%>Address</th><th width=10%>Width</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=40%>Description</th></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("swdt___mode.html")>MODE</a></td><td class="hex">0x0000000000</td><td class="center">24</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x000001C2</td><td>WD zero mode register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("swdt___control.html")>CONTROL</a></td><td class="hex">0x0000000004</td><td class="center">26</td><td class="tooltip">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td><td class="hex">0x00003FFC</td><td>Counter Control Register</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("swdt___restart.html")>RESTART</a></td><td class="hex">0x0000000008</td><td class="center">16</td><td class="tooltip">wo<span class="tooltiptext">Write-only</span></td><td class="hex">0x00000000</td><td>Restart key register - this not a real register as no data is stored</td></tr>
+<tr valign=top><td><a href=# onclick=gotoTopic("swdt___status.html")>STATUS</a></td><td class="hex">0x000000000C</td><td class="center"> 1</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x00000000</td><td>Status Register</td></tr>
+</table>
+<p id=foot class=footer></p>
+</body>
+</html>

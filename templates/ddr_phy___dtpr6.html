@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<title>DTPR6 (DDR_PHY) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddr_phy.html")>DDR_PHY Module</a> &gt; DTPR6 (DDR_PHY) Register</p><h1>DTPR6 (DDR_PHY) Register</h1>
+<h2>DTPR6 (DDR_PHY) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>DTPR6</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000128</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD080128 (DDR_PHY)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00000505</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>DRAM Timing Parameters Register 6</td></tr>
+</table>
+<p></p>
+<h2>DTPR6 (DDR_PHY) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>PUBWLEN</td><td class="center">31</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>PUB Write Latency Enable: Specifies, if set, that the PUB should use<br/>the write latency specified in DTPR6.PUBWL. Otherwise, if not set, the<br/>PUB write latency is automatically calculated from the mode register<br/>settings.</td></tr>
+<tr valign=top><td>PUBRLEN</td><td class="center">30</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x0</td><td>PUB Read Latency Enable: Specifies, if set, that the PUB should use<br/>the read latency specified in DTPR6.PUBRL. Otherwise, if not set, the<br/>PUB read latency is automatically calculated from the mode register<br/>settings.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">29:14</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Return zeroes on reads.</td></tr>
+<tr valign=top><td>PUBWL</td><td class="center">13:8</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x5</td><td>Write Latency: Specifies the write latency that should be used inside the<br/>PUB when DTPTR6.PUBWL is set to 1. Valid values are 1 to 31. If<br/>PUBWLEN is not set, then the PUB write latency is automatically<br/>calculated from the mode register settings.</td></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center"> 7:6</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Return zeroes on reads.</td></tr>
+<tr valign=top><td>PUBRL</td><td class="center"> 5:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x5</td><td>Read Latency: Specifies the read latency that should be used inside the<br/>PUB when DTPTR6.PUBRLEN is set to 1. Valid values are 1 to 31. If<br/>PUBRL is not set, then the PUB read latency is automatically calculated<br/>from the mode register settings.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

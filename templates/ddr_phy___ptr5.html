@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<title>PTR5 (DDR_PHY) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___ddr_phy.html")>DDR_PHY Module</a> &gt; PTR5 (DDR_PHY) Register</p><h1>PTR5 (DDR_PHY) Register</h1>
+<h2>PTR5 (DDR_PHY) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>PTR5</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000054</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FD080054 (DDR_PHY)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">mixed<span class="tooltiptext">Mixed types. See bit-field details.</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x00068268</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>PHY Timing Register 5</td></tr>
+</table>
+<p></p>
+<h2>PTR5 (DDR_PHY) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td class="grayback">Reserved</td><td class="grayback center">31:19</td><td class="tooltip grayback">ro<span class="tooltiptext">Read-only</span></td><td class="hex grayback">0x0</td><td class=grayback>Reserved. Return zeroes on reads.</td></tr>
+<tr valign=top><td>tDINIT2</td><td class="center">18:0</td><td class="tooltip">rw<span class="tooltiptext">Normal read/write</span></td><td class="hex">0x68268</td><td>DRAM Initialization Time 2: DRAM initialization time in DRAM clock<br/>cycles corresponding to the following:<br/>DDR4 = Reset low time (200 us on power-up or 100 ns after power-<br/>up)<br/>DDR3 = Reset low time (200 us on power-up or 100 ns after power-<br/>up)<br/>LPDDR4 = Reset low time (200 us on power-up or 100 ns after<br/>power-up)<br/>LPDDR3 = Time from reset command to end of auto initialization (11<br/>us)<br/>Default value corresponds to LPDDR4 200 us at 2133 MHz.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>

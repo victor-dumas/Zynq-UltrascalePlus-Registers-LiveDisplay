@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<title>MIDR_EL1 (A53_DBG_3) Register</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_register_reference.css')}}">
+<script src="xilfunctions.js" type="text/javascript"></script>
+</head>
+<body>
+<p class=header><a href=# onclick=gotoTopic("_overview.html")>Zynq UltraScale+ Devices Register Reference</a> &gt; <a href=# onclick=gotoTopic("_module_summary.html")>Module Summary</a> &gt; <a href=# onclick=gotoTopic("mod___a53_dbg_3.html")>A53_DBG_3 Module</a> &gt; MIDR_EL1 (A53_DBG_3) Register</p><h1>MIDR_EL1 (A53_DBG_3) Register</h1>
+<h2>MIDR_EL1 (A53_DBG_3) Register Description</h2>
+<table class=noborder>
+<tr valign=top><th width=20% class=sumparam>Register Name</th><td width=80% class=noborder>MIDR_EL1</td></tr>
+<tr valign=top><th class=sumparam>Relative Address</th><td class=noborder id="registerOffset">0x0000000D00</td></tr>
+<tr valign=top><th class=sumparam>Absolute Address</th><td class=noborder>
+0x00FEF10D00 (CORESIGHT_A53_DBG_3)
+</td></tr>
+<tr valign=top><th class=sumparam>Width</th><td class=noborder>32</td></tr>
+<tr valign=top><th class=sumparam>Type</th><td class="tooltip2 noborder">ro<span class="tooltiptext">Read-only</span></td></tr>
+<tr valign=top><th class=sumparam>Reset Value</th><td class=noborder>0x410FD032</td></tr>
+<tr valign=top><th class=sumparam>Description</th><td class=noborder>Main ID Register</td></tr>
+</table>
+<p></p>
+<h2>MIDR_EL1 (A53_DBG_3) Register Bit-Field Summary</h2>
+<table>
+<tr valign=top><th width=20%>Field Name</th><th width=10%>Bits</th><th width=10%>Type</th><th width=10%>Reset Value</th><th width=50%>Description</th></tr>
+<tr valign=top><td>Implementer</td><td class="center">31:24</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x41</td><td>The Implementer code. This field must hold an implementer code that has been assigned by Arm. Assigned codes include the following:Hex representationASCII representationImplementer0x41AArm Limited0x42BBroadcom Corporation0x43CCavium Inc.0x44DDigital Equipment Corporation0x49IInfineon Technologies AG0x4DMMotorola or Freescale Semiconductor Inc.0x4ENNVIDIA Corporation0x50PApplied Micro Circuits Corporation0x51QQualcomm Inc.0x56VMarvell International Ltd.0x69iIntel CorporationArm can assign codes that are not published in this manual. All values not assigned by Arm are reserved and must not be used.</td></tr>
+<tr valign=top><td>Variant</td><td class="center">23:20</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x0</td><td>An IMPLEMENTATION DEFINED variant number. Typically, this field is used to distinguish between different product variants, or major revisions of a product.</td></tr>
+<tr valign=top><td>Architecture</td><td class="center">19:16</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0xF</td><td>The permitted values of this field are:All other values are reserved.</td></tr>
+<tr valign=top><td>PartNum</td><td class="center">15:4</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0xD03</td><td>An IMPLEMENTATION DEFINED primary part number for the device.On processors implemented by Arm, if the top four bits of the primary part number are 0x0 or 0x7, the variant and architecture are encoded differently.</td></tr>
+<tr valign=top><td>Revision</td><td class="center"> 3:0</td><td class="tooltip">ro<span class="tooltiptext">Read-only</span></td><td class="hex">0x2</td><td>An IMPLEMENTATION DEFINED revision number for the device.</td></tr>
+</table><p id=foot class=footer></p>
+</body>
+</html>
