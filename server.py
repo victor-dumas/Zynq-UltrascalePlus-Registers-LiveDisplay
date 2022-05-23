@@ -3,6 +3,8 @@ from bs4 import BeautifulSoup
 import copy
 import re
 
+from comm import Comm
+
 '''
 @brief  Get bits from value using the selected mask (bits)
         The masks has a VHDL syntax (e.g. 15:8 -> [8:16])
@@ -67,7 +69,7 @@ def genHtml(file):
                     addrs_soup.append(soup.new_tag('br'))
             print(addrs)
         else:
-            # If the page is not recognized as a module or register page then return the render of the origin HTML page
+            # If the page is not recognized as a module/register page then return the render of the original HTML page
             return render_template(file)
 
         # Record if the current page is a register page or a module page
