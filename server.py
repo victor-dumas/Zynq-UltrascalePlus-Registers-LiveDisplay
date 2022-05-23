@@ -25,7 +25,7 @@ def getBits(value, bits):
     return result
 
 '''
-@brief  Inserts tables for each register and display current value
+@brief  Inserts tables for each register and display current value of each register/bits per module
         Handles both module and register pages
 '''
 def genHtml(file):
@@ -37,17 +37,22 @@ def genHtml(file):
 
         if len(tables) == 2:
             # Get the base addresses for all registers for module pages and the register being dissected for a reg page
-            addrs = tables[0].find_all('tr')[2].find('td').renderContents().decode('utf-8') .split('<br/>')
+            addrs_soup = tables[0].find_all('tr')[2].find('td')
+            addrs = addrs_soup.renderContents().decode('utf-8').split('<br/>')
 
             # Get the addresses and names of each register for a module
             for addr in addrs:
                 # Remove newlines
                 addr = addr.strip()
                 groups = re.split(' ', addr, maxsplit=2)
+                # Check that both address and name are present
                 if len(groups) > 1:
                     addrs_tables.append(groups)
+                    table_title = soup.new_tag('h2', id=groups[0])
+                    table_title.append(groups[1])
+                    tables[1].insert_before(table_title)
                     new_table = copy.copy(tables[1])
-                    tables[1].insert_after(new_table)
+                    table_title.insert_after(new_table)
         else:
             # If the page is not recognized as a module or register page then return the render of the origin HTML page
             return render_template(file)
@@ -82,10 +87,10 @@ def genHtml(file):
                         reg = int(addrs_tables[table][0], 16)
                     else:
                         reg = int(reg, base = 16) + int(addrs_tables[table][0], base = 16)
-                    line.insert(append_index, BeautifulSoup(f'''<td class='hex'>0x{reg:08X}''' + selection + '''</td>''', 'html.parser'))
+                    line.insert(append_index, BeautifulSoup(f'''<td class='hex' width='10%'>0x{reg:08X}''' + selection + '''</td>''', 'html.parser'))
                 # Header line
                 elif len(line.find_all('th')) > 0:
-                    line.insert(append_index, BeautifulSoup(f'''<th >Value</th>''', 'html.parser'))
+                    line.insert(append_index, BeautifulSoup(f'''<th width='10%'>Value</th>''', 'html.parser'))
         # Remove original table
         tables[-1].extract()
         return render_template_string(str(soup))
