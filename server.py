@@ -39,20 +39,33 @@ def genHtml(file):
             # Get the base addresses for all registers for module pages and the register being dissected for a reg page
             addrs_soup = tables[0].find_all('tr')[2].find('td')
             addrs = addrs_soup.renderContents().decode('utf-8').split('<br/>')
+            addrs_soup.clear()
 
             # Get the addresses and names of each register for a module
-            for addr in addrs:
+            for i, addr in enumerate(addrs):
                 # Remove newlines
                 addr = addr.strip()
                 groups = re.split(' ', addr, maxsplit=2)
                 # Check that both address and name are present
                 if len(groups) > 1:
+                    # Table title
                     addrs_tables.append(groups)
                     table_title = soup.new_tag('h2', id=groups[0])
-                    table_title.append(groups[1])
+                    table_title.append(f'{groups[1]}')
+                    # Link for navigating to the top of the page
+                    table_fast_top = soup.new_tag('a', href='#top')
+                    table_fast_top.string = u'\u21E7'
+                    table_title.append(table_fast_top)
+                    # Table containing the values
                     tables[1].insert_before(table_title)
                     new_table = copy.copy(tables[1])
                     table_title.insert_after(new_table)
+                    # Links to get to each base address table
+                    addr_href = soup.new_tag('a', href=f'#{groups[0]}', id='top')
+                    addr_href.string = addr
+                    addrs_soup.append(addr_href)
+                    addrs_soup.append(soup.new_tag('br'))
+            print(addrs)
         else:
             # If the page is not recognized as a module or register page then return the render of the origin HTML page
             return render_template(file)
