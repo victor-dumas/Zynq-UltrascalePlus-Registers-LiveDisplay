@@ -125,10 +125,8 @@ def index():
 def value():
     req = request.get_json()
     result = {}
-    i = 0
     for addr in req['values']:
         result[addr] = time.time()
-        i += 1
     return json.dumps(result)
 
 @app.route('/<name>')
