@@ -1,7 +1,9 @@
-from flask import Flask, render_template, render_template_string
+from flask import Flask, render_template, render_template_string, request
 from bs4 import BeautifulSoup
 import copy
+import json
 import re
+import time
 
 from comm import Comm
 
@@ -67,10 +69,13 @@ def genHtml(file):
                     addr_href.string = addr
                     addrs_soup.append(addr_href)
                     addrs_soup.append(soup.new_tag('br'))
-            print(addrs)
         else:
             # If the page is not recognized as a module/register page then return the render of the original HTML page
             return render_template(file)
+        
+        # Add live js script
+        liveview = soup.new_tag('script', type='text/javascript', language='javascript', src='liveview.js')
+        soup.find('head').append(liveview)
 
         # Record if the current page is a register page or a module page
         reg_page = False
@@ -102,7 +107,7 @@ def genHtml(file):
                         reg = int(addrs_tables[table][0], 16)
                     else:
                         reg = int(reg, base = 16) + int(addrs_tables[table][0], base = 16)
-                    line.insert(append_index, BeautifulSoup(f'''<td class='hex' width='10%'>0x{reg:08X}''' + selection + '''</td>''', 'html.parser'))
+                    line.insert(append_index, BeautifulSoup(f'''<td class='hex value' id='0x{reg:08X}' width='10%'>0x{reg:08X}''' + selection + '''</td>''', 'html.parser'))
                 # Header line
                 elif len(line.find_all('th')) > 0:
                     line.insert(append_index, BeautifulSoup(f'''<th width='10%'>Value</th>''', 'html.parser'))
@@ -116,9 +121,18 @@ app = Flask(__name__)
 def index():
     return render_template('ug1087-zynq-ultrascale-registers.htm')
 
+@app.route('/values', methods=['POST'])
+def value():
+    req = request.get_json()
+    result = {}
+    i = 0
+    for addr in req['values']:
+        result[addr] = time.time()
+        i += 1
+    return json.dumps(result)
+
 @app.route('/<name>')
 def route(name):
-    print(name)
     if re.match('.*\.html', name):
         return genHtml(f'{name}')
     else:
