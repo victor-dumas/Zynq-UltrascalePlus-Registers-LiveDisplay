@@ -30,6 +30,7 @@ function transferCanceled(e) {
 
 // Request updated values for the entire page (making 100's of requests per seconds freezes the browser)
 function getValues() {
+    var reqTime = performance.now()
     var json = new Object()
     json.values = []
 
@@ -38,7 +39,6 @@ function getValues() {
         json.values.push(node.id);
     });
 
-    var reqTime = performance.now()
     // Prepare and sent the request
     var req = new XMLHttpRequest();
     req.open("POST", "values", true);
@@ -52,4 +52,4 @@ function getValues() {
 
 interval = setInterval(getValues, 1000);
 
-//setTimeout(function() { clearInterval(interval); }, 10000);
+//setTimeout(function() { clearInterval(interval); }, 2000);

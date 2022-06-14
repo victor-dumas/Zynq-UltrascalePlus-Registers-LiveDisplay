@@ -7,5 +7,4 @@ A tcp server(devmem_server) is used on the target to get the register values. Th
 
   
 TODO:
-- Add a way to select the target ip
 - Improve performance of the live display

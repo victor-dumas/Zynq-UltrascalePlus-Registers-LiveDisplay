@@ -7,9 +7,11 @@ import time
 
 from comm import Comm
 
+hostname = '192.168.9.1'
+
 '''
 @brief  Get bits from value using the selected mask (bits)
-        The masks has a VHDL syntax (e.g. 15:8 -> [8:16])
+        The masks has a VHDL syntax (e.g. [8:16])
 '''
 def getBits(value, bits):
     result = 0
@@ -74,7 +76,7 @@ def genHtml(file):
             return render_template(file)
         
         # Add live js script
-        liveview = soup.new_tag('script', type='text/javascript', language='javascript', src='liveview.js')
+        liveview = soup.new_tag('script', type='text/javascript', language='javascript', src='static/scripts/liveview.js')
         soup.find('head').append(liveview)
 
         # Record if the current page is a register page or a module page
@@ -102,12 +104,14 @@ def genHtml(file):
                 # Value line
                 if len(line.find_all('td')) > 0:
                     selection = ""
+                    sub_id = ""
                     if reg_page:
                         selection = f'->{reg}'
+                        sub_id += f'@[{reg.strip()}]'
                         reg = int(addrs_tables[table][0], 16)
                     else:
                         reg = int(reg, base = 16) + int(addrs_tables[table][0], base = 16)
-                    line.insert(append_index, BeautifulSoup(f'''<td class='hex value' id='0x{reg:08X}' width='10%'>0x{reg:08X}''' + selection + '''</td>''', 'html.parser'))
+                    line.insert(append_index, BeautifulSoup(f'''<td class='hex value' id='0x{reg:08X}{sub_id}' width='10%'>0x{reg:08X}''' + selection + '''</td>''', 'html.parser'))
                 # Header line
                 elif len(line.find_all('th')) > 0:
                     line.insert(append_index, BeautifulSoup(f'''<th width='10%'>Value</th>''', 'html.parser'))
@@ -125,15 +129,32 @@ def index():
 def value():
     req = request.get_json()
     result = {}
-    soc = Comm(hostname='192.168.9.1')
-    for addr in req['values']:
-        reg = 0
+    soc = Comm(hostname=hostname)
+    for full_addr in req['values']:
+        addr = full_addr
+        split = addr.split('@')
+        bits = ''
+        if len(split) == 2:
+            addr = split[0]
+            bits = split[1]
+        reg = 'DEADBEEF'
         try:
             reg = soc.regrd(int(addr, 16), 0)
         except:
-            print("ERROR addr:", addr)
-        result[addr] = f'0x{reg:08X}'
+            print("ERROR addr:", full_addr)
+        if bits != '':
+            reg = getBits(reg, bits[1:len(bits) - 1])
+        result[full_addr] = f'0x{reg:08X}'
     return json.dumps(result)
+
+@app.route('/target')
+def change_target():
+    global hostname
+    target = request.args.get('hostname')
+    status = False
+    if re.match(r"^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$", target):
+        hostname = target
+    return render_template(f'branding.html'), 200
 
 @app.route('/<name>')
 def route(name):
