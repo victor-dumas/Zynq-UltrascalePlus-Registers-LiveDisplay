@@ -41,24 +41,21 @@ class Comm(Component):
     # Write data to addr at offset
     def regwr(self, base_addr, offset_reg, data):
         addr = base_addr + offset_reg
-        if (self.dummy_bus_cfg == True):
-            self.log.debug("regwr> mem[{:#011x}]={:#010x}".format(addr, data) )
-            self.mem[addr]= data
+
+        cmd = "W{:09X}{:08X}\n".format(addr, data)
+        self.log.debug("regwr> cmd={}".format(cmd))
+        self.sock_reg.send(cmd.encode('utf-8'))
+
+        #La reponse est du type WAAAAAAAAA
+        answer= self.sock_reg.recv(1024).decode()
+        self.log.debug( "regwr> reception de {}".format(answer))
+
+        addr_receive = int(answer[1:1+9], 16)
+        self.log.debug("regwr> addr_receive={}".format(addr_receive))
+        if (addr_receive != addr):
+            self.log.critical("regwr> addr_receive={}".format(addr_receive))
         else:
-            cmd = "W{:09X}{:08X}\n".format(addr, data)
-            self.log.debug("regwr> cmd={}".format(cmd))
-            self.sock_reg.send(cmd.encode('utf-8'))
-
-            #La reponse est du type WAAAAAAAAA
-            answer= self.sock_reg.recv(1024).decode()
-            self.log.debug( "regwr> reception de {}".format(answer))
-
-            addr_receive = int(answer[1:1+9], 16)
-            self.log.debug("regwr> addr_receive={}".format(addr_receive))
-            if (addr_receive != addr):
-                self.log.critical("regwr> addr_receive={}".format(addr_receive))
-            else:
-                self.log.debug("regwr> ok")
+            self.log.debug("regwr> ok")
 
 
     def regmd(self, base_addr, offset_reg, val, mask):
@@ -67,26 +64,23 @@ class Comm(Component):
 
     def regrd(self, base_addr, offset_reg):
         addr = base_addr + offset_reg
-        if (self.dummy_bus_cfg == True):
-            self.log.debug("regrd> mem[{:#011x}]={:#010x}".format(addr, self.mem[addr]) )
-            return self.mem[addr]
+
+        cmd = "R{:09X}\n".format(addr)
+        self.log.debug("regrd> cmd={}".format(cmd))
+        self.sock_reg.send(cmd.encode('utf-8'))
+
+        answer= self.sock_reg.recv(1024).decode()
+        self.log.debug( "regrd> reception de {}".format(answer))
+
+        # Answer format: RAAAAAAAAADDDDDDDD
+        addr_receive = int(answer[1:1+9], 16)
+        data_receive = int(answer[10:10+8], 16)
+        self.log.debug("regrd> addr_receive={} data_receive={}".format(addr_receive, data_receive))
+        if (addr_receive != addr):
+            self.log.critical("regrd> addr_receive={} addr={}".format(addr_receive, addr))
         else:
-            cmd = "R{:09X}\n".format(addr)
-            self.log.debug("regrd> cmd={}".format(cmd))
-            self.sock_reg.send(cmd.encode('utf-8'))
-
-            answer= self.sock_reg.recv(1024).decode()
-            self.log.debug( "regrd> reception de {}".format(answer))
-
-            # Answer format: RAAAAAAAAADDDDDDDD
-            addr_receive = int(answer[1:1+9], 16)
-            data_receive = int(answer[10:10+8], 16)
-            self.log.debug("regrd> addr_receive={} data_receive={}".format(addr_receive, data_receive))
-            if (addr_receive != addr):
-                self.log.critical("regrd> addr_receive={} addr={}".format(addr_receive, addr))
-            else:
-                self.log.debug("regrd> [{:#011x}]={:#010x}".format(addr, data_receive))
-                return data_receive
+            self.log.debug("regrd> [{:#011x}]={:#010x}".format(addr, data_receive))
+            return data_receive
 
     def close(self):
         self.log.info('close')

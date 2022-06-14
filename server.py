@@ -125,8 +125,14 @@ def index():
 def value():
     req = request.get_json()
     result = {}
+    soc = Comm(hostname='192.168.9.1')
     for addr in req['values']:
-        result[addr] = time.time()
+        reg = 0
+        try:
+            reg = soc.regrd(int(addr, 16), 0)
+        except:
+            print("ERROR addr:", addr)
+        result[addr] = f'0x{reg:08X}'
     return json.dumps(result)
 
 @app.route('/<name>')

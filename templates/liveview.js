@@ -52,4 +52,4 @@ function getValues() {
 
 interval = setInterval(getValues, 1000);
 
-setTimeout(function() { clearInterval(interval); }, 10000);
+//setTimeout(function() { clearInterval(interval); }, 10000);
