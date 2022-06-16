@@ -19,7 +19,7 @@ def getBits(value, bits):
     # Value to binary array
     bin_list = [int(x) for x in bin(value)[2:]]
     
-    start = len(bin_list) - int(splits[0]) - 1
+    start = len(bin_list) - int(splits[0])
     end = start + 1
     if len(splits) > 1:
         end = len(bin_list) - int(splits[1])
