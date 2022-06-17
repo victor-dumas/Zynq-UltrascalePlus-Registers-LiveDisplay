@@ -202,12 +202,61 @@ int search_read_pattern_new(char *line, u_int64_t *addr_detected)
     	return 0;
 }
 
+void process_command(int connfd)
+{
+    // infinite loop for command
+    int match;
+    u_int32_t data;
+    u_int64_t addr;
+    char buff[MAX];
+    while(1) { 
+        bzero(buff, MAX); 
+    
+        // read the message from client and copy it in buffer 
+        int ret=recv(connfd, buff, sizeof(buff),0); 
+        if (ret == 0)
+        {
+            printf("Connexion stop...\n"); 
+            //close(sockfd); 
+            break; 
+        }
+        printf("Received %s",buff);
+        fflush(stdout);
+        if ( (match=search_write_pattern_new(buff, &addr, &data)) == 1) 
+        {
+            write_register(addr, data);
+            sprintf(buff, "WN%010lx\n\r", addr);
+            write(connfd, buff, 2+10+2); 
+
+        } else if ( (match=search_write_pattern(buff, &addr, &data)) == 1) 
+        {
+            write_register(addr, data);
+            sprintf(buff, "W%09lx\n\r", addr);
+            write(connfd, buff, 1+9+2); 
+        } else if ( (match=search_read_pattern_new(buff, &addr)) == 1)
+        {
+            data= read_register(addr);
+            sprintf(buff, "RN%010lx%08x\n\r", addr, data);
+            write(connfd, buff, 1+9+8+2); 
+        }else if ( (match=search_read_pattern(buff, &addr)) == 1)
+        {
+            data= read_register(addr);
+            sprintf(buff, "R%09lx%08x\n\r", addr, data);
+            write(connfd, buff, 1+9+8+2); 
+        }
+    
+        if (strncmp("exit", buff, 4) == 0) { 
+            printf("Server Exit...\n"); 
+            return;
+        }         	
+    }
+}
 
 int main(int argc, char *argv[])
 {
     int sockfd, connfd, len; 
     struct sockaddr_in servaddr, cli; 
-    char buff[MAX]; 
+    char buff[MAX];
     int port;
 
 	if(argc == 2 ) {
@@ -262,7 +311,7 @@ int main(int argc, char *argv[])
     else
         printf("Server listening..\n"); 
     len = sizeof(cli); 
- 	
+ 	int pid = 0;
     while(1)  { 
 
 	    // Accept the data packet from client and verification 
@@ -274,52 +323,21 @@ int main(int argc, char *argv[])
 	    else
 	        printf("server accept the client...\n"); 
 
-		// infinite loop for command
-	    int match;
-		u_int32_t data;
-		u_int64_t addr;
-	    while(1) { 
-	        bzero(buff, MAX); 
-	  
-	        // read the message from client and copy it in buffer 
-	        int ret=recv(connfd, buff, sizeof(buff),0); 
-	        if (ret == 0)
-	        {
-	            printf("Connexion stop...\n"); 
-	            //close(sockfd); 
-	            break; 
-	        }
-	        printf("Received %s",buff);
-		    fflush(stdout);
-	        if ( (match=search_write_pattern_new(buff, &addr, &data)) == 1) 
-	        {
-				write_register(addr, data);
-				sprintf(buff, "WN%010lx\n\r", addr);
-		        write(connfd, buff, 2+10+2); 
+        pid = fork();
 
-		    } else if ( (match=search_write_pattern(buff, &addr, &data)) == 1) 
-		    {
-				write_register(addr, data);
-				sprintf(buff, "W%09lx\n\r", addr);
-		        write(connfd, buff, 1+9+2); 
-		    } else if ( (match=search_read_pattern_new(buff, &addr)) == 1)
-		    {
-		    	data= read_register(addr);
-				sprintf(buff, "RN%010lx%08x\n\r", addr, data);
-		        write(connfd, buff, 1+9+8+2); 
-		    }else if ( (match=search_read_pattern(buff, &addr)) == 1)
-		    {
-		    	data= read_register(addr);
-				sprintf(buff, "R%09lx%08x\n\r", addr, data);
-		        write(connfd, buff, 1+9+8+2); 
-		    }
-	  
-	        if (strncmp("exit", buff, 4) == 0) { 
-	            printf("Server Exit...\n"); 
-			    close(sockfd); 
-				return 0;
-	        }         	
-	    }     
+        if (pid < 0)
+            perror("Error on fork\n");
+
+        if (pid == 0) {
+            /* This is the client process */
+            close(sockfd);
+            process_command(connfd);
+            exit(0);
+        }
+        else {
+            close(connfd);
+        }
+
 	}     
 }
 
