@@ -147,6 +147,7 @@ def value():
         if bits != '':
             reg = getBits(reg, bits[1:len(bits) - 1])
         result[full_addr] = f'0x{reg:08X}'
+    soc.close()
     return json.dumps(result)
 
 @app.route('/target')
